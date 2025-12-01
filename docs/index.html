@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Basalt Code</title>
+    <link rel="icon" type="image/png" href="favicon.png"/>
+    <link rel="stylesheet" href="./css/fancybox.css"/>
+    <link rel="stylesheet" href="./css/aos.css"/>
+    <link rel="stylesheet" href="./css/tailwind.css"/>
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./css/style.css"/>
+  </head>
+  <body>
+    <header class="header w-full pt-[40px] fixed left-0 top-0 z-20 transition-all duration-300 ease">
+      <div class="container">
+        <div class="header__content flex items-center justify-between gap-2">
+          <div class="header__logo w-[200px] max-md:w-[150px]"><img src="./img/metaracing-logo.svg" alt=""/></div>
+          <div class="header__navbar relative flex justify-between items-center gap-2.5 font-['Golos'] header__navbar d-none-max-tablet"><a class="block py-2.5 px-5 hover:text-app-accent transition-all duration-200 ease" href="#">Как это работает</a><a class="block py-2.5 px-5 hover:text-app-accent transition-all duration-200 ease" href="#">Цены</a><a class="block py-2.5 px-5 hover:text-app-accent transition-all duration-200 ease" href="#">Сертификаты</a><a class="block py-2.5 px-5 hover:text-app-accent transition-all duration-200 ease" href="#">Мероприятия</a><a class="block py-2.5 px-5 hover:text-app-accent transition-all duration-200 ease" href="#">Клубы</a></div>
+          <div class="header__order d-none-max-tablet">
+            <button class="btn btn-accent">Онлайн-запись</button>
+          </div>
+          <button class="burger d-none-min-tablet" data-modal-open="header-mobile" aria-label="Открыть меню"><span></span><span></span><span></span></button>
+        </div>
+      </div>
+    </header>
+    <div class="header-mobile modal-wrapper" data-modal-block="header-mobile" aria-label="Открыть меню">
+      <div class="
+    header-mobile__content w-full max-h-[500px] flex flex-col gap-6 absolute left-0 top[-18px]  bg-app-white-secondary/60 backdrop-blur-[10px] border border-app-white/10 rounded-b-[30px] py-[40px] px-[30px] 
+    transition-all duration-300 ease-in-out  max-md:px-[20px]
+  ">
+        <div class="x-btn" data-modal-close="header-mobile" aria-label="Открыть меню"></div>
+        <div class="header-mobile__logo max-md:w-[150px]"><img src="./img/metaracing-logo.svg" alt=""/></div>
+        <div class="header-mobile__navbar flex flex-col gap-4"><a class="header__navbar-item" href="#"> Как это работает</a><a class="header__navbar-item" href="#"> Цены</a><a class="header__navbar-item" href="#"> Сертификаты</a><a class="header__navbar-item" href="#"> Мероприятия</a><a class="header__navbar-item" href="#"> Клубы</a></div>
+        <div class="header-mobile__order w-full">
+          <button class="btn btn-accent">Онлайн-запись</button>
+        </div>
+      </div>
+    </div>
+    <main>
+      <section class="sec-banner">
+        <div class="container">
+          <div class="sec-banner__content">
+            <div class="sec-banner__title">Сеть клубов <br/> <span class="text-c-accent">гоночных симуляторов</span></div>
+            <div class="sec-banner__contacts">
+              <div class="sec-banner__contacts-socs"><a class="sec-banner__contacts-soc skewx--10" href="#">
+                  <div class="skewx--10-content"><img src="./img/accent-whatsapp.svg" alt=""/></div></a><a class="sec-banner__contacts-soc skewx--10" href="#">
+                  <div class="skewx--10-content"><img src="./img/accent-tg.svg" alt=""/></div></a><a class="sec-banner__contacts-soc skewx--10" href="#">
+                  <div class="skewx--10-content"><img src="./img/accent-vk.svg" alt=""/></div></a></div>
+              <div class="sec-banner__contacts-address">
+                <p>МОСКВа (<span class="text-c-accent">new</span>)</p>
+                <p>Санкт-петербург</p>
+              </div>
+              <div class="sec-banner__contacts-phones"><a class="sec-banner__contacts-phone" href="tel:"><span class="text-c-accent">+</span> 7 812 665-38-88</a><a class="sec-banner__contacts-phone" href="tel:"><span class="text-c-accent">+</span> 7 812 565-38-88</a></div>
+            </div>
+            <div class="sec-banner__desc">
+              <div class="sec-banner__desc-atmosphere"> <img src="./img/14+.svg" alt=""/>
+                <p>Погрузись в атмосферу — почувствуй настоящую гонку <br/> и прокачай навыки управления автомобилем.</p>
+              </div>
+              <div class="sec-banner__desc-worktime">Ежедневно с 12:00 до 00:00 <br/> Отвечаем моментально.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sec-benefits relative pt-3 pb-16 overflow-visible">
+        <div class="absolute top-[-20%] max-md:top-0 l-0 w-full -z-10"><img class="w-full" src="./img/benefits-bg.png" loading="lazy"/></div>
+        <div class="container">
+          <div class="sec-benefits__list grid grid-cols-4 justify-items-center gap-3 max-lg:grid-cols-2 max-md:grid-cols-1 max-sm:gap-12">
+                  <div class="tech-card relative">
+                    <div class="absolute top-5 left-0 z-1"><img src="./img/bb-1.svg" alt="" loading="lazy"/></div>
+                    <div class="tech-card__img"><img src="./img/benefits-1.png" alt="" loading="lazy"/></div>
+                    <div class="max-lg:pl-4 max-md:pl-0 max-md:text-center">
+                      <div class="tech-card__title mt-8 uppercase font-bold text-2xl max-md:text-xl"><span class="text-app-green">Топовое</span><br/> Оборудование</div>
+                      <div class="tech-card__desc mt-3 text-lg text-c-white-sec max-md:text-base">Симуляторы MetaRacing собраны <br/> на базе профессионального <br/> оборудования от Simagic.</div>
+                    </div>
+                  </div>
+                  <div class="tech-card relative">
+                    <div class="absolute top-5 left-0 z-1"><img src="./img/bb-2.svg" alt="" loading="lazy"/></div>
+                    <div class="tech-card__img"><img src="./img/benefits-2.png" alt="" loading="lazy"/></div>
+                    <div class="max-lg:pl-4 max-md:pl-0 max-md:text-center">
+                      <div class="tech-card__title mt-8 uppercase font-bold text-2xl max-md:text-xl">Максимальная <span class="text-app-pink">Реалистичность</span></div>
+                      <div class="tech-card__desc mt-3 text-lg text-c-white-sec max-md:text-base">Наши симуляторы настроены <br/> профессионалами и копируют <br/> поведение реальных авто.,</div>
+                    </div>
+                  </div>
+                  <div class="tech-card relative">
+                    <div class="absolute top-5 left-0 z-1"><img src="./img/bb-3.svg" alt="" loading="lazy"/></div>
+                    <div class="tech-card__img"><img src="./img/benefits-3.png" alt="" loading="lazy"/></div>
+                    <div class="max-lg:pl-4 max-md:pl-0 max-md:text-center">
+                      <div class="tech-card__title mt-8 uppercase font-bold text-2xl max-md:text-xl"><span class="text-app-sky">Любые автомобили</span>  <br/> На ваш вкус</div>
+                      <div class="tech-card__desc mt-3 text-lg text-c-white-sec max-md:text-base">BMW M-серии, Porsche, <br/> Lamborghini и ещё более 200 <br/> других спорткаров.,</div>
+                    </div>
+                  </div>
+                  <div class="tech-card relative">
+                    <div class="absolute top-5 left-0 z-1"><img src="./img/bb-4.svg" alt="" loading="lazy"/></div>
+                    <div class="tech-card__img"><img src="./img/benefits-4.png" alt="" loading="lazy"/></div>
+                    <div class="max-lg:pl-4 max-md:pl-0 max-md:text-center">
+                      <div class="tech-card__title mt-8 uppercase font-bold text-2xl max-md:text-xl"><span class="text-app-purple">Мультиплеер</span></div>
+                      <div class="tech-card__desc mt-3 text-lg text-c-white-sec max-md:text-base">Приходите компанией <br/> и соревнуйтесь друг с другом <br/> на одной трассе.,</div>
+                    </div>
+                  </div>
+          </div>
+        </div>
+      </section>
+      <section class="sec-simulators py-16 bg-[url('/img/simulators-bg.png')] bg-contain bg-position:[center_70px] bg-no-repeat">
+        <div class="container">
+          <div class="text-center uppercase">
+            <div class="italic font-black text-pink-600 text-3xl md:text-6xl lg:text-[80px]">Автосимуляторы</div>
+            <div class="text-2xl mt-5 text-app-white-secondary max-lg:text-xl max-md:text-lg">Почувствуйте себя настоящим пилотом гоночного болида</div>
+          </div>
+          <div class="sec-simulators__content mt-[90px] flex flex-col items-center">
+            <div class="flex gap-1 max-lg:flex-col  max-lg:gap-10">
+              <div class="flex flex-col gap-1 items-center justify-end">
+                <div class="max-w-[425px] mb-20 max-lg:max-w-[650px]">
+                  <div class="sec-simulators__content-title text-app-white uppercase font-bold text-2xl max-md:text-lg">Профессиональный сетап <br/> <span class="text-app-pink">для полного погружения</span> </div>
+                  <div class="sec-simulators__content-desc text-app-white-secondary mt-[22px] text-[19px] max-md:text-base"><span class="text-app-white">В комплектации:</span> спортивное кресло, педали, коробка передач, ручник, сменные рули и панель кнопок. Руль с обратной связью передает каждую неровность дороги.</div>
+                </div>
+                      <div class="simulators-item relative w-full"><img src="./img/simulators-1.png" loading="lazy"/>
+                        <div class="absolute top-5 z-1 left-[20px] max-md:left-0 max-md:top-2"><img class="max-md:h-[20px]" src="./img/sim-b-1.svg" alt="" loading="lazy"/></div>
+                      </div>
+              </div>
+              <div class="sec-simulators__content-big flex items-end">
+                      <div class="simulators-item relative w-full"><img src="./img/simulators-2.png" loading="lazy"/>
+                        <div class="absolute top-5 z-1 left-[80px] max-md:left-0 max-md:top-2"><img class="max-md:h-[20px]" src="./img/sim-b-2.svg" alt="" loading="lazy"/></div>
+                      </div>
+              </div>
+            </div>
+            <div class="grid grid-cols-3 gap-1 mt-11 gap-y-10  max-lg:grid-cols-2 max-md:grid-cols-2 max-sm:gap-y-12">
+                    <div class="simulators-item relative w-full"><img src="./img/simulators-3.png" loading="lazy"/>
+                      <div class="absolute top-5 z-1 left-[20px] max-md:left-0 max-md:top-2"><img class="max-md:h-[20px]" src="./img/sim-b-3.svg" alt="" loading="lazy"/></div>
+                    </div>
+                    <div class="simulators-item relative w-full"><img src="./img/simulators-4.png" loading="lazy"/>
+                      <div class="absolute top-5 z-1 left-[20px] max-md:left-0 max-md:top-2"><img class="max-md:h-[20px]" src="./img/sim-b-4.svg" alt="" loading="lazy"/></div>
+                    </div>
+                    <div class="simulators-item relative w-full"><img src="./img/simulators-5.png" loading="lazy"/>
+                      <div class="absolute top-5 z-1 left-[20px] max-md:left-0 max-md:top-2"><img class="max-md:h-[20px]" src="./img/sim-b-5.svg" alt="" loading="lazy"/></div>
+                    </div>
+                    <div class="simulators-item relative w-full"><img src="./img/simulators-6.png" loading="lazy"/>
+                    </div>
+                    <div class="simulators-item relative w-full"><img src="./img/simulators-7.png" loading="lazy"/>
+                    </div>
+                    <div class="simulators-item relative w-full"><img src="./img/simulators-8.png" loading="lazy"/>
+                    </div>
+            </div>
+            <button class="btn btn-accent mt-20 max-md:mt-10"> 
+              <p>Подробнее про симуляторы</p><img src="./img/arrow.svg"/>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="sec-games py-20 relative ">
+        <div class="absolute top-[-20%] max-md:top-0 l-0 w-full -z-10"><img class="w-full" src="./img/games-bg.png" loading="lazy"/></div>
+        <div class="container">
+                <div class="text-center uppercase">
+                  <div class="italic font-black text-3xl md:text-6xl lg:text-[80px]"> <span class="text-app-pink"> Игры </span> на любой вкус</div>
+                  <div class="text-2xl mt-6 text-app-white-secondary max-lg:text-xl max-md:text-lg">Отличный способ весело провести время</div>
+                </div>
+          <div class="grid grid-cols-[40%_60%] mt-[70px] max-lg:grid-cols-1 gap-y-6">
+                  <div class="tech-card-content relative max-lg:max-w-[600px] mx-auto">
+                    <div class="absolute top-5 z-1 left-[30px] max-md:left-0 max-md:top-2"><img class="max-md:h-[30px]" src="./img/gb-1.svg" alt="" loading="lazy"/></div>
+                    <div class="group/card relative w-full flex items-end cursor-pointer">
+                      <picture>
+                        <source media="(max-width: 1024px)" srcset="img/mob-games-1.png"/><img class="left-0 bottom-0 w-full -z-1" src="img/games-1.png" loading="lazy"/>
+                      </picture>
+                      <div class="absolute left-0 bottom-0 w-full flex justify-between items-center pl-[44px] pr-[80px] pb-[30px] gap-2.5 max-[1200px]:pr-[60px] max-[1200px]:pl-[30px] max-[400px]:pr-[40px] flex-wrap gap-x-4" href="">
+                        <div class="text-[28px] max-md:text-xl italic font-black text-app-white group-hover/card:scale-110 transition duration-300 ease-in-out uppercase max-w-[80%] max-md:max-w-[57%] ">BeamNG.drive</div>
+                        <div class="w-[80px] h-[55px] max-md:w-[60px] max-md:h-[40px] flex justify-center items-center bg-app-white rounded-2xl group-hover/card:scale-110 transition duration-300 ease-in-out"><img src="./img/arrow-purple.svg" loading="lazy"/></div>
+                      </div>
+                    </div>
+                    <div class="relative py-7 pl-[48px] pr-[80px] max-md:pl-[38px] max-md:pr-[60px] text-app-white-secondary text-[19px] max-md:text-base max-sm:text-[14px] font-medium text-left">Для тех, кто любит «нырять в поток». Берите друга, выбирайте машину — и мы отправим вас на трассу с трафиком. Проверьте мастерство в динамике!
+                      <picture>
+                        <source media="(max-width: 1024px)" srcset="img/mob-games-1-before.png"/><img class="absolute left-0 bottom-0 w-full -z-2 max-lg:h-[300px]" src="img/games-1-before.png" loading="lazy"/>
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="tech-card-content relative max-lg:max-w-[600px] mx-auto">
+                    <div class="absolute top-5 z-1 left-[30px] max-md:left-0 max-md:top-2"><img class="max-md:h-[30px]" src="./img/gb-2.svg" alt="" loading="lazy"/></div>
+                    <div class="group/card relative w-full flex items-end cursor-pointer">
+                      <picture>
+                        <source media="(max-width: 1024px)" srcset="img/mob-games-2.png"/><img class="left-0 bottom-0 w-full -z-1" src="img/games-2.png" loading="lazy"/>
+                      </picture>
+                      <div class="absolute left-0 bottom-0 w-full flex justify-between items-center pl-[44px] pr-[80px] pb-[30px] gap-2.5 max-[1200px]:pr-[60px] max-[1200px]:pl-[30px] max-[400px]:pr-[40px] flex-wrap gap-x-4" href="">
+                        <div class="text-[28px] max-md:text-xl italic font-black text-app-white group-hover/card:scale-110 transition duration-300 ease-in-out uppercase max-w-[80%] max-md:max-w-[57%] ">Assetto Corsa</div>
+                        <div class="w-[80px] h-[55px] max-md:w-[60px] max-md:h-[40px] flex justify-center items-center bg-app-white rounded-2xl group-hover/card:scale-110 transition duration-300 ease-in-out"><img src="./img/arrow-purple.svg" loading="lazy"/></div>
+                      </div>
+                    </div>
+                    <div class="relative py-7 pl-[48px] pr-[80px] max-md:pl-[38px] max-md:pr-[60px] text-app-white-secondary text-[19px] max-md:text-base max-sm:text-[14px] font-medium text-left">Управляемый занос — один из самых зрелищных видов автоспорта. <br/> Почувствуйте себя дрифт-пилотом: катайтесь по трассам со всего мира. <br/> Дым, углы и море удовольствия!
+                      <picture>
+                        <source media="(max-width: 1024px)" srcset="img/mob-games-2-before.png"/><img class="absolute left-0 bottom-0 w-full -z-2 max-lg:h-[300px]" src="img/games-2-before.png" loading="lazy"/>
+                      </picture>
+                    </div>
+                  </div>
+          </div>
+          <div class="grid grid-cols-[47%_52%] mt-15 max-md:mt-6 max-lg:grid-cols-1 gap-y-6">
+                  <div class="tech-card-content relative max-lg:max-w-[600px] mx-auto">
+                    <div class="absolute top-5 z-1 left-[30px] max-md:left-0 max-md:top-2"><img class="max-md:h-[30px]" src="./img/gb-3.svg" alt="" loading="lazy"/></div>
+                    <div class="group/card relative w-full flex items-end cursor-pointer">
+                      <picture>
+                        <source media="(max-width: 1024px)" srcset="img/mob-games-3.png"/><img class="left-0 bottom-0 w-full -z-1" src="img/games-3.png" loading="lazy"/>
+                      </picture>
+                      <div class="absolute left-0 bottom-0 w-full flex justify-between items-center pl-[44px] pr-[80px] pb-[30px] gap-2.5 max-[1200px]:pr-[60px] max-[1200px]:pl-[30px] max-[400px]:pr-[40px] flex-wrap gap-x-4" href="">
+                        <div class="text-[28px] max-md:text-xl italic font-black text-app-white group-hover/card:scale-110 transition duration-300 ease-in-out uppercase max-w-[80%] max-md:max-w-[57%] ">Dirt Rally 2.0</div>
+                        <div class="w-[80px] h-[55px] max-md:w-[60px] max-md:h-[40px] flex justify-center items-center bg-app-white rounded-2xl group-hover/card:scale-110 transition duration-300 ease-in-out"><img src="./img/arrow-purple.svg" loading="lazy"/></div>
+                      </div>
+                    </div>
+                    <div class="relative py-7 pl-[48px] pr-[80px] max-md:pl-[38px] max-md:pr-[60px] text-app-white-secondary text-[19px] max-md:text-base max-sm:text-[14px] font-medium text-left">Любите кольцевые гонки или ралли? Включайся в заезд <br/> на Nurburgring, Spa, Sochi Autodrom и других культовых трассах мира. Соревонвательные режимы и гоночные машины любых классов уже ждут вас.
+                      <picture>
+                        <source media="(max-width: 1024px)" srcset="img/mob-games-3-before.png"/><img class="absolute left-0 bottom-0 w-full -z-2 max-lg:h-[300px]" src="img/games-3-before.png" loading="lazy"/>
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="tech-card-content relative max-lg:max-w-[600px] mx-auto">
+                    <div class="absolute top-5 z-1 left-[30px] max-md:left-0 max-md:top-2"><img class="max-md:h-[30px]" src="./img/gb-4.svg" alt="" loading="lazy"/></div>
+                    <div class="group/card relative w-full flex items-end cursor-pointer">
+                      <picture>
+                        <source media="(max-width: 1024px)" srcset="img/mob-games-4.png"/><img class="left-0 bottom-0 w-full -z-1" src="img/games-4.png" loading="lazy"/>
+                      </picture>
+                      <div class="absolute left-0 bottom-0 w-full flex justify-between items-center pl-[44px] pr-[80px] pb-[30px] gap-2.5 max-[1200px]:pr-[60px] max-[1200px]:pl-[30px] max-[400px]:pr-[40px] flex-wrap gap-x-4" href="">
+                        <div class="text-[28px] max-md:text-xl italic font-black text-app-white group-hover/card:scale-110 transition duration-300 ease-in-out uppercase max-w-[80%] max-md:max-w-[57%] ">Euro Truck Simulator 2</div>
+                        <div class="w-[80px] h-[55px] max-md:w-[60px] max-md:h-[40px] flex justify-center items-center bg-app-white rounded-2xl group-hover/card:scale-110 transition duration-300 ease-in-out"><img src="./img/arrow-purple.svg" loading="lazy"/></div>
+                      </div>
+                    </div>
+                    <div class="relative py-7 pl-[48px] pr-[80px] max-md:pl-[38px] max-md:pr-[60px] text-app-white-secondary text-[19px] max-md:text-base max-sm:text-[14px] font-medium text-left">Хотите отдохнуть после сложного дня? Мы отправим вас в мир больших машин и техники. Здесь вы сможете почувствовать себя водителем фуры, взять груз и с чашечкой вкусного кофе отправиться в путешествие.
+                      <picture>
+                        <source media="(max-width: 1024px)" srcset="img/mob-games-4-before.png"/><img class="absolute left-0 bottom-0 w-full -z-2 max-lg:h-[300px]" src="img/games-4-before.png" loading="lazy"/>
+                      </picture>
+                    </div>
+                  </div>
+          </div>
+          <div class="grid grid-cols-[27.6%_39.5%_36%] mt-10 max-md:mt-6 max-lg:grid-cols-1 gap-y-6">
+                  <div class="tech-card-content relative max-lg:max-w-[600px] mx-auto">
+                    <div class="absolute top-5 z-1 left-[30px] max-md:left-0 max-md:top-2"><img class="max-md:h-[30px]" src="./img/gb-5.svg" alt="" loading="lazy"/></div>
+                    <div class="group/card relative w-full flex items-end cursor-pointer">
+                      <picture>
+                        <source media="(max-width: 1024px)" srcset="img/mob-games-5.png"/><img class="left-0 bottom-0 w-full -z-1" src="img/games-5.png" loading="lazy"/>
+                      </picture>
+                      <div class="absolute left-0 bottom-0 w-full flex justify-between items-center pl-[44px] pr-[80px] pb-[30px] gap-2.5 max-[1200px]:pr-[60px] max-[1200px]:pl-[30px] max-[400px]:pr-[40px] flex-wrap gap-x-4" href="">
+                        <div class="text-[28px] max-md:text-xl italic font-black text-app-white group-hover/card:scale-110 transition duration-300 ease-in-out uppercase max-w-[80%] max-md:max-w-[57%] ">Wreckfest</div>
+                        <div class="w-[80px] h-[55px] max-md:w-[60px] max-md:h-[40px] flex justify-center items-center bg-app-white rounded-2xl group-hover/card:scale-110 transition duration-300 ease-in-out"><img src="./img/arrow-purple.svg" loading="lazy"/></div>
+                      </div>
+                    </div>
+                    <div class="relative py-7 pl-[48px] pr-[80px] max-md:pl-[38px] max-md:pr-[60px] text-app-white-secondary text-[19px] max-md:text-base max-sm:text-[14px] font-medium text-left">Самый фановый режим <br/> для компании. Мы отправим <br/> вас на арену, где нужно разбить <br/> машины ваших друзей. <br/> Победит сильнейший!
+                      <picture>
+                        <source media="(max-width: 1024px)" srcset="img/mob-games-5-before.png"/><img class="absolute left-0 bottom-0 w-full -z-2 max-lg:h-[300px]" src="img/games-5-before.png" loading="lazy"/>
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="tech-card-content relative max-lg:max-w-[600px] mx-auto">
+                    <div class="absolute top-5 z-1 left-[30px] max-md:left-0 max-md:top-2"><img class="max-md:h-[30px]" src="./img/gb-6.svg" alt="" loading="lazy"/></div>
+                    <div class="group/card relative w-full flex items-end cursor-pointer">
+                      <picture>
+                        <source media="(max-width: 1024px)" srcset="img/mob-games-6.png"/><img class="left-0 bottom-0 w-full -z-1" src="img/games-6.png" loading="lazy"/>
+                      </picture>
+                      <div class="absolute left-0 bottom-0 w-full flex justify-between items-center pl-[44px] pr-[80px] pb-[30px] gap-2.5 max-[1200px]:pr-[60px] max-[1200px]:pl-[30px] max-[400px]:pr-[40px] flex-wrap gap-x-4" href="">
+                        <div class="text-[28px] max-md:text-xl italic font-black text-app-white group-hover/card:scale-110 transition duration-300 ease-in-out uppercase max-w-[80%] max-md:max-w-[57%] ">Assetto Corsa</div>
+                        <div class="w-[80px] h-[55px] max-md:w-[60px] max-md:h-[40px] flex justify-center items-center bg-app-white rounded-2xl group-hover/card:scale-110 transition duration-300 ease-in-out"><img src="./img/arrow-purple.svg" loading="lazy"/></div>
+                      </div>
+                    </div>
+                    <div class="relative py-7 pl-[48px] pr-[80px] max-md:pl-[38px] max-md:pr-[60px] text-app-white-secondary text-[19px] max-md:text-base max-sm:text-[14px] font-medium text-left">Картинг — это то, с чего начинали большинство автоспортсменов. У нас вы можете сесть за болид <br/> и начать свой путь в автоспорте с картинга, а затем перейти в более суровые условия Формулы 1. <br/> Или сразу, если вы готовы!
+                      <picture>
+                        <source media="(max-width: 1024px)" srcset="img/mob-games-6-before.png"/><img class="absolute left-0 bottom-0 w-full -z-2 max-lg:h-[300px]" src="img/games-6-before.png" loading="lazy"/>
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="tech-card-content relative max-lg:max-w-[600px] mx-auto">
+                    <div class="absolute top-5 z-1 left-[30px] max-md:left-0 max-md:top-2"><img class="max-md:h-[30px]" src="./img/gb-7.svg" alt="" loading="lazy"/></div>
+                    <div class="group/card relative w-full flex items-end cursor-pointer">
+                      <picture>
+                        <source media="(max-width: 1024px)" srcset="img/mob-games-7.png"/><img class="left-0 bottom-0 w-full -z-1" src="img/games-7.png" loading="lazy"/>
+                      </picture>
+                      <div class="absolute left-0 bottom-0 w-full flex justify-between items-center pl-[44px] pr-[80px] pb-[30px] gap-2.5 max-[1200px]:pr-[60px] max-[1200px]:pl-[30px] max-[400px]:pr-[40px] flex-wrap gap-x-4" href="">
+                        <div class="text-[28px] max-md:text-xl italic font-black text-app-white group-hover/card:scale-110 transition duration-300 ease-in-out uppercase max-w-[80%] max-md:max-w-[57%] ">City Car Driving</div>
+                        <div class="w-[80px] h-[55px] max-md:w-[60px] max-md:h-[40px] flex justify-center items-center bg-app-white rounded-2xl group-hover/card:scale-110 transition duration-300 ease-in-out"><img src="./img/arrow-purple.svg" loading="lazy"/></div>
+                      </div>
+                    </div>
+                    <div class="relative py-7 pl-[48px] pr-[80px] max-md:pl-[38px] max-md:pr-[60px] text-app-white-secondary text-[19px] max-md:text-base max-sm:text-[14px] font-medium text-left">Ваш путь к водительским правам начинается <br/> прямо сейчас! Симулятор вождения поможет <br/> вам безопасно научиться водить автомобиль, улучшить и отточить все самые необходимые <br/> навыки управления машиной.
+                      <picture>
+                        <source media="(max-width: 1024px)" srcset="img/mob-games-7-before.png"/><img class="absolute left-0 bottom-0 w-full -z-2 max-lg:h-[300px]" src="img/games-7-before.png" loading="lazy"/>
+                      </picture>
+                    </div>
+                  </div>
+          </div>
+        </div>
+      </section>
+      <section class="sec-prices relative py-20 overflow-visible">
+        <div class="absolute top-[-15%] max-md:top-0 l-0 w-full -z-10"><img class="w-full" src="./img/prices-bg.png" loading="lazy"/></div>
+        <div class="container">
+          <div class="text-center uppercase">
+            <div class="italic font-black text-3xl md:text-6xl lg:text-[80px]">Прайс <span class="text-app-pink">и акции</span></div>
+          </div>
+          <div class="mt-[75px]">
+                  <div class="flex justify-center" data-tabs-wrapper="data-tabs-wrapper">
+                    <div class="tabs-buttons flex gap-1 items-center p-2 -skew-x-12 rounded-[20px] border-app-border border">
+                      <div class="tab-button py-4 px-9 max-md:px-4 rounded-2xl cursor-pointer font-bold transition duration-300 ease-in-out active" data-tab-btn="t1">
+                        <p class="skew-x-12">Сакнт-Петербург</p>
+                      </div>
+                      <div class="tab-button py-4 px-9 max-md:px-4 rounded-2xl cursor-pointer font-bold transition duration-300 ease-in-out " data-tab-btn="t2">
+                        <p class="skew-x-12">Москва</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-content w-full mt-[75px] max-md:mt-[35px]">
+                    <div class="tab-pane active" data-tab-item="t1">
+                      <div class="grid grid-cols-3 max-[1300px]:gap-y-8 max-md:gap-y-0 max-[1300px]:flex max-[1300px]:flex-wrap max-[1300px]:justify-center gap-12 px-7">
+                              <div class="max-md:scale-95 z-10">
+                                <div class="sec-games__prices relative py-[30px] px-[50px] max-[1500px]:px-[35px] max-md:px-[25px] rounded-[15px] overflow-hidden -skew-x-10   w-full max-[1300px]:max-w-[500px] lg:min-h-[455px]">
+                                  <div class="absolute w-full h-full top-0 left-0 bg-linear-220 from-[#1e3047] to-app-purple border-transparent [background-clip:content-box,border-box] bg-origin-border -z-2"></div>
+                                  <div class="absolute rounded-[15px] left-[1.3px] top-[1.3px] w-[calc(100%-3px)] h-[calc(100%-3px)] -z-1 bg-linear-326 from-app-purple/60 to-transparent to-40% bg-[#091119] backdrop-blur-[40px]"></div>
+                                  <div class="skew-x-10 h-full">
+                                    <div class="-skew-x-9 flex flex-col h-full">
+                                      <div class="sec-games__prices-title text-[32px] max-md:text-2xl italic font-black uppercase leading-[120%] "><span class="text-app-purple">Статичный</span> симулятор</div>
+                                      <div class="sec-games__prices-subtitle mt-2.5 mb-[22px] text-[19px] max-md:text-lg font-['Golos'] font-semibold">во всех клубах</div>
+                                      <ul class="sec-games__prices-list">
+                                        <li class="sec-games__prices-price text-[19px] max-md:text-base font-medium flex justify-between gap-1 pb-2.5 pt-5 border-b last:border-b-0 last:pb-0 first:pt-0" style="border-color: #AC9CDB"><span class="font-['Golos']] text-app-white-secondary">30 минут</span>
+                                          <div class="min-w-[130px] text-right"><span class="text-[28px] italic font-black text-right max-[1300px]:text-2xl max-md:text-xl">790 ₽</span>
+                                          </div>
+                                        </li>
+                                        <li class="sec-games__prices-price text-[19px] max-md:text-base font-medium flex justify-between gap-1 pb-2.5 pt-5 border-b last:border-b-0 last:pb-0 first:pt-0" style="border-color: #AC9CDB"><span class="font-['Golos']] text-app-white-secondary">1 час</span>
+                                          <div class="min-w-[130px] text-right"><span class="text-[28px] italic font-black text-right max-[1300px]:text-2xl max-md:text-xl">1390 ₽</span>
+                                          </div>
+                                        </li>
+                                        <li class="sec-games__prices-price text-[19px] max-md:text-base font-medium flex justify-between gap-1 pb-2.5 pt-5 border-b last:border-b-0 last:pb-0 first:pt-0" style="border-color: #AC9CDB"><span class="font-['Golos']] text-app-white-secondary">2 часа</span>
+                                          <div class="min-w-[130px] text-right"><span class="text-[21px] italic font-bold opacity-50 ml-auto mr-3.5 max-md:text-base">2780 ₽</span><span class="text-[28px] italic font-black text-right max-[1300px]:text-2xl max-md:text-xl">2490 ₽</span>
+                                          </div>
+                                        </li>
+                                        <li class="sec-games__prices-price text-[19px] max-md:text-base font-medium flex justify-between gap-1 pb-2.5 pt-5 border-b last:border-b-0 last:pb-0 first:pt-0" style="border-color: #AC9CDB"><span class="font-['Golos']] text-app-white-secondary">3 часа</span>
+                                          <div class="min-w-[130px] text-right"><span class="text-[21px] italic font-bold opacity-50 ml-auto mr-3.5 max-md:text-base">4170 ₽</span><span class="text-[28px] italic font-black text-right max-[1300px]:text-2xl max-md:text-xl">3590 ₽</span>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="relative pr-11 py-7.5 -z-1">
+                                  <div class="card-tech-before-gradient-purple absolute  w-full bottom-0 left-0 -skew-x-10 rounded-[15px] border border-app-white/10 bg-app-card-bg/40 h-[380px]"></div>
+                                  <button class="btn-purple btn w-full z-1">Онлайн-запись</button>
+                                </div>
+                              </div>
+                              <div class="max-md:scale-95 z-10">
+                                <div class="sec-games__prices relative py-[30px] px-[50px] max-[1500px]:px-[35px] max-md:px-[25px] rounded-[15px] overflow-hidden -skew-x-10   w-full max-[1300px]:max-w-[500px] lg:min-h-[455px]">
+                                  <div class="absolute w-full h-full top-0 left-0 bg-linear-220 from-[#1e3047] to-app-purple border-transparent [background-clip:content-box,border-box] bg-origin-border -z-2"></div>
+                                  <div class="absolute rounded-[15px] left-[1.3px] top-[1.3px] w-[calc(100%-3px)] h-[calc(100%-3px)] -z-1 bg-linear-326 from-app-purple/60 to-transparent to-40% bg-[#091119] backdrop-blur-[40px]"></div>
+                                  <div class="skew-x-10 h-full">
+                                    <div class="-skew-x-9 flex flex-col h-full">
+                                      <div class="sec-games__prices-title text-[32px] max-md:text-2xl italic font-black uppercase leading-[120%] "><span class="text-app-purple">Подвижный</span> симулятор</div>
+                                      <div class="sec-games__prices-subtitle mt-2.5 mb-[22px] text-[19px] max-md:text-lg font-['Golos'] font-semibold">в MetaRacing Московская</div>
+                                      <ul class="sec-games__prices-list">
+                                        <li class="sec-games__prices-price text-[19px] max-md:text-base font-medium flex justify-between gap-1 pb-2.5 pt-5 border-b last:border-b-0 last:pb-0 first:pt-0" style="border-color: #AC9CDB"><span class="font-['Golos']] text-app-white-secondary">15 минут</span>
+                                          <div class="min-w-[130px] text-right"><span class="text-[28px] italic font-black text-right max-[1300px]:text-2xl max-md:text-xl">790 ₽</span>
+                                          </div>
+                                        </li>
+                                        <li class="sec-games__prices-price text-[19px] max-md:text-base font-medium flex justify-between gap-1 pb-2.5 pt-5 border-b last:border-b-0 last:pb-0 first:pt-0" style="border-color: #AC9CDB"><span class="font-['Golos']] text-app-white-secondary">30 минут</span>
+                                          <div class="min-w-[130px] text-right"><span class="text-[28px] italic font-black text-right max-[1300px]:text-2xl max-md:text-xl">1690 ₽</span>
+                                          </div>
+                                        </li>
+                                        <li class="sec-games__prices-price text-[19px] max-md:text-base font-medium flex justify-between gap-1 pb-2.5 pt-5 border-b last:border-b-0 last:pb-0 first:pt-0" style="border-color: #AC9CDB"><span class="font-['Golos']] text-app-white-secondary">1 час</span>
+                                          <div class="min-w-[130px] text-right"><span class="text-[28px] italic font-black text-right max-[1300px]:text-2xl max-md:text-xl">2390 ₽</span>
+                                          </div>
+                                        </li>
+                                        <li class="sec-games__prices-price text-[19px] max-md:text-base font-medium flex justify-between gap-1 pb-2.5 pt-5 border-b last:border-b-0 last:pb-0 first:pt-0" style="border-color: #AC9CDB"><span class="font-['Golos']] text-app-white-secondary">2 часа</span>
+                                          <div class="min-w-[130px] text-right"><span class="text-[28px] italic font-black text-right max-[1300px]:text-2xl max-md:text-xl">3490 ₽</span>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="relative pr-11 py-7.5 -z-1">
+                                  <div class="card-tech-before-gradient-purple absolute  w-full bottom-0 left-0 -skew-x-10 rounded-[15px] border border-app-white/10 bg-app-card-bg/40 h-[380px]"></div>
+                                  <button class="btn-purple btn w-full z-1">Онлайн-запись</button>
+                                </div>
+                              </div>
+                              <div class="max-md:scale-95 z-10">
+                                <div class="sec-games__prices relative py-[30px] px-[50px] max-[1500px]:px-[35px] max-md:px-[25px] rounded-[15px] overflow-hidden -skew-x-10   w-full max-[1300px]:max-w-[500px] lg:min-h-[455px]">
+                                  <div class="absolute w-full h-full top-0 left-0 bg-linear-220 from-[#1e3047] to-app-pink border-transparent [background-clip:content-box,border-box] bg-origin-border -z-2"></div>
+                                  <div class="absolute rounded-[15px] left-[1.3px] top-[1.3px] w-[calc(100%-3px)] h-[calc(100%-3px)] -z-1 bg-linear-326 from-app-pink/60 to-transparent to-40% bg-[#091119] backdrop-blur-[40px]"></div>
+                                  <div class="skew-x-10 h-full">
+                                    <div class="-skew-x-9 flex flex-col h-full">
+                                      <div class="sec-games__prices-title text-[32px] max-md:text-2xl italic font-black uppercase leading-[120%] "><span class="text-app-accent">Абонементы</span></div>
+                                      <div class="sec-games__prices-subtitle mt-2.5 mb-[22px] text-[19px] max-md:text-lg font-['Golos'] font-semibold">для всех клубов</div>
+                                      <ul class="sec-games__prices-list">
+                                        <li class="sec-games__prices-price text-[19px] max-md:text-base font-medium flex justify-between gap-1 pb-2.5 pt-5 border-b last:border-b-0 last:pb-0 first:pt-0" style="border-color: #D89CDB"><span class="font-['Golos']] text-app-white-secondary">10 часов / статичный <br/> 5 часов  / подвижный</span>
+                                          <div class="min-w-[130px] text-right"><span class="text-[28px] italic font-black text-right max-[1300px]:text-2xl max-md:text-xl">10 990 ₽</span>
+                                          </div>
+                                        </li>
+                                        <li class="sec-games__prices-price text-[19px] max-md:text-base font-medium flex justify-between gap-1 pb-2.5 pt-5 border-b last:border-b-0 last:pb-0 first:pt-0" style="border-color: #D89CDB"><span class="font-['Golos']] text-app-white-secondary">14 часов / статичный <br/> 7 часов  / подвижный</span>
+                                          <div class="min-w-[130px] text-right"><span class="text-[28px] italic font-black text-right max-[1300px]:text-2xl max-md:text-xl">16 590 ₽</span>
+                                          </div>
+                                        </li>
+                                        <li class="sec-games__prices-price text-[19px] max-md:text-base font-medium flex justify-between gap-1 pb-2.5 pt-5 border-b last:border-b-0 last:pb-0 first:pt-0" style="border-color: #D89CDB"><span class="font-['Golos']] text-app-white-secondary">18 часов / статичный <br/> 9 часов / подвижный</span>
+                                          <div class="min-w-[130px] text-right"><span class="text-[28px] italic font-black text-right max-[1300px]:text-2xl max-md:text-xl">20 990 ₽</span>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="relative pr-11 py-7.5 -z-1">
+                                  <div class="card-tech-before-gradient absolute  w-full bottom-0 left-0 -skew-x-10 rounded-[15px] border border-app-white/10 bg-app-card-bg/40 h-[380px]"></div>
+                                  <button class="btn-accent btn w-full z-1">Онлайн-запись</button>
+                                </div>
+                              </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane" data-tab-item="t2">
+                      <div class="grid grid-cols-3 max-[1300px]:gap-y-8 max-md:gap-y-0 max-[1300px]:flex max-[1300px]:flex-wrap max-[1300px]:justify-center gap-12 px-7">
+                              <div class="max-md:scale-95 z-10">
+                                <div class="sec-games__prices relative py-[30px] px-[50px] max-[1500px]:px-[35px] max-md:px-[25px] rounded-[15px] overflow-hidden -skew-x-10   w-full max-[1300px]:max-w-[500px] lg:min-h-[455px]">
+                                  <div class="absolute w-full h-full top-0 left-0 bg-linear-220 from-[#1e3047] to-app-pink border-transparent [background-clip:content-box,border-box] bg-origin-border -z-2"></div>
+                                  <div class="absolute rounded-[15px] left-[1.3px] top-[1.3px] w-[calc(100%-3px)] h-[calc(100%-3px)] -z-1 bg-linear-326 from-app-pink/60 to-transparent to-40% bg-[#091119] backdrop-blur-[40px]"></div>
+                                  <div class="skew-x-10 h-full">
+                                    <div class="-skew-x-9 flex flex-col h-full">
+                                      <div class="sec-games__prices-title text-[32px] max-md:text-2xl italic font-black uppercase leading-[120%] "><span class="text-app-accent">Абонементы</span></div>
+                                      <div class="sec-games__prices-subtitle mt-2.5 mb-[22px] text-[19px] max-md:text-lg font-['Golos'] font-semibold">для всех клубов</div>
+                                      <ul class="sec-games__prices-list">
+                                        <li class="sec-games__prices-price text-[19px] max-md:text-base font-medium flex justify-between gap-1 pb-2.5 pt-5 border-b last:border-b-0 last:pb-0 first:pt-0" style="border-color: #D89CDB"><span class="font-['Golos']] text-app-white-secondary">10 часов / статичный <br/> 5 часов  / подвижный</span>
+                                          <div class="min-w-[130px] text-right"><span class="text-[28px] italic font-black text-right max-[1300px]:text-2xl max-md:text-xl">10 990 ₽</span>
+                                          </div>
+                                        </li>
+                                        <li class="sec-games__prices-price text-[19px] max-md:text-base font-medium flex justify-between gap-1 pb-2.5 pt-5 border-b last:border-b-0 last:pb-0 first:pt-0" style="border-color: #D89CDB"><span class="font-['Golos']] text-app-white-secondary">14 часов / статичный <br/> 7 часов  / подвижный</span>
+                                          <div class="min-w-[130px] text-right"><span class="text-[28px] italic font-black text-right max-[1300px]:text-2xl max-md:text-xl">16 590 ₽</span>
+                                          </div>
+                                        </li>
+                                        <li class="sec-games__prices-price text-[19px] max-md:text-base font-medium flex justify-between gap-1 pb-2.5 pt-5 border-b last:border-b-0 last:pb-0 first:pt-0" style="border-color: #D89CDB"><span class="font-['Golos']] text-app-white-secondary">18 часов / статичный <br/> 9 часов / подвижный</span>
+                                          <div class="min-w-[130px] text-right"><span class="text-[28px] italic font-black text-right max-[1300px]:text-2xl max-md:text-xl">20 990 ₽</span>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="relative pr-11 py-7.5 -z-1">
+                                  <div class="card-tech-before-gradient absolute  w-full bottom-0 left-0 -skew-x-10 rounded-[15px] border border-app-white/10 bg-app-card-bg/40 h-[380px]"></div>
+                                  <button class="btn-accent btn w-full z-1">Онлайн-запись</button>
+                                </div>
+                              </div>
+                              <div class="max-md:scale-95 z-10">
+                                <div class="sec-games__prices relative py-[30px] px-[50px] max-[1500px]:px-[35px] max-md:px-[25px] rounded-[15px] overflow-hidden -skew-x-10   w-full max-[1300px]:max-w-[500px] lg:min-h-[455px]">
+                                  <div class="absolute w-full h-full top-0 left-0 bg-linear-220 from-[#1e3047] to-app-purple border-transparent [background-clip:content-box,border-box] bg-origin-border -z-2"></div>
+                                  <div class="absolute rounded-[15px] left-[1.3px] top-[1.3px] w-[calc(100%-3px)] h-[calc(100%-3px)] -z-1 bg-linear-326 from-app-purple/60 to-transparent to-40% bg-[#091119] backdrop-blur-[40px]"></div>
+                                  <div class="skew-x-10 h-full">
+                                    <div class="-skew-x-9 flex flex-col h-full">
+                                      <div class="sec-games__prices-title text-[32px] max-md:text-2xl italic font-black uppercase leading-[120%] "><span class="text-app-purple">Подвижный</span> симулятор</div>
+                                      <div class="sec-games__prices-subtitle mt-2.5 mb-[22px] text-[19px] max-md:text-lg font-['Golos'] font-semibold">в MetaRacing Московская</div>
+                                      <ul class="sec-games__prices-list">
+                                        <li class="sec-games__prices-price text-[19px] max-md:text-base font-medium flex justify-between gap-1 pb-2.5 pt-5 border-b last:border-b-0 last:pb-0 first:pt-0" style="border-color: #AC9CDB"><span class="font-['Golos']] text-app-white-secondary">15 минут</span>
+                                          <div class="min-w-[130px] text-right"><span class="text-[28px] italic font-black text-right max-[1300px]:text-2xl max-md:text-xl">790 ₽</span>
+                                          </div>
+                                        </li>
+                                        <li class="sec-games__prices-price text-[19px] max-md:text-base font-medium flex justify-between gap-1 pb-2.5 pt-5 border-b last:border-b-0 last:pb-0 first:pt-0" style="border-color: #AC9CDB"><span class="font-['Golos']] text-app-white-secondary">30 минут</span>
+                                          <div class="min-w-[130px] text-right"><span class="text-[28px] italic font-black text-right max-[1300px]:text-2xl max-md:text-xl">1690 ₽</span>
+                                          </div>
+                                        </li>
+                                        <li class="sec-games__prices-price text-[19px] max-md:text-base font-medium flex justify-between gap-1 pb-2.5 pt-5 border-b last:border-b-0 last:pb-0 first:pt-0" style="border-color: #AC9CDB"><span class="font-['Golos']] text-app-white-secondary">1 час</span>
+                                          <div class="min-w-[130px] text-right"><span class="text-[28px] italic font-black text-right max-[1300px]:text-2xl max-md:text-xl">2390 ₽</span>
+                                          </div>
+                                        </li>
+                                        <li class="sec-games__prices-price text-[19px] max-md:text-base font-medium flex justify-between gap-1 pb-2.5 pt-5 border-b last:border-b-0 last:pb-0 first:pt-0" style="border-color: #AC9CDB"><span class="font-['Golos']] text-app-white-secondary">2 часа</span>
+                                          <div class="min-w-[130px] text-right"><span class="text-[28px] italic font-black text-right max-[1300px]:text-2xl max-md:text-xl">3490 ₽</span>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="relative pr-11 py-7.5 -z-1">
+                                  <div class="card-tech-before-gradient-purple absolute  w-full bottom-0 left-0 -skew-x-10 rounded-[15px] border border-app-white/10 bg-app-card-bg/40 h-[380px]"></div>
+                                  <button class="btn-purple btn w-full z-1">Онлайн-запись</button>
+                                </div>
+                              </div>
+                              <div class="max-md:scale-95 z-10">
+                                <div class="sec-games__prices relative py-[30px] px-[50px] max-[1500px]:px-[35px] max-md:px-[25px] rounded-[15px] overflow-hidden -skew-x-10   w-full max-[1300px]:max-w-[500px] lg:min-h-[455px]">
+                                  <div class="absolute w-full h-full top-0 left-0 bg-linear-220 from-[#1e3047] to-app-purple border-transparent [background-clip:content-box,border-box] bg-origin-border -z-2"></div>
+                                  <div class="absolute rounded-[15px] left-[1.3px] top-[1.3px] w-[calc(100%-3px)] h-[calc(100%-3px)] -z-1 bg-linear-326 from-app-purple/60 to-transparent to-40% bg-[#091119] backdrop-blur-[40px]"></div>
+                                  <div class="skew-x-10 h-full">
+                                    <div class="-skew-x-9 flex flex-col h-full">
+                                      <div class="sec-games__prices-title text-[32px] max-md:text-2xl italic font-black uppercase leading-[120%] "><span class="text-app-purple">Статичный</span> симулятор</div>
+                                      <div class="sec-games__prices-subtitle mt-2.5 mb-[22px] text-[19px] max-md:text-lg font-['Golos'] font-semibold">во всех клубах</div>
+                                      <ul class="sec-games__prices-list">
+                                        <li class="sec-games__prices-price text-[19px] max-md:text-base font-medium flex justify-between gap-1 pb-2.5 pt-5 border-b last:border-b-0 last:pb-0 first:pt-0" style="border-color: #AC9CDB"><span class="font-['Golos']] text-app-white-secondary">30 минут</span>
+                                          <div class="min-w-[130px] text-right"><span class="text-[28px] italic font-black text-right max-[1300px]:text-2xl max-md:text-xl">790 ₽</span>
+                                          </div>
+                                        </li>
+                                        <li class="sec-games__prices-price text-[19px] max-md:text-base font-medium flex justify-between gap-1 pb-2.5 pt-5 border-b last:border-b-0 last:pb-0 first:pt-0" style="border-color: #AC9CDB"><span class="font-['Golos']] text-app-white-secondary">1 час</span>
+                                          <div class="min-w-[130px] text-right"><span class="text-[28px] italic font-black text-right max-[1300px]:text-2xl max-md:text-xl">1390 ₽</span>
+                                          </div>
+                                        </li>
+                                        <li class="sec-games__prices-price text-[19px] max-md:text-base font-medium flex justify-between gap-1 pb-2.5 pt-5 border-b last:border-b-0 last:pb-0 first:pt-0" style="border-color: #AC9CDB"><span class="font-['Golos']] text-app-white-secondary">2 часа</span>
+                                          <div class="min-w-[130px] text-right"><span class="text-[21px] italic font-bold opacity-50 ml-auto mr-3.5 max-md:text-base">2780 ₽</span><span class="text-[28px] italic font-black text-right max-[1300px]:text-2xl max-md:text-xl">2490 ₽</span>
+                                          </div>
+                                        </li>
+                                        <li class="sec-games__prices-price text-[19px] max-md:text-base font-medium flex justify-between gap-1 pb-2.5 pt-5 border-b last:border-b-0 last:pb-0 first:pt-0" style="border-color: #AC9CDB"><span class="font-['Golos']] text-app-white-secondary">3 часа</span>
+                                          <div class="min-w-[130px] text-right"><span class="text-[21px] italic font-bold opacity-50 ml-auto mr-3.5 max-md:text-base">4170 ₽</span><span class="text-[28px] italic font-black text-right max-[1300px]:text-2xl max-md:text-xl">3590 ₽</span>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="relative pr-11 py-7.5 -z-1">
+                                  <div class="card-tech-before-gradient-purple absolute  w-full bottom-0 left-0 -skew-x-10 rounded-[15px] border border-app-white/10 bg-app-card-bg/40 h-[380px]"></div>
+                                  <button class="btn-purple btn w-full z-1">Онлайн-запись</button>
+                                </div>
+                              </div>
+                      </div>
+                    </div>
+                  </div>
+          </div>
+        </div>
+      </section>
+      <section class="sec-atmosphere py-24 relative"> 
+        <div class="absolute top-[-15%] max-md:top-0 l-0 w-full -z-10"><img class="w-full" src="./img/atmosphere-bg.png" loading="lazy"/></div>
+        <div class="container">
+          <div class="flex relative justify-center items-end max-md:flex-col max-md:items-center">
+                  <div class="text-center uppercase">
+                    <div class="italic font-black text-3xl md:text-6xl lg:text-[80px]"><span class="text-app-pink"> Атмосфера </span></div>
+                    <div class="text-2xl mt-6 text-app-white-secondary max-lg:text-xl max-md:text-lg">Видео с заездами наших клиентов</div>
+                  </div>
+            <div class="flex gap-4 absolute right-0 max-md:relative h-[55px] max-md:mt-4">
+              <div class="btn-icon swiper-button-atmosphere swiper-button-prev w-[55px]"><img class="rotate-225" src="./img/arrow-purple.svg" loading="lazy"/></div>
+              <div class="btn-icon swiper-button-atmosphere swiper-button-next w-[55px]"><img class="rotate-45" src="./img/arrow-purple.svg" loading="lazy"/></div>
+            </div>
+          </div>
+          <div class="mt-[96px] px-12 max-md:mt-[35px]">
+            <div class="swiper swiper-atmosphere">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="sec-atmosphere__video p-[2px] z-1 to-app-accent relative -skew-x-10 rounded-[15px] bg-app-white-secondary w-full h-[650px] max-md:h-[400px]">
+                          <div class="absolute rounded-[15px] w-full h-full top-0 left-0 bg-linear-220 from-[#1e3047] to-app-accent border-transparent [background-clip:content-box,border-box] bg-origin-border -z-2"></div>
+                          <div class="absolute rounded-[15px] left-[1.3px] top-[1.3px] w-[calc(100%-3px)] h-[calc(100%-3px)] -z-1 bg-linear-326 from-app-pink/60 to-transparent to-40% bg-transparent"></div><img class="absolute top-[26px] left-[-30px]" src="./img/live-video.svg" loading="lazy"/><img class="absolute w-[calc(100%-3px)] h-[calc(100%-3px)] top-[1.5px] left-[1.5px] -z-1 object-cover rounded-[15px]" src="./img/atmosphere-1.png" loading="lazy"/>
+                    <p class="text-[28px] max-[1510px]:text-xl uppercase italic font-black text-app-white absolute w-full p-[30px]  bottom-0 left-0">@metaracing.ru</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="sec-atmosphere__video p-[2px] z-1 to-app-accent relative overflow-hidden -skew-x-10 rounded-[15px] bg-app-white-secondary w-full h-[650px] max-md:h-[400px]">
+                          <div class="absolute rounded-[15px] w-full h-full top-0 left-0 bg-linear-220 from-[#1e3047] to-app-accent border-transparent [background-clip:content-box,border-box] bg-origin-border -z-2"></div>
+                          <div class="absolute rounded-[15px] left-[1.3px] top-[1.3px] w-[calc(100%-3px)] h-[calc(100%-3px)] -z-1 bg-linear-326 from-app-pink/60 to-transparent to-40% bg-transparent"></div>
+                    <video class="absolute w-[calc(100%-3px)] h-[calc(100%-3px)] rounded-[15px] top-[1.5px] left-[1.5px] object-cover" src="./img/sim.mp4" controls="controls" muted="muted"></video>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="sec-atmosphere__video p-[2px] z-1 to-app-accent relative overflow-hidden -skew-x-10 rounded-[15px] bg-app-white-secondary w-full h-[650px] max-md:h-[400px]">
+                          <div class="absolute rounded-[15px] w-full h-full top-0 left-0 bg-linear-220 from-[#1e3047] to-app-accent border-transparent [background-clip:content-box,border-box] bg-origin-border -z-2"></div>
+                          <div class="absolute rounded-[15px] left-[1.3px] top-[1.3px] w-[calc(100%-3px)] h-[calc(100%-3px)] -z-1 bg-linear-326 from-app-pink/60 to-transparent to-40% bg-transparent"></div>
+                    <video class="absolute w-[calc(100%-3px)] h-[calc(100%-3px)] rounded-[15px] top-[1.5px] left-[1.5px] object-cover" src="./img/sim.mp4" controls="controls" muted="muted"></video>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="sec-atmosphere__video p-[2px] z-1 to-app-accent relative overflow-hidden -skew-x-10 rounded-[15px] bg-app-white-secondary w-full h-[650px] max-md:h-[400px]">
+                          <div class="absolute rounded-[15px] w-full h-full top-0 left-0 bg-linear-220 from-[#1e3047] to-app-accent border-transparent [background-clip:content-box,border-box] bg-origin-border -z-2"></div>
+                          <div class="absolute rounded-[15px] left-[1.3px] top-[1.3px] w-[calc(100%-3px)] h-[calc(100%-3px)] -z-1 bg-linear-326 from-app-pink/60 to-transparent to-40% bg-transparent"></div>
+                    <video class="absolute w-[calc(100%-3px)] h-[calc(100%-3px)] rounded-[15px] top-[1.5px] left-[1.5px] object-cover" src="./img/sim.mp4" controls="controls" muted="muted"></video>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="sec-atmosphere__video p-[2px] z-1 to-app-accent relative overflow-hidden -skew-x-10 rounded-[15px] bg-app-white-secondary w-full h-[650px] max-md:h-[400px]">
+                          <div class="absolute rounded-[15px] w-full h-full top-0 left-0 bg-linear-220 from-[#1e3047] to-app-accent border-transparent [background-clip:content-box,border-box] bg-origin-border -z-2"></div>
+                          <div class="absolute rounded-[15px] left-[1.3px] top-[1.3px] w-[calc(100%-3px)] h-[calc(100%-3px)] -z-1 bg-linear-326 from-app-pink/60 to-transparent to-40% bg-transparent"></div>
+                    <video class="absolute w-[calc(100%-3px)] h-[calc(100%-3px)] rounded-[15px] top-[1.5px] left-[1.5px] object-cover" src="./img/sim.mp4" controls="controls" muted="muted"></video>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="sec-atmosphere__video p-[2px] z-1 to-app-accent relative overflow-hidden -skew-x-10 rounded-[15px] bg-app-white-secondary w-full h-[650px] max-md:h-[400px]">
+                          <div class="absolute rounded-[15px] w-full h-full top-0 left-0 bg-linear-220 from-[#1e3047] to-app-accent border-transparent [background-clip:content-box,border-box] bg-origin-border -z-2"></div>
+                          <div class="absolute rounded-[15px] left-[1.3px] top-[1.3px] w-[calc(100%-3px)] h-[calc(100%-3px)] -z-1 bg-linear-326 from-app-pink/60 to-transparent to-40% bg-transparent"></div>
+                    <video class="absolute w-[calc(100%-3px)] h-[calc(100%-3px)] rounded-[15px] top-[1.5px] left-[1.5px] object-cover" src="./img/sim.mp4" controls="controls" muted="muted"></video>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="sec-atmosphere__video p-[2px] z-1 to-app-accent relative overflow-hidden -skew-x-10 rounded-[15px] bg-app-white-secondary w-full h-[650px] max-md:h-[400px]">
+                          <div class="absolute rounded-[15px] w-full h-full top-0 left-0 bg-linear-220 from-[#1e3047] to-app-accent border-transparent [background-clip:content-box,border-box] bg-origin-border -z-2"></div>
+                          <div class="absolute rounded-[15px] left-[1.3px] top-[1.3px] w-[calc(100%-3px)] h-[calc(100%-3px)] -z-1 bg-linear-326 from-app-pink/60 to-transparent to-40% bg-transparent"></div>
+                    <video class="absolute w-[calc(100%-3px)] h-[calc(100%-3px)] rounded-[15px] top-[1.5px] left-[1.5px] object-cover" src="./img/sim.mp4" controls="controls" muted="muted"></video>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sec-reviews py-24 relative"><img class="absolute top-[-15%] max-md:top-0 l-0 w-full -z-10" src="./img/reviews-bg.png" loading="lazy"/>
+        <div class="container">
+          <div class="flex relative justify-center items-end max-md:flex-col max-md:items-center">
+                  <div class="text-center uppercase">
+                    <div class="italic font-black text-3xl md:text-6xl lg:text-[80px]">Впечатления </div>
+                    <div class="text-2xl mt-6 text-app-white-secondary max-lg:text-xl max-md:text-lg">Отзывы гостей наших клубов</div>
+                  </div>
+            <div class="flex gap-4 absolute right-0 max-md:relative h-[55px] max-md:mt-4">
+              <div class="btn-icon swiper-button-reviews swiper-button-prev w-[55px]"><img class="rotate-225" src="./img/arrow-purple.svg" loading="lazy"/></div>
+              <div class="btn-icon swiper-button-reviews swiper-button-next w-[55px]"><img class="rotate-45" src="./img/arrow-purple.svg" loading="lazy"/></div>
+            </div>
+          </div>
+          <div class="mt-[96px] px-12 max-md:mt-[35px]">
+            <div class="swiper swiper-reviews">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="reviews-item border-gradient w-full min-h-[280px] relative font-['Golos'] text-[19px] -skew-x-10 -bg-linear-35 from-transparent to-app-yellow/20 from-60% ">
+                    <div class="badge absolute top-5 left-[-30px]"><img src="./img/badge-y-5.svg" loading="lazy"/></div>
+                    <div class="border-gradient-border"></div>
+                    <div class="border-gradient-content"></div>
+                    <div class="skew-x-10 py-[34px] pl-[20px] pr-[40px]">
+                      <div class="flex flex-col"><img class="ml-auto shrink-0 max-md:w-[100px] max-md:translate-x-[20px]" src="./img/r-avatars.png" loading="lazy"/>
+                        <div class="pl-[30px]">
+                          <div class="reviews-item__stars flex gap-1 items-center mt-[34px]"><img src="./img/r-star.svg" loading="lazy"/><img src="./img/r-star.svg" loading="lazy"/><img src="./img/r-star.svg" loading="lazy"/><img src="./img/r-star.svg" loading="lazy"/><img src="./img/r-star.svg" loading="lazy"/></div>
+                          <div class="font-semibold mt-2">Более 160 оценок</div>
+                        </div><a class="reviews-item__btn btn-white mt-5 z-1" href="">Смотреть все отзывы</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="flex flex-col gap-10">
+                          <div class="reviews-item min-h-[280px] card-tech-before-gradient-yellow --top-l  border border-[#25262A] relative font-['Golos'] text-[19px] rounded-[15px] -skew-x-10 -bg-linear-35 from-transparent to-app-yellow/20 from-60%">
+                            <div class="rounded-[15px]">
+                              <div class="skew-x-10 flex flex-col gap-6 py-[22px] pl-[35px] pr-[20px]">
+                                <div class="reviews-item__header flex gap-5 items-center">
+                                  <div class="reviews-item__img w-[60px] h-[60px] rounded-full overflow-hidden"><img class="w-full h-full object-cover" src="./img/reviews-1.png" loading="lazy"/></div>
+                                  <div class="flex flex-col gap-1">
+                                    <div class="reviews-item__name font-bold">Юрий В.0</div>
+                                    <div class="reviews-item__date font-medium text-app-white-secondary">19 февраля 2024</div>
+                                  </div>
+                                </div>
+                                <div class="reviews-item__stars flex gap-1 items-center"><img src="./img/r-star.svg" loading="lazy"/><img src="./img/r-star.svg" loading="lazy"/><img src="./img/r-star.svg" loading="lazy"/><img src="./img/r-star.svg" loading="lazy"/><img src="./img/r-star.svg" loading="lazy"/></div>
+                                <div class="reviews-item__desc max-w-[364px] text-[19px] max-md:text-base max-sm:text-sm">Все очень понравилось! Чисто, аккуратно, удобные кокпиты. Пришел в первый раз, администратор все показал и рассказал.</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="reviews-item min-h-[280px] card-tech-before-gradient-yellow --top-l  border border-[#25262A] relative font-['Golos'] text-[19px] rounded-[15px] -skew-x-10 -bg-linear-35 from-transparent to-app-yellow/20 from-60%">
+                            <div class="rounded-[15px]">
+                              <div class="skew-x-10 flex flex-col gap-6 py-[22px] pl-[35px] pr-[20px]">
+                                <div class="reviews-item__header flex gap-5 items-center">
+                                  <div class="reviews-item__img w-[60px] h-[60px] rounded-full overflow-hidden"><img class="w-full h-full object-cover" src="./img/reviews-2.png" loading="lazy"/></div>
+                                  <div class="flex flex-col gap-1">
+                                    <div class="reviews-item__name font-bold">Алексей С.1</div>
+                                    <div class="reviews-item__date font-medium text-app-white-secondary">23 ноября 2024</div>
+                                  </div>
+                                </div>
+                                <div class="reviews-item__stars flex gap-1 items-center"><img src="./img/r-star.svg" loading="lazy"/><img src="./img/r-star.svg" loading="lazy"/><img src="./img/r-star.svg" loading="lazy"/><img src="./img/r-star.svg" loading="lazy"/><img src="./img/r-star.svg" loading="lazy"/></div>
+                                <div class="reviews-item__desc max-w-[364px] text-[19px] max-md:text-base max-sm:text-sm">Уровень потрясающий, на профессиональном уровне. Оценка — несомненно 5 баллов.</div>
+                              </div>
+                            </div>
+                          </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="flex flex-col gap-10">
+                          <div class="reviews-item min-h-[280px] card-tech-before-gradient-yellow --top-l  border border-[#25262A] relative font-['Golos'] text-[19px] rounded-[15px] -skew-x-10 -bg-linear-35 from-transparent to-app-yellow/20 from-60%">
+                            <div class="rounded-[15px]">
+                              <div class="skew-x-10 flex flex-col gap-6 py-[22px] pl-[35px] pr-[20px]">
+                                <div class="reviews-item__header flex gap-5 items-center">
+                                  <div class="reviews-item__img w-[60px] h-[60px] rounded-full overflow-hidden"><img class="w-full h-full object-cover" src="./img/reviews-3.png" loading="lazy"/></div>
+                                  <div class="flex flex-col gap-1">
+                                    <div class="reviews-item__name font-bold">Кирилл Р.2</div>
+                                    <div class="reviews-item__date font-medium text-app-white-secondary">18 января 2024</div>
+                                  </div>
+                                </div>
+                                <div class="reviews-item__stars flex gap-1 items-center"><img src="./img/r-star.svg" loading="lazy"/><img src="./img/r-star.svg" loading="lazy"/><img src="./img/r-star.svg" loading="lazy"/><img src="./img/r-star.svg" loading="lazy"/><img src="./img/r-star.svg" loading="lazy"/></div>
+                                <div class="reviews-item__desc max-w-[364px] text-[19px] max-md:text-base max-sm:text-sm">Реалистичное поведение авто, чувствуется отзывчивость в руле и педалях, большой выбор гоночных трасс и машин.</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="reviews-item min-h-[280px] card-tech-before-gradient-yellow --top-l  border border-[#25262A] relative font-['Golos'] text-[19px] rounded-[15px] -skew-x-10 -bg-linear-35 from-transparent to-app-yellow/20 from-60%">
+                            <div class="rounded-[15px]">
+                              <div class="skew-x-10 flex flex-col gap-6 py-[22px] pl-[35px] pr-[20px]">
+                                <div class="reviews-item__header flex gap-5 items-center">
+                                  <div class="reviews-item__img w-[60px] h-[60px] rounded-full overflow-hidden"><img class="w-full h-full object-cover" src="./img/reviews-4.png" loading="lazy"/></div>
+                                  <div class="flex flex-col gap-1">
+                                    <div class="reviews-item__name font-bold">Валерия С.3</div>
+                                    <div class="reviews-item__date font-medium text-app-white-secondary">25 сентября 2024</div>
+                                  </div>
+                                </div>
+                                <div class="reviews-item__stars flex gap-1 items-center"><img src="./img/r-star.svg" loading="lazy"/><img src="./img/r-star.svg" loading="lazy"/><img src="./img/r-star.svg" loading="lazy"/><img src="./img/r-star.svg" loading="lazy"/><img src="./img/r-star.svg" loading="lazy"/></div>
+                                <div class="reviews-item__desc max-w-[364px] text-[19px] max-md:text-base max-sm:text-sm">Очень крутой симулятор! Регулярно тренируюсь дрифту. Советую попробовать разные дисциплины. Можно прийти большой компанией.</div>
+                              </div>
+                            </div>
+                          </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="flex flex-col gap-10">
+                          <div class="reviews-item min-h-[280px] card-tech-before-gradient-yellow --top-l  border border-[#25262A] relative font-['Golos'] text-[19px] rounded-[15px] -skew-x-10 -bg-linear-35 from-transparent to-app-yellow/20 from-60%">
+                            <div class="rounded-[15px]">
+                              <div class="skew-x-10 flex flex-col gap-6 py-[22px] pl-[35px] pr-[20px]">
+                                <div class="reviews-item__header flex gap-5 items-center">
+                                  <div class="reviews-item__img w-[60px] h-[60px] rounded-full overflow-hidden"><img class="w-full h-full object-cover" src="./img/reviews-5.png" loading="lazy"/></div>
+                                  <div class="flex flex-col gap-1">
+                                    <div class="reviews-item__name font-bold">Илья В.4</div>
+                                    <div class="reviews-item__date font-medium text-app-white-secondary">5 мая 2025</div>
+                                  </div>
+                                </div>
+                                <div class="reviews-item__stars flex gap-1 items-center"><img src="./img/r-star.svg" loading="lazy"/><img src="./img/r-star.svg" loading="lazy"/><img src="./img/r-star.svg" loading="lazy"/><img src="./img/r-star.svg" loading="lazy"/><img src="./img/r-star.svg" loading="lazy"/></div>
+                                <div class="reviews-item__desc max-w-[364px] text-[19px] max-md:text-base max-sm:text-sm">Оборудование — на отлично, настройки под разные игры. Админы всегда приятные. Рекомендую.</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="reviews-item min-h-[280px] card-tech-before-gradient-yellow --top-l  border border-[#25262A] relative font-['Golos'] text-[19px] rounded-[15px] -skew-x-10 -bg-linear-35 from-transparent to-app-yellow/20 from-60%">
+                            <div class="rounded-[15px]">
+                              <div class="skew-x-10 flex flex-col gap-6 py-[22px] pl-[35px] pr-[20px]">
+                                <div class="reviews-item__header flex gap-5 items-center">
+                                  <div class="reviews-item__img w-[60px] h-[60px] rounded-full overflow-hidden"><img class="w-full h-full object-cover" src="./img/reviews-6.png" loading="lazy"/></div>
+                                  <div class="flex flex-col gap-1">
+                                    <div class="reviews-item__name font-bold">Марк Р.5</div>
+                                    <div class="reviews-item__date font-medium text-app-white-secondary">30 сентября 2023</div>
+                                  </div>
+                                </div>
+                                <div class="reviews-item__stars flex gap-1 items-center"><img src="./img/r-star.svg" loading="lazy"/><img src="./img/r-star.svg" loading="lazy"/><img src="./img/r-star.svg" loading="lazy"/><img src="./img/r-star.svg" loading="lazy"/><img src="./img/r-star.svg" loading="lazy"/></div>
+                                <div class="reviews-item__desc max-w-[364px] text-[19px] max-md:text-base max-sm:text-sm">Отличное место для тех, кто хочет погрузиться в мир гоночных автомобилей и испытать настоящие ощущения за рулем.</div>
+                              </div>
+                            </div>
+                          </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sec-events py-24 relative overflow-visible max-lg:py-18">
+        <div class="absolute top-[-15%] max-md:top-0 l-0 w-full -z-10"><img class="w-full" src="./img/events-bg.png" loading="lazy"/></div>
+        <div class="container">
+                <div class="text-center uppercase">
+                  <div class="italic font-black text-3xl md:text-6xl lg:text-[80px]">Мероприятия </div>
+                  <div class="text-2xl mt-6 text-app-white-secondary max-lg:text-xl max-md:text-lg">В день рождения или корпоратив  —  арендуйте весь клуб MetaRacing <br/> и отлично проведите время со своей компанией</div>
+                </div>
+          <div class="events-list grid grid-cols-3 gap-y-[33px] max-lg:grid-cols-1 max-md:px-10 mt-[100px]">
+                  <div class="events-item  relative w-full max-lg:max-w-[500px] max-lg:mx-auto">
+                    <div class="badge-clip text-[27px] absolute top-5 left-0 bg-app-purple z-1">6 симуляторов</div>
+                    <div class="events-item__img relative"><img src="./img/event-1.png" loading="lazy"/></div>
+                    <div class="events-item__body relative pt-4 pb-6 pr-10 w-[90%] ml-4">
+                      <div class="card-tech-before-gradient-pink -z-1 absolute  w-full bottom-0 left-0 -skew-x-10 rounded-[15px] border border-app-white/10 bg-app-card-bg/40 h-[330px]"></div>
+                      <div class="flex items-end flex-wrap gap-y-5 pl-6 max-md:flex-col max-md:items-start">
+                        <div class="text-['Golos'] flex flex-col gap-1 text-[19px] max-md:text-base"> <span class="font-bold">Метро Приморская,</span><span class="text-app-white-secondary font-medium"> Санкт-Петербург</span></div>
+                        <div class="flex items-end gap-4 ml-auto max-md:ml-0"><span class="font-medium text-app-white-secondary text-[19px] max-md:text-base">1 час /</span><span class="font-black text-[28px] max-md:text-xl leading-[110%] uppercase italic">6990 ₽</span></div>
+                      </div><a class="btn-accent w-full mt-5" href="">Заказать праздник</a>
+                    </div>
+                  </div>
+                  <div class="events-item  relative w-full max-lg:max-w-[500px] max-lg:mx-auto">
+                    <div class="badge-clip text-[27px] absolute top-5 left-0 bg-app-purple z-1">8 симуляторов</div>
+                    <div class="events-item__img relative"><img src="./img/event-2.png" loading="lazy"/></div>
+                    <div class="events-item__body relative pt-4 pb-6 pr-10 w-[90%] ml-4">
+                      <div class="card-tech-before-gradient-pink -z-1 absolute  w-full bottom-0 left-0 -skew-x-10 rounded-[15px] border border-app-white/10 bg-app-card-bg/40 h-[330px]"></div>
+                      <div class="flex items-end flex-wrap gap-y-5 pl-6 max-md:flex-col max-md:items-start">
+                        <div class="text-['Golos'] flex flex-col gap-1 text-[19px] max-md:text-base"> <span class="font-bold">Метро Приморская,</span><span class="text-app-white-secondary font-medium"> Санкт-Петербург</span></div>
+                        <div class="flex items-end gap-4 ml-auto max-md:ml-0"><span class="font-medium text-app-white-secondary text-[19px] max-md:text-base">1 час /</span><span class="font-black text-[28px] max-md:text-xl leading-[110%] uppercase italic">9990 ₽</span></div>
+                      </div><a class="btn-accent w-full mt-5" href="">Заказать праздник</a>
+                    </div>
+                  </div>
+                  <div class="events-item  relative w-full max-lg:max-w-[500px] max-lg:mx-auto">
+                    <div class="badge-clip text-[27px] absolute top-5 left-0 bg-app-purple z-1">8 симуляторов</div>
+                    <div class="events-item__img relative"><img src="./img/event-3.png" loading="lazy"/></div>
+                    <div class="events-item__body relative pt-4 pb-6 pr-10 w-[90%] ml-4">
+                      <div class="card-tech-before-gradient-pink -z-1 absolute  w-full bottom-0 left-0 -skew-x-10 rounded-[15px] border border-app-white/10 bg-app-card-bg/40 h-[330px]"></div>
+                      <div class="flex items-end flex-wrap gap-y-5 pl-6 max-md:flex-col max-md:items-start">
+                        <div class="text-['Golos'] flex flex-col gap-1 text-[19px] max-md:text-base"> <span class="font-bold">Метро ЗИЛ,</span><span class="text-app-white-secondary font-medium">Москва</span></div>
+                        <div class="flex items-end gap-4 ml-auto max-md:ml-0"><span class="font-medium text-app-white-secondary text-[19px] max-md:text-base">1 час /</span><span class="font-black text-[28px] max-md:text-xl leading-[110%] uppercase italic">12 990 ₽</span></div>
+                      </div><a class="btn-accent w-full mt-5" href="">Заказать праздник</a>
+                    </div>
+                  </div>
+          </div>
+        </div>
+      </section>
+      <section class="sec-rental py-24 relative overflow-visible max-lg:py-18">
+        <div class="absolute top-[-15%] max-md:top-0 l-0 w-full -z-10"><img class="w-full" src="./img/rental-bg.png" loading="lazy"/></div>
+        <div class="container">
+                <div class="text-center uppercase">
+                  <div class="italic font-black text-3xl md:text-6xl lg:text-[80px]">Выездная <span class="text-app-pink"> аренда</span></div>
+                  <div class="text-2xl mt-6 text-app-white-secondary max-lg:text-xl max-md:text-lg">MetaRacing — выбор крупнейших событий и брендов, Мы берём все заботы на себя, <br/> а вам остается только наслаждаться восторгом гостей</div>
+                </div>
+          <div class="rental-content mt-[77px]">
+            <div class="grid grid-cols-[1fr_28.46%_41.67%] max-lg:grid-cols-1 gap-y-[33px]">
+              <div class="flex flex-col justify-center pl-[60px] max-[1200px]:pl-0 pr-3 max-lg:max-w-[650px] max-lg:mx-auto">
+                <div class="text-[25px] max-md:text-lg leading-[110%] font-bold"><span class="text-app-pink">Максимум драйва —</span> <br/> минимум забот</div>
+                <div class="max-w-[366px]  mt-[22px] font-['Golos'] text-[19px] max-md:text-base text-app-white-secondary">Мы сами доставим все необходимое оборудование прямо к месту проведения вашего мероприятия — будь то выставочный центр, частная площадка или загородный клуб.</div>
+              </div>
+              <div class="hidden max-lg:block"></div>
+                    <div class="max-lg:max-w-[500px] mx-auto">
+                      <picture>
+                        <source media="(max-width: 1024px)" srcset="img/mob-rental-1.png"/><img class="w-full" src="img/rental-1.png" loading="lazy"/>
+                      </picture>
+                    </div>
+                    <div class="max-lg:max-w-[500px] mx-auto">
+                      <picture>
+                        <source media="(max-width: 1024px)" srcset="img/mob-rental-2.png"/><img class="w-full" src="img/rental-2.png" loading="lazy"/>
+                      </picture>
+                    </div>
+            </div>
+            <div class="grid grid-cols-[51.47%_50.64%] gap-y-[33px] max-lg:grid-cols-1 mt-[33px]">
+                    <div class="max-lg:max-w-[500px] mx-auto">
+                      <picture>
+                        <source media="(max-width: 1024px)" srcset="img/mob-rental-3.png"/><img class="w-full" src="img/rental-3.png" loading="lazy"/>
+                      </picture>
+                    </div>
+                    <div class="max-lg:max-w-[500px] mx-auto">
+                      <picture>
+                        <source media="(max-width: 1024px)" srcset="img/mob-rental-4.png"/><img class="w-full" src="img/rental-4.png" loading="lazy"/>
+                      </picture>
+                    </div>
+            </div>
+            <div class="flex justify-center mt-[88px] max-lg:mt-[35px]"><a class="btn btn-accent w-full max-w-[300px] h-[70px]" href=""> 
+                <p>Подробнее про аренду</p><img class="brightness-200 mt-1" src="./img/arrow-purple.svg"/></a></div>
+          </div>
+        </div>
+      </section>
+      <section class="sec-gift py-24 relative overflow-visible max-lg:py-18">
+        <div class="absolute top-[-15%] max-md:top-0 l-0 w-full -z-10"><img class="w-full" src="./img/gift-bg.png" loading="lazy"/></div>
+        <div class="container">
+                <div class="text-center uppercase">
+                  <div class="italic font-black text-3xl md:text-6xl lg:text-[80px]">В подарок</div>
+                  <div class="text-2xl mt-6 text-app-white-secondary max-lg:text-xl max-md:text-lg">Подарочный сертификат MetaRacing не оставит равнодушным <br/> ни одного фаната автомобилей, На ваш выбор — сертификат может быть <br/> изготовлен в печатном или электронном виде</div>
+                </div>
+        </div>
+        <div class="gift-list grid grid-cols-3 max-lg:grid-cols-1 gap-y-[33px] mt-[80px] max-lg:mt-[35px] px-10">
+                <div class="gift-item  relative w-full max-lg:max-w-[500px] max-lg:mx-auto">
+                  <div class="badge-clip text-[30px] absolute top-5 left-[50px] z-1 bg-app-sky">1390 ₽</div>
+                  <div class="events-item__img relative"><img class="w-full" src="./img/gift-1.png" loading="lazy"/></div>
+                  <div class="events-item__body relative pt-4 pb-[30px] max-md:pb-[20px] pr-[40px] max-lg:pl-[10px] max-md:pr-[20px] w-[90%] ml-8">
+                    <div class="card-tech-before-gradient-sky  -z-1 absolute  w-full bottom-0 left-0 -skew-x-10 rounded-[15px] border border-app-white/10 bg-app-card-bg/40 h-[330px] max-md:h-[200px]"></div>
+                    <div class="flex justify-between gap-2 flex-wrap gap-y-5 max-md:items-start max-w-[445px] max-[1200] mx-auto">
+                      <div class="text-[28px] max-md:text-lg italic font-black uppercase leading-[50px]">1 час</div><a class="btn-sky" href="">Оформить</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="gift-item  relative w-full max-lg:max-w-[500px] max-lg:mx-auto">
+                  <div class="badge-clip text-[30px] absolute top-5 left-[50px] z-1 bg-app-purple">2780 ₽</div>
+                  <div class="events-item__img relative"><img class="w-full" src="./img/gift-2.png" loading="lazy"/></div>
+                  <div class="events-item__body relative pt-4 pb-[30px] max-md:pb-[20px] pr-[40px] max-lg:pl-[10px] max-md:pr-[20px] w-[90%] ml-8">
+                    <div class="card-tech-before-gradient-purple  -z-1 absolute  w-full bottom-0 left-0 -skew-x-10 rounded-[15px] border border-app-white/10 bg-app-card-bg/40 h-[330px] max-md:h-[200px]"></div>
+                    <div class="flex justify-between gap-2 flex-wrap gap-y-5 max-md:items-start max-w-[445px] max-[1200] mx-auto">
+                      <div class="text-[28px] max-md:text-lg italic font-black uppercase leading-[50px]">2 часа</div><a class="btn-purple" href="">Оформить</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="gift-item  relative w-full max-lg:max-w-[500px] max-lg:mx-auto">
+                  <div class="badge-clip text-[30px] absolute top-5 left-[50px] z-1 bg-app-pink">4170 ₽</div>
+                  <div class="events-item__img relative"><img class="w-full" src="./img/gift-3.png" loading="lazy"/></div>
+                  <div class="events-item__body relative pt-4 pb-[30px] max-md:pb-[20px] pr-[40px] max-lg:pl-[10px] max-md:pr-[20px] w-[90%] ml-8">
+                    <div class="card-tech-before-gradient-pink  -z-1 absolute  w-full bottom-0 left-0 -skew-x-10 rounded-[15px] border border-app-white/10 bg-app-card-bg/40 h-[330px] max-md:h-[200px]"></div>
+                    <div class="flex justify-between gap-2 flex-wrap gap-y-5 max-md:items-start max-w-[445px] max-[1200] mx-auto">
+                      <div class="text-[28px] max-md:text-lg italic font-black uppercase leading-[50px]">3 часа</div><a class="btn-accent" href="">Оформить</a>
+                    </div>
+                  </div>
+                </div>
+        </div>
+      </section>
+      <section class="sec-merch py-24 relative overflow-visible max-lg:py-18">
+        <div class="absolute top-[10%] max-md:top-0 l-0 w-full -z-10"><img class="w-full" src="./img/merch-bg.png" loading="lazy"/></div>
+        <div class="container">
+                <div class="text-center uppercase">
+                  <div class="italic font-black text-3xl md:text-6xl lg:text-[80px]">Наш <span class="text-app-pink">мерч</span></div>
+                  <div class="text-2xl mt-6 text-app-white-secondary max-lg:text-xl max-md:text-lg">MetaRacing — это стиль жизни! <br/> Приобрести всю красоту можно как в клубе, так и онлайн</div>
+                </div>
+          <div class="merch-list relative grid grid-cols-[30.51%_30.51%_45.26%] max-[1200px]:grid-cols-1 gap-y-[33px] mt-[80px] max-lg:mt-[35px]">
+                  <div class="merch-item relative w-full mx-auto max-[1200px]:max-w-[500px] max-lg:mx-auto ">
+                    <div class="badge-clip bg-white text-[#121212] text-[30px] absolute top-5 left-[50px] z-1">6900 ₽</div><img class="w-full" src="img/merch-1.png" loading="lazy"/>
+                    <div class="absolute z-2 bottom-0 left-0 flex items-center justify-between gap-2.5 flex-wrap w-full pb-[30px] pl-[40px] pr-[100px] max-[400px]:pr-[60px] max-[400px]:pl-[30px] max-[1550px]:justify-start max-[1200px]:justify-between">
+                      <div class="text-[28px] max-md:text-lg italic font-black uppercase leading-[50px]">Зип-худи</div><a class="btn btn-sky" href="#">Купить</a>
+                    </div>
+                  </div>
+                  <div class="merch-item relative w-full mx-auto max-[1200px]:max-w-[500px] max-lg:mx-auto translate-x-[-40px] max-[1200px]:translate-x-0">
+                    <div class="badge-clip bg-white text-[#121212] text-[30px] absolute top-5 left-[50px] z-1">6900 ₽</div><img class="w-full" src="img/merch-2.png" loading="lazy"/>
+                    <div class="absolute z-2 bottom-0 left-0 flex items-center justify-between gap-2.5 flex-wrap w-full pb-[30px] pl-[40px] pr-[100px] max-[400px]:pr-[60px] max-[400px]:pl-[30px] max-[1550px]:justify-start max-[1200px]:justify-between">
+                      <div class="text-[28px] max-md:text-lg italic font-black uppercase leading-[50px]">Ветровка</div><a class="btn btn-sky" href="#">Купить</a>
+                    </div>
+                  </div>
+                  <div class="merch-item relative w-full mx-auto max-[1200px]:max-w-[500px] max-lg:mx-auto translate-x-[-70px] max-[1200px]:translate-x-0">
+                    <div class="badge-clip bg-white text-[#121212] text-[30px] absolute top-5 left-[50px] z-1">6900 ₽</div><img class="w-full" src="img/merch-3.png" loading="lazy"/>
+                    <div class="absolute z-2 bottom-0 left-0 flex items-center justify-between gap-2.5 flex-wrap w-full pb-[30px] pl-[40px] pr-[100px] max-[400px]:pr-[60px] max-[400px]:pl-[30px] max-[1550px]:justify-start max-[1200px]:justify-between">
+                      <div class="text-[28px] max-md:text-lg italic font-black uppercase leading-[50px]">И ДРУГИЕ ТОВАРЫ</div><a class="btn btn-pink w-[234px] max-lg:w-auto" href="#"> 
+                        <p>Весь каталог</p><img class="brightness-200 mt-1" src="./img/arrow-purple.svg"/></a>
+                    </div>
+                  </div>
+          </div>
+        </div>
+      </section>
+      <section class="sec-qa py-24 relative overflow-visible max-lg:py-18">
+        <div class="absolute top-[10%] max-md:top-0 l-0 w-full -z-10"><img class="w-full" src="./img/qa-bg.png" loading="lazy"/></div>
+        <div class="container">
+                <div class="text-center uppercase">
+                  <div class="italic font-black text-3xl md:text-6xl lg:text-[80px]">Вопросы и ответы</div>
+                  <div class="text-2xl mt-6 text-app-white-secondary max-lg:text-xl max-md:text-lg">Возможно, вы хотите об этом спросить</div>
+                </div>
+          <div class="qa-list mt-[80px] max-lg:mt-[35px] flex flex-col gap-y-3.5 px-10">
+                  <div class="
+      qa-item border-gradient relative pt-[42px] pb-[32px] pl-[72px] pr-[110px] max-md:pl-[22px] max-md:pr-[50px] rounded-[15px] -skew-x-10
+      bg-linear-195 from-transparent from-80% to-app-pink/10
+    " style="--border-gradient-image: linear-gradient(195deg, #1E3147 80%, #5D1946)">
+                    <div class="border-gradient-border"></div>
+                    <div class="border-gradient-content"></div>
+                    <div class="badge-clip bg-white text-app-pink text-[30px] absolute top-5 right-[-10px] z-1">01</div>
+                    <div class="relative z-2 skew-x-10 max-md:skew-x-0">
+                      <div class="text-[25px] max-md:text-xl max-sm:text-base font-bold"><span class="text-app-pink">Можно прийти с 2-3 друзьями,</span> чтобы погонять в одной гонке?</div>
+                      <div class="text-[19px] max-md:text-base max-sm:text-[12px] font-medium text-app-white-secondary mt-[26px]">Да! У нас доступна совместная игра — можно гонять с друзьями в одном клубе (до 6–8 человек одновременно), либо подключаться к онлайн-серверам и соревноваться между клубами.</div>
+                    </div>
+                  </div>
+                  <div class="
+      qa-item border-gradient relative pt-[42px] pb-[32px] pl-[72px] pr-[110px] max-md:pl-[22px] max-md:pr-[50px] rounded-[15px] -skew-x-10
+      bg-linear-195 from-transparent from-80% to-app-pink/10
+    " style="--border-gradient-image: linear-gradient(195deg, #1E3147 80%, #5D1946)">
+                    <div class="border-gradient-border"></div>
+                    <div class="border-gradient-content"></div>
+                    <div class="badge-clip bg-white text-app-pink text-[30px] absolute top-5 right-[-10px] z-1">02</div>
+                    <div class="relative z-2 skew-x-10 max-md:skew-x-0">
+                      <div class="text-[25px] max-md:text-xl max-sm:text-base font-bold"><span class="text-app-pink">Какие игры у вас есть?</span></div>
+                      <div class="text-[19px] max-md:text-base max-sm:text-[12px] font-medium text-app-white-secondary mt-[26px]">Доступные игры в наших клубах: Assetto Corsa, Assetto Corsa Competizione, Dirt Rally 2.0, City Car Driving, Euro Truck Simulator 2, Wreckfest. Из дисциплин доступны: дрифт, кольцевые гонки, ралли, Формула 1 и картинг. А также "шашки" с трафиком и езда в открытом мире. Смотрите описание всех наших игр.</div>
+                    </div>
+                  </div>
+                  <div class="
+      qa-item border-gradient relative pt-[42px] pb-[32px] pl-[72px] pr-[110px] max-md:pl-[22px] max-md:pr-[50px] rounded-[15px] -skew-x-10
+      bg-linear-195 from-transparent from-80% to-app-pink/10
+    " style="--border-gradient-image: linear-gradient(195deg, #1E3147 80%, #5D1946)">
+                    <div class="border-gradient-border"></div>
+                    <div class="border-gradient-content"></div>
+                    <div class="badge-clip bg-white text-app-pink text-[30px] absolute top-5 right-[-10px] z-1">03</div>
+                    <div class="relative z-2 skew-x-10 max-md:skew-x-0">
+                      <div class="text-[25px] max-md:text-xl max-sm:text-base font-bold"><span class="text-app-pink">Какие ограничения по возрасту или по росту? </span> Хочу с ребенком покататься</div>
+                      <div class="text-[19px] max-md:text-base max-sm:text-[12px] font-medium text-app-white-secondary mt-[26px]">Доступ на наши симуляторы осуществляется с 14 лет. Это обусловлено настройкой наших симуляторов под взрослого человека.</div>
+                    </div>
+                  </div>
+                  <div class="
+      qa-item border-gradient relative pt-[42px] pb-[32px] pl-[72px] pr-[110px] max-md:pl-[22px] max-md:pr-[50px] rounded-[15px] -skew-x-10
+      bg-linear-195 from-transparent from-80% to-app-pink/10
+    " style="--border-gradient-image: linear-gradient(195deg, #1E3147 80%, #5D1946)">
+                    <div class="border-gradient-border"></div>
+                    <div class="border-gradient-content"></div>
+                    <div class="badge-clip bg-white text-app-pink text-[30px] absolute top-5 right-[-10px] z-1">04</div>
+                    <div class="relative z-2 skew-x-10 max-md:skew-x-0">
+                      <div class="text-[25px] max-md:text-xl max-sm:text-base font-bold"><span class="text-app-pink">Я только учусь на права и хочу закрепить навыки вождения. </span> Как это сделать?</div>
+                      <div class="text-[19px] max-md:text-base max-sm:text-[12px] font-medium text-app-white-secondary mt-[26px]">У нас вы можете научиться и гражданскому вождению, и получить навыки управления спортивным автомобилем в различных дисциплинах.</div>
+                    </div>
+                  </div>
+          </div>
+          <div class="flex justify-center mt-[88px] max-lg:mt-[35px]"><a class="btn btn-accent w-full max-w-[300px] h-[70px]" href=""> 
+              <p>Все вопросы и ответы</p><img class="brightness-200 mt-1" src="./img/arrow-purple.svg"/></a></div>
+        </div>
+      </section>
+      <section class="sec-address py-24 relative max-lg:py-18 overflow-visible">
+        <div class="absolute top-[10%] max-md:top-0 l-0 w-full -z-10"><img class="w-full" src="./img/address-bg.png" loading="lazy"/></div>
+        <div class="container">
+                <div class="text-center uppercase">
+                  <div class="italic font-black text-3xl md:text-6xl lg:text-[80px]"><span class="text-app-pink">Где мы</span> находимся</div>
+                  <div class="text-2xl mt-6 text-app-white-secondary max-lg:text-xl max-md:text-lg">Адреса клубов в Москве и Санкт-Петербурге</div>
+                </div>
+          <div class="address-list mt-[80px] max-lg:mt-[35px]">
+                  <div class="flex justify-center" data-tabs-wrapper="data-tabs-wrapper">
+                    <div class="tabs-buttons flex gap-1 items-center p-2 -skew-x-12 rounded-[20px] border-app-border border">
+                      <div class="tab-button py-4 px-9 max-md:px-4 rounded-2xl cursor-pointer font-bold transition duration-300 ease-in-out active" data-tab-btn="t-address-1">
+                        <p class="skew-x-12">Сакнт-Петербург</p>
+                      </div>
+                      <div class="tab-button py-4 px-9 max-md:px-4 rounded-2xl cursor-pointer font-bold transition duration-300 ease-in-out " data-tab-btn="t-address-2">
+                        <p class="skew-x-12">Москва</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-content w-full mt-[75px] max-md:mt-[35px]">
+                    <div class="tab-pane active" data-tab-item="t-address-1">
+                      <div class="grid grid-cols-[1fr_63.5%] gap-y-[33px] px-7 max-[1300px]:flex max-[1300px]:flex-col max-[1300px]:items-center">
+                        <div class="w-full flex flex-col gap-y-[40px]">
+                                <div class="
+      address-item border-gradient relative py-[35px] px-[40px] max-md:px-[20px] rounded-[15px] -skew-x-10
+      w-full max-[1300px]:w-[88%] max-[1300px]:max-w-[554px] max-[1300px]:mx-auto
+      bg-linear-195 from-[#121424] from-80% to-app-pink/30
+    " style="--border-gradient-image: linear-gradient(225deg, #1E3147 20%, #d442a3)">
+                                  <div class="border-gradient-border"></div>
+                                  <div class="border-gradient-content"></div>
+                                  <div class="badge-clip bg-app-yellow text-black text-[30px] flex items-center gap-1 absolute top-5 right-[-10px] z-1">
+                                    <p>5.0</p><img class="brightness-0 size-[18px]" src="./img/r-star.svg" loading="lazy"/>
+                                  </div>
+                                  <div class="relative z-2  max-md:skew-x-0">
+                                    <div class="text-[25px] max-md:text-xl max-sm:text-base font-bold uppercase">metaracing <br/> <span class="text-app-pink">М.Московская</span></div>
+                                    <div class="flex justify-between max-md:flex-col gap-2 mt-6 text-[19px] max-md:text-base">
+                                      <div class="flex flex-col"><span>  Санкт-Петербург</span><span class="text-app-white-secondary">ул. Типанова, 21 <br/> ТЦ «Питер», 3 этаж</span></div>
+                                      <div class="flex flex-col"><span>+7 921 864-38-88</span><span class="text-app-white-secondary text-right max-md:text-left">12:00 – 00:00 <br/> без выходных</span></div>
+                                    </div>
+                                    <div class="grid grid-cols-[42%_1fr] max-md:grid-cols-1 gap-2.5 mt-6 skew-x-10"><a class="btn-accent" href="">Позвонить</a><a class="btn-white-pink text-app-pink" href="">Как добраться?</a></div>
+                                  </div>
+                                </div>
+                                <div class="
+      address-item border-gradient relative py-[35px] px-[40px] max-md:px-[20px] rounded-[15px] -skew-x-10
+      w-full max-[1300px]:w-[88%] max-[1300px]:max-w-[554px] max-[1300px]:mx-auto
+      bg-linear-195 from-[#121424] from-80% to-app-pink/30
+    " style="--border-gradient-image: linear-gradient(225deg, #1E3147 20%, #d442a3)">
+                                  <div class="border-gradient-border"></div>
+                                  <div class="border-gradient-content"></div>
+                                  <div class="badge-clip bg-app-yellow text-black text-[30px] flex items-center gap-1 absolute top-5 right-[-10px] z-1">
+                                    <p>5.0</p><img class="brightness-0 size-[18px]" src="./img/r-star.svg" loading="lazy"/>
+                                  </div>
+                                  <div class="relative z-2  max-md:skew-x-0">
+                                    <div class="text-[25px] max-md:text-xl max-sm:text-base font-bold uppercase">metaracing <br/> <span class="text-app-pink">М.Московская</span></div>
+                                    <div class="flex justify-between max-md:flex-col gap-2 mt-6 text-[19px] max-md:text-base">
+                                      <div class="flex flex-col"><span>  Санкт-Петербург</span><span class="text-app-white-secondary">малый пр. В.О., д. 88, к. 2 <br/> ТЦ «Шкиперский Молл», 4 этаж</span></div>
+                                      <div class="flex flex-col"><span>+7 921 764-38-88</span><span class="text-app-white-secondary text-right max-md:text-left">12:00 – 00:00 <br/> без выходных</span></div>
+                                    </div>
+                                    <div class="grid grid-cols-[42%_1fr] max-md:grid-cols-1 gap-2.5 mt-6 skew-x-10"><a class="btn-accent" href="">Позвонить</a><a class="btn-white-pink text-app-pink" href="">Как добраться?</a></div>
+                                  </div>
+                                </div>
+                        </div>
+                        <div class="
+                w-[88%] max-[1300px]:max-w-[554px] h-full min-h-[680px] max-[1300px]:min-h-[400px] ml-[80px] max-[1300px]:ml-0
+                address-item border-gradient relative rounded-[15px] -skew-x-10
+                bg-linear-195 from-transparent from-80% to-app-pink/30
+                
+              " style="--border-gradient-image: linear-gradient(225deg, #1E3147 20%, #d442a3)">
+                          <div class="border-gradient-border"></div>
+                          <div class="border-gradient-content"></div>
+                          <div class="badge-clip bg-app-white italic  text-black text-[40px] flex items-center gap-1 absolute top-5 left-[-30px] z-1" style="padding: 3px 44px 7px 30px;">Наши клубы</div>
+                          <div class="absolute rounded-[15px] w-full h-full overflow-hidden">
+                            <iframe class="h-full w-[120%] skew-x-10 absolute top-0 left-[-10%]" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab76037977501323e32999dfe2d470752b295009e7277db5a398f5fa429a2b0b4&amp;amp;source=constructor" theme="dark" frameborder="0" style="filter: invert(90%) hue-rotate(180deg) brightness(80%);"></iframe>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane" data-tab-item="t-address-2">
+                      <div class="grid grid-cols-3 max-[1300px]:gap-y-8 max-md:gap-y-0 max-[1300px]:flex max-[1300px]:flex-wrap max-[1300px]:justify-center gap-12 px-7">
+                        <p>TAB 2</p>
+                      </div>
+                    </div>
+                  </div>
+          </div>
+        </div>
+      </section>
+      <section class="sec-register py-20 relative overflow-visible max-lg:py-0">
+        <div class="container">
+          <div class="register-content mt-[80px] px-10">
+            <div class="
+          qa-item border-gradient relative pt-[55px] pb-[62px] max-md:py-[30px] px-[95px] max-[1360px]:px-[50px] max-md:px-[20px] rounded-[15px] -skew-x-10
+          bg-linear-195 from-[#090D12] from-80% to-app-pink/10
+        " style="--border-gradient-image: linear-gradient(195deg, #1E3147 80%, #5D1946)">
+              <div class="border-gradient-border"></div>
+              <div class="border-gradient-content"></div>
+              <div class="relative z-2 skew-x-10 flex items-center gap-4 max-[1200px]:flex-col ">
+                <div class="uppercase text-[32px] max-md:text-xl italic font-black max-[1200px]:text-center max-md:translate-x-[14px]"><span class="text-app-pink">онлайн-Запись</span> в наши клубы </div>
+                <div class="flex items-center max-md:justify-center gap-2.5 max-md:flex-wrap  ml-auto max-[1200px]:ml-0"><a class="btn-icon-purple w-[68px] h-[62px] max-md:w-[50px] max-md:h-[45px]" href=""><img class="brightness-[5] w-[22px] h-[22px]" src="./img/accent-whatsapp.svg" loading="lazy"/></a><a class="btn-icon-purple w-[68px] h-[62px] max-md:w-[50px] max-md:h-[45px]" href=""><img class="brightness-[5] w-[22px] h-[22px]" src="./img/accent-tg.svg" loading="lazy"/></a><a class="btn-icon-purple w-[68px] h-[62px] max-md:w-[50px] max-md:h-[45px]" href=""><img class="brightness-[5] w-[22px] h-[22px]" src="./img/accent-vk.svg" loading="lazy"/></a><a class="btn-accent w-[200px] h-[62px] max-md:w-full max-md:ml-[-20px]" href="">Записаться</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="relative bg-[#040405] pt-[166px] pb-[78px]">
+      <div class="w-full absolute bottom-0 left-0"><img src="img/footer-bg.svg" loading="lazy"/></div>
+      <div class="container"> 
+        <div class="flex justify-between items-end max-lg:flex-col max-lg:items-center max-lg:text-center gap-y-8">
+          <div>
+            <div class="flex items-center gap-2.5 max-lg:justify-center"><a class="btn-icon-white w-[68px] h-[62px] max-md:w-[50px] max-md:h-[45px] z-1" href=""><img class="w-[22px] h-[22px]" src="./img/accent-whatsapp.svg" loading="lazy"/></a><a class="btn-icon-white w-[68px] h-[62px] max-md:w-[50px] max-md:h-[45px] z-1" href=""><img class="w-[22px] h-[22px]" src="./img/accent-tg.svg" loading="lazy"/></a><a class="btn-icon-white w-[68px] h-[62px] max-md:w-[50px] max-md:h-[45px] z-1" href=""><img class="w-[22px] h-[22px]" src="./img/accent-vk.svg" loading="lazy"/></a><a class="btn-icon-white w-[68px] h-[62px] max-md:w-[50px] max-md:h-[45px] z-1" href=""><img class="w-[22px] h-[22px]" src="./img/accent-insta.svg" loading="lazy"/></a><a class="btn-icon-white w-[68px] h-[62px] max-md:w-[50px] max-md:h-[45px] z-1" href=""><img class="w-[22px] h-[22px]" src="./img/accent-yt.svg" loading="lazy"/></a>
+            </div>
+            <div class="flex items-center gap-4 mt-[24px] text-[#545467] text-[19px] max-md:text-sm font-medium font-['Golos']"> <img class="size-[38px] opacity-50" src="./img/14+.svg" loading="lazy"/>
+              <p>Погрузись в атмосферу — почувствуй настоящую гонку <br/> и прокачай навыки управления автомобилем.</p>
+            </div>
+          </div>
+          <div class="flex flex-col items-end max-lg:items-center">
+            <div class="max-w-[338px] ml-auto max-lg:ml-0"><img src="img/logo-footer.svg" loading="lazy"/></div>
+            <div class="mt-[24px] flex flex-col gap-1 text-[19px] max-md:text-sm font-medium font-['Golos'] text-right max-lg:text-center"><span class="text-[#545467]">© 2025 MetaRacing. Сеть клубов гоночных симуляторов.</span><a class="text-[#9090AA]" href="">Политика обработки персональных данных</a></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="modal-success modal-wrapper" data-modal-block="form-success">
+      <div class="modal-content">
+        <div class="x-btn" data-modal-close="form-success"></div>
+        <div class="modal-content__title">Супер!</div>
+        <div class="modal-content__subtitle">Скоро свяжемся с вами</div>
+      </div>
+    </div>
+    <script src="./js/fancybox.umd.js"></script>
+    <script src="./js/imask.js"></script>
+    <script src="./js/aos.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

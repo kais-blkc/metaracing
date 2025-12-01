@@ -1,0 +1,25 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-app-accent: #de127a;
+  --color-app-accent-hover: color-mix(in srgb, var(--color-app-accent), #000 20%);
+  --color-app-accent-active: color-mix(in srgb, var(--color-app-accent), #000 40%);
+  --color-app-white: #fff;
+  --color-app-white-hover: color-mix(in srgb, var(--color-app-white), #000 25%);
+  --color-app-white-secondary: #b8b8d6;
+  --color-app-purple: #7d5c9c;
+  --color-app-purple-hover: color-mix(in srgb, var(--color-app-purple), #000 20%);
+  --color-app-purple-active: color-mix(in srgb, var(--color-app-purple), #000 40%);
+  --color-app-yellow: #ffd409;
+  --color-app-red: #e52c4b;
+  --color-app-sky: #4ea8f3;
+  --color-app-green: #43a382;
+  --color-app-pink: #de127a;
+  --color-app-primary-start: #de127a;
+  --color-app-primary-end: #040a0f;
+  --color-app-page-background: #0e1923;
+  --color-app-border: rgba(255, 255, 255, 0.08);
+  --color-app-gradient-black: color-mix(in srgb, #040a0f, transparent 60%);
+  --color-app-card-bg: #0b131e;
+  --rounded-15: 15px;
+}

@@ -1,0 +1,40 @@
+header(class="header w-full pt-[40px] fixed left-0 top-0 z-20 transition-all duration-300 ease")
+  .container
+    div(class="header__content flex items-center justify-between gap-2")
+      div(class="header__logo w-[200px] max-md:w-[150px]")
+        img(src="./img/metaracing-logo.svg", alt="")
+
+      div(class="header__navbar relative flex justify-between items-center gap-2.5 font-['Golos']").header__navbar.d-none-max-tablet
+        a(href="#" class="block py-2.5 px-5 hover:text-app-accent transition-all duration-200 ease") Как это работает
+        a(href="#" class="block py-2.5 px-5 hover:text-app-accent transition-all duration-200 ease") Цены
+        a(href="#" class="block py-2.5 px-5 hover:text-app-accent transition-all duration-200 ease") Сертификаты
+        a(href="#" class="block py-2.5 px-5 hover:text-app-accent transition-all duration-200 ease") Мероприятия
+        a(href="#" class="block py-2.5 px-5 hover:text-app-accent transition-all duration-200 ease") Клубы
+
+      .header__order.d-none-max-tablet
+        button.btn.btn-accent Онлайн-запись
+
+      button.burger.d-none-min-tablet(data-modal-open="header-mobile" aria-label="Открыть меню")
+        span
+        span
+        span
+
+.header-mobile.modal-wrapper(data-modal-block="header-mobile" aria-label="Открыть меню")
+  div(class=`
+    header-mobile__content w-full max-h-[500px] flex flex-col gap-6 absolute left-0 top[-18px]  bg-app-white-secondary/60 backdrop-blur-[10px] border border-app-white/10 rounded-b-[30px] py-[40px] px-[30px] 
+    transition-all duration-300 ease-in-out  max-md:px-[20px]
+  `)
+    .x-btn(data-modal-close="header-mobile" aria-label="Открыть меню")
+
+    div(class="header-mobile__logo max-md:w-[150px]")
+      img(src="./img/metaracing-logo.svg", alt="")
+
+    div(class="header-mobile__navbar flex flex-col gap-4")
+      a(href="#").header__navbar-item  Как это работает
+      a(href="#").header__navbar-item  Цены
+      a(href="#").header__navbar-item  Сертификаты
+      a(href="#").header__navbar-item  Мероприятия
+      a(href="#").header__navbar-item  Клубы
+
+    div(class="header-mobile__order w-full")
+      button.btn.btn-accent Онлайн-запись

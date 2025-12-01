@@ -1,0 +1,35 @@
+mixin simulator-item(img, badge, i)
+  div(class="simulators-item relative w-full")
+    img(src=`./img/${img}` loading="lazy")
+    if badge
+      div(class=`absolute top-5 z-1 ${i == 2 ? 'left-[80px]' : 'left-[20px]'} max-md:left-0 max-md:top-2`)
+        img(class="max-md:h-[20px]" src="./img/"+badge, alt="", loading="lazy")
+
+section(class="sec-simulators py-16 bg-[url('/img/simulators-bg.png')] bg-contain bg-position:[center_70px] bg-no-repeat")
+  .container
+    div(class="text-center uppercase")
+      div(class="italic font-black text-pink-600 text-3xl md:text-6xl lg:text-[80px]") Автосимуляторы
+      div(class="text-2xl mt-5 text-app-white-secondary max-lg:text-xl max-md:text-lg") Почувствуйте себя настоящим пилотом гоночного болида
+
+    div(class="sec-simulators__content mt-[90px] flex flex-col items-center")
+      div(class="flex gap-1 max-lg:flex-col  max-lg:gap-10")
+        div(class="flex flex-col gap-1 items-center justify-end")
+          div(class="max-w-[425px] mb-20 max-lg:max-w-[650px]")
+            div(class="sec-simulators__content-title text-app-white uppercase font-bold text-2xl max-md:text-lg") Профессиональный сетап #[br] #[span(class="text-app-pink") для полного погружения] 
+            div(class="sec-simulators__content-desc text-app-white-secondary mt-[22px] text-[19px] max-md:text-base") #[span(class="text-app-white") В комплектации:] спортивное кресло, педали, коробка передач, ручник, сменные рули и панель кнопок. Руль с обратной связью передает каждую неровность дороги.
+          +simulator-item('simulators-1.png', 'sim-b-1.svg')
+
+        div(class="sec-simulators__content-big flex items-end")
+          +simulator-item('simulators-2.png', 'sim-b-2.svg', 2)
+
+      div(class="grid grid-cols-3 gap-1 mt-11 gap-y-10  max-lg:grid-cols-2 max-md:grid-cols-2 max-sm:gap-y-12")
+        +simulator-item('simulators-3.png', 'sim-b-3.svg')
+        +simulator-item('simulators-4.png', 'sim-b-4.svg')
+        +simulator-item('simulators-5.png', 'sim-b-5.svg')
+        +simulator-item('simulators-6.png',)
+        +simulator-item('simulators-7.png',)
+        +simulator-item('simulators-8.png',)
+
+      button(class="btn btn-accent mt-20 max-md:mt-10") 
+        p Подробнее про симуляторы
+        img(src="./img/arrow.svg")

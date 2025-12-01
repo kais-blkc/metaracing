@@ -1,0 +1,40 @@
+include ../mixins/sec-title
+
+mixin tech-card-content(title, desc, img1, img2, badge)
+  div(class="tech-card-content relative max-lg:max-w-[600px] mx-auto")
+    if badge
+      div(class=`absolute top-5 z-1 left-[30px] max-md:left-0 max-md:top-2`)
+        img(class="max-md:h-[30px]" src="./img/"+badge, alt="", loading="lazy")
+
+    div(class="group/card relative w-full flex items-end cursor-pointer")
+      picture
+        source(media="(max-width: 1024px)" srcset="img/mob-"+img1)
+        img(class="left-0 bottom-0 w-full -z-1" src="img/"+img1 loading="lazy")
+
+      div(href="" class="absolute left-0 bottom-0 w-full flex justify-between items-center pl-[44px] pr-[80px] pb-[30px] gap-2.5 max-[1200px]:pr-[60px] max-[1200px]:pl-[30px] max-[400px]:pr-[40px] flex-wrap gap-x-4" )
+        div(class="text-[28px] max-md:text-xl italic font-black text-app-white group-hover/card:scale-110 transition duration-300 ease-in-out uppercase max-w-[80%] max-md:max-w-[57%] ")!=title
+        div(class="w-[80px] h-[55px] max-md:w-[60px] max-md:h-[40px] flex justify-center items-center bg-app-white rounded-2xl group-hover/card:scale-110 transition duration-300 ease-in-out")
+          img(src="./img/arrow-purple.svg" loading="lazy")
+
+    div(class="relative py-7 pl-[48px] pr-[80px] max-md:pl-[38px] max-md:pr-[60px] text-app-white-secondary text-[19px] max-md:text-base max-sm:text-[14px] font-medium text-left")!=desc
+      picture
+        source(media="(max-width: 1024px)" srcset="img/mob-"+img2)
+        img(class="absolute left-0 bottom-0 w-full -z-2 max-lg:h-[300px]" src="img/"+img2 loading="lazy")
+
+section(class="sec-games py-20 relative ")
+  div(class="absolute top-[-20%] max-md:top-0 l-0 w-full -z-10")
+    img(class="w-full" src="./img/games-bg.png" loading="lazy")
+
+  .container
+    +sec-title(' <span class="text-app-pink"> Игры </span> на любой вкус', 'Отличный способ весело провести время')
+
+    div(class="grid grid-cols-[40%_60%] mt-[70px] max-lg:grid-cols-1 gap-y-6")
+      +tech-card-content('BeamNG.drive', 'Для тех, кто любит «нырять в поток». Берите друга, выбирайте машину — и мы отправим вас на трассу с трафиком. Проверьте мастерство в динамике!', 'games-1.png', 'games-1-before.png', 'gb-1.svg')
+      +tech-card-content('Assetto Corsa', 'Управляемый занос — один из самых зрелищных видов автоспорта. <br/> Почувствуйте себя дрифт-пилотом: катайтесь по трассам со всего мира. <br/> Дым, углы и море удовольствия!', 'games-2.png', 'games-2-before.png', 'gb-2.svg')
+    div(class="grid grid-cols-[47%_52%] mt-15 max-md:mt-6 max-lg:grid-cols-1 gap-y-6")
+      +tech-card-content('Dirt Rally 2.0', 'Любите кольцевые гонки или ралли? Включайся в заезд <br/> на Nurburgring, Spa, Sochi Autodrom и других культовых трассах мира. Соревонвательные режимы и гоночные машины любых классов уже ждут вас.', 'games-3.png', 'games-3-before.png', 'gb-3.svg')
+      +tech-card-content('Euro Truck Simulator 2', 'Хотите отдохнуть после сложного дня? Мы отправим вас в мир больших машин и техники. Здесь вы сможете почувствовать себя водителем фуры, взять груз и с чашечкой вкусного кофе отправиться в путешествие.', 'games-4.png', 'games-4-before.png', 'gb-4.svg')
+    div(class="grid grid-cols-[27.6%_39.5%_36%] mt-10 max-md:mt-6 max-lg:grid-cols-1 gap-y-6")
+      +tech-card-content('Wreckfest', 'Самый фановый режим <br/> для компании. Мы отправим <br/> вас на арену, где нужно разбить <br/> машины ваших друзей. <br/> Победит сильнейший!', 'games-5.png', 'games-5-before.png', 'gb-5.svg')
+      +tech-card-content('Assetto Corsa', 'Картинг — это то, с чего начинали большинство автоспортсменов. У нас вы можете сесть за болид <br/> и начать свой путь в автоспорте с картинга, а затем перейти в более суровые условия Формулы 1. <br/> Или сразу, если вы готовы!', 'games-6.png', 'games-6-before.png', 'gb-6.svg')
+      +tech-card-content('City Car Driving', 'Ваш путь к водительским правам начинается <br/> прямо сейчас! Симулятор вождения поможет <br/> вам безопасно научиться водить автомобиль, улучшить и отточить все самые необходимые <br/> навыки управления машиной.', 'games-7.png', 'games-7-before.png', 'gb-7.svg')

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Basalt Code
+    link(rel="icon" type="image/png" href="favicon.png")
+    link(rel="stylesheet", href="./css/fancybox.css")
+    link(rel="stylesheet", href="./css/aos.css")
+    link(rel="stylesheet", href="./css/tailwind.css")
+    link(rel="stylesheet", href="./css/swiper-bundle.min.css")
+    link(rel="stylesheet", href="./css/style.css")
+
+  body
+    include ./parts/header.pug
+
+    main
+      include ./home/banner.pug
+      include ./home/benefits.pug
+      include ./home/simulators.pug
+      include ./home/games.pug
+      include ./home/prices.pug
+      include ./home/atmosphere.pug
+      include ./home/reviews.pug
+      include ./home/events.pug
+      include ./home/rental.pug
+      include ./home/gift.pug
+      include ./home/merch.pug
+      include ./home/qa.pug
+      include ./home/address.pug
+      include ./home/register.pug
+    
+    include ./parts/footer.pug
+    include ./parts/modals.pug
+
+
+    script(src="./js/fancybox.umd.js")
+    script(src="./js/imask.js")
+    script(src="./js/aos.js")
+    script(src="./js/swiper-bundle.min.js")
+    script(src="./js/main.js")

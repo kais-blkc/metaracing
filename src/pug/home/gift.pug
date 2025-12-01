@@ -1,0 +1,26 @@
+include ../mixins/sec-title
+
+mixin gift-item(img, badge, time, badgebg, cardBgColor, btnColor)
+  div(class="gift-item  relative w-full max-lg:max-w-[500px] max-lg:mx-auto")
+    div(class="badge-clip text-[30px] absolute top-5 left-[50px] z-1 "+badgebg )!=badge
+
+    div(class="events-item__img relative")
+      img(class="w-full" src=`./img/${img}` loading="lazy")
+
+    div(class="events-item__body relative pt-4 pb-[30px] max-md:pb-[20px] pr-[40px] max-lg:pl-[10px] max-md:pr-[20px] w-[90%] ml-8")
+      div(class=`${cardBgColor}  -z-1 absolute  w-full bottom-0 left-0 -skew-x-10 rounded-[15px] border border-app-white/10 bg-app-card-bg/40 h-[330px] max-md:h-[200px]`)
+      div(class="flex justify-between gap-2 flex-wrap gap-y-5 max-md:items-start max-w-[445px] max-[1200] mx-auto")
+        div(class="text-[28px] max-md:text-lg italic font-black uppercase leading-[50px]")!=time
+        a(href="", class=`btn-${btnColor}`) Оформить
+
+section(class="sec-gift py-24 relative overflow-visible max-lg:py-18")
+  div(class="absolute top-[-15%] max-md:top-0 l-0 w-full -z-10")
+    img(class="w-full" src="./img/gift-bg.png" loading="lazy")
+
+  .container
+    +sec-title('В подарок', 'Подарочный сертификат MetaRacing не оставит равнодушным <br/> ни одного фаната автомобилей, На ваш выбор — сертификат может быть <br/> изготовлен в печатном или электронном виде')
+  
+  div(class="gift-list grid grid-cols-3 max-lg:grid-cols-1 gap-y-[33px] mt-[80px] max-lg:mt-[35px] px-10")
+    +gift-item('gift-1.png', '1390 ₽', '1 час', 'bg-app-sky', 'card-tech-before-gradient-sky', 'sky')
+    +gift-item('gift-2.png', '2780 ₽', '2 часа', 'bg-app-purple', 'card-tech-before-gradient-purple', 'purple')
+    +gift-item('gift-3.png', '4170 ₽', '3 часа', 'bg-app-pink', 'card-tech-before-gradient-pink', 'accent')

@@ -1,0 +1,27 @@
+include ../mixins/sec-title
+
+mixin merch-item(img, title, badge, btnColor, lastBtn, translate)
+  div(class=`merch-item relative w-full mx-auto max-[1200px]:max-w-[500px] max-lg:mx-auto ${translate}`)
+    div(class="badge-clip bg-white text-[#121212] text-[30px] absolute top-5 left-[50px] z-1")!=badge
+    img(class="w-full" src=`img/${img}` loading="lazy")
+
+    div(class="absolute z-2 bottom-0 left-0 flex items-center justify-between gap-2.5 flex-wrap w-full pb-[30px] pl-[40px] pr-[100px] max-[400px]:pr-[60px] max-[400px]:pl-[30px] max-[1550px]:justify-start max-[1200px]:justify-between")
+      div(class="text-[28px] max-md:text-lg italic font-black uppercase leading-[50px]")!=title
+      if lastBtn
+        a(href="#" class=`btn btn-${btnColor} w-[234px] max-lg:w-auto`) 
+          p Весь каталог
+          img(class="brightness-200 mt-1" src="./img/arrow-purple.svg")
+      else 
+        a(href="#" class=`btn btn-${btnColor}`) Купить
+
+section(class="sec-merch py-24 relative overflow-visible max-lg:py-18")
+  div(class="absolute top-[10%] max-md:top-0 l-0 w-full -z-10")
+    img(class="w-full" src="./img/merch-bg.png" loading="lazy")
+
+  .container
+    +sec-title('Наш <span class="text-app-pink">мерч</span>', 'MetaRacing — это стиль жизни! <br/> Приобрести всю красоту можно как в клубе, так и онлайн')
+
+    div(class="merch-list relative grid grid-cols-[30.51%_30.51%_45.26%] max-[1200px]:grid-cols-1 gap-y-[33px] mt-[80px] max-lg:mt-[35px]")
+     +merch-item('merch-1.png', 'Зип-худи', '6900 ₽', 'sky', false, '')
+     +merch-item('merch-2.png', 'Ветровка', '6900 ₽', 'sky', false, 'translate-x-[-40px] max-[1200px]:translate-x-0')
+     +merch-item('merch-3.png', 'И ДРУГИЕ ТОВАРЫ', '6900 ₽', 'pink', true, 'translate-x-[-70px] max-[1200px]:translate-x-0')

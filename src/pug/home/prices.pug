@@ -1,0 +1,78 @@
+include ../mixins/tabs
+
+-
+  var tabData = [
+    ['t1', 'Сакнт-Петербург'],
+    ['t2', 'Москва']
+  ]
+  var pricesSP1 = [
+    ['30 минут', '790 ₽'],
+    ['1 час', '1390 ₽'],
+    ['2 часа', '2490 ₽', '2780 ₽'],
+    ['3 часа', '3590 ₽', '4170 ₽'],
+  ]
+  var pricesSP2 = [
+    ['15 минут', '790 ₽'],
+    ['30 минут', '1690 ₽'],
+    ['1 час', '2390 ₽'],
+    ['2 часа', '3490 ₽'],
+  ]
+  var pricesSP3 = [
+    ['10 часов / статичный <br/> 5 часов  / подвижный', '10 990 ₽'],
+    ['14 часов / статичный <br/> 7 часов  / подвижный', '16 590 ₽'],
+    ['18 часов / статичный <br/> 9 часов / подвижный', '20 990 ₽'],
+  ]
+
+mixin prices-item(img, title, subtitle, borderColor, prices, isPink)
+  div(class="max-md:scale-95 z-10")
+    div(class="sec-games__prices relative py-[30px] px-[50px] max-[1500px]:px-[35px] max-md:px-[25px] rounded-[15px] overflow-hidden -skew-x-10   w-full max-[1300px]:max-w-[500px] lg:min-h-[455px]")
+      if isPink
+        div(class="absolute w-full h-full top-0 left-0 bg-linear-220 from-[#1e3047] to-app-pink border-transparent [background-clip:content-box,border-box] bg-origin-border -z-2")
+        div(class="absolute rounded-[15px] left-[1.3px] top-[1.3px] w-[calc(100%-3px)] h-[calc(100%-3px)] -z-1 bg-linear-326 from-app-pink/60 to-transparent to-40% bg-[#091119] backdrop-blur-[40px]")
+      else 
+        div(class="absolute w-full h-full top-0 left-0 bg-linear-220 from-[#1e3047] to-app-purple border-transparent [background-clip:content-box,border-box] bg-origin-border -z-2")
+        div(class="absolute rounded-[15px] left-[1.3px] top-[1.3px] w-[calc(100%-3px)] h-[calc(100%-3px)] -z-1 bg-linear-326 from-app-purple/60 to-transparent to-40% bg-[#091119] backdrop-blur-[40px]")
+
+      div(class="skew-x-10 h-full")
+        div(class="-skew-x-9 flex flex-col h-full")
+          div(class="sec-games__prices-title text-[32px] max-md:text-2xl italic font-black uppercase leading-[120%] ")!=title
+          div(class="sec-games__prices-subtitle mt-2.5 mb-[22px] text-[19px] max-md:text-lg font-['Golos'] font-semibold")!=subtitle
+          ul(class="sec-games__prices-list")
+            each price in prices
+              li(class="sec-games__prices-price text-[19px] max-md:text-base font-medium flex justify-between gap-1 pb-2.5 pt-5 border-b last:border-b-0 last:pb-0 first:pt-0", style="border-color: "+borderColor)
+                span(class="font-['Golos']] text-app-white-secondary")!=price[0]
+                div(class="min-w-[130px] text-right")
+                  if price.length > 2
+                    span(class="text-[21px] italic font-bold opacity-50 ml-auto mr-3.5 max-md:text-base")!=price[2]
+                  span(class="text-[28px] italic font-black text-right max-[1300px]:text-2xl max-md:text-xl")!=price[1]
+
+    div(class="relative pr-11 py-7.5 -z-1")
+      - var gradient = isPink ? "card-tech-before-gradient" : "card-tech-before-gradient-purple";
+      - var buttonType = isPink ? "btn-accent" : "btn-purple";
+      div(class=gradient+" absolute  w-full bottom-0 left-0 -skew-x-10 rounded-[15px] border border-app-white/10 bg-app-card-bg/40 h-[380px]")
+      button(class=buttonType+" btn w-full z-1") Онлайн-запись
+
+section(class="sec-prices relative py-20 overflow-visible")
+  div(class="absolute top-[-15%] max-md:top-0 l-0 w-full -z-10")
+    img(class="w-full" src="./img/prices-bg.png" loading="lazy")
+    
+  .container
+    div(class="text-center uppercase")
+      div(class="italic font-black text-3xl md:text-6xl lg:text-[80px]") Прайс #[span(class="text-app-pink") и акции]
+
+    div(class="mt-[75px]")
+      +tabs(tabData)
+        div(class="tab-pane active" data-tab-item="t1")
+          div(class="grid grid-cols-3 max-[1300px]:gap-y-8 max-md:gap-y-0 max-[1300px]:flex max-[1300px]:flex-wrap max-[1300px]:justify-center gap-12 px-7")
+            +prices-item('prices-1.svg', '<span class="text-app-purple">Статичный</span> симулятор', 'во всех клубах', '#AC9CDB', pricesSP1)
+            +prices-item('prices-1.svg', '<span class="text-app-purple">Подвижный</span> симулятор', 'в MetaRacing Московская', '#AC9CDB', pricesSP2)
+            +prices-item('prices-2.png', '<span class="text-app-accent">Абонементы</span>', 'для всех клубов', '#D89CDB', pricesSP3, true)
+
+        div(class="tab-pane" data-tab-item="t2")
+          div(class="grid grid-cols-3 max-[1300px]:gap-y-8 max-md:gap-y-0 max-[1300px]:flex max-[1300px]:flex-wrap max-[1300px]:justify-center gap-12 px-7")
+            +prices-item('prices-2.png', '<span class="text-app-accent">Абонементы</span>', 'для всех клубов', '#D89CDB', pricesSP3, true)
+            +prices-item('prices-1.png', '<span class="text-app-purple">Подвижный</span> симулятор', 'в MetaRacing Московская', '#AC9CDB', pricesSP2)
+            +prices-item('prices-1.png', '<span class="text-app-purple">Статичный</span> симулятор', 'во всех клубах', '#AC9CDB', pricesSP1)
+    
+
+        

@@ -1,0 +1,11 @@
+mixin linear-border-220(toColor)
+  div(class=`absolute rounded-[15px] w-full h-full top-0 left-0 bg-linear-220 from-[#1e3047] ${toColor} border-transparent [background-clip:content-box,border-box] bg-origin-border -z-2`)
+  div(class="absolute rounded-[15px] left-[1.3px] top-[1.3px] w-[calc(100%-3px)] h-[calc(100%-3px)] -z-1 bg-linear-326 from-app-pink/60 to-transparent to-40% bg-[#091119] backdrop-blur-[40px]")
+
+mixin linear-border-220-transparent(toColor)
+  div(class=`absolute rounded-[15px] w-full h-full top-0 left-0 bg-linear-220 from-[#1e3047] ${toColor} border-transparent [background-clip:content-box,border-box] bg-origin-border -z-2`)
+  div(class="absolute rounded-[15px] left-[1.3px] top-[1.3px] w-[calc(100%-3px)] h-[calc(100%-3px)] -z-1 bg-linear-326 from-app-pink/60 to-transparent to-40% bg-transparent")
+
+mixin linear-border-reviews(toColor)
+  div(class=`absolute rounded-[15px] w-full h-full top-0 left-0 bg-linear-220 from-[#1e3047] ${toColor} border-transparent [background-clip:content-box,border-box] bg-origin-border -z-2`)
+  div(class="absolute rounded-[15px] left-[1.3px] top-[1.3px] w-[calc(100%-3px)] h-[calc(100%-3px)] -z-1 bg-linear-326 from-app-pink/60 to-transparent to-40% bg-transparent")

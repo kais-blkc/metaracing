@@ -1,0 +1,34 @@
+include ../mixins/sec-title
+
+mixin events-item(img, badge, address, city, price)
+  div(class="events-item  relative w-full max-lg:max-w-[500px] max-lg:mx-auto")
+    div(class="badge-clip text-[27px] absolute top-5 left-0 bg-app-purple z-1" )!=badge
+
+    div(class="events-item__img relative")
+      img(class=""  src=`./img/${img}` loading="lazy")
+
+    div(class="events-item__body relative pt-4 pb-6 pr-10 w-[90%] ml-4")
+      div(class="card-tech-before-gradient-pink -z-1 absolute  w-full bottom-0 left-0 -skew-x-10 rounded-[15px] border border-app-white/10 bg-app-card-bg/40 h-[330px]")
+
+      div(class="flex items-end flex-wrap gap-y-5 pl-6 max-md:flex-col max-md:items-start")
+        div(class="text-['Golos'] flex flex-col gap-1 text-[19px] max-md:text-base") 
+          span(class="font-bold")!=address
+          span(class="text-app-white-secondary font-medium")!=city
+        div(class="flex items-end gap-4 ml-auto max-md:ml-0")
+          span(class="font-medium text-app-white-secondary text-[19px] max-md:text-base") 1 час /
+          span(class="font-black text-[28px] max-md:text-xl leading-[110%] uppercase italic")!=price + ' ₽'
+
+      a(href="", class="btn-accent w-full mt-5") Заказать праздник
+
+section(class="sec-events py-24 relative overflow-visible max-lg:py-18")
+  div(class="absolute top-[-15%] max-md:top-0 l-0 w-full -z-10")
+    img(class="w-full" src="./img/events-bg.png" loading="lazy")
+
+  .container
+    +sec-title('Мероприятия ', 'В день рождения или корпоратив  —  арендуйте весь клуб MetaRacing <br/> и отлично проведите время со своей компанией')
+
+    div(class="events-list grid grid-cols-3 gap-y-[33px] max-lg:grid-cols-1 max-md:px-10 mt-[100px]")
+      +events-item('event-1.png', '6 симуляторов', 'Метро Приморская,', ' Санкт-Петербург', '6990')
+      +events-item('event-2.png', '8 симуляторов', 'Метро Приморская,', ' Санкт-Петербург', '9990')
+      +events-item('event-3.png', '8 симуляторов', 'Метро ЗИЛ,', 'Москва', '12 990')
+      

@@ -1,0 +1,32 @@
+include ../mixins/sec-title
+include ../mixins/linear-border
+
+section(class="sec-atmosphere py-24 relative") 
+  div(class="absolute top-[-15%] max-md:top-0 l-0 w-full -z-10")
+    img(class="w-full" src="./img/atmosphere-bg.png" loading="lazy")
+
+  .container
+    div(class="flex relative justify-center items-end max-md:flex-col max-md:items-center")
+      +sec-title('<span class="text-app-pink"> Атмосфера </span>', 'Видео с заездами наших клиентов')
+      div(class="flex gap-4 absolute right-0 max-md:relative h-[55px] max-md:mt-4")
+        div(class="btn-icon swiper-button-atmosphere swiper-button-prev w-[55px]")
+          img(class="rotate-225" src="./img/arrow-purple.svg" loading="lazy")
+        div(class="btn-icon swiper-button-atmosphere swiper-button-next w-[55px]")
+          img(class="rotate-45" src="./img/arrow-purple.svg" loading="lazy")
+  
+    div(class="mt-[96px] px-12 max-md:mt-[35px]")
+      div(class="swiper swiper-atmosphere")
+        .swiper-wrapper
+          .swiper-slide
+            div(class="sec-atmosphere__video p-[2px] z-1 to-app-accent relative -skew-x-10 rounded-[15px] bg-app-white-secondary w-full h-[650px] max-md:h-[400px]")
+              +linear-border-220-transparent('to-app-accent')
+
+              img(class="absolute top-[26px] left-[-30px]" src="./img/live-video.svg" loading="lazy" )
+              img(class="absolute w-[calc(100%-3px)] h-[calc(100%-3px)] top-[1.5px] left-[1.5px] -z-1 object-cover rounded-[15px]" src="./img/atmosphere-1.png" loading="lazy" )
+              p(class="text-[28px] max-[1510px]:text-xl uppercase italic font-black text-app-white absolute w-full p-[30px]  bottom-0 left-0") @metaracing.ru
+
+          - for (let i = 0; i < 6; i++)
+            .swiper-slide
+              div(class="sec-atmosphere__video p-[2px] z-1 to-app-accent relative overflow-hidden -skew-x-10 rounded-[15px] bg-app-white-secondary w-full h-[650px] max-md:h-[400px]")
+                +linear-border-220-transparent('to-app-accent')
+                video(class="absolute w-[calc(100%-3px)] h-[calc(100%-3px)] rounded-[15px] top-[1.5px] left-[1.5px] object-cover" src="./img/sim.mp4" controls muted)

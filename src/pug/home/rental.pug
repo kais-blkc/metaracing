@@ -1,0 +1,33 @@
+include ../mixins/sec-title
+
+mixin rental_img(img1)
+  div(class="max-lg:max-w-[500px] mx-auto")
+    picture
+      source(media="(max-width: 1024px)" srcset="img/mob-"+img1)
+      img(class="w-full" src="img/"+img1 loading="lazy")
+
+section(class="sec-rental py-24 relative overflow-visible max-lg:py-18")
+  div(class="absolute top-[-15%] max-md:top-0 l-0 w-full -z-10")
+    img(class="w-full" src="./img/rental-bg.png" loading="lazy")
+
+  .container
+    +sec-title('Выездная <span class="text-app-pink"> аренда</span>', 'MetaRacing — выбор крупнейших событий и брендов, Мы берём все заботы на себя, <br/> а вам остается только наслаждаться восторгом гостей')
+
+    div(class="rental-content mt-[77px]")
+
+      div(class="grid grid-cols-[1fr_28.46%_41.67%] max-lg:grid-cols-1 gap-y-[33px]")
+        div(class="flex flex-col justify-center pl-[60px] max-[1200px]:pl-0 pr-3 max-lg:max-w-[650px] max-lg:mx-auto")
+          div(class="text-[25px] max-md:text-lg leading-[110%] font-bold") #[span(class="text-app-pink") Максимум драйва —] #[br] минимум забот
+          div(class="max-w-[366px]  mt-[22px] font-['Golos'] text-[19px] max-md:text-base text-app-white-secondary") Мы сами доставим все необходимое оборудование прямо к месту проведения вашего мероприятия — будь то выставочный центр, частная площадка или загородный клуб.
+        div(class="hidden max-lg:block")
+        +rental_img('rental-1.png')
+        +rental_img('rental-2.png')
+
+      div(class="grid grid-cols-[51.47%_50.64%] gap-y-[33px] max-lg:grid-cols-1 mt-[33px]")
+        +rental_img('rental-3.png')
+        +rental_img('rental-4.png')
+      
+      div(class="flex justify-center mt-[88px] max-lg:mt-[35px]")
+        a(href="", class="btn btn-accent w-full max-w-[300px] h-[70px]") 
+          p Подробнее про аренду
+          img(class="brightness-200 mt-1" src="./img/arrow-purple.svg")

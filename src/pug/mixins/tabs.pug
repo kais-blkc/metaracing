@@ -1,0 +1,10 @@
+mixin tabs(buttons)
+  div(class="flex justify-center" data-tabs-wrapper)
+    div(class="tabs-buttons flex gap-1 items-center p-2 -skew-x-12 rounded-[20px] border-app-border border")
+      each button, i in buttons
+        div(class=`tab-button py-4 px-9 max-md:px-4 rounded-2xl cursor-pointer font-bold transition duration-300 ease-in-out ${i === 0 ? 'active' : ''}` data-tab-btn=button[0])
+          p(class="skew-x-12")!=button[1]
+
+  div(class="tab-content w-full mt-[75px] max-md:mt-[35px]")
+    block
+  

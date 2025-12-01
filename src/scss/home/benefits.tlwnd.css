@@ -1,0 +1,77 @@
+@reference "../../css/tailwind.css";
+
+/* .tech-card {
+  --cut-size: 50px; 
+  --border-width: 2px; 
+  @apply relative w-full max-w-[480px] bg-amber-400;
+}
+
+.tech-card__badge {
+  @apply absolute z-20 flex items-center justify-center;
+  @apply h-14 w-24 bg-[#74a485] text-white;
+  @apply -left-2 -top-4;
+
+  clip-path: polygon(
+      0 0, 
+      100% 5%, 
+      90% 100%, 
+      10% 90%
+    );
+  transform: rotate(-3deg);
+
+  span {
+    @apply text-3xl font-black italic tracking-tighter;
+    transform: rotate(3deg); 
+    text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+  }
+}
+
+.tech-card__border-wrap {
+  @apply relative z-10 w-full p-[2px]; 
+  @apply bg-gradient-to-r from-emerald-500 to-slate-700;
+  
+  clip-path: polygon(
+    0 var(--cut-size)
+    var(--cut-size) 0, 
+    100% 0, 
+    100% 100%, 
+    0 100%
+  );
+}
+
+
+.tech-card__content {
+  @apply relative flex h-[320px] w-full items-center justify-center overflow-hidden bg-slate-900;
+  
+  clip-path: polygon(
+    0  var(--cut-size),
+    var(--cut-size) 0, 
+    100% 0, 
+    100% 100%, 
+    0 100%
+  );
+}
+
+.tech-card__atmosphere {
+  @apply absolute inset-0 z-0;
+  @apply bg-gradient-to-br from-blue-900/30 via-transparent to-slate-900;
+  
+}
+.glow {
+  @apply absolute h-64 w-64 rounded-full opacity-40 blur-[80px];
+}
+
+.glow--purple {
+  @apply -right-10 top-10 bg-purple-600;
+}
+.glow--blue {
+  @apply -bottom-10 -left-10 bg-blue-600;
+}
+
+.tech-card__image {
+  @apply relative z-10 w-[85%] object-contain drop-shadow-2xl transition-transform duration-500;
+  
+  &:hover {
+    @apply scale-105;
+  }
+} */
