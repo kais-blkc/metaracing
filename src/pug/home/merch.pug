@@ -2,7 +2,7 @@ include ../mixins/sec-title
 
 mixin merch-item(img, title, badge, btnColor, lastBtn, translate)
   div(class=`merch-item relative w-full mx-auto max-[1200px]:max-w-[500px] max-lg:mx-auto ${translate}`)
-    div(class="badge-clip bg-white text-[#121212] text-[30px] absolute top-5 left-[50px] z-1")!=badge
+    div(class="badge-clip bg-white text-[#121212] text-[30px] max-md:text-lg absolute top-5 max-md:top-2 left-[50px] max-md:left-[20px] z-1")!=badge
     img(class="w-full" src=`img/${img}` loading="lazy")
 
     div(class="absolute z-2 bottom-0 left-0 flex items-center justify-between gap-2.5 flex-wrap w-full pb-[30px] pl-[40px] pr-[100px] max-[400px]:pr-[60px] max-[400px]:pl-[30px] max-[1550px]:justify-start max-[1200px]:justify-between")

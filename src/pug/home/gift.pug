@@ -2,7 +2,7 @@ include ../mixins/sec-title
 
 mixin gift-item(img, badge, time, badgebg, cardBgColor, btnColor)
   div(class="gift-item  relative w-full max-lg:max-w-[500px] max-lg:mx-auto")
-    div(class="badge-clip text-[30px] absolute top-5 left-[50px] z-1 "+badgebg )!=badge
+    div(class="badge-clip text-[30px] max-md:text-lg absolute top-5 max-md:top-2 left-[50px] max-md:left-[20px] z-1 "+badgebg )!=badge
 
     div(class="events-item__img relative")
       img(class="w-full" src=`./img/${img}` loading="lazy")

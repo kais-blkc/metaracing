@@ -2,7 +2,7 @@ include ../mixins/sec-title
 
 mixin events-item(img, badge, address, city, price)
   div(class="events-item  relative w-full max-lg:max-w-[500px] max-lg:mx-auto")
-    div(class="badge-clip text-[27px] absolute top-5 left-0 bg-app-purple z-1" )!=badge
+    div(class="badge-clip text-[27px] max-md:text-base absolute top-5 max-md:top-2 left-0 bg-app-purple z-1" )!=badge
 
     div(class="events-item__img relative")
       img(class=""  src=`./img/${img}` loading="lazy")

@@ -10,7 +10,7 @@ mixin qa-item(badge, title, desc)
   )
     div(class="border-gradient-border")
     div(class="border-gradient-content")
-    div(class="badge-clip bg-white text-app-pink text-[30px] absolute top-5 right-[-10px] z-1")!=badge
+    div(class="badge-clip bg-white text-app-pink text-[30px] max-md:text-lg absolute top-5 right-[-10px] z-1", style="padding-left: 15px;")!=badge
     div(class="relative z-2 skew-x-10 max-md:skew-x-0")
       div(class="text-[25px] max-md:text-xl max-sm:text-base font-bold")!=title
       div(class="text-[19px] max-md:text-base max-sm:text-[12px] font-medium text-app-white-secondary mt-[26px]")!=desc
