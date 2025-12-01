@@ -54,7 +54,28 @@ section(class="sec-address py-24 relative max-lg:py-18 overflow-visible")
                 w-[88%] max-[1300px]:max-w-[554px] h-full min-h-[680px] max-[1300px]:min-h-[400px] ml-[80px] max-[1300px]:ml-0
                 address-item border-gradient relative rounded-[15px] -skew-x-10
                 bg-linear-195 from-transparent from-80% to-app-pink/30
+              `
+              style=`--border-gradient-image: linear-gradient(225deg, #1E3147 20%, #d442a3)`
+            )
+              div(class="border-gradient-border")
+              div(class="border-gradient-content")
+              div(class="badge-clip bg-app-white italic  text-black text-[40px] flex items-center gap-1 absolute top-5 left-[-30px] z-1" style="padding: 3px 44px 7px 30px;") Наши клубы
+              div(class="absolute rounded-[15px] w-full h-full overflow-hidden")
+                iframe(class="h-full w-[120%] skew-x-10 absolute top-0 left-[-10%]" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab76037977501323e32999dfe2d470752b295009e7277db5a398f5fa429a2b0b4&amp;source=constructor" theme="dark" frameborder="0" 
+                style=`filter: invert(90%) hue-rotate(180deg) brightness(80%);`
+                )
                 
+        div(data-tab-item="t-address-2" class="tab-pane")
+          div(class="grid grid-cols-[1fr_63.5%] gap-y-[33px] px-7 max-[1300px]:flex max-[1300px]:flex-col max-[1300px]:items-center")
+            div(class="w-full flex flex-col gap-y-[40px]")
+              +address-item('metaracing <br/> <span class="text-app-pink">М.Московская 2</span> ', 'Москва', 'ул. Типанова, 21 <br/> ТЦ «Питер», 3 этаж', '+7 921 864-38-88', '12:00 – 00:00 <br/> без выходных')
+              +address-item('metaracing <br/> <span class="text-app-pink">М.Московская 2</span> ', 'Москва', 'малый пр. В.О., д. 88, к. 2 <br/> ТЦ «Шкиперский Молл», 4 этаж', '+7 921 764-38-88', '12:00 – 00:00 <br/> без выходных')
+
+            div(
+              class=`
+                w-[88%] max-[1300px]:max-w-[554px] h-full min-h-[680px] max-[1300px]:min-h-[400px] ml-[80px] max-[1300px]:ml-0
+                address-item border-gradient relative rounded-[15px] -skew-x-10
+                bg-linear-195 from-transparent from-80% to-app-pink/30
               `
               style=`--border-gradient-image: linear-gradient(225deg, #1E3147 20%, #d442a3)`
             )
@@ -67,6 +88,27 @@ section(class="sec-address py-24 relative max-lg:py-18 overflow-visible")
                 )
                 
 
-        div(data-tab-item="t-address-2" class="tab-pane")
-          div(class="grid grid-cols-3 max-[1300px]:gap-y-8 max-md:gap-y-0 max-[1300px]:flex max-[1300px]:flex-wrap max-[1300px]:justify-center gap-12 px-7")
-            p TAB 2
+        //- div(data-tab-item="t-address-2" class="tab-pane")
+        //-   div(class="grid grid-cols-3 max-[1300px]:gap-y-8 max-md:gap-y-0 max-[1300px]:flex max-[1300px]:flex-wrap max-[1300px]:justify-center gap-12 px-7")
+        //-     div(data-tab-item="t-address-1" class="tab-pane active")
+        //-       div(class="grid grid-cols-[1fr_63.5%] gap-y-[33px] px-7 max-[1300px]:flex max-[1300px]:flex-col max-[1300px]:items-center")
+        //-         div(class="w-full flex flex-col gap-y-[40px]")
+        //-           +address-item('metaracing <br/> <span class="text-app-pink">М.Московская</span>', '  Санкт-Петербург', 'ул. Типанова, 21 <br/> ТЦ «Питер», 3 этаж', '+7 921 864-38-88', '12:00 – 00:00 <br/> без выходных')
+        //-           +address-item('metaracing <br/> <span class="text-app-pink">М.Московская</span>', '  Санкт-Петербург', 'малый пр. В.О., д. 88, к. 2 <br/> ТЦ «Шкиперский Молл», 4 этаж', '+7 921 764-38-88', '12:00 – 00:00 <br/> без выходных')
+
+        //-         div(
+        //-           class=`
+        //-             w-[88%] max-[1300px]:max-w-[554px] h-full min-h-[680px] max-[1300px]:min-h-[400px] ml-[80px] max-[1300px]:ml-0
+        //-             address-item border-gradient relative rounded-[15px] -skew-x-10
+        //-             bg-linear-195 from-transparent from-80% to-app-pink/30
+        //-           `
+        //-           style=`--border-gradient-image: linear-gradient(225deg, #1E3147 20%, #d442a3)`
+        //-         )
+        //-           div(class="border-gradient-border")
+        //-           div(class="border-gradient-content")
+        //-           div(class="badge-clip bg-app-white italic  text-black text-[40px] flex items-center gap-1 absolute top-5 left-[-30px] z-1" style="padding: 3px 44px 7px 30px;") Наши клубы
+        //-           div(class="absolute rounded-[15px] w-full h-full overflow-hidden")
+        //-             iframe(class="h-full w-[120%] skew-x-10 absolute top-0 left-[-10%]" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab76037977501323e32999dfe2d470752b295009e7277db5a398f5fa429a2b0b4&amp;source=constructor" theme="dark" frameborder="0" 
+        //-             style=`filter: invert(90%) hue-rotate(180deg) brightness(80%);`
+        //-             )
+                    
