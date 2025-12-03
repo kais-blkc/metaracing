@@ -1,23 +1,42 @@
 mixin btn-icon(img) 
-  a(href="" class="btn-icon-purple w-[68px] h-[62px] max-md:w-[50px] max-md:h-[45px]")
+  a(href="" class="btn-small btn-icon-purple w-[68px] h-[62px] max-md:w-[50px] max-md:h-[45px]")
     img(class="brightness-[5] w-[22px] h-[22px]" src=`./img/${img}` loading="lazy")
 
-section(class="sec-register py-20 relative overflow-visible max-lg:py-0")
+section(class="sec-register py-20 max-md:py-[50px] relative overflow-visible max-lg:py-0")
+  div(class="absolute top-[-130%] l-0 w-full -z-10")
+    img(class="w-full" src="./img/reg-bg.png" loading="lazy")
+
   .container
-    div(class="register-content mt-[80px] px-10")
+    div(class="register-content px-10 max-md:px-5")
       div(
         class=`
-          qa-item border-gradient relative pt-[55px] pb-[62px] max-md:py-[30px] px-[95px] max-[1360px]:px-[50px] max-md:px-[20px] rounded-[15px] -skew-x-10
+          border-gradient relative  rounded-[15px] -skew-x-10
           bg-linear-195 from-[#090D12] from-80% to-app-pink/10
+          max-md:from-60% max-md:to-app-pink/30
+          pt-[55px] pb-[62px] max-md:py-[30px] px-[95px] max-[1360px]:px-[50px] max-md:px-[20px]
+          max-md:pt-5 max-md:pb-3 max-md:pl-[6px] max-md:pr-[15px] max-[1200px]:py-[37px]
+          max-md:max-w-[347px] max-md:mx-auto
         `
         style=`--border-gradient-image: linear-gradient(195deg, #1E3147 80%, #5D1946)`
       )
         div(class="border-gradient-border")
         div(class="border-gradient-content")
-        div(class="relative z-2 skew-x-10 flex items-center gap-4 max-[1200px]:flex-col ")
-          div(class="uppercase text-[32px] max-md:text-xl italic font-black max-[1200px]:text-center max-md:translate-x-[14px]") #[span(class="text-app-pink") онлайн-Запись] в наши клубы 
-          div(class="flex items-center max-md:justify-center gap-2.5 max-md:flex-wrap  ml-auto max-[1200px]:ml-0")
+        div(class=`
+          relative z-2 skew-x-10
+          flex items-center gap-4
+          max-md:flex-col max-md:gap-6
+          max-md:items-start
+        `)
+          div(class=`
+            uppercase text-[32px] max-[1200px]:text-[19px] italic font-black
+            max-[1200px]:text-left max-md:text-[22px] max-md:ml-[25px]
+          `) #[span(class="text-app-pink") онлайн-Запись] <br class="md:hidden"/> в наши клубы 
+          div(class=`
+          register-socs flex items-center gap-2.5
+          max-md:gap-1.5
+          ml-auto max-md:ml-0
+          `)
             +btn-icon("accent-whatsapp.svg")
             +btn-icon("accent-tg.svg")
             +btn-icon("accent-vk.svg")
-            a(href="" class="btn-accent w-[200px] h-[62px] max-md:w-full max-md:ml-[-20px]" ) Записаться
+            a(href="" class="btn-big btn-accent w-[200px] h-[62px] max-lg:w-[124px] max-lg:h-[38px] max-md:w-[144px] max-md:h-[48px]" ) Записаться

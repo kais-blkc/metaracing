@@ -173,53 +173,33 @@ function openModalFail(node) {
 
 /* ========== SWIPER ========== */
 const swiperAtmosphere = new Swiper('.swiper-atmosphere', {
-  slidesPerView: 4,
-  spaceBetween: 40,
-  // Navigation arrows
+  slidesPerView: 'auto',
   navigation: {
     nextEl: '.swiper-button-atmosphere.swiper-button-next',
     prevEl: '.swiper-button-atmosphere.swiper-button-prev',
   },
-  //  media
-  breakpoints: {
-    0: {
-      slidesPerView: 1,
-    },
-    768: {
-      slidesPerView: 2,
-    },
-    1024: {
-      slidesPerView: 3,
-    },
-    1280: {
-      slidesPerView: 4,
-    },
-  },
 });
 
 const swiperReviews = new Swiper('.swiper-reviews', {
-  spaceBetween: 26,
-  // Navigation arrows
-  autoHeight: true,
+  slidesPerView: 'auto',
+
   navigation: {
     nextEl: '.swiper-button-reviews.swiper-button-next',
     prevEl: '.swiper-button-reviews.swiper-button-prev',
   },
-  //  media
-  breakpoints: {
-    0: {
-      slidesPerView: 1,
-    },
-    768: {
-      slidesPerView: 2,
-    },
-    1024: {
-      slidesPerView: 2,
-    },
-    1280: {
-      slidesPerView: 3,
-    },
-  },
+});
+
+const swiperSimulators = new Swiper('.swiper-sims', {
+  slidesPerView: 1,
+  spaceBetween: 15,
+});
+
+const swiperRental = new Swiper('.swiper-rental', {
+  slidesPerView: 'auto',
+});
+
+const swiperMerch = new Swiper('.swiper-merch', {
+  slidesPerView: 'auto',
 });
 /* ========== SWIPER END ========== */
 

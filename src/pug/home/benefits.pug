@@ -1,19 +1,19 @@
 mixin tech-card(img, title, desc, badge)
-  div(class="tech-card relative")
-    div(class=`absolute top-5 left-0 z-1`)
+  div(class="tech-card relative br-hidden-md max-md:max-w-[372px]")
+    div(class=`absolute top-5 left-0 z-1 max-lg:w-[50px] max-md:w-[70px] max-lg:top-1 max-md:top-3 max-md:left-[10px]`)
       img(src="./img/"+badge, alt="", loading="lazy")
     div(class="tech-card__img")
       img(src=img, alt="", loading="lazy")
-    div(class="max-lg:pl-4 max-md:pl-0 max-md:text-center")
-      div(class="tech-card__title mt-8 uppercase font-bold text-2xl max-md:text-xl")!=title
-      div(class="tech-card__desc mt-3 text-lg text-c-white-sec max-md:text-base")!=desc
+    div(class="max-lg:pl-4 max-md:pl-0")
+      div(class="tech-card__title mt-8 max-md:mt-3.5 uppercase font-bold text-2xl max-lg:text-[15px] max-md:text-lg")!=title
+      div(class="tech-card__desc mt-3 text-lg text-c-white-sec max-lg:text-[12px] max-md:text-sm")!=desc
 
 section(class="sec-benefits relative pt-3 pb-16 overflow-visible")
   div(class="absolute top-[-20%] max-md:top-0 l-0 w-full -z-10")
     img(class="w-full" src="./img/benefits-bg.png" loading="lazy")
 
   .container
-    div(class="sec-benefits__list grid grid-cols-4 justify-items-center gap-3 max-lg:grid-cols-2 max-md:grid-cols-1 max-sm:gap-12")
+    div(class="sec-benefits__list grid grid-cols-4 justify-items-center gap-3 max-md:grid-cols-1 max-md:gap-[45px]")
       +tech-card('./img/benefits-1.png', '<span class="text-app-green">Топовое</span><br/> Оборудование', 'Симуляторы MetaRacing собраны <br/> на базе профессионального <br/> оборудования от Simagic.', 'bb-1.svg',)
       +tech-card('./img/benefits-2.png', 'Максимальная <span class="text-app-pink">Реалистичность</span>', 'Наши симуляторы настроены <br/> профессионалами и копируют <br/> поведение реальных авто.,', 'bb-2.svg',)
       +tech-card('./img/benefits-3.png', '<span class="text-app-sky">Любые автомобили</span>  <br/> На ваш вкус', 'BMW M-серии, Porsche, <br/> Lamborghini и ещё более 200 <br/> других спорткаров.,', 'bb-3.svg',)

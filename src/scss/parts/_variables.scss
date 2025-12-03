@@ -1,20 +1,20 @@
 :root {
   /* Colors */
   --color-accent: #de127a;
-  --color-accent-hover: color-mix(in srgb, var(--color-accent), #000 20%);
-  --color-accent-active: color-mix(in srgb, var(--color-accent), #000 40%);
+  --color-accent-hover: #ff2393;
+  --color-accent-active: #ff2393;
   --color-white: #fff;
-  --color-white-hover: color-mix(in srgb, var(--color-white), #000 25%);
-  --color-white-active: color-mix(in srgb, var(--color-white), #000 40%);
+  --color-white-hover: #fff;
+  --color-white-active: #fff;
   --color-white-secondaty: #b8b8d6;
   --color-purple: #7d5c9c;
-  --color-purple-hover: color-mix(in srgb, var(--color-purple), #000 20%);
-  --color-purple-active: color-mix(in srgb, var(--color-purple), #000 40%);
+  --color-purple-hover: #8a62b0;
+  // --color-purple-active: color-mix(in srgb, var(--color-purple), #000 40%);
   --color-yellow: #ffd409;
   --color-red: #e52c4b;
   --color-sky: #4ea8f3;
-  --color-sky-hover: color-mix(in srgb, var(--color-sky), #000 25%);
-  --color-sky-active: color-mix(in srgb, var(--color-sky), #000 40%);
+  --color-sky-hover: #30a1ff;
+  // --color-sky-active: color-mix(in srgb, var(--color-sky), #000 40%);
   --color-green: #43a382;
   --color-pink: #de127a;
 

@@ -1,9 +1,12 @@
-mixin simulator-item(img, badge, i)
+mixin simulator-item(img, badge, i, extraClass)
   div(class="simulators-item relative w-full")
     img(src=`./img/${img}` loading="lazy")
     if badge
-      div(class=`absolute top-5 z-1 ${i == 2 ? 'left-[80px]' : 'left-[20px]'} max-md:left-0 max-md:top-2`)
-        img(class="max-md:h-[20px]" src="./img/"+badge, alt="", loading="lazy")
+      div(class=`
+        absolute top-5 z-1 max-lg:top-2.5 max-md:left-0
+        left-[20px] max-lg:left-0 max-md:top-2
+      `)
+        img(class="max-lg:max-h-[28px] max-md:max-h-[35px]"  src="./img/"+badge, alt="", loading="lazy")
 
 section(class="sec-simulators py-16 bg-[url('/img/simulators-bg.png')] bg-contain bg-position:[center_70px] bg-no-repeat")
   .container
@@ -11,25 +14,53 @@ section(class="sec-simulators py-16 bg-[url('/img/simulators-bg.png')] bg-contai
       div(class="italic font-black text-pink-600 text-3xl md:text-6xl lg:text-[80px]") Автосимуляторы
       div(class="text-2xl mt-5 text-app-white-secondary max-lg:text-xl max-md:text-lg") Почувствуйте себя настоящим пилотом гоночного болида
 
-    div(class="sec-simulators__content mt-[90px] flex flex-col items-center")
-      div(class="flex gap-1 max-lg:flex-col  max-lg:gap-10")
-        div(class="flex flex-col gap-1 items-center justify-end")
+    div(class="sec-simulators__content mt-[90px] max-md:mt-[34px] flex flex-col items-center")
+      div(class="grid grid-cols-[1fr_64.36%] max-md:flex max-md:flex-col max-md:grid-cols-1 max-md:items-center")
+        div(class="flex flex-col gap-1 items-center justify-end max-md:hidden")
           div(class="max-w-[425px] mb-20 max-lg:max-w-[650px]")
-            div(class="sec-simulators__content-title text-app-white uppercase font-bold text-2xl max-md:text-lg") Профессиональный сетап #[br] #[span(class="text-app-pink") для полного погружения] 
-            div(class="sec-simulators__content-desc text-app-white-secondary mt-[22px] text-[19px] max-md:text-base") #[span(class="text-app-white") В комплектации:] спортивное кресло, педали, коробка передач, ручник, сменные рули и панель кнопок. Руль с обратной связью передает каждую неровность дороги.
-          +simulator-item('simulators-1.png', 'sim-b-1.svg')
+            div(class="sec-simulators__content-title text-app-white uppercase font-bold text-2xl max-lg:text-[15px]") Профессиональный сетап #[br] #[span(class="text-app-pink") для полного погружения] 
+            div(class="sec-simulators__content-desc text-app-white-secondary mt-[22px] text-[19px] max-lg:text-[12px] font-golos") #[span(class="text-app-white") В комплектации:] спортивное кресло, педали, коробка передач, ручник, сменные рули и панель кнопок. Руль с обратной связью передает каждую неровность дороги.
+          +simulator-item('simulators-1.png', 'sim-b-1.svg', 1, )
 
-        div(class="sec-simulators__content-big flex items-end")
-          +simulator-item('simulators-2.png', 'sim-b-2.svg', 2)
+        div(class="sec-simulators__content-big flex items-end max-md:w-full")
+          div(class="simulators-item relative w-full max-md:h-[380px]")
+            div(class="max-md:hidden")
+              img(src="./img/simulators-2.png" loading="lazy")
+            div(class="md:hidden")
+              img(class="max-none w-[133%] h-[380px] object-cover translate-x-[-13%]" src="./img/simulators-2.png" loading="lazy")
+            div(class=`
+              absolute top-5 z-1 max-lg:top-2.5 max-md:left-0
+              left-[80px] max-lg:left-[40px] max-md:top-[22px]
+            `)
+              img(class="max-lg:max-h-[28px] max-md:max-h-[35px]" src="./img/sim-b-2.svg", alt="", loading="lazy")
+            p(class="absolute left-0 bottom-[48px] max-lg:bottom-[30px] px-[80px] max-lg:px-[50px] max-md:px-[30px]  font-golos text-app-white-secondary text-[19px] max-lg:text-[12px] max-md:text-sm ") #[span(class="text-app-white") Все как в жизни —] максимально приближённый к реальности <br/> способ получить опыт вождения автомобиля в различных условиях. 
 
-      div(class="grid grid-cols-3 gap-1 mt-11 gap-y-10  max-lg:grid-cols-2 max-md:grid-cols-2 max-sm:gap-y-12")
-        +simulator-item('simulators-3.png', 'sim-b-3.svg')
-        +simulator-item('simulators-4.png', 'sim-b-4.svg')
-        +simulator-item('simulators-5.png', 'sim-b-5.svg')
+      div(class="md:hidden mt-[26px] w-full px-6")
+          div(class="sec-simulators__content-title text-app-white uppercase font-bold text-[19px]") Профессиональный сетап #[br] #[span(class="text-app-pink") для полного погружения] 
+          div(class="sec-simulators__content-desc max-w-[280px] text-app-white-secondary mt-[12px] text-sm font-golos") #[span(class="text-app-white") В комплектации:] спортивное кресло, педали, коробка передач, ручник, сменные рули и панель кнопок. Руль с обратной связью передает каждую неровность дороги.
+        
+      div(class="max-w-full overflow-scroll md:hidden mt-[33px]")
+        div(class="flex gap-4 w-[900px]")
+          div(class="w-[270px]")
+            +simulator-item('simulators-1.png', 'sim-b-1.svg', 1, )
+          div(class="w-[270px]")
+            +simulator-item('simulators-3.png', 'sim-b-3.svg')
+          div(class="w-[270px]")
+            +simulator-item('simulators-4.png', 'sim-b-4.svg')
+          div(class="w-[270px]")
+            +simulator-item('simulators-5.png', 'sim-b-5.svg')
+
+      div(class="grid grid-cols-3 gap-1 mt-11 gap-y-10  max-md:grid-cols-1 max-sm:gap-y-12")
+        div(class="max-md:hidden")
+          +simulator-item('simulators-3.png', 'sim-b-3.svg')
+        div(class="max-md:hidden")
+          +simulator-item('simulators-4.png', 'sim-b-4.svg')
+        div(class="max-md:hidden")
+          +simulator-item('simulators-5.png', 'sim-b-5.svg')
         +simulator-item('simulators-6.png',)
         +simulator-item('simulators-7.png',)
         +simulator-item('simulators-8.png',)
 
-      button(class="btn btn-accent mt-20 max-md:mt-10") 
+      button(class="btn btn-accent mt-20 max-lg:mt-[55px]") 
         p Подробнее про симуляторы
         img(src="./img/arrow.svg")

@@ -1,27 +1,63 @@
 include ../mixins/sec-title
 
 mixin merch-item(img, title, badge, btnColor, lastBtn, translate)
-  div(class=`merch-item relative w-full mx-auto max-[1200px]:max-w-[500px] max-lg:mx-auto ${translate}`)
-    div(class="badge-clip bg-white text-[#121212] text-[30px] max-md:text-lg absolute top-5 max-md:top-2 left-[50px] max-md:left-[20px] z-1")!=badge
-    img(class="w-full" src=`img/${img}` loading="lazy")
+  div(class=`
+      merch-item relative w-full
+      mx-auto max-[1200px]:max-w-[500px] max-lg:mx-auto
+      max-md:h-[307px]
+      ${translate}
+    `)
+    div(class=`absolute top-5 max-[1200px]:top-2.5 z-1 left-[50px] max-[1200px]:left-5 max-md:top-2`)
+      img(class="h-[51px] max-[1550px]:h-[30px]  max-md:h-[30px]" src="./img/"+badge, alt="", loading="lazy")
+    picture
+      source(media="(max-width: 767px)" srcset="img/mob-"+img)
+      img(class="w-full h-full" src=`img/${img}` loading="lazy")
 
-    div(class="absolute z-2 bottom-0 left-0 flex items-center justify-between gap-2.5 flex-wrap w-full pb-[30px] pl-[40px] pr-[100px] max-[400px]:pr-[60px] max-[400px]:pl-[30px] max-[1550px]:justify-start max-[1200px]:justify-between")
-      div(class="text-[28px] max-md:text-lg italic font-black uppercase leading-[50px]")!=title
+    div(class=`
+      absolute z-2 bottom-0 left-0 w-full
+      flex items-center justify-between flex-wrap 
+      pl-[40px] pr-[100px] max-[1550px]:pr-[80px] max-[1200px]:pr-[55px] max-[1200px]:pl-[30px]
+      pb-[30px] max-[1200px]:pb-[8px]
+      max-md:pl-[20px] max-md:pr-[60px] max-md:pb-[20px]
+     `)
+      div(class=`
+        italic font-black uppercase leading-[50px]
+        text-[28px] max-[1550px]:text-[17px] max-md:text-base
+      `)!=title
       if lastBtn
-        a(href="#" class=`btn btn-${btnColor} w-[234px] max-lg:w-auto`) 
+        a(href="#" class=`btn btn-${btnColor} w-[234px] max-[1200px]:max-w-[144px] max-[1200px]:max-h-[35px] max-lg:w-auto`) 
           p Весь каталог
           img(class="brightness-200 mt-1" src="./img/arrow-purple.svg")
       else 
-        a(href="#" class=`btn btn-${btnColor}`) Купить
+        a(href="#" 
+          class=`
+            btn btn-${btnColor}
+            max-[1200px]:max-w-[90px] max-[1200px]:max-h-[35px]
+            max-md:max-w-[118px]  max-md:max-h-[55px] max-md:w-[118px]
+          `
+        ) Купить
 
-section(class="sec-merch py-24 relative overflow-visible max-lg:py-18")
+section(class="sec-merch py-24 max-md:py-[50px] relative overflow-visible max-lg:py-18")
   div(class="absolute top-[10%] max-md:top-0 l-0 w-full -z-10")
     img(class="w-full" src="./img/merch-bg.png" loading="lazy")
 
   .container
     +sec-title('Наш <span class="text-app-pink">мерч</span>', 'MetaRacing — это стиль жизни! <br/> Приобрести всю красоту можно как в клубе, так и онлайн')
 
-    div(class="merch-list relative grid grid-cols-[30.51%_30.51%_45.26%] max-[1200px]:grid-cols-1 gap-y-[33px] mt-[80px] max-lg:mt-[35px]")
-     +merch-item('merch-1.png', 'Зип-худи', '6900 ₽', 'sky', false, '')
-     +merch-item('merch-2.png', 'Ветровка', '6900 ₽', 'sky', false, 'translate-x-[-40px] max-[1200px]:translate-x-0')
-     +merch-item('merch-3.png', 'И ДРУГИЕ ТОВАРЫ', '6900 ₽', 'pink', true, 'translate-x-[-70px] max-[1200px]:translate-x-0')
+    div(class="merch-list max-md:hidden relative grid grid-cols-[30.51%_30.51%_45.26%] max-md:grid-cols-1 gap-y-[33px] mt-[80px] max-lg:mt-[48px] ")
+     +merch-item('merch-1.png', 'Зип-худи', 'merch-b-1.svg', 'sky', false, '')
+     +merch-item('merch-2.png', 'Ветровка', 'merch-b-2.svg', 'sky', false, 'translate-x-[-40px] max-md:translate-x-0')
+     +merch-item('merch-3.png', 'И ДРУГИЕ ТОВАРЫ', 'merch-b-3.svg', 'pink', true, 'translate-x-[-70px] max-md:translate-x-0')
+
+    div(class="md:hidden max-md:mt-[35px]")
+      div(class="swiper swiper-merch")
+        div(class="swiper-wrapper")
+          div(class="swiper-slide max-md:max-w-[320px]")
+            +merch-item('merch-1.png', 'Зип-худи', 'merch-b-1.svg', 'sky', false)
+          div(class="swiper-slide max-md:max-w-[320px]")
+            +merch-item('merch-2.png', 'Ветровка', 'merch-b-2.svg', 'sky', false, 'translate-x-[-20px]')
+
+      div(class="flex justify-center w-full mt-[34px]")
+        a(href="#" class=`btn btn-${btnColor} w-[234px] h-[55px]`) 
+          p Весь каталог
+          img(class="brightness-200 mt-1" src="./img/arrow-purple.svg")

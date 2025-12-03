@@ -1,40 +1,66 @@
 header(class="header w-full pt-[40px] fixed left-0 top-0 z-20 transition-all duration-300 ease")
   .container
-    div(class="header__content flex items-center justify-between gap-2")
-      div(class="header__logo w-[200px] max-md:w-[150px]")
+    div(class="header__content flex items-center justify-between gap-2 ")
+      div(class="header__logo w-[200px] max-[1200px]:w-[130px]")
         img(src="./img/metaracing-logo.svg", alt="")
 
-      div(class="header__navbar relative flex justify-between items-center gap-2.5 font-['Golos']").header__navbar.d-none-max-tablet
-        a(href="#" class="block py-2.5 px-5 hover:text-app-accent transition-all duration-200 ease") Как это работает
-        a(href="#" class="block py-2.5 px-5 hover:text-app-accent transition-all duration-200 ease") Цены
-        a(href="#" class="block py-2.5 px-5 hover:text-app-accent transition-all duration-200 ease") Сертификаты
-        a(href="#" class="block py-2.5 px-5 hover:text-app-accent transition-all duration-200 ease") Мероприятия
-        a(href="#" class="block py-2.5 px-5 hover:text-app-accent transition-all duration-200 ease") Клубы
+      div(class="header__navbar max-md:hidden py-[5px] px-[10px] flex justify-between items-center gap-2.5 font-golos font-bold")
+        div(class="py-2.5 px-5 max-lg:py-1.5 max-lg:px-3")
+          a(href="#" class="header__navbar-link max-[1200px]:text-[10px] block transition-all duration-200 ease") Как это работает
+        div(class="py-2.5 px-5 max-lg:py-1.5 max-lg:px-3")
+          a(href="#" class="header__navbar-link max-[1200px]:text-[10px] block transition-all duration-200 ease") Цены
+        div(class="py-2.5 px-5 max-lg:py-1.5 max-lg:px-3")
+          a(href="#" class="header__navbar-link max-[1200px]:text-[10px] block transition-all duration-200 ease") Сертификаты
+        div(class="py-2.5 px-5 max-lg:py-1.5 max-lg:px-3")
+          a(href="#" class="header__navbar-link max-[1200px]:text-[10px] block transition-all duration-200 ease") Мероприятия
+        div(class="py-2.5 px-5 max-lg:py-1.5 max-lg:px-3")
+          a(href="#" class="header__navbar-link max-[1200px]:text-[10px] block transition-all duration-200 ease") Клубы
 
-      .header__order.d-none-max-tablet
+      div(class="header__order max-md:hidden")
         button.btn.btn-accent Онлайн-запись
 
-      button.burger.d-none-min-tablet(data-modal-open="header-mobile" aria-label="Открыть меню")
-        span
-        span
-        span
+      button.burger.d-none-min-mob(data-modal-open="header-mobile" aria-label="Открыть меню")
+        img(src="./img/burger.svg", alt="")
 
 .header-mobile.modal-wrapper(data-modal-block="header-mobile" aria-label="Открыть меню")
   div(class=`
-    header-mobile__content w-full max-h-[500px] flex flex-col gap-6 absolute left-0 top[-18px]  bg-app-white-secondary/60 backdrop-blur-[10px] border border-app-white/10 rounded-b-[30px] py-[40px] px-[30px] 
-    transition-all duration-300 ease-in-out  max-md:px-[20px]
+    header-mobile__content w-full h-full flex flex-col gap-6 absolute left-0 bg-[#0E1923]/55 backdrop-blur-[27px]  
+    transition-all duration-300 ease-in-out py-[40px] px-[30px] max-md:px-[20px] text-center
   `)
-    .x-btn(data-modal-close="header-mobile" aria-label="Открыть меню")
+    button.x-btn.burger(data-modal-close="header-mobile" aria-label="Открыть меню")
+      img(src="./img/x.svg", alt="")
 
-    div(class="header-mobile__logo max-md:w-[150px]")
+    div(class="header-mobile__logo mx-auto w-[150px]")
       img(src="./img/metaracing-logo.svg", alt="")
 
-    div(class="header-mobile__navbar flex flex-col gap-4")
-      a(href="#").header__navbar-item  Как это работает
-      a(href="#").header__navbar-item  Цены
-      a(href="#").header__navbar-item  Сертификаты
-      a(href="#").header__navbar-item  Мероприятия
-      a(href="#").header__navbar-item  Клубы
+    div(class="header-mobile__navbar flex flex-col items-center gap-[22px] ")
+      a(href="#" class="header__navbar-item text-[21px] font-semibold underline hover:text-app-pink") Как это работает
+      a(href="#" class="header__navbar-item text-[21px] font-semibold underline hover:text-app-pink") Цены
+      a(href="#" class="header__navbar-item text-[21px] font-semibold underline hover:text-app-pink") Сертификаты
+      a(href="#" class="header__navbar-item text-[21px] font-semibold underline hover:text-app-pink") Мероприятия
+      a(href="#" class="header__navbar-item text-[21px] font-semibold underline hover:text-app-pink") Клубы
 
-    div(class="header-mobile__order w-full")
-      button.btn.btn-accent Онлайн-запись
+
+    div(class="mt-[30px] uppercase text-lg")
+      p(class="mb-1") МОСКВа (#[span(class="text-app-accent") new])
+      a(href="tel:" class="hover:text-app-pink") #[span(class="text-app-pink") +] 7 812 665-38-88
+
+    div(class="uppercase text-lg")
+      p(class="mb-1") Санкт-петербург
+      a(href="tel:" class="sec-banner__contacts-phone hover:text-app-pink") #[span(class="text-app-pink") +] 7 812 565-38-88
+
+
+    button(class="btn btn-accent mx-auto w-full max-w-[337px] h-[63px] mt-5") Онлайн-запись
+
+    div(class="flex gap-2.5 justify-center")
+      a(href="#").btn.btn-icon-white
+        img(class="img-base" src="./img/accent-whatsapp.svg", alt="")
+        img(class="img-hover" src="./img/hover-whatsapp.svg", alt="")
+      a(href="#").btn.btn-icon-white
+        img(class="img-base" src="./img/accent-tg.svg", alt="")
+        img(class="img-hover" src="./img/hover-tg.svg", alt="")
+      a(href="#").btn.btn-icon-white
+        img(class="img-base" src="./img/accent-vk.svg", alt="")
+        img(class="img-hover" src="./img/hover-vk.svg", alt="")
+
+    p(class="text-sm text-app-white-secondary font-golos") Ежедневно с 12:00 до 00:00 <br/> Отвечаем моментально.

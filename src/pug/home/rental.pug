@@ -1,33 +1,49 @@
 include ../mixins/sec-title
 
-mixin rental_img(img1)
-  div(class="max-lg:max-w-[500px] mx-auto")
+mixin rental_img(img1, badge, translate="")
+  div(class=`max-lg:max-w-[500px] mx-auto relative ${translate}`)
     picture
-      source(media="(max-width: 1024px)" srcset="img/mob-"+img1)
+      source(media="(max-width: 767px)" srcset="img/mob-"+img1)
       img(class="w-full" src="img/"+img1 loading="lazy")
+    div(class=`absolute top-5 z-1 left-[40px] max-lg:top-2 max-lg:left-[20px]`)
+      img(class="max-lg:h-[28px] max-md:h-[30px]" src="./img/"+badge, alt="", loading="lazy")
 
-section(class="sec-rental py-24 relative overflow-visible max-lg:py-18")
+section(class="sec-rental py-24 max-md:py-[50px] relative overflow-visible max-lg:py-18")
   div(class="absolute top-[-15%] max-md:top-0 l-0 w-full -z-10")
     img(class="w-full" src="./img/rental-bg.png" loading="lazy")
 
   .container
-    +sec-title('Выездная <span class="text-app-pink"> аренда</span>', 'MetaRacing — выбор крупнейших событий и брендов, Мы берём все заботы на себя, <br/> а вам остается только наслаждаться восторгом гостей')
+    +sec-title('Выездная <span class="text-app-pink"> аренда</span>', 'MetaRacing — выбор крупнейших событий и брендов, <br class="md:hidden" /> Мы берём все заботы на себя, <br/> а вам остается только <br class="md:hidden" /> наслаждаться восторгом гостей')
 
-    div(class="rental-content mt-[77px]")
+    div(class="rental-content mt-[77px] max-lg:mt-[48px] max-md:mt-[33px]")
 
-      div(class="grid grid-cols-[1fr_28.46%_41.67%] max-lg:grid-cols-1 gap-y-[33px]")
-        div(class="flex flex-col justify-center pl-[60px] max-[1200px]:pl-0 pr-3 max-lg:max-w-[650px] max-lg:mx-auto")
-          div(class="text-[25px] max-md:text-lg leading-[110%] font-bold") #[span(class="text-app-pink") Максимум драйва —] #[br] минимум забот
-          div(class="max-w-[366px]  mt-[22px] font-['Golos'] text-[19px] max-md:text-base text-app-white-secondary") Мы сами доставим все необходимое оборудование прямо к месту проведения вашего мероприятия — будь то выставочный центр, частная площадка или загородный клуб.
-        div(class="hidden max-lg:block")
-        +rental_img('rental-1.png')
-        +rental_img('rental-2.png')
+      div(class="max-md:hidden")
+        div(class="grid grid-cols-[1fr_28.46%_41.67%] max-md:grid-cols-1 gap-y-[33px]")
 
-      div(class="grid grid-cols-[51.47%_50.64%] gap-y-[33px] max-lg:grid-cols-1 mt-[33px]")
-        +rental_img('rental-3.png')
-        +rental_img('rental-4.png')
-      
-      div(class="flex justify-center mt-[88px] max-lg:mt-[35px]")
-        a(href="", class="btn btn-accent w-full max-w-[300px] h-[70px]") 
+          div(class="flex flex-col justify-center pl-[60px] pr-3 max-lg:max-w-[650px] max-lg:mx-auto max-md:hidden")
+            div(class="text-[25px] max-lg:text-sm max-md:text-lg leading-[110%] font-bold") #[span(class="text-app-pink") Максимум драйва —] #[br] минимум забот
+            div(class="max-w-[366px] max-lg:text-[11px] mt-[22px] font-golos text-[19px] max-md:text-base text-app-white-secondary") Мы сами доставим все необходимое оборудование прямо к месту проведения вашего мероприятия — будь то выставочный центр, частная площадка или загородный клуб.
+
+          +rental_img('rental-1.png', 'renb-1.svg')
+          +rental_img('rental-2.png', 'renb-2.svg', 'translate-x-[-20px]')
+
+        div(class="grid grid-cols-[51.47%_50.64%] gap-y-[33px] max-md:grid-cols-1 mt-[33px] max-lg:mt-[20px]")
+          +rental_img('rental-3.png', 'renb-3.svg')
+          +rental_img('rental-4.png', 'renb-4.svg', 'min-md:translate-x-[-20px]')
+        
+      div(class="md:hidden")
+        div(class="swiper swiper-rental")
+          div(class="swiper-wrapper max-w-[330px]")
+            div(class="swiper-slide")
+              div(class="flex flex-col gap-y-5")
+                img(class="h-[300px] object-contain" src="./img/mob-rental-1.png" loading="lazy")
+                img(class="h-[300px] object-contain" src="./img/mob-rental-3.png" loading="lazy")
+            div(class="swiper-slide max-w-[330px]")
+              div(class="flex flex-col gap-y-5 translate-x-[-30px]")
+                img(class="h-[300px] object-contain" src="./img/mob-rental-2.png" loading="lazy")
+                img(class="h-[300px] object-contain" src="./img/mob-rental-4.png" loading="lazy")
+
+      div(class="flex justify-center mt-[88px] max-lg:mt-[54px] max-md:mt-[38px]")
+        a(href="", class="btn btn-accent w-full max-w-[300px] h-[70px] max-lg:h-[43px] max-lg:max-w-[200px] max-md:max-w-[300px] max-md:h-[70px]") 
           p Подробнее про аренду
-          img(class="brightness-200 mt-1" src="./img/arrow-purple.svg")
+          img(class="brightness-400 mt-1 max-lg:size-[10px]" src="./img/arrow-purple.svg")

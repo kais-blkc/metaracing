@@ -1,15 +1,18 @@
-@use "../parts/variables" as v;
+@use '../parts/variables' as v;
 
 .sec-banner {
   padding-top: 100px;
   padding-bottom: 100px;
   min-height: 1040px;
   height: 100svh;
-  background: center / cover no-repeat url("../img/banner-bg.png");
+  background: center / cover no-repeat url('../img/banner-bg.png');
 
-  @media (max-width: 1200px) {
-    background: center / 170% no-repeat url("../img/banner-bg-2.png");
-    background-position: center -60px;
+  @media (max-width: 1320px) {
+    background-size: 130%;
+  }
+
+  @media (max-width: v.$screen-lg) {
+    min-height: 840px;
   }
 
   @media (max-width: 920px) {
@@ -17,35 +20,9 @@
   }
 
   @media (max-width: v.$screen-md) {
-    background-position: center 140px;
-  }
-
-  @media (max-width: 440px) {
-    background-position: center 200px;
-  }
-
-  &__title {
-    text-align: center;
-    font-size: 92px;
-    font-weight: 900;
-    text-transform: uppercase;
-    font-style: italic;
-    margin-top: 105px;
-    display: none;
-
-    @media (max-width: 1200px) {
-      display: block;
-      font-size: 62px;
-    }
-
-    @media (max-width: v.$screen-md) {
-      font-size: 42px;
-      margin-top: 65px;
-    }
-
-    @media (max-width: 360px) {
-      font-size: 32px;
-    }
+    background: center / cover no-repeat url('../img/banner-textures.png');
+    background-position: center 0px;
+    min-height: 920px;
   }
 
   .container {
@@ -59,93 +36,6 @@
     flex-direction: column;
     justify-content: flex-end;
     height: 100%;
-  }
-
-  &__contacts {
-    margin-top: auto;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-
-    @media (max-width: v.$screen-md) {
-      justify-content: center;
-      gap: 20px;
-    }
-
-    @media (max-width: 500px) {
-      text-align: center;
-    }
-
-    &-socs {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-
-      @media (max-width: v.$screen-md) {
-        width: 100%;
-        justify-content: center;
-        text-align: center;
-      }
-    }
-
-    &-soc {
-      width: 50px;
-      height: 50px;
-      border-radius: 15px;
-      background: var(--color-white);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: var(--trans-02s);
-
-      &:hover {
-        background: var(--color-white-hover);
-      }
-
-      &:active {
-        --skewx-scale: 0.9;
-      }
-    }
-
-    &-address {
-      margin-left: auto;
-      font-size: 24px;
-      font-weight: 600;
-      text-transform: uppercase;
-
-      @media (max-width: v.$screen-md) {
-        margin-left: 0;
-      }
-
-      @media (max-width: v.$screen-md) {
-        font-size: 18px;
-      }
-    }
-
-    &-phones {
-      margin-left: 15px;
-      display: flex;
-      flex-direction: column;
-      font-size: 24px;
-      font-weight: 600;
-
-      @media (max-width: 500px) {
-        margin-left: 0;
-      }
-
-      @media (max-width: v.$screen-md) {
-        font-size: 18px;
-      }
-    }
-
-    &-phone {
-      display: block;
-      transition: var(--trans-02s);
-
-      &:hover {
-        color: var(--color-white-hover);
-      }
-    }
   }
 
   &__desc {

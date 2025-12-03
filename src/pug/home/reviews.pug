@@ -5,19 +5,7 @@ include ../mixins/linear-border
       name: "Юрий В.",
       date: "19 февраля 2024",
       rating: 5,
-      text: "Все очень понравилось! Чисто, аккуратно, удобные кокпиты. Пришел в первый раз, администратор все показал и рассказал."
-    },
-    {
-      name: "Алексей С.",
-      date: "23 ноября 2024",
-      rating: 5,
-      text: "Уровень потрясающий, на профессиональном уровне. Оценка — несомненно 5 баллов."
-    },
-    {
-      name: "Кирилл Р.",
-      date: "18 января 2024",
-      rating: 5,
-      text: "Реалистичное поведение авто, чувствуется отзывчивость в руле и педалях, большой выбор гоночных трасс и машин."
+      text: "Все очень понравилось! <br class='md:hidden'/> Чисто, аккуратно, удобные кокпиты. <br class='md:hidden'/> Пришел в первый раз, администратор <br class='md:hidden'/> все показал и рассказал."
     },
     {
       name: "Валерия С.",
@@ -26,10 +14,22 @@ include ../mixins/linear-border
       text: "Очень крутой симулятор! Регулярно тренируюсь дрифту. Советую попробовать разные дисциплины. Можно прийти большой компанией."
     },
     {
+      name: "Алексей С.",
+      date: "23 ноября 2024",
+      rating: 5,
+      text: "Уровень потрясающий, на профессиональном уровне. Оценка — несомненно 5 баллов."
+    },
+    {
       name: "Илья В.",
       date: "5 мая 2025",
       rating: 5,
       text: "Оборудование — на отлично, настройки под разные игры. Админы всегда приятные. Рекомендую."
+    },
+    {
+      name: "Кирилл Р.",
+      date: "18 января 2024",
+      rating: 5,
+      text: "Реалистичное поведение авто, чувствуется отзывчивость в руле и педалях, большой выбор гоночных трасс и машин."
     },
     {
       name: "Марк Р.",
@@ -40,62 +40,128 @@ include ../mixins/linear-border
   ]
 
 mixin reviews-item(review, i)
-  div(class="reviews-item min-h-[280px] card-tech-before-gradient-yellow --top-l  border border-[#25262A] relative font-['Golos'] text-[19px] rounded-[15px] -skew-x-10 -bg-linear-35 from-transparent to-app-yellow/20 from-60%")
+  div(class=`
+    reviews-item relative rounded-[15px] -skew-x-10
+    min-h-[280px] max-lg:min-h-[162px] max-md:min-h-[190px]
+    card-tech-before-gradient-yellow --top-l  border border-[#25262A]
+    font-golos text-[19px] -bg-linear-35 from-transparent to-app-yellow/20 from-60%
+  `)
     div(class="rounded-[15px]")
-      div(class="skew-x-10 flex flex-col gap-6 py-[22px] pl-[35px] pr-[20px]")
-        div(class="reviews-item__header flex gap-5 items-center")
-          div(class="reviews-item__img w-[60px] h-[60px] rounded-full overflow-hidden")
+      div(class=`
+        skew-x-10 flex flex-col
+        gap-6 max-lg:gap-2 max-md:gap-4 py-[22px] max-lg:py-2.5 max-md:py-3.5
+        pl-[35px] max-lg:pl-[25px] pr-[20px]
+      `)
+        div(class="reviews-item__header flex gap-5  items-center")
+          div(class="reviews-item__img size-[60px] max-lg:size-[37px] max-md:size-[41px] rounded-full overflow-hidden")
             img(class="w-full h-full object-cover" src=`./img/reviews-${i+1}.png` loading="lazy")
-          div(class="flex flex-col gap-1")
+          div(class="flex flex-col gap-1 max-lg:text-[11px] max-md:text-[13px]")
             div(class="reviews-item__name font-bold")!=reviews[i].name + i
             div(class="reviews-item__date font-medium text-app-white-secondary")!=reviews[i].date
 
         div(class="reviews-item__stars flex gap-1 items-center")
-          img(src="./img/r-star.svg" loading="lazy")
-          img(src="./img/r-star.svg" loading="lazy")
-          img(src="./img/r-star.svg" loading="lazy")
-          img(src="./img/r-star.svg" loading="lazy")
-          img(src="./img/r-star.svg" loading="lazy")
+          img(class="max-lg:w-2" src="./img/r-star.svg" loading="lazy")
+          img(class="max-lg:w-2" src="./img/r-star.svg" loading="lazy")
+          img(class="max-lg:w-2" src="./img/r-star.svg" loading="lazy")
+          img(class="max-lg:w-2" src="./img/r-star.svg" loading="lazy")
+          img(class="max-lg:w-2" src="./img/r-star.svg" loading="lazy")
 
-        div(class="reviews-item__desc max-w-[364px] text-[19px] max-md:text-base max-sm:text-sm")!=reviews[i].text
+        div(class="reviews-item__desc max-w-[364px] text-[19px] max-lg:text-[11px] max-md:text-[12px]")!=reviews[i].text
 
-section(class="sec-reviews py-24 relative")
+section(class="sec-reviews py-24 max-lg:py-[50px] relative")
   img(class="absolute top-[-15%] max-md:top-0 l-0 w-full -z-10" src="./img/reviews-bg.png" loading="lazy")
   .container
     div(class="flex relative justify-center items-end max-md:flex-col max-md:items-center")
       +sec-title('Впечатления ', 'Отзывы гостей наших клубов')
-      div(class="flex gap-4 absolute right-0 max-md:relative h-[55px] max-md:mt-4")
-        div(class="btn-icon swiper-button-reviews swiper-button-prev w-[55px]")
-          img(class="rotate-225" src="./img/arrow-purple.svg" loading="lazy")
-        div(class="btn-icon swiper-button-reviews swiper-button-next w-[55px]")
-          img(class="rotate-45" src="./img/arrow-purple.svg" loading="lazy")
+      div(class="flex gap-4 absolute right-0 h-[55px] max-md:hidden")
+        div(class="btn-icon-white swiper-button-reviews swiper-button-prev w-[55px]")
+          img(class="img-base rotate-225" src="./img/arrow-purple.svg" loading="lazy")
+          img(class="img-hover rotate-225" src="./img/arrow-pink.svg", alt="")
+        div(class="btn-icon-white swiper-button-reviews swiper-button-next w-[55px]")
+          img(class="img-base rotate-45" src="./img/arrow-purple.svg" loading="lazy")
+          img(class="img-hover rotate-45" src="./img/arrow-pink.svg", alt="")
   
-    div(class="mt-[96px] px-12 max-md:mt-[35px]")
+    div(class=`
+      px-12 max-md:px-6
+      mt-[96px] max-lg:mt-[41px] max-md:mt-[35px]
+    `)
       div(class="swiper swiper-reviews")
         div(class="swiper-wrapper")
 
-          div(class="swiper-slide")
-            div(class="reviews-item border-gradient w-full min-h-[280px] relative font-['Golos'] text-[19px] -skew-x-10 -bg-linear-35 from-transparent to-app-yellow/20 from-60% ")
+          div(class=`
+            reviews-yandex
+            max-md:hidden
+            swiper-slide 
+            w-full max-w-[390px] max-lg:max-w-[240px]
+            pr-[25px] max-lg:pr-[15px]
+          `)
+            div(class=`
+              reviews-item border-gradient w-full relative -skew-x-10
+              min-h-[280px] max-lg:min-h-auto
+              font-golos text-[19px] 
+              -bg-linear-35 from-transparent to-app-yellow/20 from-60%
+            `)
               div(class="badge absolute top-5 left-[-30px]" )
-                img(src="./img/badge-y-5.svg" loading="lazy")
+                img(class="max-lg:h-[35px]" src="./img/badge-y-5.svg" loading="lazy")
 
               div(class="border-gradient-border")
               div(class="border-gradient-content")
-              div(class="skew-x-10 py-[34px] pl-[20px] pr-[40px]")
+              div(class=`
+                skew-x-10 
+                pl-[20px] pr-[40px] max-lg:pl-[5px] max-lg:pr-[30px]
+                py-[34px] max-lg:py-[20px]
+              `)
                 div(class="flex flex-col")
-                  img(class="ml-auto shrink-0 max-md:w-[100px] max-md:translate-x-[20px]" src="./img/r-avatars.png" loading="lazy")
-                  div(class="pl-[30px]")
-                    div(class="reviews-item__stars flex gap-1 items-center mt-[34px]")
-                      img(src="./img/r-star.svg" loading="lazy")
-                      img(src="./img/r-star.svg" loading="lazy")
-                      img(src="./img/r-star.svg" loading="lazy")
-                      img(src="./img/r-star.svg" loading="lazy")
-                      img(src="./img/r-star.svg" loading="lazy")
-                    div(class="font-semibold mt-2") Более 160 оценок
-                  a(href="" class="reviews-item__btn btn-white mt-5 z-1") Смотреть все отзывы
+                  img(class="ml-auto shrink-0 max-lg:w-[90px] max-md:w-[100px] max-md:translate-x-[20px]" src="./img/r-avatars.png" loading="lazy")
+                  div(class="pl-[30px] max-lg:pl-[15px]")
+                    div(class="reviews-item__stars flex gap-1 items-center mt-[34px] max-lg:mt-[15px]")
+                      img(class="max-lg:w-2" src="./img/r-star.svg" loading="lazy")
+                      img(class="max-lg:w-2" src="./img/r-star.svg" loading="lazy")
+                      img(class="max-lg:w-2" src="./img/r-star.svg" loading="lazy")
+                      img(class="max-lg:w-2" src="./img/r-star.svg" loading="lazy")
+                      img(class="max-lg:w-2" src="./img/r-star.svg" loading="lazy")
+                    div(class="font-semibold mt-2 max-lg:text-[12px]") Более 160 оценок
+                  a(href="" class="reviews-item__btn btn-white mt-5 max-lg:mt-3 z-1") Смотреть все отзывы
 
           - for (var i = 0; i < reviews.length; i+=2)
-            div(class="swiper-slide")
-              div(class="flex flex-col gap-10")
+            div(class=`
+              swiper-slide
+              w-full max-w-[460px] max-lg:max-w-[286px] max-md:max-w-[320px]
+              pr-[25px] max-lg:pr-[15px]
+            `)
+              div(class="flex flex-col gap-10 max-md:gap-7")
                 +reviews-item(reviews[i], i)
                 +reviews-item(reviews[i+1], i+1)
+
+      div(class=`
+        md:hidden
+        w-full max-md:max-w-[350px]
+        pt-[28px]
+      `)
+        div(class=`
+          reviews-item border-gradient w-full relative -skew-x-10
+          min-h-[280px] max-lg:min-h-auto
+          font-golos text-[19px] 
+          -bg-linear-35 from-transparent to-app-yellow/20 from-60%
+        `)
+          div(class="badge absolute top-5 left-[-30px]" )
+            img(class="max-lg:h-[35px] max-md:h-[44px]" src="./img/badge-y-5.svg" loading="lazy")
+
+          div(class="border-gradient-border")
+          div(class="border-gradient-content")
+          div(class=`
+            skew-x-10 
+            pl-[20px] pr-[40px] max-lg:pl-[5px] max-lg:pr-[30px]
+            py-[34px] max-lg:py-[20px] max-md:pt-[30px] max-md:pb-[24px]
+          `)
+            div(class="flex flex-col")
+              img(class="ml-auto shrink-0 max-lg:w-[90px] max-md:w-[145px] max-md:translate-x-[20px]" src="./img/r-avatars.png" loading="lazy")
+              div(class="pl-[30px] max-lg:pl-[15px] max-md:pl-[20px]")
+                div(class="reviews-item__stars flex gap-1 items-center mt-[34px] max-lg:mt-[15px]")
+                  img(class="max-lg:w-2 max-md:w-2.5" src="./img/r-star.svg" loading="lazy")
+                  img(class="max-lg:w-2 max-md:w-2.5" src="./img/r-star.svg" loading="lazy")
+                  img(class="max-lg:w-2 max-md:w-2.5" src="./img/r-star.svg" loading="lazy")
+                  img(class="max-lg:w-2 max-md:w-2.5" src="./img/r-star.svg" loading="lazy")
+                  img(class="max-lg:w-2 max-md:w-2.5" src="./img/r-star.svg" loading="lazy")
+                div(class="font-semibold mt-2 max-lg:text-[12px]") Более 160 оценок
+              a(href="" class="reviews-item__btn btn-white mt-5 max-md:h-[55px] max-lg:mt-3 z-1") Смотреть все отзывы

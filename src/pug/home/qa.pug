@@ -1,33 +1,61 @@
 include ../mixins/sec-title
 
-mixin qa-item(badge, title, desc)
+mixin qa-item(title, desc, badge)
   div(
     class=`
-      qa-item border-gradient relative pt-[42px] pb-[32px] pl-[72px] pr-[110px] max-md:pl-[22px] max-md:pr-[50px] rounded-[15px] -skew-x-10
+      qa-item border-gradient relative rounded-[15px] -skew-x-10
       bg-linear-195 from-transparent from-80% to-app-pink/10
+      pt-[42px] pb-[32px] pl-[72px] pr-[110px]
+      max-lg:pt-[22px] max-lg:pb-[18px] max-lg:pl-[44px] max-lg:pr-[67px]
     `
     style=`--border-gradient-image: linear-gradient(195deg, #1E3147 80%, #5D1946)`
   )
     div(class="border-gradient-border")
     div(class="border-gradient-content")
-    div(class="badge-clip bg-white text-app-pink text-[30px] max-md:text-lg absolute top-5 right-[-10px] z-1", style="padding-left: 15px;")!=badge
+    div(class=`absolute max-md:hidden top-5 max-[1200px]:top-2.5 z-1 right-[-10px]  max-md:top-2`)
+      img(class="h-[51px] max-[1550px]:h-[30px]  max-md:h-[30px]" src="./img/"+badge, alt="", loading="lazy")
     div(class="relative z-2 skew-x-10 max-md:skew-x-0")
-      div(class="text-[25px] max-md:text-xl max-sm:text-base font-bold")!=title
-      div(class="text-[19px] max-md:text-base max-sm:text-[12px] font-medium text-app-white-secondary mt-[26px]")!=desc
+      div(class="text-[25px] max-lg:text-[15px] max-md:text-xl font-bold")!=title
+      div(class="text-[19px] max-lg:text-[11px] max-md:text-base max-sm:text-[12px] font-medium text-app-white-secondary mt-[26px]")!=desc
 
-section(class="sec-qa py-24 relative overflow-visible max-lg:py-18")
-  div(class="absolute top-[10%] max-md:top-0 l-0 w-full -z-10")
+mixin qa-item-mob(title, desc, badge)
+  div(
+    class=`
+      qa-item-mob border-gradient relative 
+      bg-linear-195 from-[#0e161f] from-65% to-app-pink/20
+    `
+    style=`--border-gradient-image: linear-gradient(195deg, #1E3147 80%, #5D1946)`
+  )
+    div(class="border-gradient-border")
+    div(class="border-gradient-content")
+    div(class="relative z-2 container py-5 px-7")
+      div(class="text-[17px] font-bold uppercase leading-[130%]")!=title
+      div(class="text-sm font-medium text-app-white mt-[17px]")!=desc
+
+
+section(class="sec-qa py-24 max-md:py-[50px] relative overflow-visible max-lg:py-18")
+  div(class="absolute top-[10%] max-md:top-[-15%] l-0 w-full -z-10")
     img(class="w-full" src="./img/qa-bg.png" loading="lazy")
+    //- img(class="md:hidden w-full" src="./img/qa-bg-mob.png" loading="lazy")
 
   .container
-    +sec-title('Вопросы и ответы', 'Возможно, вы хотите об этом спросить')
+    +sec-title('Вопросы и ответы', 'Возможно, вы хотите <br class="md:hidden"/>  об этом спросить')
 
+  div(class="container max-md:hidden")
     div(class="qa-list mt-[80px] max-lg:mt-[35px] flex flex-col gap-y-3.5 px-10")
-      +qa-item('01', '<span class="text-app-pink">Можно прийти с 2-3 друзьями,</span> чтобы погонять в одной гонке?', 'Да! У нас доступна совместная игра — можно гонять с друзьями в одном клубе (до 6–8 человек одновременно), либо подключаться к онлайн-серверам и соревноваться между клубами.')
-      +qa-item('02', '<span class="text-app-pink">Какие игры у вас есть?</span>', 'Доступные игры в наших клубах: Assetto Corsa, Assetto Corsa Competizione, Dirt Rally 2.0, City Car Driving, Euro Truck Simulator 2, Wreckfest. Из дисциплин доступны: дрифт, кольцевые гонки, ралли, Формула 1 и картинг. А также "шашки" с трафиком и езда в открытом мире. Смотрите описание всех наших игр.')
-      +qa-item('03', '<span class="text-app-pink">Какие ограничения по возрасту или по росту? </span> Хочу с ребенком покататься', 'Доступ на наши симуляторы осуществляется с 14 лет. Это обусловлено настройкой наших симуляторов под взрослого человека.')
-      +qa-item('04', '<span class="text-app-pink">Я только учусь на права и хочу закрепить навыки вождения. </span> Как это сделать?', 'У нас вы можете научиться и гражданскому вождению, и получить навыки управления спортивным автомобилем в различных дисциплинах.')
-      
+      +qa-item('<span class="text-app-pink">Можно прийти с 2-3 друзьями,</span> чтобы погонять в одной гонке?', 'Да! У нас доступна совместная игра — можно гонять с друзьями в одном клубе (до 6–8 человек одновременно), либо подключаться к онлайн-серверам и соревноваться между клубами.', 'qa-b-1.svg')
+      +qa-item('<span class="text-app-pink">Какие игры у вас есть?</span>', 'Доступные игры в наших клубах: Assetto Corsa, Assetto Corsa Competizione, Dirt Rally 2.0, City Car Driving, Euro Truck Simulator 2, Wreckfest. Из дисциплин доступны: дрифт, кольцевые гонки, ралли, Формула 1 и картинг. А также "шашки" с трафиком и езда в открытом мире. Смотрите описание всех наших игр.', 'qa-b-2.svg')
+      +qa-item('<span class="text-app-pink">Какие ограничения по возрасту или по росту? </span> Хочу с ребенком покататься', 'Доступ на наши симуляторы осуществляется с 14 лет. Это обусловлено настройкой наших симуляторов под взрослого человека.', 'qa-b-3.svg')
+      +qa-item('<span class="text-app-pink">Я только учусь на права и хочу закрепить навыки вождения. </span> Как это сделать?', 'У нас вы можете научиться и гражданскому вождению, и получить навыки управления спортивным автомобилем в различных дисциплинах.', 'qa-b-4.svg')
+
+  div(class="md:hidden")
+    div(class=" qa-list mt-[35px] flex flex-col gap-y-[37px]")
+      +qa-item-mob('<span class="text-app-pink">Можно прийти с 2-3 друзьями,</span> <br/> чтобы погонять в одной гонке?', 'Да! У нас доступна совместная игра — можно гонять с друзьями в одном клубе (до 6–8 человек одновременно), либо подключаться к онлайн-серверам и соревноваться между клубами.', 'qa-b-1.svg')
+      +qa-item-mob('<span class="text-app-pink">Какие игры у вас есть?</span>', 'Доступные игры в наших клубах: Assetto Corsa, Assetto Corsa Competizione, Dirt Rally 2.0, City Car Driving, Euro Truck Simulator 2, Wreckfest. <br/> <br/> Из дисциплин доступны: дрифт, кольцевые гонки, ралли, Формула 1 и картинг. А также "шашки" с трафиком и езда в открытом мире. Смотрите описание всех наших игр.', 'qa-b-2.svg')
+      +qa-item-mob('<span class="text-app-pink">Какие ограничения по возрасту или по росту?</span> <br/> Хочу с ребенком покататься', 'Доступ на наши симуляторы осуществляется с 14 лет. Это обусловлено настройкой наших симуляторов под взрослого человека.', 'qa-b-3.svg')
+      +qa-item-mob('<span class="text-app-pink">Я только учусь на права <br/> и хочу закрепить навыки <br/> вождения.</span> Как это сделать?', 'У нас вы можете научиться и гражданскому вождению, и получить навыки управления спортивным автомобилем в различных дисциплинах.', 'qa-b-4.svg')
+    
+  .container
     div(class="flex justify-center mt-[88px] max-lg:mt-[35px]")
       a(href="", class="btn btn-accent w-full max-w-[300px] h-[70px]") 
         p Все вопросы и ответы
