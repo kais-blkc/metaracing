@@ -1,0 +1,14 @@
+extends ./base/base.pug
+include ./mixins/sec-title
+
+block head
+  title Вопросы и ответы
+
+block content
+  div(class="md:bg-none bg-[url('/img/p-acd-bg-mob.png')] bg-cover bg-top bg-no-repeat w-full")
+    include ./acdrift/acd-banner.pug
+    include ./acdrift/acd-professionals.pug
+    include ./acdrift/acd-catalog.pug
+    include ./acdrift/acd-tracks.pug
+
+    include ./home/register.pug

@@ -1,0 +1,49 @@
+mixin prices-item(img, title, subtitle, borderColor, prices, isPink, priceListClasses, minHeight)
+  div(class="max-md:scale-95 z-10")
+    div(
+      class=`
+        sec-games__prices relative py-[30px] px-[50px] rounded-[15px] overflow-hidden -skew-x-10  
+        w-full max-[1300px]:max-w-[500px]
+        max-[1500px]:px-[35px] max-md:px-[25px] max-[1300px]:px-[30px] max-[1300px]:py-[20px]
+        ${minHeight}
+      `
+      )
+      if isPink
+        div(class="absolute w-full h-full top-0 left-0 bg-linear-220 from-[#1e3047] to-app-pink border-transparent [background-clip:content-box,border-box] bg-origin-border -z-2")
+        div(class="absolute rounded-[15px] left-[1.3px] top-[1.3px] w-[calc(100%-3px)] h-[calc(100%-3px)] -z-1 bg-linear-326 from-app-pink/60 to-transparent to-40% bg-[#091119] backdrop-blur-[40px]")
+      else 
+        div(class="absolute w-full h-full top-0 left-0 bg-linear-220 from-[#1e3047] to-app-purple border-transparent [background-clip:content-box,border-box] bg-origin-border -z-2")
+        div(class="absolute rounded-[15px] left-[1.3px] top-[1.3px] w-[calc(100%-3px)] h-[calc(100%-3px)] -z-1 bg-linear-326 from-app-purple/60 to-transparent to-40% bg-[#091119] backdrop-blur-[40px]")
+
+      div(class="skew-x-10 h-full")
+        div(class="-skew-x-9 flex flex-col h-full")
+          div(
+            class=`
+            sec-games__prices-title text-[32px] italic font-black uppercase leading-[120%]
+            max-[1300px]:text-xl max-md:text-2xl
+          `)!=title
+          div(class="sec-games__prices-subtitle mt-1.5 mb-[18px] text-[19px] max-[1300px]:text-[12px] font-golos font-semibold")!=subtitle
+          div(class=`${priceListClasses}`)
+            ul(class=`sec-games__prices-list `)
+              each price in prices
+                li(
+                  class=`
+                  sec-games__prices-price text-[19px] max-md:text-base font-medium flex justify-between gap-1 pt-5 border-b last:border-b-0 last:pb-0 first:pt-0
+                  max-[1300px]:text-[12px] max-md:text-[14px]
+                `,
+                style="border-color: "+borderColor)
+                  span(class="font-golos text-app-white-secondary")!=price[0]
+                  div(class="text-right")
+                    if price.length > 2
+                      span(class="relative inline-flex justify-center items-center text-[21px] max-[1300px]:text-[12px] max-md:text-[14px] italic font-bold opacity-50 ml-auto mr-3.5 max-md:text-base")!=price[2]
+                        img(class="absolute w-full" src="./img/line-inch.svg" loading="lazy")
+                    span(class="text-[28px] max-[1300px]:text-[17px] max-md:text-[19px] italic font-black text-right max-[1300px]:text-2xl max-md:text-xl")!=price[1]
+
+    div(class="relative pr-11 py-7.5 -z-1 max-md:pb-0 max-md:pt-3 max-md:pr-3")
+      - var gradient = isPink ? "card-tech-before-gradient" : "card-tech-before-gradient-purple";
+      - var buttonType = isPink ? "btn-accent" : "btn-purple";
+      div(class=`
+        ${gradient} absolute  w-full bottom-0 left-0 -skew-x-10 rounded-[15px] border border-app-white/10 bg-app-card-bg/40 h-[380px]
+        max-md:hidden
+      `)
+      button(class=`${buttonType} btn w-full z-1`) Онлайн-запись

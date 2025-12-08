@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Вопросы и ответы</title>
+    <link rel="icon" type="image/png" href="favicon.png"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&amp;family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="./css/fancybox.css"/>
+    <link rel="stylesheet" href="./css/aos.css"/>
+    <link rel="stylesheet" href="./css/tailwind.css"/>
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./css/style.css?v=3"/>
+  </head>
+  <body>
+    <header class="header w-full pt-[40px] fixed left-0 top-0 z-20 transition-all duration-300 ease">
+      <div class="container">
+        <div class="header__content flex items-center justify-between gap-2 "><a class="header__logo block cursor-pointer w-[200px] max-[1200px]:w-[130px]" href="/"><img src="./img/metaracing-logo.svg" alt=""/></a>
+          <div class="header__navbar max-md:hidden py-[5px] px-[10px] flex justify-between items-center gap-2.5 font-golos font-bold">
+            <div class="py-2.5 px-5 max-lg:py-1.5 max-lg:px-3"><a class="header__navbar-link max-[1200px]:text-[10px] block transition-all duration-200 ease" href="#">Как это работает</a></div>
+            <div class="py-2.5 px-5 max-lg:py-1.5 max-lg:px-3"><a class="header__navbar-link max-[1200px]:text-[10px] block transition-all duration-200 ease" href="/prices.html">Цены</a></div>
+            <div class="py-2.5 px-5 max-lg:py-1.5 max-lg:px-3"><a class="header__navbar-link max-[1200px]:text-[10px] block transition-all duration-200 ease" href="#">Сертификаты</a></div>
+            <div class="py-2.5 px-5 max-lg:py-1.5 max-lg:px-3"><a class="header__navbar-link max-[1200px]:text-[10px] block transition-all duration-200 ease" href="#">Мероприятия</a></div>
+            <div class="py-2.5 px-5 max-lg:py-1.5 max-lg:px-3"><a class="header__navbar-link max-[1200px]:text-[10px] block transition-all duration-200 ease" href="#">Клубы</a></div>
+          </div>
+          <div class="header__order max-md:hidden">
+            <button class="btn btn-accent">Онлайн-запись</button>
+          </div>
+          <button class="burger d-none-min-mob" data-modal-open="header-mobile" aria-label="Открыть меню"><img src="./img/burger.svg" alt=""/></button>
+        </div>
+      </div>
+    </header>
+    <div class="header-mobile modal-wrapper" data-modal-block="header-mobile" aria-label="Открыть меню">
+      <div class="
+    header-mobile__content w-full h-full flex flex-col gap-6 absolute left-0 bg-[#0E1923]/55 backdrop-blur-[27px]  
+    transition-all duration-300 ease-in-out py-[40px] px-[30px] max-md:px-[20px] text-center
+  ">
+        <button class="x-btn burger" data-modal-close="header-mobile" aria-label="Открыть меню"><img src="./img/x.svg" alt=""/></button><a class="header-mobile__logo block mx-auto w-[150px]" href="/"><img src="./img/metaracing-logo.svg" alt=""/></a>
+        <div class="header-mobile__navbar flex flex-col items-center gap-[22px] "><a class="header__navbar-item text-[21px] font-semibold underline hover:text-app-pink" href="#">Как это работает</a><a class="header__navbar-item text-[21px] font-semibold underline hover:text-app-pink" href="/prices.html">Цены</a><a class="header__navbar-item text-[21px] font-semibold underline hover:text-app-pink" href="#">Сертификаты</a><a class="header__navbar-item text-[21px] font-semibold underline hover:text-app-pink" href="#">Мероприятия</a><a class="header__navbar-item text-[21px] font-semibold underline hover:text-app-pink" href="#">Клубы</a></div>
+        <div class="mt-[30px] uppercase text-lg">
+          <p class="mb-1">МОСКВа (<span class="text-app-accent">new</span>)</p><a class="hover:text-app-pink" href="tel:"><span class="text-app-pink">+</span> 7 812 665-38-88</a>
+        </div>
+        <div class="uppercase text-lg">
+          <p class="mb-1">Санкт-петербург</p><a class="sec-banner__contacts-phone hover:text-app-pink" href="tel:"><span class="text-app-pink">+</span> 7 812 565-38-88</a>
+        </div>
+        <button class="btn btn-accent mx-auto w-full max-w-[337px] h-[63px] mt-5">Онлайн-запись</button>
+        <div class="flex gap-2.5 justify-center"><a class="btn btn-icon-white" href="#"><img class="img-base" src="./img/accent-whatsapp.svg" alt=""/><img class="img-hover" src="./img/hover-whatsapp.svg" alt=""/></a><a class="btn btn-icon-white" href="#"><img class="img-base" src="./img/accent-tg.svg" alt=""/><img class="img-hover" src="./img/hover-tg.svg" alt=""/></a><a class="btn btn-icon-white" href="#"><img class="img-base" src="./img/accent-vk.svg" alt=""/><img class="img-hover" src="./img/hover-vk.svg" alt=""/></a></div>
+        <p class="text-sm text-app-white-secondary font-golos">Ежедневно с 12:00 до 00:00 <br/> Отвечаем моментально.</p>
+      </div>
+    </div>
+    <main>
+      <div class="md:bg-none bg-[url('/img/p-or-bg-mob.png')] bg-cover bg-top bg-no-repeat w-full">
+        <section class="por-banner pt-[200px] pb-[50px] max-md:pt-[130px] relative overflow-visible">
+          <div class="absolute max-md:hidden top-[-10%] l-0 w-full -z-10"><img class="w-full" src="./img/or-banner-bg.png" loading="lazy"/></div>
+          <div class="container">
+                    <div class="text-center uppercase">
+                      <div class="italic font-black text-[35px] md:text-[50px] lg:text-[80px] leading-[110%]"><span class="text-app-pink">Выездная аренда</span> <br/> автосимуляторов <br/> на ваши мероприятия</div>
+                    </div>
+            <div class="mt-[32px] max-[1200px]:mt-[20px] max-md:mt-[30px] text-center text-[25px] max-[1200px]:text-[15px] max-md:text-[18px] uppercase text-app-white font-semibold">Хотите поразить гостей и превратить мероприятие <br/> <span class="text-app-pink">в настоящее шоу?</span> </div>
+            <div class="por-banner__img mt-[74px] max-[1200px]:mt-[45px] max-md:mt-[30px]"><img class="w-full" src="./img/or-banner.png" loading="lazy"/></div>
+            <div class="mt-[112px] max-[1200px]:mt-[70px] max-md:mt-[36px] text-center text-[25px] max-[1200px]:text-[15px] max-md:text-[18px] uppercase text-app-white-secondary font-semibold">Автосимуляторы MetaRacing — это не просто развлечение, а полное погружение <br class="max-md:hidden"/> в мир скорости, соревнований и острых ощущений. <br/> <br class="md:hidden"/> Мы добавим вашему мероприятию драйв, вовлечённость и эмоции, <br/> которые гости запомнят надолго.</div>
+            <div class="por-banner__list mt-[87px] max-[1200px]:mt-[50px] max-md:mt-[45px]">
+              <div class="grid grid-cols-4 max-md:hidden">
+                        <div class="relative scale-105 max-md:scale-100 max-md:h-[300px] ">
+                          <picture><img class="w-full h-full" src="img/mob-rental-2.png" loading="lazy"/></picture>
+                          <div class="absolute top-3 z-1 left-[40px] max-[1200px]:top-2 max-[1200px]:left-[20px]"><img class="max-[1200px]:h-[28px] max-md:h-[30px]" src="./img/renb-1.svg" alt="" loading="lazy"/></div>
+                        </div>
+                        <div class="relative scale-105 max-md:scale-100 max-md:h-[300px] ">
+                          <picture><img class="w-full h-full" src="img/mob-rental-1.png" loading="lazy"/></picture>
+                          <div class="absolute top-3 z-1 left-[40px] max-[1200px]:top-2 max-[1200px]:left-[20px]"><img class="max-[1200px]:h-[28px] max-md:h-[30px]" src="./img/renb-2.svg" alt="" loading="lazy"/></div>
+                        </div>
+                        <div class="relative scale-105 max-md:scale-100 max-md:h-[300px] ">
+                          <picture><img class="w-full h-full" src="img/mob-rental-3.png" loading="lazy"/></picture>
+                          <div class="absolute top-3 z-1 left-[40px] max-[1200px]:top-2 max-[1200px]:left-[20px]"><img class="max-[1200px]:h-[28px] max-md:h-[30px]" src="./img/renb-3.svg" alt="" loading="lazy"/></div>
+                        </div>
+                        <div class="relative scale-105 max-md:scale-100 max-md:h-[300px] ">
+                          <picture><img class="w-full h-full" src="img/mob-rental-4.png" loading="lazy"/></picture>
+                          <div class="absolute top-3 z-1 left-[40px] max-[1200px]:top-2 max-[1200px]:left-[20px]"><img class="max-[1200px]:h-[28px] max-md:h-[30px]" src="./img/badge-red-grounded.svg" alt="" loading="lazy"/></div>
+                        </div>
+              </div>
+              <div class="md:hidden">
+                <div class="swiper swiper-offsite-rental">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide max-w-[330px]">
+                      <div class="flex flex-col gap-5">
+                                <div class="relative scale-105 max-md:scale-100 max-md:h-[300px] ">
+                                  <picture><img class="w-full h-full" src="img/mob-rental-1.png" loading="lazy"/></picture>
+                                  <div class="absolute top-3 z-1 left-[40px] max-[1200px]:top-2 max-[1200px]:left-[20px]"><img class="max-[1200px]:h-[28px] max-md:h-[30px]" src="./img/renb-2.svg" alt="" loading="lazy"/></div>
+                                </div>
+                                <div class="relative scale-105 max-md:scale-100 max-md:h-[300px] ">
+                                  <picture><img class="w-full h-full" src="img/mob-rental-3.png" loading="lazy"/></picture>
+                                  <div class="absolute top-3 z-1 left-[40px] max-[1200px]:top-2 max-[1200px]:left-[20px]"><img class="max-[1200px]:h-[28px] max-md:h-[30px]" src="./img/renb-3.svg" alt="" loading="lazy"/></div>
+                                </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide max-w-[330px]">
+                      <div class="flex flex-col gap-5 translate-x-[-25px]">
+                                <div class="relative scale-105 max-md:scale-100 max-md:h-[300px] ">
+                                  <picture><img class="w-full h-full" src="img/mob-rental-2.png" loading="lazy"/></picture>
+                                  <div class="absolute top-3 z-1 left-[40px] max-[1200px]:top-2 max-[1200px]:left-[20px]"><img class="max-[1200px]:h-[28px] max-md:h-[30px]" src="./img/renb-1.svg" alt="" loading="lazy"/></div>
+                                </div>
+                                <div class="relative scale-105 max-md:scale-100 max-md:h-[300px] ">
+                                  <picture><img class="w-full h-full" src="img/mob-rental-4.png" loading="lazy"/></picture>
+                                  <div class="absolute top-3 z-1 left-[40px] max-[1200px]:top-2 max-[1200px]:left-[20px]"><img class="max-[1200px]:h-[28px] max-md:h-[30px]" src="./img/badge-red-grounded.svg" alt="" loading="lazy"/></div>
+                                </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="por-drive pt-[130px] pb-[50px] max-md:pt-[50px] relative overflow-visible">
+          <div class="absolute max-md:hidden top-[-30%] l-0 w-full -z-10"><img class="w-full" src="./img/por-drive-bg.png" loading="lazy"/></div>
+          <div class="container">
+                    <div class="text-center uppercase">
+                      <div class="italic font-black text-[35px] md:text-[50px] lg:text-[80px] leading-[110%]"><span class="text-app-pink">Максимум драйва,</span> <br/> минимум забот</div>
+                    </div>
+            <div class="mt-[32px] max-[1200px]:mt-[20px] max-md:mt-[30px] text-center text-[25px] max-[1200px]:text-[15px] max-md:text-[18px] uppercase text-app-white-secondary font-semibold">Мы знаем, как важно, чтобы всё прошло идеально. Поэтому MetaRacing <br class="max-md:hidden"/> предлагает <span class="text-app-white">услугу выездной аренды автосимуляторов «под ключ».</span> <br class="md:hidden"/><br class="md:hidden"/> Мы берём на <br class="max-md:hidden"/> себя все заботы — вам остаётся только наблюдать, как ваши гости получают <br class="max-md:hidden"/> удовольствие.</div>
+            <div class="por-drive__list mt-[90px] max-[1200px]:mt-[56px] max-md:mt-[40px]">
+              <div class="max-md:hidden grid grid-cols-[67.00%_1fr]">
+                        <div class="por-drive-item relative w-full">
+                          <div class="absolute top-5 max-[1200px]:top-2.5 z-1 left-[50px] max-[1200px]:left-[70px] max-md:left-[30px] max-md:top-2"><img class="h-[50px] max-[1550px]:h-[30px] max-md:h-[30px]" src="./img/badge-pink-aimol.svg" alt="" loading="lazy"/></div>
+                          <div class="por-drive-item__img relative">
+                            <picture>
+                              <source media="(max-width: 767px)" srcset="img/mob-por-drive-1.png"/><img class="max-lg:h-full" src="./img/por-drive-1.png" loading="lazy"/>
+                            </picture>
+                          </div>
+                          <div class="
+        por-drive-item__img absolute 
+        left-0 bottom-0 w-full
+        px-[60px] pb-[37px] max-[1200px]:pb-[28px] max-[1200px]:px-[37px] max-md:px-[28px]
+      ">
+                            <div class="text-[28px] max-[1200px]:text-[17px] max-md:text-base text-app-white font-black italic uppercase">MetaRacing для бренда <br/> AIMOL на RDS GP</div>
+                          </div>
+                        </div>
+                <div class="flex flex-col gap-[32px] ml-[-25px]"><img src="./img/por-drive-2.png" loading="lazy"/><img class=" scale-110 ml-[-30px] max-[1200px]:ml-[-20px] max-[1200px]:h-[160px]" src="./img/por-drive-3.png" loading="lazy"/></div>
+              </div>
+              <div class="md:hidden">
+                <div class="swiper swiper-por-drive">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide max-w-[330px]">
+                              <div class="por-drive-item relative w-full">
+                                <div class="absolute top-5 max-[1200px]:top-2.5 z-1 left-[50px] max-[1200px]:left-[70px] max-md:left-[30px] max-md:top-2"><img class="h-[50px] max-[1550px]:h-[30px] max-md:h-[30px]" src="./img/badge-pink-aimol.svg" alt="" loading="lazy"/></div>
+                                <div class="por-drive-item__img relative">
+                                  <picture>
+                                    <source media="(max-width: 767px)" srcset="img/mob-por-drive-1.png"/><img class="max-lg:h-full" src="./img/por-drive-1.png" loading="lazy"/>
+                                  </picture>
+                                </div>
+                                <div class="
+        por-drive-item__img absolute 
+        left-0 bottom-0 w-full
+        px-[60px] pb-[37px] max-[1200px]:pb-[28px] max-[1200px]:px-[37px] max-md:px-[28px]
+      ">
+                                  <div class="text-[28px] max-[1200px]:text-[17px] max-md:text-base text-app-white font-black italic uppercase">MetaRacing для бренда <br/> AIMOL на RDS GP</div>
+                                </div>
+                              </div>
+                    </div>
+                    <div class="swiper-slide max-w-[330px]"><img class="ml-[-25px]" src="./img/mob-por-drive-2.png" loading="lazy"/></div>
+                    <div class="swiper-slide max-w-[330px]"><img class="ml-[-50px]" src="./img/mob-por-drive-3.png" loading="lazy"/></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="por-drive__benefits mt-[53px] max-[1200px]:mt-[30px] max-md:mt-[50px]">
+              <div class="max-md:hidden grid grid-cols-[1fr_1fr_37%] gap-5">
+                        <div class="
+      qa-item border-gradient relative rounded-[15px] -skew-x-10
+      bg-linear-195 from-[#0B1118] from-65% to-app-sky/35
+      pt-[42px] pb-[30px] pl-[55px] pr-0
+      max-[1200px]:pt-[22px] max-[1200px]:pl-[34px] max-[1200px]:pr-[40px] max-[1200px]:pb-[20px]
+    " style="--border-gradient-image: linear-gradient(195deg, #1E3147 10%, var(--color-sky))">
+                          <div class="border-gradient-border"></div>
+                          <div class="border-gradient-content"></div>
+                          <div class="relative z-2 skew-x-10 max-md:skew-x-0">
+                            <div class="text-[25px] max-[1200px]:text-[15px] max-md:text-xl font-bold uppercase"><span class="text-app-sky">Логистика</span> <br/> и доставка</div>
+                            <div class="text-[19px] max-[1200px]:text-[11px] max-md:text-base max-sm:text-[12px] font-medium text-app-white-secondary mt-[26px]">Мы сами доставим все необходимое <br class="max-lg:hidden"/> оборудование прямо к месту <br class="max-lg:hidden"/> проведения вашего мероприятия — <br class="max-lg:hidden"/> будь то выставочный центр, загородный <br class="max-lg:hidden"/> клуб или частная площадка.</div>
+                          </div>
+                        </div>
+                        <div class="
+      qa-item border-gradient relative rounded-[15px] -skew-x-10
+      bg-linear-195 from-[#0B1118] from-65% to-app-pink/35
+      pt-[42px] pb-[30px] pl-[55px] pr-0
+      max-[1200px]:pt-[22px] max-[1200px]:pl-[34px] max-[1200px]:pr-[40px] max-[1200px]:pb-[20px]
+    " style="--border-gradient-image: linear-gradient(195deg, #1E3147 10%, var(--color-pink))">
+                          <div class="border-gradient-border"></div>
+                          <div class="border-gradient-content"></div>
+                          <div class="relative z-2 skew-x-10 max-md:skew-x-0">
+                            <div class="text-[25px] max-[1200px]:text-[15px] max-md:text-xl font-bold uppercase"><span class="text-app-pink">Профессиональная</span> <br/> установка и настройка</div>
+                            <div class="text-[19px] max-[1200px]:text-[11px] max-md:text-base max-sm:text-[12px] font-medium text-app-white-secondary mt-[26px]">Наши специалисты не просто доставят <br class="max-lg:hidden"/> оборудование — они установят <br class="max-lg:hidden"/> протестируют и подготовят его для <br class="max-lg:hidden"/> идеальной работы. Все будет готово <br class="max-lg:hidden"/> к началу мероприятия без суеты.</div>
+                          </div>
+                        </div>
+                        <div class="
+      qa-item border-gradient relative rounded-[15px] -skew-x-10
+      bg-linear-195 from-[#0B1118] from-65% to-app-purple/35
+      pt-[42px] pb-[30px] pl-[55px] pr-0
+      max-[1200px]:pt-[22px] max-[1200px]:pl-[34px] max-[1200px]:pr-[40px] max-[1200px]:pb-[20px]
+    " style="--border-gradient-image: linear-gradient(195deg, #1E3147 10%, var(--color-purple))">
+                          <div class="border-gradient-border"></div>
+                          <div class="border-gradient-content"></div>
+                          <div class="relative z-2 skew-x-10 max-md:skew-x-0">
+                            <div class="text-[25px] max-[1200px]:text-[15px] max-md:text-xl font-bold uppercase"><span class="text-app-purple">Квалифицированный</span> <br/> администратор</div>
+                            <div class="text-[19px] max-[1200px]:text-[11px] max-md:text-base max-sm:text-[12px] font-medium text-app-white-secondary mt-[26px]">На всем мероприятии с гостями будут работать <br class="max-lg:hidden"/> наши опытные администраторы: обучат <br class="max-lg:hidden"/> управлению симулятором и помогут выбрать <br class="max-lg:hidden"/> трассы и автомобили, создавая атмосферу <br class="max-lg:hidden"/> гоночного праздника.</div>
+                          </div>
+                        </div>
+              </div>
+            </div>
+          </div>
+          <div class="md:hidden flex flex-col gap-6">
+                    <div class="
+      qa-item-mob border-gradient relative 
+      bg-linear-195 from-[#0e161f] from-65% to-app-sky/35
+    " style="--border-gradient-image: linear-gradient(195deg, #1E3147 10%, var(--color-sky))">
+                      <div class="border-gradient-border"></div>
+                      <div class="border-gradient-content"></div>
+                      <div class="relative z-2 container py-5 px-7">
+                        <div class="text-[17px] font-bold uppercase leading-[130%]"><span class="text-app-sky">Логистика</span> <br/> и доставка</div>
+                        <div class="text-sm font-medium text-app-white-secondary mt-[17px]">Мы сами доставим все необходимое <br class="max-lg:hidden"/> оборудование прямо к месту <br class="max-lg:hidden"/> проведения вашего мероприятия — <br class="max-lg:hidden"/> будь то выставочный центр, загородный <br class="max-lg:hidden"/> клуб или частная площадка.</div>
+                      </div>
+                    </div>
+                    <div class="
+      qa-item-mob border-gradient relative 
+      bg-linear-195 from-[#0e161f] from-65% to-app-pink/35
+    " style="--border-gradient-image: linear-gradient(195deg, #1E3147 10%, var(--color-pink))">
+                      <div class="border-gradient-border"></div>
+                      <div class="border-gradient-content"></div>
+                      <div class="relative z-2 container py-5 px-7">
+                        <div class="text-[17px] font-bold uppercase leading-[130%]"><span class="text-app-pink">Профессиональная</span> <br/> установка и настройка</div>
+                        <div class="text-sm font-medium text-app-white-secondary mt-[17px]">Наши специалисты не просто доставят <br class="max-lg:hidden"/> оборудование — они установят <br class="max-lg:hidden"/> протестируют и подготовят его для <br class="max-lg:hidden"/> идеальной работы. Все будет готово <br class="max-lg:hidden"/> к началу мероприятия без суеты.</div>
+                      </div>
+                    </div>
+                    <div class="
+      qa-item-mob border-gradient relative 
+      bg-linear-195 from-[#0e161f] from-65% to-app-purple/35
+    " style="--border-gradient-image: linear-gradient(195deg, #1E3147 10%, var(--color-purple))">
+                      <div class="border-gradient-border"></div>
+                      <div class="border-gradient-content"></div>
+                      <div class="relative z-2 container py-5 px-7">
+                        <div class="text-[17px] font-bold uppercase leading-[130%]"><span class="text-app-purple">Квалифицированный</span> <br/> администратор</div>
+                        <div class="text-sm font-medium text-app-white-secondary mt-[17px]">На всем мероприятии с гостями будут работать <br class="max-lg:hidden"/> наши опытные администраторы: обучат <br class="max-lg:hidden"/> управлению симулятором и помогут выбрать <br class="max-lg:hidden"/> трассы и автомобили, создавая атмосферу <br class="max-lg:hidden"/> гоночного праздника.</div>
+                      </div>
+                    </div>
+          </div>
+        </section>
+        <section class="por-get pt-[130px] pb-[50px] max-md:pt-[50px] relative overflow-visible">
+          <div class="absolute max-md:hidden top-[-30%] l-0 w-full -z-10"><img class="w-full" src="./img/por-drive-bg.png" loading="lazy"/></div>
+          <div class="container">
+                    <div class="text-center uppercase">
+                      <div class="italic font-black text-[35px] md:text-[50px] lg:text-[80px] leading-[110%]"><span class="text-app-pink">Что получают </span> <br/> ваши гости?</div>
+                      <div class="text-2xl mt-6 max-lg:mt-[16px] max-md:mt-[14px] text-app-white-secondary max-lg:text-[15px] max-md:text-lg">Незабываемый опыт и взрыв адреналина!</div>
+                    </div>
+            <div class="mt-[88px] max-[1200px]:mt-[50px] max-md:mt-[30px] text-center text-[25px] max-[1200px]:text-[15px] max-md:text-[18px] uppercase text-app-white-secondary font-semibold">Наши автосимуляторы — это не просто игра, а реалистичное управление <br class="max-md:hidden"/> гоночным болидом. <span class="text-app-white"><br class="md:hidden"/> <br class="md:hidden"/> Благодаря мощной обратной связи (force feedback),</span>  <br class="max-md:hidden"/> детализированной графике, профессиональным рулям, педалям и спортивным <br class="max-md:hidden"/> креслам — каждый участник почувствует себя настоящим пилотом.</div>
+            <div class="por-get__list mt-[112px] max-[1200px]:mt-[68px] max-md:mt-[48px]">
+              <div class="grid grid-cols-[1fr_35.64%_1fr] max-md:grid-cols-1 max-md:gap-[40px]">
+                        <div class="or-get-item  relative w-full max-lg:max-w-[500px] max-lg:mx-auto">
+                          <div class="or-get-item__img relative"><img class="w-full" src="./img/or-get-1.png" loading="lazy"/></div>
+                          <div class="
+      or-get-item__body relative
+      w-full
+      pl-[45px] pr-[20px] pt-[50px] max-[1200px]:pl-[25px] max-[1200px]:pr-[10px] max-[1200px]:pt-[30px]
+    ">
+                            <div class="
+        flex flex-col gap-3.5
+      ">
+                              <div class="text-app-pink text-[25px] max-[1200px]:text-[15px] max-md:text-[18px] font-bold uppercase">Ощущение cкорости</div>
+                              <div class="text-app-white-secondary text-[19px] max-[1200px]:text-[11px] max-md:text-[14px] font-medium">Почувствуйте каждый поворот, <br/> вираж и обгон, погружаясь в атмосферу реальной гонки.</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="or-get-item  relative w-full max-lg:max-w-[500px] max-lg:mx-auto">
+                          <div class="or-get-item__img relative"><img class="w-full" src="./img/or-get-2.png" loading="lazy"/></div>
+                          <div class="
+      or-get-item__body relative
+      w-full
+      pl-[45px] pr-[20px] pt-[50px] max-[1200px]:pl-[25px] max-[1200px]:pr-[10px] max-[1200px]:pt-[30px]
+    ">
+                            <div class="
+        flex flex-col gap-3.5
+      ">
+                              <div class="text-app-pink text-[25px] max-[1200px]:text-[15px] max-md:text-[18px] font-bold uppercase">Соревновательный дух</div>
+                              <div class="text-app-white-secondary text-[19px] max-[1200px]:text-[11px] max-md:text-[14px] font-medium">Устройте дружеские заезды или полноценные <br/> турниры с призами — азарт и соперничество <br/> среди участников гарантированы.</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="or-get-item  relative w-full max-lg:max-w-[500px] max-lg:mx-auto">
+                          <div class="or-get-item__img relative"><img class="w-full" src="./img/or-get-3.png" loading="lazy"/></div>
+                          <div class="
+      or-get-item__body relative
+      w-full
+      pl-[45px] pr-[20px] pt-[50px] max-[1200px]:pl-[25px] max-[1200px]:pr-[10px] max-[1200px]:pt-[30px]
+    ">
+                            <div class="
+        flex flex-col gap-3.5
+      ">
+                              <div class="text-app-pink text-[25px] max-[1200px]:text-[15px] max-md:text-[18px] font-bold uppercase">Доступность для всех</div>
+                              <div class="text-app-white-secondary text-[19px] max-[1200px]:text-[11px] max-md:text-[14px] font-medium">Независимо от опыта вождения, каждый <br/> сможет освоить управление и получить <br/> свою порцию адреналина.</div>
+                            </div>
+                          </div>
+                        </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="por-get pt-[130px] pb-[50px] max-md:pt-[50px] relative overflow-visible">
+          <div class="absolute max-md:hidden top-[7%] l-0 w-full -z-10"><img class="w-full" src="./img/or-partner-bg.png" loading="lazy"/></div>
+          <div class="container">
+                    <div class="text-center uppercase">
+                      <div class="italic font-black text-[35px] md:text-[50px] lg:text-[80px] leading-[110%]">MetaRacing — <br/><span class="text-app-pink">проверенный партнер </span> <br/> крупнейших событий и брендов</div>
+                    </div>
+            <div class="mt-[50px] max-[1200px]:mt-[30px] max-md:mt-[46px] text-center text-[25px] max-[1200px]:text-[15px] max-md:text-[18px] uppercase text-app-white-secondary font-semibold">Наш опыт работы на мероприятиях любого формата и масштаба подтверждает <br/> надежность, популярность и способность работать на самом высоком уровне.</div>
+            <div class="or-partner__list-pc max-md:hidden mt-[130px] max-[1200px]:mt-[80px] max-md:mt-[50px]">
+              <div class="relative"><img class="w-full" src="./img/or-part-1.png" loading="lazy"/>
+                <div class="absolute bottom-0 left-0 w-full grid grid-cols-[46%_1fr] z-1">
+                          <div class="
+    or-partner-content w-full h-full
+    flex flex-col items-center justify-end
+    px-[45px] py-[40px]
+    max-[1200px]:px-[28px] max-[1200px]:py-[25px]
+  ">
+                            <div class="w-full flex flex-col gap-2.5">
+                              <div class="text-[28px] max-[1200px]:text-[17px] max-md:text-sm text-app-white font-black italic uppercase">Tsunami Picnic</div>
+                              <div class="text-[19px] max-[1200px]:text-[11px] max-md:text-[10px] font-golos font-medium text-app-white-secondary">Фестиваль автокультуры</div>
+                            </div>
+                          </div>
+                          <div class="
+    or-partner-content w-full h-full
+    flex flex-col items-center justify-end
+    px-[45px] py-[40px]
+    max-[1200px]:px-[28px] max-[1200px]:py-[25px]
+  ">
+                            <div class="w-full flex flex-col gap-2.5">
+                              <div class="text-[28px] max-[1200px]:text-[17px] max-md:text-sm text-app-white font-black italic uppercase">VK Fest</div>
+                              <div class="text-[19px] max-[1200px]:text-[11px] max-md:text-[10px] font-golos font-medium text-app-white-secondary">Крупнейший фестиваль под открытым небом</div>
+                            </div>
+                          </div>
+                </div>
+              </div>
+              <div class="relative"><img class="w-full mt-[60px] max-[1200px]:mt-[40px]" src="./img/or-part-2.png" loading="lazy"/>
+                <div class="absolute bottom-0 left-0 w-full grid grid-cols-[32%_40%_1fr] z-1">
+                          <div class="
+    or-partner-content w-full h-full
+    flex flex-col items-center justify-end
+    px-[45px] py-[40px]
+    max-[1200px]:px-[28px] max-[1200px]:py-[25px]
+  ">
+                            <div class="w-full flex flex-col gap-2.5">
+                              <div class="text-[28px] max-[1200px]:text-[17px] max-md:text-sm text-app-white font-black italic uppercase">Drift Expo</div>
+                              <div class="text-[19px] max-[1200px]:text-[11px] max-md:text-[10px] font-golos font-medium text-app-white-secondary">Выставка дрифт-индустрии</div>
+                            </div>
+                          </div>
+                          <div class="
+    or-partner-content w-full h-full
+    flex flex-col items-center justify-end
+    px-[45px] py-[40px]
+    max-[1200px]:px-[28px] max-[1200px]:py-[25px]
+  ">
+                            <div class="w-full flex flex-col gap-2.5">
+                              <div class="text-[28px] max-[1200px]:text-[17px] max-md:text-sm text-app-white font-black italic uppercase">RDS GP</div>
+                              <div class="text-[19px] max-[1200px]:text-[11px] max-md:text-[10px] font-golos font-medium text-app-white-secondary">Главные соревнования по дрифту в России</div>
+                            </div>
+                          </div>
+                  <div class="
+            or-partner-content w-full h-full
+            flex flex-col items-center justify-end
+            px-[45px] py-[40px]
+            max-[1200px]:px-[28px] max-[1200px]:py-[25px]
+          ">
+                    <div class="w-full flex flex-col gap-2.5">
+                      <div class="text-[80px] max-[1200px]:text-[50px] max-md:text-[54px] text-app-white font-black italic uppercase">20+</div>
+                      <div class="text-[19px] max-[1200px]:text-[11px] max-md:text-sm font-golos font-medium text-app-white-secondary">И десятки других масштабных <br/> событий — от городских <br/> до частных ивентов</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="or-partner__list-mob md:hidden mt-[50px]">
+              <div class="swiper swiper-or-partner">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide max-w-[330px]">
+                    <div class="flex flex-col gap-8">
+                              <div class="or-partner relative">
+                                <div class="or-partner__img flex justify-start">
+                                  <picture>
+                                    <source media="(max-width: 767px)" srcset="./img/mob-or-partner-1.png"/><img class="w-full max-md:h-[300px]" src="./img/or-partner-1.png" alt="" loading="lazy"/>
+                                  </picture>
+                                </div>
+                                <div class="
+      or-partner-content absolute bottom-0 left-0 w-full h-full
+      flex flex-col items-center justify-end
+      px-[45px] py-[40px]
+      max-[1200px]:px-[28px] max-[1200px]:py-[25px]
+    ">
+                                  <div class="w-full flex flex-col gap-2.5">
+                                    <div class="text-[28px] max-[1200px]:text-[17px] max-md:text-sm text-app-white font-black italic uppercase">Tsunami Picnic</div>
+                                    <div class="text-[19px] max-[1200px]:text-[11px] max-md:text-[10px] font-golos font-medium text-app-white-secondary">Фестиваль автокультуры</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="or-partner relative">
+                                <div class="or-partner__img flex justify-start">
+                                  <picture>
+                                    <source media="(max-width: 767px)" srcset="./img/mob-or-partner-3.png"/><img class="w-full max-md:h-[300px]" src="./img/or-partner-3.png" alt="" loading="lazy"/>
+                                  </picture>
+                                </div>
+                                <div class="
+      or-partner-content absolute bottom-0 left-0 w-full h-full
+      flex flex-col items-center justify-end
+      px-[45px] py-[40px]
+      max-[1200px]:px-[28px] max-[1200px]:py-[25px]
+    ">
+                                  <div class="w-full flex flex-col gap-2.5">
+                                    <div class="text-[28px] max-[1200px]:text-[17px] max-md:text-sm text-app-white font-black italic uppercase">Drift Expo</div>
+                                    <div class="text-[19px] max-[1200px]:text-[11px] max-md:text-[10px] font-golos font-medium text-app-white-secondary">Выставка дрифт-индустрии</div>
+                                  </div>
+                                </div>
+                              </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide max-w-[330px]">
+                    <div class="flex flex-col gap-8 ml-[-30px]">
+                              <div class="or-partner relative">
+                                <div class="or-partner__img flex justify-start">
+                                  <picture>
+                                    <source media="(max-width: 767px)" srcset="./img/mob-or-partner-2.png"/><img class="w-full max-md:h-[300px]" src="./img/or-partner-2.png" alt="" loading="lazy"/>
+                                  </picture>
+                                </div>
+                                <div class="
+      or-partner-content absolute bottom-0 left-0 w-full h-full
+      flex flex-col items-center justify-end
+      px-[45px] py-[40px]
+      max-[1200px]:px-[28px] max-[1200px]:py-[25px]
+    ">
+                                  <div class="w-full flex flex-col gap-2.5">
+                                    <div class="text-[28px] max-[1200px]:text-[17px] max-md:text-sm text-app-white font-black italic uppercase">VK Fest</div>
+                                    <div class="text-[19px] max-[1200px]:text-[11px] max-md:text-[10px] font-golos font-medium text-app-white-secondary">Крупнейший фестиваль под открытым небом</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="or-partner relative">
+                                <div class="or-partner__img flex justify-start">
+                                  <picture>
+                                    <source media="(max-width: 767px)" srcset="./img/mob-or-partner-4.png"/><img class="w-full max-md:h-[300px]" src="./img/or-partner-4.png" alt="" loading="lazy"/>
+                                  </picture>
+                                </div>
+                                <div class="
+      or-partner-content absolute bottom-0 left-0 w-full h-full
+      flex flex-col items-center justify-end
+      px-[45px] py-[40px]
+      max-[1200px]:px-[28px] max-[1200px]:py-[25px]
+    ">
+                                  <div class="w-full flex flex-col gap-2.5">
+                                    <div class="text-[28px] max-[1200px]:text-[17px] max-md:text-sm text-app-white font-black italic uppercase">RDS GP</div>
+                                    <div class="text-[19px] max-[1200px]:text-[11px] max-md:text-[10px] font-golos font-medium text-app-white-secondary">Главные соревнования по дрифту в России</div>
+                                  </div>
+                                </div>
+                              </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-[30px] max-w-[370px]">
+                        <div class="or-partner relative">
+                          <picture>
+                            <source media="(max-width: 767px)" srcset="./img/mob-or-partner-5.png"/><img class="w-full" src="./img/or-partner-5.png" alt="" loading="lazy"/>
+                          </picture>
+                          <div class="
+      or-partner-content absolute bottom-0 left-0 w-full h-full
+      flex flex-col items-center justify-end
+      px-[45px] py-[40px]
+      max-[1200px]:px-[28px] max-[1200px]:py-[25px]
+    ">
+                            <div class="w-full flex flex-col gap-2.5">
+                              <div class="text-[80px] max-[1200px]:text-[50px] max-md:text-[54px] text-app-white font-black italic uppercase">20+</div>
+                              <div class="text-[19px] max-[1200px]:text-[11px] max-md:text-sm font-golos font-medium text-app-white-secondary">И десятки других масштабных <br/> событий — от городских <br/> до частных ивентов</div>
+                            </div>
+                          </div>
+                        </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="por-benefits pt-[130px] pb-[50px] max-md:pt-[50px] relative overflow-visible">
+          <div class="absolute max-md:hidden top-[-20%] l-0 w-full -z-10"><img class="w-full" src="./img/por-benefits-bg.png" loading="lazy"/></div>
+          <div class="container">
+                    <div class="text-center uppercase">
+                      <div class="italic font-black text-[35px] md:text-[50px] lg:text-[80px] leading-[110%]">Готовы добавить драйва <br/><span class="text-app-pink">вашему мероприятию? </span></div>
+                      <div class="text-2xl mt-6 max-lg:mt-[16px] max-md:mt-[14px] text-app-white-secondary max-lg:text-[15px] max-md:text-lg">Подходит для ивентов любого масштаба:</div>
+                    </div>
+            <div class="mt-[86px] max-md:hidden max-[1200px]:mt-[54px] ">
+              <div class="grid grid-cols-[39.62%_26.15%_1fr] gap-5">
+                        <div class="
+      qa-item border-gradient relative rounded-[15px] -skew-x-10
+      bg-linear-188 from-[#0E151C]/50 from-70% to-app-pink/20
+      px-[55px] py-[30px] max-[1450px]:px-[30px] max-[1450px]:py-[20px]
+    " style="--border-gradient-image: linear-gradient(195deg, #1E3147 80%, #5D1946)">
+                          <div class="border-gradient-border"></div>
+                          <div class="border-gradient-content"></div>
+                          <div class="absolute max-md:hidden top-5 max-[1200px]:top-2.5 z-1 right-[-10px]  max-md:top-2"><img class="h-[46px] max-[1450px]:h-[28px]  max-md:h-[39px]" src="./img/badge-s1.svg" alt="" loading="lazy"/></div>
+                          <div class="relative z-2 skew-x-10 max-md:skew-x-0">
+                            <div class="text-[25px] max-[1450px]:text-[15px] max-md:text-xl font-bold uppercase"><span class="text-app-pink">Корпоративы</span> <br/> и тимбилдинги</div>
+                            <div class="text-[19px] max-[1450px]:text-[11px] max-md:text-base max-sm:text-[12px] font-medium text-app-white-secondary mt-[26px]">Сплотите команду <br/> в увлекательной гонке.</div>
+                          </div>
+                        </div>
+                        <div class="
+      qa-item border-gradient relative rounded-[15px] -skew-x-10
+      bg-linear-188 from-[#0E151C]/50 from-70% to-app-pink/20
+      px-[55px] py-[30px] max-[1450px]:px-[30px] max-[1450px]:py-[20px]
+    " style="--border-gradient-image: linear-gradient(195deg, #1E3147 80%, #5D1946)">
+                          <div class="border-gradient-border"></div>
+                          <div class="border-gradient-content"></div>
+                          <div class="absolute max-md:hidden top-5 max-[1200px]:top-2.5 z-1 right-[-10px]  max-md:top-2"><img class="h-[46px] max-[1450px]:h-[28px]  max-md:h-[39px]" src="./img/badge-s2.svg" alt="" loading="lazy"/></div>
+                          <div class="relative z-2 skew-x-10 max-md:skew-x-0">
+                            <div class="text-[25px] max-[1450px]:text-[15px] max-md:text-xl font-bold uppercase"><span class="text-app-pink">Промо-акций </span> <br/> и открытий</div>
+                            <div class="text-[19px] max-[1450px]:text-[11px] max-md:text-base max-sm:text-[12px] font-medium text-app-white-secondary mt-[26px]">Создайте незабываемый <br/> интерактив.</div>
+                          </div>
+                        </div>
+                        <div class="
+      qa-item border-gradient relative rounded-[15px] -skew-x-10
+      bg-linear-188 from-[#0E151C]/50 from-70% to-app-pink/20
+      px-[55px] py-[30px] max-[1450px]:px-[30px] max-[1450px]:py-[20px]
+    " style="--border-gradient-image: linear-gradient(195deg, #1E3147 80%, #5D1946)">
+                          <div class="border-gradient-border"></div>
+                          <div class="border-gradient-content"></div>
+                          <div class="absolute max-md:hidden top-5 max-[1200px]:top-2.5 z-1 right-[-10px]  max-md:top-2"><img class="h-[46px] max-[1450px]:h-[28px]  max-md:h-[39px]" src="./img/badge-s3.svg" alt="" loading="lazy"/></div>
+                          <div class="relative z-2 skew-x-10 max-md:skew-x-0">
+                            <div class="text-[25px] max-[1450px]:text-[15px] max-md:text-xl font-bold uppercase"><span class="text-app-pink">Дней рождений </span> <br/> и частных вечеринок</div>
+                            <div class="text-[19px] max-[1450px]:text-[11px] max-md:text-base max-sm:text-[12px] font-medium text-app-white-secondary mt-[26px]">Подарите гостям уникальное <br/> развлечение.</div>
+                          </div>
+                        </div>
+              </div>
+              <div class="grid grid-cols-[39.62%_26.15%_1fr] gap-5 mt-[24px]">
+                        <div class="
+      qa-item border-gradient relative rounded-[15px] -skew-x-10
+      bg-linear-188 from-[#0E151C]/50 from-70% to-app-pink/20
+      px-[55px] py-[30px] max-[1450px]:px-[30px] max-[1450px]:py-[20px]
+    " style="--border-gradient-image: linear-gradient(195deg, #1E3147 80%, #5D1946)">
+                          <div class="border-gradient-border"></div>
+                          <div class="border-gradient-content"></div>
+                          <div class="absolute max-md:hidden top-5 max-[1200px]:top-2.5 z-1 right-[-10px]  max-md:top-2"><img class="h-[46px] max-[1450px]:h-[28px]  max-md:h-[39px]" src="./img/badge-s4.svg" alt="" loading="lazy"/></div>
+                          <div class="relative z-2 skew-x-10 max-md:skew-x-0">
+                            <div class="text-[25px] max-[1450px]:text-[15px] max-md:text-xl font-bold uppercase"><span class="text-app-pink">Городских праздников </span> <br/> и фестивалей</div>
+                            <div class="text-[19px] max-[1450px]:text-[11px] max-md:text-base max-sm:text-[12px] font-medium text-app-white-secondary mt-[26px]">Станьте центром притяжения <br/> для посетителей.</div>
+                          </div>
+                        </div>
+                        <div class="
+      qa-item border-gradient relative rounded-[15px] -skew-x-10
+      bg-linear-188 from-[#0E151C]/50 from-70% to-app-pink/20
+      px-[55px] py-[30px] max-[1450px]:px-[30px] max-[1450px]:py-[20px]
+    " style="--border-gradient-image: linear-gradient(195deg, #1E3147 80%, #5D1946)">
+                          <div class="border-gradient-border"></div>
+                          <div class="border-gradient-content"></div>
+                          <div class="absolute max-md:hidden top-5 max-[1200px]:top-2.5 z-1 right-[-10px]  max-md:top-2"><img class="h-[46px] max-[1450px]:h-[28px]  max-md:h-[39px]" src="./img/badge-s5.svg" alt="" loading="lazy"/></div>
+                          <div class="relative z-2 skew-x-10 max-md:skew-x-0">
+                            <div class="text-[25px] max-[1450px]:text-[15px] max-md:text-xl font-bold uppercase"><span class="text-app-pink">Выставок </span> <br/> и презентаций</div>
+                            <div class="text-[19px] max-[1450px]:text-[11px] max-md:text-base max-sm:text-[12px] font-medium text-app-white-secondary mt-[26px]">Привлеките максимум внимания к вашему <br/> мероприятию или стенду.</div>
+                          </div>
+                        </div>
+              </div>
+            </div>
+          </div>
+          <div class="md:hidden flex flex-col gap-[30px] mt-[42px]">
+                    <div class="
+      qa-item-mob border-gradient relative 
+      bg-linear-195 from-[#0e161f] from-65% to-app-pink/20
+    " style="--border-gradient-image: linear-gradient(195deg, #1E3147 80%, #5D1946)">
+                      <div class="border-gradient-border"></div>
+                      <div class="border-gradient-content"></div>
+                      <div class="absolute z-1 right-[15px] top-2"><img class="h-[40px]" src="./img/badge-s1.svg" alt="" loading="lazy"/></div>
+                      <div class="relative z-2 container py-5 px-7">
+                        <div class="text-[17px] font-bold uppercase leading-[130%] pr-[50px]"><span class="text-app-pink">Корпоративы</span> <br/> и тимбилдинги</div>
+                        <div class="text-sm font-medium text-app-white-secondary mt-[17px]">Сплотите команду <br/> в увлекательной гонке.</div>
+                      </div>
+                    </div>
+                    <div class="
+      qa-item-mob border-gradient relative 
+      bg-linear-195 from-[#0e161f] from-65% to-app-pink/20
+    " style="--border-gradient-image: linear-gradient(195deg, #1E3147 80%, #5D1946)">
+                      <div class="border-gradient-border"></div>
+                      <div class="border-gradient-content"></div>
+                      <div class="absolute z-1 right-[15px] top-2"><img class="h-[40px]" src="./img/badge-s2.svg" alt="" loading="lazy"/></div>
+                      <div class="relative z-2 container py-5 px-7">
+                        <div class="text-[17px] font-bold uppercase leading-[130%] pr-[50px]"><span class="text-app-pink">Промо-акций </span> <br/> и открытий</div>
+                        <div class="text-sm font-medium text-app-white-secondary mt-[17px]">Создайте незабываемый <br/> интерактив.</div>
+                      </div>
+                    </div>
+                    <div class="
+      qa-item-mob border-gradient relative 
+      bg-linear-195 from-[#0e161f] from-65% to-app-pink/20
+    " style="--border-gradient-image: linear-gradient(195deg, #1E3147 80%, #5D1946)">
+                      <div class="border-gradient-border"></div>
+                      <div class="border-gradient-content"></div>
+                      <div class="absolute z-1 right-[15px] top-2"><img class="h-[40px]" src="./img/badge-s3.svg" alt="" loading="lazy"/></div>
+                      <div class="relative z-2 container py-5 px-7">
+                        <div class="text-[17px] font-bold uppercase leading-[130%] pr-[50px]"><span class="text-app-pink">Дней рождений </span> <br/> и частных вечеринок</div>
+                        <div class="text-sm font-medium text-app-white-secondary mt-[17px]">Подарите гостям уникальное <br/> развлечение.</div>
+                      </div>
+                    </div>
+                    <div class="
+      qa-item-mob border-gradient relative 
+      bg-linear-195 from-[#0e161f] from-65% to-app-pink/20
+    " style="--border-gradient-image: linear-gradient(195deg, #1E3147 80%, #5D1946)">
+                      <div class="border-gradient-border"></div>
+                      <div class="border-gradient-content"></div>
+                      <div class="absolute z-1 right-[15px] top-2"><img class="h-[40px]" src="./img/badge-s4.svg" alt="" loading="lazy"/></div>
+                      <div class="relative z-2 container py-5 px-7">
+                        <div class="text-[17px] font-bold uppercase leading-[130%] pr-[50px]"><span class="text-app-pink">Городских праздников </span> <br/> и фестивалей</div>
+                        <div class="text-sm font-medium text-app-white-secondary mt-[17px]">Станьте центром притяжения <br/> для посетителей.</div>
+                      </div>
+                    </div>
+                    <div class="
+      qa-item-mob border-gradient relative 
+      bg-linear-195 from-[#0e161f] from-65% to-app-pink/20
+    " style="--border-gradient-image: linear-gradient(195deg, #1E3147 80%, #5D1946)">
+                      <div class="border-gradient-border"></div>
+                      <div class="border-gradient-content"></div>
+                      <div class="absolute z-1 right-[15px] top-2"><img class="h-[40px]" src="./img/badge-s5.svg" alt="" loading="lazy"/></div>
+                      <div class="relative z-2 container py-5 px-7">
+                        <div class="text-[17px] font-bold uppercase leading-[130%] pr-[50px]"><span class="text-app-pink">Выставок </span> <br/> и презентаций</div>
+                        <div class="text-sm font-medium text-app-white-secondary mt-[17px]">Привлеките максимум внимания к вашему <br/> мероприятию или стенду.</div>
+                      </div>
+                    </div>
+          </div>
+          <div class="container">
+            <div class="mt-[117px] max-[1200px]:mt-[70px] max-md:mt-[65px] text-center text-[25px] max-[1200px]:text-[15px] max-md:text-[18px] uppercase text-app-white-secondary font-semibold">Свяжитесь с нами уже сегодня, чтобы узнать больше <br/> о выездной аренде автосимуляторов MetaRacing <br/> и получить персональное предложение под ваши задачи. <br/> <br/> <span class="text-app-white"> Не упустите шанс сделать свой ивент действительно <br/> ярким и запоминающимся!</span></div>
+            <div class="mt-[100px] max-[1200px]:mt-[60px] flex justify-center">
+              <div class="btn-accent max-w-[474px] h-[70px] max-md:h-[58px]">
+                <p class="text-[19px] max-md:text-[14px]">Заполнить бриф на ваше мероприятие</p><img class="brightness-400" src="./img/arrow.svg" loading="lazy"/>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <section class="sec-register py-20 max-md:py-[50px] relative overflow-visible max-lg:py-0">
+        <div class="absolute top-[-130%] l-0 w-full -z-10"><img class="w-full" src="./img/reg-bg.png" loading="lazy"/></div>
+        <div class="container">
+          <div class="register-content px-10 max-md:px-5">
+            <div class="
+          border-gradient relative  rounded-[15px] -skew-x-10
+          bg-linear-195 from-[#090D12] from-80% to-app-pink/10
+          max-md:from-60% max-md:to-app-pink/30
+          pt-[55px] pb-[62px] max-md:py-[30px] px-[95px] max-[1360px]:px-[50px] max-md:px-[20px]
+          max-md:pt-5 max-md:pb-3 max-md:pl-[6px] max-md:pr-[15px] max-[1200px]:py-[37px]
+          max-md:max-w-[347px] max-md:mx-auto
+        " style="--border-gradient-image: linear-gradient(195deg, #1E3147 80%, #5D1946)">
+              <div class="border-gradient-border"></div>
+              <div class="border-gradient-content"></div>
+              <div class="
+          relative z-2 skew-x-10
+          flex items-center gap-4
+          max-md:flex-col max-md:gap-6
+          max-md:items-start
+        ">
+                <div class="
+            uppercase text-[32px] max-[1200px]:text-[19px] italic font-black
+            max-[1200px]:text-left max-md:text-[22px] max-md:ml-[25px]
+          "><span class="text-app-pink">онлайн-Запись</span> <br class="md:hidden"/> в наши клубы </div>
+                <div class="
+          register-socs flex items-center gap-2.5
+          max-md:gap-1.5
+          ml-auto max-md:ml-0
+          "><a class="btn-small btn-icon-purple w-[68px] h-[62px]" href=""><img class="brightness-[5] w-[22px] h-[22px]" src="./img/accent-whatsapp.svg" loading="lazy"/></a><a class="btn-small btn-icon-purple w-[68px] h-[62px]" href=""><img class="brightness-[5] w-[22px] h-[22px]" src="./img/accent-tg.svg" loading="lazy"/></a><a class="btn-small btn-icon-purple w-[68px] h-[62px]" href=""><img class="brightness-[5] w-[22px] h-[22px]" src="./img/accent-vk.svg" loading="lazy"/></a><a class="btn-big btn-accent w-[200px] h-[62px] max-lg:w-[124px] max-lg:h-[38px] max-md:w-[144px] max-md:h-[48px]" href="">Записаться</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="relative bg-[#040405] pt-[166px] max-md:py-10 pb-[78px] overflow-hidden">
+      <div class="w-full absolute bottom-0 left-0"><img src="img/footer-bg.svg" loading="lazy"/></div>
+      <div class="container"> 
+        <div class="flex justify-between items-end max-lg:flex-col max-lg:items-center max-lg:text-center gap-y-8 max-md:gap-[33px]">
+          <div>
+            <div class="flex justify-center mx-auto md:hidden mb-[33px]"><img src="img/footer-logo.svg" loading="lazy"/></div>
+            <div class="flex items-center gap-2.5 max-lg:justify-center"><a class="btn-icon-white w-[68px] h-[62px] max-md:w-[50px] max-md:h-[45px] z-1" href=""><img class="w-[22px] h-[22px]" src="./img/accent-whatsapp.svg" loading="lazy"/></a><a class="btn-icon-white w-[68px] h-[62px] max-md:w-[50px] max-md:h-[45px] z-1" href=""><img class="w-[22px] h-[22px]" src="./img/accent-tg.svg" loading="lazy"/></a><a class="btn-icon-white w-[68px] h-[62px] max-md:w-[50px] max-md:h-[45px] z-1" href=""><img class="w-[22px] h-[22px]" src="./img/accent-vk.svg" loading="lazy"/></a><a class="btn-icon-white w-[68px] h-[62px] max-md:w-[50px] max-md:h-[45px] z-1" href=""><img class="w-[22px] h-[22px]" src="./img/accent-insta.svg" loading="lazy"/></a><a class="btn-icon-white w-[68px] h-[62px] max-md:w-[50px] max-md:h-[45px] z-1" href=""><img class="w-[22px] h-[22px]" src="./img/accent-yt.svg" loading="lazy"/></a>
+            </div>
+            <div class="flex items-center gap-4 mt-[24px] text-[#545467] text-[19px] max-md:text-sm font-medium font-golos max-md:hidden"> <img class="size-[38px] opacity-50" src="./img/14+.svg" loading="lazy"/>
+              <p>Погрузись в атмосферу — почувствуй настоящую гонку <br/> и прокачай навыки управления автомобилем.</p>
+            </div>
+          </div>
+          <div class="flex flex-col items-end max-lg:items-center">
+            <div class="max-w-[338px] ml-auto max-lg:ml-0 max-md:hidden"><img src="img/logo-footer.svg" loading="lazy"/></div>
+            <div class="mt-[24px] flex flex-col gap-1 text-[19px] max-md:text-sm font-medium font-golos text-right max-lg:text-center"><span class="text-[#545467]">© 2025 MetaRacing. <br class="md:hidden" /> Сеть клубов гоночных симуляторов.</span><a class="text-[#9090AA]" href="">Политика обработки персональных данных</a></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="modal-success modal-wrapper" data-modal-block="form-success">
+      <div class="modal-content">
+        <div class="x-btn" data-modal-close="form-success"></div>
+        <div class="modal-content__title">Супер!</div>
+        <div class="modal-content__subtitle">Скоро свяжемся с вами</div>
+      </div>
+    </div>
+    <script src="./js/fancybox.umd.js"></script>
+    <script src="./js/imask.js"></script>
+    <script src="./js/aos.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/main.js?v=3"></script>
+  </body>
+</html>

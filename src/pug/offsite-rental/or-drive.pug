@@ -1,0 +1,89 @@
+include ../mixins/sec-title
+
+mixin por-drive-item(img, badge, title)
+  div(class="por-drive-item relative w-full")
+    if badge
+      div(class=`absolute top-5 max-[1200px]:top-2.5 z-1 left-[50px] max-[1200px]:left-[70px] max-md:left-[30px] max-md:top-2`)
+        img(class="h-[50px] max-[1550px]:h-[30px] max-md:h-[30px]" src="./img/"+badge, alt="", loading="lazy")
+
+    div(class="por-drive-item__img relative")
+      picture
+        source(media="(max-width: 767px)" srcset="img/mob-"+img)
+        img(class="max-lg:h-full" src=`./img/${img}` loading="lazy")
+    
+    if title
+      div(class=`
+        por-drive-item__img absolute 
+        left-0 bottom-0 w-full
+        px-[60px] pb-[37px] max-[1200px]:pb-[28px] max-[1200px]:px-[37px] max-md:px-[28px]
+      `)
+        div(class="text-[28px] max-[1200px]:text-[17px] max-md:text-base text-app-white font-black italic uppercase")!=title
+
+
+mixin por-drive-item-2(title, desc, toColor, brColor)
+  div(
+    class=`
+      qa-item border-gradient relative rounded-[15px] -skew-x-10
+      bg-linear-195 from-[#0B1118] from-65% ${toColor}
+      pt-[42px] pb-[30px] pl-[55px] pr-0
+      max-[1200px]:pt-[22px] max-[1200px]:pl-[34px] max-[1200px]:pr-[40px] max-[1200px]:pb-[20px]
+    `
+    style=`--border-gradient-image: linear-gradient(195deg, #1E3147 10%, ${brColor})`
+  )
+    div(class="border-gradient-border")
+    div(class="border-gradient-content")
+    div(class="relative z-2 skew-x-10 max-md:skew-x-0")
+      div(class="text-[25px] max-[1200px]:text-[15px] max-md:text-xl font-bold uppercase")!=title
+      div(class="text-[19px] max-[1200px]:text-[11px] max-md:text-base max-sm:text-[12px] font-medium text-app-white-secondary mt-[26px]")!=desc
+
+
+mixin por-drive-item-2-mob(title, desc, toColor, brColor)
+  div(
+    class=`
+      qa-item-mob border-gradient relative 
+      bg-linear-195 from-[#0e161f] from-65% ${toColor}
+    `
+    style=`--border-gradient-image: linear-gradient(195deg, #1E3147 10%, ${brColor})`
+  )
+    div(class="border-gradient-border")
+    div(class="border-gradient-content")
+    div(class="relative z-2 container py-5 px-7")
+      div(class="text-[17px] font-bold uppercase leading-[130%]")!=title
+      div(class="text-sm font-medium text-app-white-secondary mt-[17px]")!=desc
+
+section(class="por-drive pt-[130px] pb-[50px] max-md:pt-[50px] relative overflow-visible")
+  div(class="absolute max-md:hidden top-[-30%] l-0 w-full -z-10")
+    img(class="w-full" src="./img/por-drive-bg.png" loading="lazy")
+
+  .container
+    +sec-title('<span class="text-app-pink">Максимум драйва,</span> <br/> минимум забот')
+    div(class="mt-[32px] max-[1200px]:mt-[20px] max-md:mt-[30px] text-center text-[25px] max-[1200px]:text-[15px] max-md:text-[18px] uppercase text-app-white-secondary font-semibold") Мы знаем, как важно, чтобы всё прошло идеально. Поэтому MetaRacing #[br(class="max-md:hidden")] предлагает #[span(class="text-app-white") услугу выездной аренды автосимуляторов «под ключ».] #[br(class="md:hidden")]#[br(class="md:hidden")] Мы берём на #[br(class="max-md:hidden")] себя все заботы — вам остаётся только наблюдать, как ваши гости получают #[br(class="max-md:hidden")] удовольствие.
+
+    div(class="por-drive__list mt-[90px] max-[1200px]:mt-[56px] max-md:mt-[40px]")
+      div(class="max-md:hidden grid grid-cols-[67.00%_1fr]")
+        +por-drive-item('por-drive-1.png', 'badge-pink-aimol.svg', 'MetaRacing для бренда <br/> AIMOL на RDS GP')
+
+        div(class="flex flex-col gap-[32px] ml-[-25px]")
+          img(class="" src="./img/por-drive-2.png" loading="lazy")
+          img(class=" scale-110 ml-[-30px] max-[1200px]:ml-[-20px] max-[1200px]:h-[160px]" src="./img/por-drive-3.png" loading="lazy")
+
+      div(class="md:hidden")
+        div(class="swiper swiper-por-drive")
+          div(class="swiper-wrapper")
+            div(class="swiper-slide max-w-[330px]")
+              +por-drive-item('por-drive-1.png', 'badge-pink-aimol.svg', 'MetaRacing для бренда <br/> AIMOL на RDS GP')
+            div(class="swiper-slide max-w-[330px]")
+              img(class="ml-[-25px]" src="./img/mob-por-drive-2.png" loading="lazy")
+            div(class="swiper-slide max-w-[330px]")
+              img(class="ml-[-50px]" src="./img/mob-por-drive-3.png" loading="lazy")
+          
+    div(class="por-drive__benefits mt-[53px] max-[1200px]:mt-[30px] max-md:mt-[50px]")
+      div(class="max-md:hidden grid grid-cols-[1fr_1fr_37%] gap-5")
+        +por-drive-item-2('<span class="text-app-sky">Логистика</span> <br/> и доставка', 'Мы сами доставим все необходимое <br class="max-lg:hidden"/> оборудование прямо к месту <br class="max-lg:hidden"/> проведения вашего мероприятия — <br class="max-lg:hidden"/> будь то выставочный центр, загородный <br class="max-lg:hidden"/> клуб или частная площадка.', 'to-app-sky/35', 'var(--color-sky)')
+        +por-drive-item-2('<span class="text-app-pink">Профессиональная</span> <br/> установка и настройка', 'Наши специалисты не просто доставят <br class="max-lg:hidden"/> оборудование — они установят <br class="max-lg:hidden"/> протестируют и подготовят его для <br class="max-lg:hidden"/> идеальной работы. Все будет готово <br class="max-lg:hidden"/> к началу мероприятия без суеты.', 'to-app-pink/35', 'var(--color-pink)')
+        +por-drive-item-2('<span class="text-app-purple">Квалифицированный</span> <br/> администратор', 'На всем мероприятии с гостями будут работать <br class="max-lg:hidden"/> наши опытные администраторы: обучат <br class="max-lg:hidden"/> управлению симулятором и помогут выбрать <br class="max-lg:hidden"/> трассы и автомобили, создавая атмосферу <br class="max-lg:hidden"/> гоночного праздника.', 'to-app-purple/35', 'var(--color-purple)')
+
+  div(class="md:hidden flex flex-col gap-6")
+    +por-drive-item-2-mob('<span class="text-app-sky">Логистика</span> <br/> и доставка', 'Мы сами доставим все необходимое <br class="max-lg:hidden"/> оборудование прямо к месту <br class="max-lg:hidden"/> проведения вашего мероприятия — <br class="max-lg:hidden"/> будь то выставочный центр, загородный <br class="max-lg:hidden"/> клуб или частная площадка.', 'to-app-sky/35', 'var(--color-sky)')
+    +por-drive-item-2-mob('<span class="text-app-pink">Профессиональная</span> <br/> установка и настройка', 'Наши специалисты не просто доставят <br class="max-lg:hidden"/> оборудование — они установят <br class="max-lg:hidden"/> протестируют и подготовят его для <br class="max-lg:hidden"/> идеальной работы. Все будет готово <br class="max-lg:hidden"/> к началу мероприятия без суеты.', 'to-app-pink/35', 'var(--color-pink)')
+    +por-drive-item-2-mob('<span class="text-app-purple">Квалифицированный</span> <br/> администратор', 'На всем мероприятии с гостями будут работать <br class="max-lg:hidden"/> наши опытные администраторы: обучат <br class="max-lg:hidden"/> управлению симулятором и помогут выбрать <br class="max-lg:hidden"/> трассы и автомобили, создавая атмосферу <br class="max-lg:hidden"/> гоночного праздника.', 'to-app-purple/35', 'var(--color-purple)')

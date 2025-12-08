@@ -1,0 +1,152 @@
+extends ./base/base.pug
+include ./mixins/sec-title
+
+block head
+  title Сертификаты
+
+block content
+  -
+    var buttonsCity = [
+      ['cert-city-1', 'Санкт-Петербург'],
+      ['cert-city-2', 'Москва'],
+    ]
+    var buttonsNominal = [
+      ['cert-nominal-1', '1 час'],
+      ['cert-nominal-2', '2 часа'],
+      ['cert-nominal-3', '3 часа'],
+      ['cert-nominal-5', '5 часа'],
+    ]
+    var buttonsVer = [
+      ['cert-ver-1', 'Электронная'],
+      ['cert-ver-2', 'Печатная'],
+    ]
+
+  mixin calc-btns(buttons)
+    div(data-tabs-wrapper)
+      div(class="flex justify-start")
+        div(class="tabs-buttons flex gap-1 items-center p-2 max-[1400px]:p-1 -skew-x-12 rounded-[25px] max-[1400px]:rounded-[15px] border-app-border border ")
+          each button, i in buttons
+            div(
+              class=`
+                tab-button py-4 px-7 cursor-pointer font-bold transition duration-300 ease-in-out 
+                max-md:px-4 text-center max-md:text-sm rounded-[15px] 
+                max-[1400px]:text-[9px] max-[1400px]:px-[18px] max-[1400px]:py-2.5
+                max-[1400px]:rounded-[10px]
+                ${i === 0 ? 'active' : ''}
+              ` 
+              data-tab-btn=button[0]
+            )
+              p(class=`skew-x-12`)!=button[1]
+            div(class="hidden" data-tab-item=button[0])
+
+  mixin certificates-item(badge, text)
+    div(
+      class=`
+        address-item border-gradient relative rounded-[15px] -skew-x-10
+        w-full max-md:max-w-[366px] max-md:mx-auto
+        bg-linear-195 from-[#121424] from-80% to-app-purple/30
+        flex items-end
+      `
+      style=`--border-gradient-image: linear-gradient(225deg, #1E3147 20%, #6E558E)`
+    )
+      div(class="border-gradient-border")
+      div(class="border-gradient-content")
+      div(class=`absolute top-5 max-[1200px]:top-2.5 z-1 left-[-20px]  max-md:top-2`)
+        img(class="h-[51px] max-[1200px]:h-[33px]" src=`./img/${badge}`, alt="", loading="lazy")
+
+      div(class=`
+        relative z-2  max-md:skew-x-0 flex items-end
+        min-h-[200px] max-[1200px]:min-h-[124px]
+        pl-[72px] pr-[32px] pb-[44px] pt-[80px]
+        max-[1200px]:pl-[44px] max-[1200px]:pr-[24px] max-[1200px]:pb-[27px] max-[1200px]:pt-[60px]
+        max-md:pl-[48px] max-md:pb-[28px]
+      `)
+        div(class="text-[19px] max-[1200px]:text-[12px] max-md:text-sm font-golos font-medium")!=text
+
+  section(class="sec-certificates pb-20 pt-[200px] max-md:pb-[50px] relative overflow-visible")
+    div(class="absolute top-[5%] max-md:top-[-5%] l-0 w-full -z-10")
+      picture
+        source(media="(max-width: 767px)" srcset="img/certs-bg-mob.png")
+        img(class="w-full" src="./img/certs-bg.png" loading="lazy")
+
+    .container
+      +sec-title('<span class="text-app-pink">Сертификаты</span>', 'Идеальный подарок для близкого человека — <br/> сертификат на <span class="text-app-white">незабываемые эмоции в клубах</span> гоночных симуляторов MetaRacing.')
+
+      div(class=`
+        certificates-list max-w-[1350px] 
+        mt-[84px] max-[1200px]:mt-[50px] max-md:mt-[34px] mx-auto
+        grid grid-cols-2 gap-10 max-md:grid-cols-1
+        max-lg:gap-[30px] max-md:gap-[24px]
+        max-[1200px]:px-5
+       `)
+        +certificates-item('cert-b-1.svg', 'Предоставляется в электронном виде <br class="max-md:hidden"/> и в фирменном дизайне MetaRacing.')
+        +certificates-item('cert-b-2.svg', 'Изготавливается в фирменном дизайне MetaRacing (A5) <br class="max-md:hidden"/> и упаковывается в стильный подарочный конверт.')
+
+
+    div(class="mt-[140px] max-[1200px]:mt-[86px] max-md:mt-[57px]")
+    .container
+      +sec-title('<span class="text-app-pink">Оформить</span> онлайн:')
+
+      div(class="md:hidden mt-8 mx-auto max-w-[350px]")
+        img(src="./img/certs-calc.png", alt="", loading="lazy")
+
+    div(
+      class=`
+        certificates-calc
+        mt-[64px] max-[1200px]:mt-[37px]
+        grid grid-cols-[57.72%_1fr]
+        address-item border-gradient relative rounded-[15px] -skew-x-10
+        bg-linear-155 from-[#121424] from-40% to-app-pink/45
+        w-[1340px] max-w-[85%] mx-auto
+        max-[1400px]:w-[770px]
+        min-h-[740px] max-[1400px]:min-h-[455px]
+        max-md:skew-x-0 max-md:max-w-full max-md:rounded-0
+        max-md:bg-linear-180 max-md:from-[#0A0E13]
+        max-md:grid-cols-1 max-md:mt-2
+      `
+      style=`--border-gradient-image: linear-gradient(45deg, #DE127A 80%, #1E3147)`
+    )
+      div(class="border-gradient-border")
+      div(class="border-gradient-content")
+
+      div(class="certificates-calc__img max-md:hidden skew-x-10 relative")
+        div(class="absolute right-0 top-[24px] w-[840px] max-[1400px]:w-[455px]")
+          img(src="./img/certs-calc.png", alt="", loading="lazy")
+
+      div(class=`
+        certificates-calc__content font-golos pl-[50px] pt-[78px] 
+        max-[1400px]:pt-[50px] max-[1400px]:pl-[30px]
+        max-md:px-[35px] max-md:pt-[31px] max-md:pb-[52px]
+        max-md:max-w-[390px] max-md:mx-auto
+      `)
+        div(class="certificates-calc__item skew-x-10 max-md:skew-x-0")
+          div(class="certificates-calc__item-label mb-4 font-semibold pl-5 max-[1400px]:text-[9px] max-md:text-sm max-[1400px]:mb-3 max-md:mb-4") Выберите город
+          +calc-btns(buttonsCity)
+
+        div(class="certificates-calc__item skew-x-10 max-md:skew-x-0 mt-[30px] max-[1400px]:mt-[20px]")
+          div(class="certificates-calc__item-label mb-4 font-semibold pl-5 max-[1400px]:text-[9px] max-md:text-sm max-[1400px]:mb-3 max-md:mb-4") Номинал
+          +calc-btns(buttonsNominal)
+
+        div(class="certificates-calc__item skew-x-10 max-md:skew-x-0 mt-[30px] max-[1400px]:mt-[20px]")
+          div(class="certificates-calc__item-label mb-4 font-semibold pl-5 max-[1400px]:text-[9px] max-md:text-sm max-[1400px]:mb-3 max-md:mb-4") Номинал
+          +calc-btns(buttonsVer)
+
+        div(class="certificates-calc__desc skew-x-10 max-md:skew-x-0 mt-[42px] max-[1400px]:mt-[26px] ")
+          p(class="text-app-white-secondary font-semibold max-[1400px]:text-[9px]") Сертификат действует только на статичные <br/> симуляторы в клубах выбранного города.
+
+        div(class="certificates-calc__total skew-x-10 max-md:skew-x-0 mt-[54px] max-[1400px]:mt-[30px]")
+          div(class="flex justify-between items-end max-md:flex-col-reverse max-md:gap-4 max-w-[410px] max-[1400px]:max-w-[250px] max-md:max-w-full")
+            button(class="btn-accent h-[60px] flex items-center justify-center max-[1400px]:h-[38px] max-md:w-full max-md:h-[58px]") Купить сертификат
+            div(class="block max-md:flex justify-between items-end max-md:w-full")
+              div(class="font-bold max-[1400px]:text-[9px] max-md:text-sm") Стоимость:
+              div(class="font-black italic text-[28px] max-[1400px]:text-[17px] max-md:text-[22px]") 1500 ₽
+
+    div(class=`
+      mt-[105px] max-[1400px]:mt-[66px] max-md:hidden
+    text-app-white-secondary uppercase text-center
+      flex flex-col gap-5 items-center
+    `)
+      p Часы из сертификата не обязательно использовать #[br] за одно посещение, а #[span(class="text-white") игровое время можно разделить между друзьями.] 
+      p Доступ на симуляторы осуществляется с 14 лет.
+
+  include ./home/register.pug

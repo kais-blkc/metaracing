@@ -1,0 +1,42 @@
+include ../mixins/sec-title
+
+mixin prof-item(img, title, desc, badge, cardBgColor)
+  div(class="prof-item  relative w-full max-lg:max-w-[500px] max-lg:mx-auto")
+    div(class=`absolute top-[55px] max-[1200px]:top-[35px] z-1 left-[30px] max-[1200px]:left-5 max-md:top-[45px] max-md:left-[30px]`)
+      img(class="h-[50px] max-[1200px]:h-[30px] max-md:h-[37px]" src="./img/"+badge, alt="", loading="lazy")
+
+    div(class="gift-item__img relative")
+      img(class="w-full" src=`./img/${img}` loading="lazy")
+
+    div(class=`
+      prof-item__body relative
+      w-[90%]
+      py-5 max-[1200px]:py-[11px] pl-[20px] pr-[40px] max-[1200px]:pl-[10px]
+      ml-8
+      max-lg:ml-2 max-md:ml-4
+    `)
+      div(class=`
+        ${cardBgColor} -z-1 absolute  w-[95%] max-[1200px]:w-[93%] max-md:w-[97%] bottom-0 left-0
+        -skew-x-10 rounded-[15px] border border-app-white/10 bg-app-card-bg/40 
+        h-[380px] max-[1200px]:h-[230px] max-md:h-[270px] 
+      `)
+      div(class="flex flex-col items-start justify-end text-[19px] max-[1200px]:text-[11px] max-md:text-sm")
+        div(class="prof-item__title font-semibold")!=title
+        div(class="prof-item__text mt-1 font-medium text-app-white-secondary")!=desc
+
+
+section(class="page-acdrift-professionals pt-[100px] max-md:pt-[50px] pb-[50px] relative overflow-visible")
+  div(class="absolute max-md:hidden top-[-10%] l-0 w-full -z-10")
+    img(class="w-full" src="./img/p-acd-prof-bg.png" loading="lazy")
+
+  .container
+    +sec-title('<span class="text-app-pink">Выбор</span> Выбор профессионалов')
+    div(class="mt-[60px] max-[1200px]:mt-[35px] max-md:mt-[20px] text-center text-[25px] max-[1200px]:text-[15px] max-md:text-[18px] uppercase text-app-white-secondary font-semibold") В наших клуб тренируются профессиональные гонщики #[br] Российской Дрифт Серии (RDS), такие как: #[span(class="text-app-white") Григорий Бурлуцкий, #[br] Артем Лейтис, Иван Пальмин, братья Поповы и многие другие.] 
+
+    div(class="p-acdp__list mt-[94px]")
+      div(class="grid grid-cols-3 max-md:grid-cols-1 gap-4")
+        +prof-item('acd-prof-1.png', 'Григорий Бурлуцкий', 'Чемпион SOCHI DRIFT CHALLENGE <br/> и RDS Europe', 'badge-sky-rally.svg', 'card-tech-before-gradient-sky')
+        +prof-item('acd-prof-2.png', 'Артем Лейтис', 'Бронзовый призер Гран-При <br/> Москвы по дрифту', 'badge-purple-drift.svg', 'card-tech-before-gradient-purple')
+        +prof-item('acd-prof-3.png', 'Иван Пальмин', 'Бронзовый призер Российской <br/> Дрифт Серии', 'badge-pink-drift.svg', 'card-tech-before-gradient-pink')
+
+    div(class="mt-[120px] max-[1200px]:mt-[75px] max-md:hidden text-center text-[25px] max-[1200px]:text-[15px] max-md:text-[18px] uppercase text-app-white-secondary font-semibold") На наших симуляторах катались такие звезды как #[span(class="text-app-pink") Аркадий Цареградцев.] #[br] А еще мы учавствовали в презентации Гочиной 400Z.

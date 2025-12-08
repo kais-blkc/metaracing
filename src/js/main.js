@@ -1,5 +1,5 @@
 /* ========== FANCYBOX ========== */
-// Fancybox.bind("[data-fancybox]", {});
+Fancybox.bind('[data-fancybox]', {});
 /* ========== END FANCYBOX ========== */
 
 /* ========== AOS ========== */
@@ -201,25 +201,51 @@ const swiperRental = new Swiper('.swiper-rental', {
 const swiperMerch = new Swiper('.swiper-merch', {
   slidesPerView: 'auto',
 });
+
+const swiperAdressGallery = new Swiper('.swiper-address-gallery', {
+  slidesPerView: 'auto',
+});
+
+const swiperAcdCatalog = new Swiper('.swiper-acd-catalog', {
+  slidesPerView: 'auto',
+});
+
+const swiperOffsiteRental = new Swiper('.swiper-offsite-rental', {
+  slidesPerView: 'auto',
+});
+
+const swiperPorDrive = new Swiper('.swiper-por-drive', {
+  slidesPerView: 'auto',
+});
+
+const swiperOrPartner = new Swiper('.swiper-or-partner', {
+  slidesPerView: 'auto',
+});
+
+const swiperPorGallery = new Swiper('.swiper-por-gallery', {
+  slidesPerView: 'auto',
+});
 /* ========== SWIPER END ========== */
 
 /* ========== TABS ========== */
-try {
-  const tabBtns = document.querySelectorAll('*[data-tab-btn]');
-  const tabItems = document.querySelectorAll('*[data-tab-item]');
+function tabs() {
+  document.addEventListener('click', (e) => {
+    const tabBtn = e.target.closest('*[data-tab-btn]');
+    if (!tabBtn) return;
+    const tabsWrapper = e.target.closest('*[data-tabs-wrapper]');
+    const tabBtns = tabsWrapper.querySelectorAll('*[data-tab-btn]');
+    const tabItems = tabsWrapper.querySelectorAll('*[data-tab-item]');
 
-  tabBtns.forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-      tabItems.forEach((item, index) => {
-        tabBtns[index].classList.remove('active');
-        tabItems[index].classList.remove('active');
+    tabItems.forEach((item, index) => {
+      tabBtns[index].classList.remove('active');
+      tabItems[index].classList.remove('active');
 
-        if (btn.dataset.tabBtn === item.dataset.tabItem) {
-          item.classList.add('active');
-          btn.classList.add('active');
-        }
-      });
+      if (tabBtn.dataset.tabBtn === item.dataset.tabItem) {
+        item.classList.add('active');
+        tabBtn.classList.add('active');
+      }
     });
   });
-} catch (err) {}
+}
+tabs();
 /* ========== TABS END ========== */

@@ -1,0 +1,33 @@
+include ../mixins/sec-title
+
+mixin or-get-item(img, title, text)
+  div(class="or-get-item  relative w-full max-lg:max-w-[500px] max-lg:mx-auto")
+
+    div(class="or-get-item__img relative")
+      img(class="w-full" src=`./img/${img}` loading="lazy")
+
+    div(class=`
+      or-get-item__body relative
+      w-full
+      pl-[45px] pr-[20px] pt-[50px] max-[1200px]:pl-[25px] max-[1200px]:pr-[10px] max-[1200px]:pt-[30px]
+    `)
+      div(class=`
+        flex flex-col gap-3.5
+      `)
+        div(class="text-app-pink text-[25px] max-[1200px]:text-[15px] max-md:text-[18px] font-bold uppercase")!=title
+        div(class="text-app-white-secondary text-[19px] max-[1200px]:text-[11px] max-md:text-[14px] font-medium")!=text
+
+
+section(class="por-get pt-[130px] pb-[50px] max-md:pt-[50px] relative overflow-visible")
+  div(class="absolute max-md:hidden top-[-30%] l-0 w-full -z-10")
+    img(class="w-full" src="./img/por-drive-bg.png" loading="lazy")
+
+  .container
+    +sec-title('<span class="text-app-pink">Что получают </span> <br/> ваши гости?', 'Незабываемый опыт и взрыв адреналина!')
+    div(class="mt-[88px] max-[1200px]:mt-[50px] max-md:mt-[30px] text-center text-[25px] max-[1200px]:text-[15px] max-md:text-[18px] uppercase text-app-white-secondary font-semibold") Наши автосимуляторы — это не просто игра, а реалистичное управление #[br(class="max-md:hidden")] гоночным болидом. #[span(class="text-app-white") #[br(class="md:hidden")] #[br(class="md:hidden")] Благодаря мощной обратной связи (force feedback),]  #[br(class="max-md:hidden")] детализированной графике, профессиональным рулям, педалям и спортивным #[br(class="max-md:hidden")] креслам — каждый участник почувствует себя настоящим пилотом.
+  
+    div(class="por-get__list mt-[112px] max-[1200px]:mt-[68px] max-md:mt-[48px]")
+      div(class="grid grid-cols-[1fr_35.64%_1fr] max-md:grid-cols-1 max-md:gap-[40px]")
+        +or-get-item('or-get-1.png', 'Ощущение cкорости', 'Почувствуйте каждый поворот, <br/> вираж и обгон, погружаясь в атмосферу реальной гонки.')
+        +or-get-item('or-get-2.png', 'Соревновательный дух', 'Устройте дружеские заезды или полноценные <br/> турниры с призами — азарт и соперничество <br/> среди участников гарантированы.')
+        +or-get-item('or-get-3.png', 'Доступность для всех', 'Независимо от опыта вождения, каждый <br/> сможет освоить управление и получить <br/> свою порцию адреналина.')

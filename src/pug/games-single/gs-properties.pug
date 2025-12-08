@@ -1,0 +1,84 @@
+include ../mixins/sec-title
+include ../mixins/qa
+
+
+mixin qa-item-cell(title, desc, badge)
+  div(
+    class=`
+      qa-item border-gradient relative rounded-[15px] -skew-x-10
+      bg-linear-188 from-[#0E151C]/50 from-70% to-app-pink/20
+      px-[55px] py-[30px] max-[1450px]:px-[30px] max-[1450px]:py-[20px]
+    `
+    style=`--border-gradient-image: linear-gradient(195deg, #1E3147 80%, #5D1946)`
+  )
+    div(class="border-gradient-border")
+    div(class="border-gradient-content")
+    div(class=`absolute max-md:hidden top-5 max-[1200px]:top-2.5 z-1 right-[-10px]  max-md:top-2`)
+      img(class="h-[46px] max-[1450px]:h-[28px]  max-md:h-[39px]" src="./img/"+badge, alt="", loading="lazy")
+
+    div(class="relative z-2 skew-x-10 max-md:skew-x-0")
+      div(class="text-[25px] max-[1450px]:text-[15px] max-md:text-xl font-bold uppercase")!=title
+      div(class="text-[19px] max-[1450px]:text-[11px] max-md:text-base max-sm:text-[12px] font-medium text-app-white-secondary mt-[26px]")!=desc
+
+
+mixin qa-item-mob-cell(title, desc, badge)
+  div(
+    class=`
+      qa-item-mob border-gradient relative 
+      bg-linear-195 from-[#0e161f] from-65% to-app-pink/20
+    `
+    style=`--border-gradient-image: linear-gradient(195deg, #1E3147 80%, #5D1946)`
+  )
+    div(class="border-gradient-border")
+    div(class="border-gradient-content")
+    div(class=`absolute z-1 right-[15px] top-2`)
+      img(class="h-[40px]" src="./img/"+badge, alt="", loading="lazy")
+    div(class="relative z-2 container py-5 px-7")
+      div(class="text-[17px] font-bold uppercase leading-[130%] pr-[50px]")!=title
+      div(class="text-sm font-medium text-app-white-secondary mt-[17px]")!=desc
+
+
+section(class="page-games-single py-24 pb-20 pt-[100px] max-md:pt-0 max-md:pb-[50px] relative overflow-visible")
+  div(class="absolute top-[-40%] l-0 w-full -z-10")
+    picture
+      source(media="(max-width: 767px)" srcset="img/gs-properties-bg-mob.png")
+      img(class="w-full" src="./img/gs-properties-bg.png" loading="lazy")
+
+  .container
+    div(class="max-md:hidden")
+      +sec-title('Ключевые особенности:')
+
+    div(class="pgs-properties__qa max-md:hidden flex flex-col gap-[24px] px-0 max-[1450px]:px-[30px] mt-[80px] max-[1200px]:mt-[50px]")
+      div(class=`
+        grid grid-cols-[23.08%_42.31%_33.97%]
+        gap-5`
+      )
+        +qa-item-cell('<span class="text-app-pink">Мультиплеер</span>', 'гонки с друзьями <br/> или участие в онлайн-соревнованиях', 'badge-s1.svg')
+        +qa-item-cell('<span class="text-app-pink">Реалистичная физика</span>', 'продвинутая модель поведения машин, учитывающая аэродинамику, износ покрышек, топливную систему <br/> и настройки подвески', 'badge-s2.svg')
+        +qa-item-cell('<span class="text-app-pink">Гибкость настроек</span>', 'регулировка времени суток, <br/>погоды (с модами), сложности ИИ <br/>и параметров геймпле', 'badge-s3.svg')
+
+      div(class=`
+        grid grid-cols-[40.71%_1fr]
+        gap-5`
+      )
+        +qa-item-cell('<span class="text-app-pink">Поддержка модов</span>', 'тысячи пользовательских машин, треков <br/> и визуальных улучшений', 'badge-s4.svg')
+        +qa-item-cell('<span class="text-app-pink">Детализированные лицензированные авто</span>', 'от классических спорткаров до современных гиперкаров и GT-болидов <br/> (Ferrari, Porsche, Lamborghini и другие).', 'badge-s5.svg')
+
+      div(class=`
+        grid grid-cols-[1fr_40.71%]
+        gap-5`
+      )
+        +qa-item-cell('<span class="text-app-pink">Точные лазерно-сканированные трассы</span>', 'Nürburgring Nordschleife, Spa-Francorchamps, Monza <br/> и многие другие', 'badge-s6.svg')
+        +qa-item-cell('<span class="text-app-pink">VR и поддержка периферии</span>', 'полная совместимость с рулями, педалями, шейкерами <br/> и VR-шлемами', 'badge-s7.svg')
+
+  div(class="md:hidden flex flex-col gap-[30px]")
+    +qa-item-mob-cell('<span class="text-app-pink">Мультиплеер</span>', 'гонки с друзьями <br/> или участие в онлайн-соревнованиях', 'badge-s1.svg')
+    +qa-item-mob-cell('<span class="text-app-pink">Реалистичная физика</span>', 'продвинутая модель поведения машин, учитывающая аэродинамику, износ покрышек, топливную систему <br/> и настройки подвески', 'badge-s2.svg')
+    +qa-item-mob-cell('<span class="text-app-pink">Гибкость настроек</span>', 'регулировка времени суток, <br/>погоды (с модами), сложности ИИ <br/>и параметров геймпле', 'badge-s3.svg')
+    +qa-item-mob-cell('<span class="text-app-pink">Поддержка модов</span>', 'тысячи пользовательских машин, треков <br/> и визуальных улучшений', 'badge-s4.svg')
+    +qa-item-mob-cell('<span class="text-app-pink">Детализированные лицензированные авто</span>', 'от классических спорткаров до современных гиперкаров и GT-болидов <br/> (Ferrari, Porsche, Lamborghini и другие).', 'badge-s5.svg')
+    +qa-item-mob-cell('<span class="text-app-pink">Точные лазерно-сканированные трассы</span>', 'Nürburgring Nordschleife, Spa-Francorchamps, Monza <br/> и многие другие', 'badge-s6.svg')
+    +qa-item-mob-cell('<span class="text-app-pink">VR и поддержка периферии</span>', 'полная совместимость с рулями, педалями, шейкерами <br/> и VR-шлемами', 'badge-s7.svg')
+  
+  div(class="mt-[100px] max-[1200px]:mt-[60px] max-md:mt-[42px] text-center text-[25px] max-[1200px]:text-[15px] max-md:text-[18px] uppercase text-app-white-secondary  font-semibold") Игра одинаково хорошо подойдет как начинающим <br/> пилотам, изучающим азы, так и опытным, стремящимся <br/> к максимальному реализму.
+

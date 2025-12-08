@@ -34,6 +34,12 @@
       text-shadow: 0 0 14px transparent;
       position: relative;
 
+      @media (max-width: 1300px) {
+        &::before {
+          bottom: -16.5px;
+        }
+      }
+
       &:hover {
         text-shadow: 0 0 14px var(--color-accent);
 

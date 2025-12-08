@@ -1,0 +1,57 @@
+include ../mixins/sec-title
+
+mixin track-item(img, title, desc, cardBgColor, bodyClasses, imgMob)
+  div(class="track-item  relative w-full max-lg:max-w-[500px] max-lg:mx-auto")
+    div(class=`absolute top-[55px] max-[1200px]:top-[35px] z-1 left-[30px] max-[1200px]:left-5 max-md:top-[45px] max-md:left-[30px]`)
+      img(class="h-[50px] max-[1200px]:h-[30px] max-md:h-[37px]" src="./img/"+badge, alt="", loading="lazy")
+
+    div(class="relative")
+      div(class="gift-item__img relative")
+        picture
+          if imgMob
+            source(media="(max-width: 767px)" srcset="./img/"+imgMob)
+          img(class="w-full" src=`./img/${img}` loading="lazy")
+
+      div(class=`
+        gift-item__title
+        absolute left-0 bottom-0 
+        px-[38px] pb-[27px] max-[1200px]:pb-4 max-[1200px]:px-[23px] max-md:pb-[22px] max-md:px-[32px]
+        text-[28px] max-[1200px]:text-[17px] max-md:text-[20px] font-black uppercase
+      `)!=title
+
+    div(class=`
+      prof-item__body relative
+      w-[90%]
+      py-5 max-[1200px]:py-[11px] pl-0 pr-[40px] max-[1200px]:pl-[10px] max-[1200px]:pr-[30px]
+      ml-8
+      max-lg:ml-2 max-md:ml-4
+    `)
+      div(class=`
+        ${cardBgColor} -z-1 absolute  w-[95%] max-[1200px]:w-[93%] max-md:w-[97%] bottom-0 left-0
+        -skew-x-10 rounded-[15px] border border-app-white/10 bg-app-card-bg/40 
+        h-[380px] max-[1200px]:h-[230px] max-md:h-[270px] 
+      `)
+      div(class=`
+        flex flex-col items-start justify-start text-[19px] max-[1200px]:text-[11px] max-md:text-sm
+        ${bodyClasses}
+      `)
+        div(class="prof-item__text mt-1 font-medium text-app-white-secondary")!=desc
+
+
+section(class="page-acdrift-tracks pt-[150px] pb-[50px] max-md:pt-[50px] relative overflow-visible")
+  div(class="absolute max-md:hidden top-[-10%] l-0 w-full -z-10")
+    img(class="w-full" src="./img/p-acd-tracks-bg.png" loading="lazy")
+
+  .container
+    +sec-title('<span class="text-app-pink">доступные</span> треки')
+
+    div(class="acd-catalog__list mt-[100px] max-[1200px]:mt-[50px] max-md:px-1")
+      div(class="grid grid-cols-3 gap-y-[42px] max-md:grid-cols-1")
+        +track-item('p-acd-tracks-1.png', 'Площадки', 'Sochi Drift Challenge, Культура заноса, <br/> IDDC, Великий Новгород и прочие', 'card-tech-before-gradient-pink', 'min-h-[90px] max-[1200px]:min-h-[50px]')
+        +track-item('p-acd-tracks-2.png', 'Профессиональные <br/> российские треки', 'NRing, Автодром Игора, Moscow Raceway, <br/> ATRON, Сочи Автодром, Автодром <br/> Шушары и прочие', 'card-tech-before-gradient-pink')
+        +track-item('p-acd-tracks-3.png', 'Горные <br/> серпантины', 'Hakone Turnpike, Mount Haruna (Akina), <br/> Usui Pass, Transfăgărășan Pass, <br/> Stelvio Pass и прочие', 'card-tech-before-gradient-pink')
+
+      div(class="grid grid-cols-[47.24%_1fr] gap-y-[42px] mt-[70px] max-[1200px]:mt-[43px] max-md:mt-[37px] max-md:grid-cols-1")
+        +track-item('p-acd-tracks-4.png', 'Японские <br/> легендарные споты', 'Ebisu Minami, Nikko Circuit, Meihan <br class="md:hidden" /> Sportsland, <br class="max-md:hidden" /> Tsukuba 1000, Honjo Circuit <br class="md:hidden" /> и прочие', 'card-tech-before-gradient-pink', '', 'p-acd-tracks-4-mob.png')
+        +track-item('p-acd-tracks-5.png', 'Профессиональные <br/> иностранные треки', 'Nürburgring GP, Spa-Francorchamps, <br class="md:hidden" /> Monza Circuit, <br class="max-md:hidden" /> Silverstone GP, Laguna Seca <br class="md:hidden" /> и прочие', 'card-tech-before-gradient-pink', '', 'p-acd-tracks-5-mob.png')
+

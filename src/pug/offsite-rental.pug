@@ -1,0 +1,15 @@
+extends ./base/base.pug
+include ./mixins/sec-title
+
+block head
+  title Вопросы и ответы
+
+block content
+  div(class="md:bg-none bg-[url('/img/p-or-bg-mob.png')] bg-cover bg-top bg-no-repeat w-full")
+    include ./offsite-rental/or-banner.pug
+    include ./offsite-rental/or-drive.pug
+    include ./offsite-rental/or-get.pug
+    include ./offsite-rental/or-partner.pug
+    include ./offsite-rental/or-benefits.pug
+
+  include ./home/register.pug

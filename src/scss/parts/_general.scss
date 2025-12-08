@@ -654,3 +654,87 @@ body .swiper {
 main {
   overflow: hidden;
 }
+
+.sec-register {
+  .btn-small {
+    @media (max-width: v.$screen-lg) {
+      width: 42px;
+      height: 38px;
+      img,
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+    @media (max-width: 400px) {
+      width: 45px;
+      height: 45px;
+    }
+    @media (max-width: 360px) {
+      width: 40px;
+      height: 45px;
+    }
+  }
+}
+
+.sec-certificates {
+  .certificates-calc {
+    &.border-gradient {
+      @media (max-width: v.$screen-md) {
+        --border-radius: 0px;
+        &-border {
+          width: 104%;
+          left: -2%;
+        }
+      }
+    }
+  }
+}
+
+.new-border-linear {
+  --nbl-deg: 200deg;
+  --nbl-color: var(--color-accent);
+  --nbl-skewX: 0deg;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transform: skewX(var(--nbl-skewX));
+
+  &::after {
+    content: '';
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    left: -1px;
+    top: -1px;
+    background-color: var(--btn-bg);
+    background-image: linear-gradient(var(--nbl-deg), transparent 30%, var(--nbl-color));
+    transform: skewX(var(--nbl-skewX));
+    position: absolute;
+    border-radius: inherit;
+    transition: var(--trans-02s);
+    z-index: -2;
+  }
+
+  &-pink {
+    @extend .new-border-linear;
+    --nbl-color: var(--color-accent);
+  }
+  &-purple {
+    @extend .new-border-linear;
+    --nbl-color: var(--color-purple);
+  }
+  &-sky {
+    @extend .new-border-linear;
+    --nbl-color: var(--color-sky);
+  }
+  &-red {
+    @extend .new-border-linear;
+    --nbl-color: var(--color-red);
+  }
+  &-tsunami {
+    @extend .new-border-linear;
+    --nbl-color: var(--color-tsunami);
+  }
+}

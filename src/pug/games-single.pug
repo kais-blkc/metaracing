@@ -1,0 +1,12 @@
+extends ./base/base.pug
+include ./mixins/sec-title
+
+block head
+  title Вопросы и ответы
+
+block content
+  include ./games-single/gs-banner.pug
+  include ./games-single/gs-properties.pug
+  include ./games-single/gs-disciplines.pug
+
+  include ./home/register.pug

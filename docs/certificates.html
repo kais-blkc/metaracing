@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Сертификаты</title>
+    <link rel="icon" type="image/png" href="favicon.png"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&amp;family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="./css/fancybox.css"/>
+    <link rel="stylesheet" href="./css/aos.css"/>
+    <link rel="stylesheet" href="./css/tailwind.css"/>
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./css/style.css?v=3"/>
+  </head>
+  <body>
+    <header class="header w-full pt-[40px] fixed left-0 top-0 z-20 transition-all duration-300 ease">
+      <div class="container">
+        <div class="header__content flex items-center justify-between gap-2 "><a class="header__logo block cursor-pointer w-[200px] max-[1200px]:w-[130px]" href="/"><img src="./img/metaracing-logo.svg" alt=""/></a>
+          <div class="header__navbar max-md:hidden py-[5px] px-[10px] flex justify-between items-center gap-2.5 font-golos font-bold">
+            <div class="py-2.5 px-5 max-lg:py-1.5 max-lg:px-3"><a class="header__navbar-link max-[1200px]:text-[10px] block transition-all duration-200 ease" href="#">Как это работает</a></div>
+            <div class="py-2.5 px-5 max-lg:py-1.5 max-lg:px-3"><a class="header__navbar-link max-[1200px]:text-[10px] block transition-all duration-200 ease" href="/prices.html">Цены</a></div>
+            <div class="py-2.5 px-5 max-lg:py-1.5 max-lg:px-3"><a class="header__navbar-link max-[1200px]:text-[10px] block transition-all duration-200 ease" href="#">Сертификаты</a></div>
+            <div class="py-2.5 px-5 max-lg:py-1.5 max-lg:px-3"><a class="header__navbar-link max-[1200px]:text-[10px] block transition-all duration-200 ease" href="#">Мероприятия</a></div>
+            <div class="py-2.5 px-5 max-lg:py-1.5 max-lg:px-3"><a class="header__navbar-link max-[1200px]:text-[10px] block transition-all duration-200 ease" href="#">Клубы</a></div>
+          </div>
+          <div class="header__order max-md:hidden">
+            <button class="btn btn-accent">Онлайн-запись</button>
+          </div>
+          <button class="burger d-none-min-mob" data-modal-open="header-mobile" aria-label="Открыть меню"><img src="./img/burger.svg" alt=""/></button>
+        </div>
+      </div>
+    </header>
+    <div class="header-mobile modal-wrapper" data-modal-block="header-mobile" aria-label="Открыть меню">
+      <div class="
+    header-mobile__content w-full h-full flex flex-col gap-6 absolute left-0 bg-[#0E1923]/55 backdrop-blur-[27px]  
+    transition-all duration-300 ease-in-out py-[40px] px-[30px] max-md:px-[20px] text-center
+  ">
+        <button class="x-btn burger" data-modal-close="header-mobile" aria-label="Открыть меню"><img src="./img/x.svg" alt=""/></button><a class="header-mobile__logo block mx-auto w-[150px]" href="/"><img src="./img/metaracing-logo.svg" alt=""/></a>
+        <div class="header-mobile__navbar flex flex-col items-center gap-[22px] "><a class="header__navbar-item text-[21px] font-semibold underline hover:text-app-pink" href="#">Как это работает</a><a class="header__navbar-item text-[21px] font-semibold underline hover:text-app-pink" href="/prices.html">Цены</a><a class="header__navbar-item text-[21px] font-semibold underline hover:text-app-pink" href="#">Сертификаты</a><a class="header__navbar-item text-[21px] font-semibold underline hover:text-app-pink" href="#">Мероприятия</a><a class="header__navbar-item text-[21px] font-semibold underline hover:text-app-pink" href="#">Клубы</a></div>
+        <div class="mt-[30px] uppercase text-lg">
+          <p class="mb-1">МОСКВа (<span class="text-app-accent">new</span>)</p><a class="hover:text-app-pink" href="tel:"><span class="text-app-pink">+</span> 7 812 665-38-88</a>
+        </div>
+        <div class="uppercase text-lg">
+          <p class="mb-1">Санкт-петербург</p><a class="sec-banner__contacts-phone hover:text-app-pink" href="tel:"><span class="text-app-pink">+</span> 7 812 565-38-88</a>
+        </div>
+        <button class="btn btn-accent mx-auto w-full max-w-[337px] h-[63px] mt-5">Онлайн-запись</button>
+        <div class="flex gap-2.5 justify-center"><a class="btn btn-icon-white" href="#"><img class="img-base" src="./img/accent-whatsapp.svg" alt=""/><img class="img-hover" src="./img/hover-whatsapp.svg" alt=""/></a><a class="btn btn-icon-white" href="#"><img class="img-base" src="./img/accent-tg.svg" alt=""/><img class="img-hover" src="./img/hover-tg.svg" alt=""/></a><a class="btn btn-icon-white" href="#"><img class="img-base" src="./img/accent-vk.svg" alt=""/><img class="img-hover" src="./img/hover-vk.svg" alt=""/></a></div>
+        <p class="text-sm text-app-white-secondary font-golos">Ежедневно с 12:00 до 00:00 <br/> Отвечаем моментально.</p>
+      </div>
+    </div>
+    <main>
+      <section class="sec-certificates pb-20 pt-[200px] max-md:pb-[50px] relative overflow-visible">
+        <div class="absolute top-[5%] max-md:top-[-5%] l-0 w-full -z-10">
+          <picture>
+            <source media="(max-width: 767px)" srcset="img/certs-bg-mob.png"/><img class="w-full" src="./img/certs-bg.png" loading="lazy"/>
+          </picture>
+        </div>
+        <div class="container">
+          <div class="text-center uppercase">
+            <div class="italic font-black text-[35px] md:text-[50px] lg:text-[80px] leading-[110%]"><span class="text-app-pink">Сертификаты</span></div>
+            <div class="text-2xl mt-6 max-lg:mt-[16px] max-md:mt-[14px] text-app-white-secondary max-lg:text-[15px] max-md:text-lg">Идеальный подарок для близкого человека — <br/> сертификат на <span class="text-app-white">незабываемые эмоции в клубах</span> гоночных симуляторов MetaRacing.</div>
+          </div>
+          <div class="
+        certificates-list max-w-[1350px] 
+        mt-[84px] max-[1200px]:mt-[50px] max-md:mt-[34px] mx-auto
+        grid grid-cols-2 gap-10 max-md:grid-cols-1
+        max-lg:gap-[30px] max-md:gap-[24px]
+        max-[1200px]:px-5
+       ">
+                  <div class="
+        address-item border-gradient relative rounded-[15px] -skew-x-10
+        w-full max-md:max-w-[366px] max-md:mx-auto
+        bg-linear-195 from-[#121424] from-80% to-app-purple/30
+        flex items-end
+      " style="--border-gradient-image: linear-gradient(225deg, #1E3147 20%, #6E558E)">
+                    <div class="border-gradient-border"></div>
+                    <div class="border-gradient-content"></div>
+                    <div class="absolute top-5 max-[1200px]:top-2.5 z-1 left-[-20px]  max-md:top-2"><img class="h-[51px] max-[1200px]:h-[33px]" src="./img/cert-b-1.svg" alt="" loading="lazy"/></div>
+                    <div class="
+        relative z-2  max-md:skew-x-0 flex items-end
+        min-h-[200px] max-[1200px]:min-h-[124px]
+        pl-[72px] pr-[32px] pb-[44px] pt-[80px]
+        max-[1200px]:pl-[44px] max-[1200px]:pr-[24px] max-[1200px]:pb-[27px] max-[1200px]:pt-[60px]
+        max-md:pl-[48px] max-md:pb-[28px]
+      ">
+                      <div class="text-[19px] max-[1200px]:text-[12px] max-md:text-sm font-golos font-medium">Предоставляется в электронном виде <br class="max-md:hidden"/> и в фирменном дизайне MetaRacing.</div>
+                    </div>
+                  </div>
+                  <div class="
+        address-item border-gradient relative rounded-[15px] -skew-x-10
+        w-full max-md:max-w-[366px] max-md:mx-auto
+        bg-linear-195 from-[#121424] from-80% to-app-purple/30
+        flex items-end
+      " style="--border-gradient-image: linear-gradient(225deg, #1E3147 20%, #6E558E)">
+                    <div class="border-gradient-border"></div>
+                    <div class="border-gradient-content"></div>
+                    <div class="absolute top-5 max-[1200px]:top-2.5 z-1 left-[-20px]  max-md:top-2"><img class="h-[51px] max-[1200px]:h-[33px]" src="./img/cert-b-2.svg" alt="" loading="lazy"/></div>
+                    <div class="
+        relative z-2  max-md:skew-x-0 flex items-end
+        min-h-[200px] max-[1200px]:min-h-[124px]
+        pl-[72px] pr-[32px] pb-[44px] pt-[80px]
+        max-[1200px]:pl-[44px] max-[1200px]:pr-[24px] max-[1200px]:pb-[27px] max-[1200px]:pt-[60px]
+        max-md:pl-[48px] max-md:pb-[28px]
+      ">
+                      <div class="text-[19px] max-[1200px]:text-[12px] max-md:text-sm font-golos font-medium">Изготавливается в фирменном дизайне MetaRacing (A5) <br class="max-md:hidden"/> и упаковывается в стильный подарочный конверт.</div>
+                    </div>
+                  </div>
+          </div>
+        </div>
+        <div class="mt-[140px] max-[1200px]:mt-[86px] max-md:mt-[57px]"></div>
+        <div class="container">
+          <div class="text-center uppercase">
+            <div class="italic font-black text-[35px] md:text-[50px] lg:text-[80px] leading-[110%]"><span class="text-app-pink">Оформить</span> онлайн:</div>
+          </div>
+          <div class="md:hidden mt-8 mx-auto max-w-[350px]"><img src="./img/certs-calc.png" alt="" loading="lazy"/></div>
+        </div>
+        <div class="
+        certificates-calc
+        mt-[64px] max-[1200px]:mt-[37px]
+        grid grid-cols-[57.72%_1fr]
+        address-item border-gradient relative rounded-[15px] -skew-x-10
+        bg-linear-155 from-[#121424] from-40% to-app-pink/45
+        w-[1340px] max-w-[85%] mx-auto
+        max-[1400px]:w-[770px]
+        min-h-[740px] max-[1400px]:min-h-[455px]
+        max-md:skew-x-0 max-md:max-w-full max-md:rounded-0
+        max-md:bg-linear-180 max-md:from-[#0A0E13]
+        max-md:grid-cols-1 max-md:mt-2
+      " style="--border-gradient-image: linear-gradient(45deg, #DE127A 80%, #1E3147)">
+          <div class="border-gradient-border"></div>
+          <div class="border-gradient-content"></div>
+          <div class="certificates-calc__img max-md:hidden skew-x-10 relative">
+            <div class="absolute right-0 top-[24px] w-[840px] max-[1400px]:w-[455px]"><img src="./img/certs-calc.png" alt="" loading="lazy"/></div>
+          </div>
+          <div class="
+        certificates-calc__content font-golos pl-[50px] pt-[78px] 
+        max-[1400px]:pt-[50px] max-[1400px]:pl-[30px]
+        max-md:px-[35px] max-md:pt-[31px] max-md:pb-[52px]
+        max-md:max-w-[390px] max-md:mx-auto
+      ">
+            <div class="certificates-calc__item skew-x-10 max-md:skew-x-0">
+              <div class="certificates-calc__item-label mb-4 font-semibold pl-5 max-[1400px]:text-[9px] max-md:text-sm max-[1400px]:mb-3 max-md:mb-4">Выберите город</div>
+                    <div data-tabs-wrapper="data-tabs-wrapper">
+                      <div class="flex justify-start">
+                        <div class="tabs-buttons flex gap-1 items-center p-2 max-[1400px]:p-1 -skew-x-12 rounded-[25px] max-[1400px]:rounded-[15px] border-app-border border ">
+                          <div class="
+                tab-button py-4 px-7 cursor-pointer font-bold transition duration-300 ease-in-out 
+                max-md:px-4 text-center max-md:text-sm rounded-[15px] 
+                max-[1400px]:text-[9px] max-[1400px]:px-[18px] max-[1400px]:py-2.5
+                max-[1400px]:rounded-[10px]
+                active
+              " data-tab-btn="cert-city-1">
+                            <p class="skew-x-12">Санкт-Петербург</p>
+                          </div>
+                          <div class="hidden" data-tab-item="cert-city-1"></div>
+                          <div class="
+                tab-button py-4 px-7 cursor-pointer font-bold transition duration-300 ease-in-out 
+                max-md:px-4 text-center max-md:text-sm rounded-[15px] 
+                max-[1400px]:text-[9px] max-[1400px]:px-[18px] max-[1400px]:py-2.5
+                max-[1400px]:rounded-[10px]
+                
+              " data-tab-btn="cert-city-2">
+                            <p class="skew-x-12">Москва</p>
+                          </div>
+                          <div class="hidden" data-tab-item="cert-city-2"></div>
+                        </div>
+                      </div>
+                    </div>
+            </div>
+            <div class="certificates-calc__item skew-x-10 max-md:skew-x-0 mt-[30px] max-[1400px]:mt-[20px]">
+              <div class="certificates-calc__item-label mb-4 font-semibold pl-5 max-[1400px]:text-[9px] max-md:text-sm max-[1400px]:mb-3 max-md:mb-4">Номинал</div>
+                    <div data-tabs-wrapper="data-tabs-wrapper">
+                      <div class="flex justify-start">
+                        <div class="tabs-buttons flex gap-1 items-center p-2 max-[1400px]:p-1 -skew-x-12 rounded-[25px] max-[1400px]:rounded-[15px] border-app-border border ">
+                          <div class="
+                tab-button py-4 px-7 cursor-pointer font-bold transition duration-300 ease-in-out 
+                max-md:px-4 text-center max-md:text-sm rounded-[15px] 
+                max-[1400px]:text-[9px] max-[1400px]:px-[18px] max-[1400px]:py-2.5
+                max-[1400px]:rounded-[10px]
+                active
+              " data-tab-btn="cert-nominal-1">
+                            <p class="skew-x-12">1 час</p>
+                          </div>
+                          <div class="hidden" data-tab-item="cert-nominal-1"></div>
+                          <div class="
+                tab-button py-4 px-7 cursor-pointer font-bold transition duration-300 ease-in-out 
+                max-md:px-4 text-center max-md:text-sm rounded-[15px] 
+                max-[1400px]:text-[9px] max-[1400px]:px-[18px] max-[1400px]:py-2.5
+                max-[1400px]:rounded-[10px]
+                
+              " data-tab-btn="cert-nominal-2">
+                            <p class="skew-x-12">2 часа</p>
+                          </div>
+                          <div class="hidden" data-tab-item="cert-nominal-2"></div>
+                          <div class="
+                tab-button py-4 px-7 cursor-pointer font-bold transition duration-300 ease-in-out 
+                max-md:px-4 text-center max-md:text-sm rounded-[15px] 
+                max-[1400px]:text-[9px] max-[1400px]:px-[18px] max-[1400px]:py-2.5
+                max-[1400px]:rounded-[10px]
+                
+              " data-tab-btn="cert-nominal-3">
+                            <p class="skew-x-12">3 часа</p>
+                          </div>
+                          <div class="hidden" data-tab-item="cert-nominal-3"></div>
+                          <div class="
+                tab-button py-4 px-7 cursor-pointer font-bold transition duration-300 ease-in-out 
+                max-md:px-4 text-center max-md:text-sm rounded-[15px] 
+                max-[1400px]:text-[9px] max-[1400px]:px-[18px] max-[1400px]:py-2.5
+                max-[1400px]:rounded-[10px]
+                
+              " data-tab-btn="cert-nominal-5">
+                            <p class="skew-x-12">5 часа</p>
+                          </div>
+                          <div class="hidden" data-tab-item="cert-nominal-5"></div>
+                        </div>
+                      </div>
+                    </div>
+            </div>
+            <div class="certificates-calc__item skew-x-10 max-md:skew-x-0 mt-[30px] max-[1400px]:mt-[20px]">
+              <div class="certificates-calc__item-label mb-4 font-semibold pl-5 max-[1400px]:text-[9px] max-md:text-sm max-[1400px]:mb-3 max-md:mb-4">Номинал</div>
+                    <div data-tabs-wrapper="data-tabs-wrapper">
+                      <div class="flex justify-start">
+                        <div class="tabs-buttons flex gap-1 items-center p-2 max-[1400px]:p-1 -skew-x-12 rounded-[25px] max-[1400px]:rounded-[15px] border-app-border border ">
+                          <div class="
+                tab-button py-4 px-7 cursor-pointer font-bold transition duration-300 ease-in-out 
+                max-md:px-4 text-center max-md:text-sm rounded-[15px] 
+                max-[1400px]:text-[9px] max-[1400px]:px-[18px] max-[1400px]:py-2.5
+                max-[1400px]:rounded-[10px]
+                active
+              " data-tab-btn="cert-ver-1">
+                            <p class="skew-x-12">Электронная</p>
+                          </div>
+                          <div class="hidden" data-tab-item="cert-ver-1"></div>
+                          <div class="
+                tab-button py-4 px-7 cursor-pointer font-bold transition duration-300 ease-in-out 
+                max-md:px-4 text-center max-md:text-sm rounded-[15px] 
+                max-[1400px]:text-[9px] max-[1400px]:px-[18px] max-[1400px]:py-2.5
+                max-[1400px]:rounded-[10px]
+                
+              " data-tab-btn="cert-ver-2">
+                            <p class="skew-x-12">Печатная</p>
+                          </div>
+                          <div class="hidden" data-tab-item="cert-ver-2"></div>
+                        </div>
+                      </div>
+                    </div>
+            </div>
+            <div class="certificates-calc__desc skew-x-10 max-md:skew-x-0 mt-[42px] max-[1400px]:mt-[26px] ">
+              <p class="text-app-white-secondary font-semibold max-[1400px]:text-[9px]">Сертификат действует только на статичные <br/> симуляторы в клубах выбранного города.</p>
+            </div>
+            <div class="certificates-calc__total skew-x-10 max-md:skew-x-0 mt-[54px] max-[1400px]:mt-[30px]">
+              <div class="flex justify-between items-end max-md:flex-col-reverse max-md:gap-4 max-w-[410px] max-[1400px]:max-w-[250px] max-md:max-w-full">
+                <button class="btn-accent h-[60px] flex items-center justify-center max-[1400px]:h-[38px] max-md:w-full max-md:h-[58px]">Купить сертификат</button>
+                <div class="block max-md:flex justify-between items-end max-md:w-full">
+                  <div class="font-bold max-[1400px]:text-[9px] max-md:text-sm">Стоимость:</div>
+                  <div class="font-black italic text-[28px] max-[1400px]:text-[17px] max-md:text-[22px]">1500 ₽</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="
+      mt-[105px] max-[1400px]:mt-[66px] max-md:hidden
+    text-app-white-secondary uppercase text-center
+      flex flex-col gap-5 items-center
+    ">
+          <p>Часы из сертификата не обязательно использовать <br/> за одно посещение, а <span class="text-white">игровое время можно разделить между друзьями.</span> </p>
+          <p>Доступ на симуляторы осуществляется с 14 лет.</p>
+        </div>
+      </section>
+      <section class="sec-register py-20 max-md:py-[50px] relative overflow-visible max-lg:py-0">
+        <div class="absolute top-[-130%] l-0 w-full -z-10"><img class="w-full" src="./img/reg-bg.png" loading="lazy"/></div>
+        <div class="container">
+          <div class="register-content px-10 max-md:px-5">
+            <div class="
+          border-gradient relative  rounded-[15px] -skew-x-10
+          bg-linear-195 from-[#090D12] from-80% to-app-pink/10
+          max-md:from-60% max-md:to-app-pink/30
+          pt-[55px] pb-[62px] max-md:py-[30px] px-[95px] max-[1360px]:px-[50px] max-md:px-[20px]
+          max-md:pt-5 max-md:pb-3 max-md:pl-[6px] max-md:pr-[15px] max-[1200px]:py-[37px]
+          max-md:max-w-[347px] max-md:mx-auto
+        " style="--border-gradient-image: linear-gradient(195deg, #1E3147 80%, #5D1946)">
+              <div class="border-gradient-border"></div>
+              <div class="border-gradient-content"></div>
+              <div class="
+          relative z-2 skew-x-10
+          flex items-center gap-4
+          max-md:flex-col max-md:gap-6
+          max-md:items-start
+        ">
+                <div class="
+            uppercase text-[32px] max-[1200px]:text-[19px] italic font-black
+            max-[1200px]:text-left max-md:text-[22px] max-md:ml-[25px]
+          "><span class="text-app-pink">онлайн-Запись</span> <br class="md:hidden"/> в наши клубы </div>
+                <div class="
+          register-socs flex items-center gap-2.5
+          max-md:gap-1.5
+          ml-auto max-md:ml-0
+          "><a class="btn-small btn-icon-purple w-[68px] h-[62px]" href=""><img class="brightness-[5] w-[22px] h-[22px]" src="./img/accent-whatsapp.svg" loading="lazy"/></a><a class="btn-small btn-icon-purple w-[68px] h-[62px]" href=""><img class="brightness-[5] w-[22px] h-[22px]" src="./img/accent-tg.svg" loading="lazy"/></a><a class="btn-small btn-icon-purple w-[68px] h-[62px]" href=""><img class="brightness-[5] w-[22px] h-[22px]" src="./img/accent-vk.svg" loading="lazy"/></a><a class="btn-big btn-accent w-[200px] h-[62px] max-lg:w-[124px] max-lg:h-[38px] max-md:w-[144px] max-md:h-[48px]" href="">Записаться</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="relative bg-[#040405] pt-[166px] max-md:py-10 pb-[78px] overflow-hidden">
+      <div class="w-full absolute bottom-0 left-0"><img src="img/footer-bg.svg" loading="lazy"/></div>
+      <div class="container"> 
+        <div class="flex justify-between items-end max-lg:flex-col max-lg:items-center max-lg:text-center gap-y-8 max-md:gap-[33px]">
+          <div>
+            <div class="flex justify-center mx-auto md:hidden mb-[33px]"><img src="img/footer-logo.svg" loading="lazy"/></div>
+            <div class="flex items-center gap-2.5 max-lg:justify-center"><a class="btn-icon-white w-[68px] h-[62px] max-md:w-[50px] max-md:h-[45px] z-1" href=""><img class="w-[22px] h-[22px]" src="./img/accent-whatsapp.svg" loading="lazy"/></a><a class="btn-icon-white w-[68px] h-[62px] max-md:w-[50px] max-md:h-[45px] z-1" href=""><img class="w-[22px] h-[22px]" src="./img/accent-tg.svg" loading="lazy"/></a><a class="btn-icon-white w-[68px] h-[62px] max-md:w-[50px] max-md:h-[45px] z-1" href=""><img class="w-[22px] h-[22px]" src="./img/accent-vk.svg" loading="lazy"/></a><a class="btn-icon-white w-[68px] h-[62px] max-md:w-[50px] max-md:h-[45px] z-1" href=""><img class="w-[22px] h-[22px]" src="./img/accent-insta.svg" loading="lazy"/></a><a class="btn-icon-white w-[68px] h-[62px] max-md:w-[50px] max-md:h-[45px] z-1" href=""><img class="w-[22px] h-[22px]" src="./img/accent-yt.svg" loading="lazy"/></a>
+            </div>
+            <div class="flex items-center gap-4 mt-[24px] text-[#545467] text-[19px] max-md:text-sm font-medium font-golos max-md:hidden"> <img class="size-[38px] opacity-50" src="./img/14+.svg" loading="lazy"/>
+              <p>Погрузись в атмосферу — почувствуй настоящую гонку <br/> и прокачай навыки управления автомобилем.</p>
+            </div>
+          </div>
+          <div class="flex flex-col items-end max-lg:items-center">
+            <div class="max-w-[338px] ml-auto max-lg:ml-0 max-md:hidden"><img src="img/logo-footer.svg" loading="lazy"/></div>
+            <div class="mt-[24px] flex flex-col gap-1 text-[19px] max-md:text-sm font-medium font-golos text-right max-lg:text-center"><span class="text-[#545467]">© 2025 MetaRacing. <br class="md:hidden" /> Сеть клубов гоночных симуляторов.</span><a class="text-[#9090AA]" href="">Политика обработки персональных данных</a></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="modal-success modal-wrapper" data-modal-block="form-success">
+      <div class="modal-content">
+        <div class="x-btn" data-modal-close="form-success"></div>
+        <div class="modal-content__title">Супер!</div>
+        <div class="modal-content__subtitle">Скоро свяжемся с вами</div>
+      </div>
+    </div>
+    <script src="./js/fancybox.umd.js"></script>
+    <script src="./js/imask.js"></script>
+    <script src="./js/aos.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/main.js?v=3"></script>
+  </body>
+</html>

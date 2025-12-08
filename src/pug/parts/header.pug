@@ -1,14 +1,14 @@
 header(class="header w-full pt-[40px] fixed left-0 top-0 z-20 transition-all duration-300 ease")
   .container
     div(class="header__content flex items-center justify-between gap-2 ")
-      div(class="header__logo w-[200px] max-[1200px]:w-[130px]")
+      a(href="/" class="header__logo block cursor-pointer w-[200px] max-[1200px]:w-[130px]")
         img(src="./img/metaracing-logo.svg", alt="")
 
       div(class="header__navbar max-md:hidden py-[5px] px-[10px] flex justify-between items-center gap-2.5 font-golos font-bold")
         div(class="py-2.5 px-5 max-lg:py-1.5 max-lg:px-3")
           a(href="#" class="header__navbar-link max-[1200px]:text-[10px] block transition-all duration-200 ease") Как это работает
         div(class="py-2.5 px-5 max-lg:py-1.5 max-lg:px-3")
-          a(href="#" class="header__navbar-link max-[1200px]:text-[10px] block transition-all duration-200 ease") Цены
+          a(href="/prices.html" class="header__navbar-link max-[1200px]:text-[10px] block transition-all duration-200 ease") Цены
         div(class="py-2.5 px-5 max-lg:py-1.5 max-lg:px-3")
           a(href="#" class="header__navbar-link max-[1200px]:text-[10px] block transition-all duration-200 ease") Сертификаты
         div(class="py-2.5 px-5 max-lg:py-1.5 max-lg:px-3")
@@ -30,12 +30,12 @@ header(class="header w-full pt-[40px] fixed left-0 top-0 z-20 transition-all dur
     button.x-btn.burger(data-modal-close="header-mobile" aria-label="Открыть меню")
       img(src="./img/x.svg", alt="")
 
-    div(class="header-mobile__logo mx-auto w-[150px]")
+    a(href="/" class="header-mobile__logo block mx-auto w-[150px]")
       img(src="./img/metaracing-logo.svg", alt="")
 
     div(class="header-mobile__navbar flex flex-col items-center gap-[22px] ")
       a(href="#" class="header__navbar-item text-[21px] font-semibold underline hover:text-app-pink") Как это работает
-      a(href="#" class="header__navbar-item text-[21px] font-semibold underline hover:text-app-pink") Цены
+      a(href="/prices.html" class="header__navbar-item text-[21px] font-semibold underline hover:text-app-pink") Цены
       a(href="#" class="header__navbar-item text-[21px] font-semibold underline hover:text-app-pink") Сертификаты
       a(href="#" class="header__navbar-item text-[21px] font-semibold underline hover:text-app-pink") Мероприятия
       a(href="#" class="header__navbar-item text-[21px] font-semibold underline hover:text-app-pink") Клубы

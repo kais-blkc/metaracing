@@ -1,0 +1,43 @@
+include ../mixins/sec-title
+
+mixin rental_img(img1, badge, translate='')
+  div(class=`relative scale-105 max-md:scale-100 max-md:h-[300px] ${translate}`)
+    picture
+      img(class="w-full h-full" src="img/"+img1 loading="lazy")
+    div(class=`absolute top-3 z-1 left-[40px] max-[1200px]:top-2 max-[1200px]:left-[20px]`)
+      img(class="max-[1200px]:h-[28px] max-md:h-[30px]" src="./img/"+badge, alt="", loading="lazy")
+
+
+section(class="por-banner pt-[200px] pb-[50px] max-md:pt-[130px] relative overflow-visible")
+  div(class="absolute max-md:hidden top-[-10%] l-0 w-full -z-10")
+    img(class="w-full" src="./img/or-banner-bg.png" loading="lazy")
+
+  .container
+    +sec-title('<span class="text-app-pink">Выездная аренда</span> <br/> автосимуляторов <br/> на ваши мероприятия')
+    div(class="mt-[32px] max-[1200px]:mt-[20px] max-md:mt-[30px] text-center text-[25px] max-[1200px]:text-[15px] max-md:text-[18px] uppercase text-app-white font-semibold") Хотите поразить гостей и превратить мероприятие #[br] #[span(class="text-app-pink") в настоящее шоу?] 
+    
+    div(class="por-banner__img mt-[74px] max-[1200px]:mt-[45px] max-md:mt-[30px]")
+      img(class="w-full" src="./img/or-banner.png" loading="lazy")
+
+    div(class="mt-[112px] max-[1200px]:mt-[70px] max-md:mt-[36px] text-center text-[25px] max-[1200px]:text-[15px] max-md:text-[18px] uppercase text-app-white-secondary font-semibold") Автосимуляторы MetaRacing — это не просто развлечение, а полное погружение #[br(class="max-md:hidden")] в мир скорости, соревнований и острых ощущений. #[br] #[br(class="md:hidden")] Мы добавим вашему мероприятию драйв, вовлечённость и эмоции, #[br] которые гости запомнят надолго.
+
+    div(class="por-banner__list mt-[87px] max-[1200px]:mt-[50px] max-md:mt-[45px]")
+      div(class="grid grid-cols-4 max-md:hidden")
+        +rental_img('mob-rental-2.png', 'renb-1.svg')
+        +rental_img('mob-rental-1.png', 'renb-2.svg')
+        +rental_img('mob-rental-3.png', 'renb-3.svg')
+        +rental_img('mob-rental-4.png', 'badge-red-grounded.svg')
+      
+      div(class="md:hidden")
+        div(class="swiper swiper-offsite-rental")
+          div(class="swiper-wrapper")
+
+            div(class="swiper-slide max-w-[330px]")
+              div(class="flex flex-col gap-5")
+                +rental_img('mob-rental-1.png', 'renb-2.svg')
+                +rental_img('mob-rental-3.png', 'renb-3.svg')
+            div(class="swiper-slide max-w-[330px]")
+              div(class="flex flex-col gap-5 translate-x-[-25px]")
+                +rental_img('mob-rental-2.png', 'renb-1.svg')
+                +rental_img('mob-rental-4.png', 'badge-red-grounded.svg')
+        

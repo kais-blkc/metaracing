@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Вопросы и ответы</title>
+    <link rel="icon" type="image/png" href="favicon.png"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&amp;family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="./css/fancybox.css"/>
+    <link rel="stylesheet" href="./css/aos.css"/>
+    <link rel="stylesheet" href="./css/tailwind.css"/>
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./css/style.css?v=3"/>
+  </head>
+  <body>
+    <header class="header w-full pt-[40px] fixed left-0 top-0 z-20 transition-all duration-300 ease">
+      <div class="container">
+        <div class="header__content flex items-center justify-between gap-2 "><a class="header__logo block cursor-pointer w-[200px] max-[1200px]:w-[130px]" href="/"><img src="./img/metaracing-logo.svg" alt=""/></a>
+          <div class="header__navbar max-md:hidden py-[5px] px-[10px] flex justify-between items-center gap-2.5 font-golos font-bold">
+            <div class="py-2.5 px-5 max-lg:py-1.5 max-lg:px-3"><a class="header__navbar-link max-[1200px]:text-[10px] block transition-all duration-200 ease" href="#">Как это работает</a></div>
+            <div class="py-2.5 px-5 max-lg:py-1.5 max-lg:px-3"><a class="header__navbar-link max-[1200px]:text-[10px] block transition-all duration-200 ease" href="/prices.html">Цены</a></div>
+            <div class="py-2.5 px-5 max-lg:py-1.5 max-lg:px-3"><a class="header__navbar-link max-[1200px]:text-[10px] block transition-all duration-200 ease" href="#">Сертификаты</a></div>
+            <div class="py-2.5 px-5 max-lg:py-1.5 max-lg:px-3"><a class="header__navbar-link max-[1200px]:text-[10px] block transition-all duration-200 ease" href="#">Мероприятия</a></div>
+            <div class="py-2.5 px-5 max-lg:py-1.5 max-lg:px-3"><a class="header__navbar-link max-[1200px]:text-[10px] block transition-all duration-200 ease" href="#">Клубы</a></div>
+          </div>
+          <div class="header__order max-md:hidden">
+            <button class="btn btn-accent">Онлайн-запись</button>
+          </div>
+          <button class="burger d-none-min-mob" data-modal-open="header-mobile" aria-label="Открыть меню"><img src="./img/burger.svg" alt=""/></button>
+        </div>
+      </div>
+    </header>
+    <div class="header-mobile modal-wrapper" data-modal-block="header-mobile" aria-label="Открыть меню">
+      <div class="
+    header-mobile__content w-full h-full flex flex-col gap-6 absolute left-0 bg-[#0E1923]/55 backdrop-blur-[27px]  
+    transition-all duration-300 ease-in-out py-[40px] px-[30px] max-md:px-[20px] text-center
+  ">
+        <button class="x-btn burger" data-modal-close="header-mobile" aria-label="Открыть меню"><img src="./img/x.svg" alt=""/></button><a class="header-mobile__logo block mx-auto w-[150px]" href="/"><img src="./img/metaracing-logo.svg" alt=""/></a>
+        <div class="header-mobile__navbar flex flex-col items-center gap-[22px] "><a class="header__navbar-item text-[21px] font-semibold underline hover:text-app-pink" href="#">Как это работает</a><a class="header__navbar-item text-[21px] font-semibold underline hover:text-app-pink" href="/prices.html">Цены</a><a class="header__navbar-item text-[21px] font-semibold underline hover:text-app-pink" href="#">Сертификаты</a><a class="header__navbar-item text-[21px] font-semibold underline hover:text-app-pink" href="#">Мероприятия</a><a class="header__navbar-item text-[21px] font-semibold underline hover:text-app-pink" href="#">Клубы</a></div>
+        <div class="mt-[30px] uppercase text-lg">
+          <p class="mb-1">МОСКВа (<span class="text-app-accent">new</span>)</p><a class="hover:text-app-pink" href="tel:"><span class="text-app-pink">+</span> 7 812 665-38-88</a>
+        </div>
+        <div class="uppercase text-lg">
+          <p class="mb-1">Санкт-петербург</p><a class="sec-banner__contacts-phone hover:text-app-pink" href="tel:"><span class="text-app-pink">+</span> 7 812 565-38-88</a>
+        </div>
+        <button class="btn btn-accent mx-auto w-full max-w-[337px] h-[63px] mt-5">Онлайн-запись</button>
+        <div class="flex gap-2.5 justify-center"><a class="btn btn-icon-white" href="#"><img class="img-base" src="./img/accent-whatsapp.svg" alt=""/><img class="img-hover" src="./img/hover-whatsapp.svg" alt=""/></a><a class="btn btn-icon-white" href="#"><img class="img-base" src="./img/accent-tg.svg" alt=""/><img class="img-hover" src="./img/hover-tg.svg" alt=""/></a><a class="btn btn-icon-white" href="#"><img class="img-base" src="./img/accent-vk.svg" alt=""/><img class="img-hover" src="./img/hover-vk.svg" alt=""/></a></div>
+        <p class="text-sm text-app-white-secondary font-golos">Ежедневно с 12:00 до 00:00 <br/> Отвечаем моментально.</p>
+      </div>
+    </div>
+    <main>
+      <section class="page-games py-24 pb-20 pt-[200px] max-md:pb-[50px] relative overflow-visible">
+        <div class="container">
+          <div class="text-center uppercase">
+            <div class="italic font-black text-[35px] md:text-[50px] lg:text-[80px] leading-[110%]"><span class="text-app-pink">игры</span> в METARACING</div>
+            <div class="text-2xl mt-6 max-lg:mt-[16px] max-md:mt-[14px] text-app-white-secondary max-lg:text-[15px] max-md:text-lg">Для различных гонок доступно более 300 трасс и локаций</div>
+          </div>
+          <div class="p-games__list mt-[80px] max-[1200px]:mt-[50px] flex flex-col gap-y-[145px] max-[1200px]:gap-y-[85px]">
+                  <div class="p-games__item relative">
+                    <div class="absolute bottom-[-20%] left-[-15%] max-md:bottom-[-10%] max-md:left-0 max-md:right-auto w-full -z-10">
+                      <picture>
+                        <source media="(max-width: 767px)" srcset="img/p-games-item-bg-mob.png"/><img class="w-full" src="./img/p-games-item-bg.png" loading="lazy"/>
+                      </picture>
+                    </div>
+                    <div class="flex flex-wrap items-center  max-md:flex-col-reverse max-md:max-w-[380px] max-md:mx-auto max-md:gap-[33px]">
+                      <div class="p-games__item-body w-[35.26%] max-md:w-full flex flex-col gap-[22px] px-[35px] items-end text-left max-md:items-stretch max-md:text-left max-md:px-[28px]">
+                        <div>
+                          <div class="p-games__item-title text-app-pink italic font-black uppercase text-[28px] max-[1200px]:text-[17px] max-md:text-[22px]">Assetto Corsa</div>
+                          <div class="p-games__item-text text-app-white-secondary font-golos font-medium  mt-[22px] max-[1200px]:mt-[18px] text-[19px] max-[1200px]:text-[11px] max-md:text-[14px]">Управляемый занос — один из самых <br/>зрелищных видов автоспорта. <br/> <br/>Почувствуйте себя дрифт-пилотом: <br/>катайтесь по трассам со всего мира. <br/>Дым, углы и море удовольствия!</div>
+                          <div class="p-games__item-btn mt-[44px] max-[1200px]:mt-[22px] max-md:mt-[33px] w-full"><a class="btn btn-white-pink w-[248px] h-[55px] max-[1200px]:w-[150px] max-[1200px]:h-[34px] max-md:w-full max-md:h-[58px]" href="#">Подробнее</a></div>
+                        </div>
+                      </div>
+                      <div class="p-games__item-img relative w-[64.74%] max-md:w-full">
+                        <picture>
+                          <source srcset="./img/mob-p-games-1.png" loading="lazy" media="(max-width: 767px)"/><img src="./img/p-games-1.png" loading="lazy"/>
+                        </picture>
+                        <div class="absolute top-4 max-[1200px]:top-2.5 max-md:top-2 z-1 left-[80px] max-[1200px]:left-[60px] max-md:top-2 max-md:right-auto max-md:left-[20px]"><img class="h-[54px] max-[1200px]:h-[30px]" src="./img/badge-purple-01.svg" alt="" loading="lazy"/></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="p-games__item relative">
+                    <div class="absolute bottom-[-20%] right-[-15%] max-md:bottom-[-10%] max-md:left-0 max-md:right-auto w-full -z-10">
+                      <picture>
+                        <source media="(max-width: 767px)" srcset="img/p-games-item-bg-mob.png"/><img class="w-full" src="./img/p-games-item-bg.png" loading="lazy"/>
+                      </picture>
+                    </div>
+                    <div class="flex flex-wrap items-center flex-row-reverse max-md:flex-col-reverse max-md:max-w-[380px] max-md:mx-auto max-md:gap-[33px]">
+                      <div class="p-games__item-body w-[35.26%] max-md:w-full flex flex-col gap-[22px] px-[35px] items-start text-start max-md:items-stretch max-md:text-left max-md:px-[28px]">
+                        <div>
+                          <div class="p-games__item-title text-app-pink italic font-black uppercase text-[28px] max-[1200px]:text-[17px] max-md:text-[22px]">Assetto Corsa <br/> Competizione</div>
+                          <div class="p-games__item-text text-app-white-secondary font-golos font-medium  mt-[22px] max-[1200px]:mt-[18px] text-[19px] max-[1200px]:text-[11px] max-md:text-[14px]">Профессиональный гоночный симулятор <br/> выпущенный в 2019 году при поддержке <br/> настоящей гоночной серии GT World Challenge <br/> Europe и предназначен для максимально <br/> реалистичного воспроизведения гонок <br/> на автомобилях класса GT3. <br/> <br/> <br/> Из нововведений: улучшеная физическая <br/> модель, смена погодных условий и глобальная <br/> рейтинговая система для онлайн заездов.</div>
+                          <div class="p-games__item-btn mt-[44px] max-[1200px]:mt-[22px] max-md:mt-[33px] w-full"><a class="btn btn-white-pink w-[248px] h-[55px] max-[1200px]:w-[150px] max-[1200px]:h-[34px] max-md:w-full max-md:h-[58px]" href="#">Подробнее</a></div>
+                        </div>
+                      </div>
+                      <div class="p-games__item-img relative w-[64.74%] max-md:w-full">
+                        <picture>
+                          <source srcset="./img/mob-p-games-2.png" loading="lazy" media="(max-width: 767px)"/><img src="./img/p-games-2.png" loading="lazy"/>
+                        </picture>
+                        <div class="absolute top-4 max-[1200px]:top-2.5 max-md:top-2 z-1 right-[-20px] max-[1200px]:right-[-10px] max-md:top-2 max-md:right-auto max-md:left-[20px]"><img class="h-[54px] max-[1200px]:h-[30px]" src="./img/badge-purple-02.svg" alt="" loading="lazy"/></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="p-games__item relative">
+                    <div class="absolute bottom-[-20%] left-[-15%] max-md:bottom-[-10%] max-md:left-0 max-md:right-auto w-full -z-10">
+                      <picture>
+                        <source media="(max-width: 767px)" srcset="img/p-games-item-bg-mob.png"/><img class="w-full" src="./img/p-games-item-bg.png" loading="lazy"/>
+                      </picture>
+                    </div>
+                    <div class="flex flex-wrap items-center  max-md:flex-col-reverse max-md:max-w-[380px] max-md:mx-auto max-md:gap-[33px]">
+                      <div class="p-games__item-body w-[35.26%] max-md:w-full flex flex-col gap-[22px] px-[35px] items-end text-left max-md:items-stretch max-md:text-left max-md:px-[28px]">
+                        <div>
+                          <div class="p-games__item-title text-app-pink italic font-black uppercase text-[28px] max-[1200px]:text-[17px] max-md:text-[22px]">Assetto Corsa EVO</div>
+                          <div class="p-games__item-text text-app-white-secondary font-golos font-medium  mt-[22px] max-[1200px]:mt-[18px] text-[19px] max-[1200px]:text-[11px] max-md:text-[14px]">Хардкорный симулятор ралли <br/> с жесткой физикой, реалистичным <br/> управлением и высокой сложностью, <br/> погружающий игрока в атмосферу <br/> настоящих внедорожных гонок. <br/> <br/> Динамичная погода, разрушаемые <br/> покрытия и точное воспроизведение <br/> легендарных трасс делают игру <br/> испытанием для мастерства пилота.</div>
+                          <div class="p-games__item-btn mt-[44px] max-[1200px]:mt-[22px] max-md:mt-[33px] w-full"><a class="btn btn-white-pink w-[248px] h-[55px] max-[1200px]:w-[150px] max-[1200px]:h-[34px] max-md:w-full max-md:h-[58px]" href="#">Подробнее</a></div>
+                        </div>
+                      </div>
+                      <div class="p-games__item-img relative w-[64.74%] max-md:w-full">
+                        <picture>
+                          <source srcset="./img/mob-p-games-3.png" loading="lazy" media="(max-width: 767px)"/><img src="./img/p-games-3.png" loading="lazy"/>
+                        </picture>
+                        <div class="absolute top-4 max-[1200px]:top-2.5 max-md:top-2 z-1 left-[80px] max-[1200px]:left-[60px] max-md:top-2 max-md:right-auto max-md:left-[20px]"><img class="h-[54px] max-[1200px]:h-[30px]" src="./img/badge-purple-03.svg" alt="" loading="lazy"/></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="p-games__item relative">
+                    <div class="absolute bottom-[-20%] right-[-15%] max-md:bottom-[-10%] max-md:left-0 max-md:right-auto w-full -z-10">
+                      <picture>
+                        <source media="(max-width: 767px)" srcset="img/p-games-item-bg-mob.png"/><img class="w-full" src="./img/p-games-item-bg.png" loading="lazy"/>
+                      </picture>
+                    </div>
+                    <div class="flex flex-wrap items-center flex-row-reverse max-md:flex-col-reverse max-md:max-w-[380px] max-md:mx-auto max-md:gap-[33px]">
+                      <div class="p-games__item-body w-[35.26%] max-md:w-full flex flex-col gap-[22px] px-[35px] items-start text-start max-md:items-stretch max-md:text-left max-md:px-[28px]">
+                        <div>
+                          <div class="p-games__item-title text-app-pink italic font-black uppercase text-[28px] max-[1200px]:text-[17px] max-md:text-[22px]">Wreckfest</div>
+                          <div class="p-games__item-text text-app-white-secondary font-golos font-medium  mt-[22px] max-[1200px]:mt-[18px] text-[19px] max-[1200px]:text-[11px] max-md:text-[14px]">Дерзкий симулятор разрушительных <br/>гонок на выживание, где физика повреждений <br/>и хаотичные столкновения играют <br/>ключевую роль. <br/> <br/>Грязные треки, мощные тараны и неистовая <br/>конкуренция создают атмосферу настоящего <br/>демо-дерби, где  побеждает не только скорость, <br/>но и умение крушить соперников.</div>
+                          <div class="p-games__item-btn mt-[44px] max-[1200px]:mt-[22px] max-md:mt-[33px] w-full"><a class="btn btn-white-pink w-[248px] h-[55px] max-[1200px]:w-[150px] max-[1200px]:h-[34px] max-md:w-full max-md:h-[58px]" href="#">Подробнее</a></div>
+                        </div>
+                      </div>
+                      <div class="p-games__item-img relative w-[64.74%] max-md:w-full">
+                        <picture>
+                          <source srcset="./img/mob-p-games-4.png" loading="lazy" media="(max-width: 767px)"/><img src="./img/p-games-4.png" loading="lazy"/>
+                        </picture>
+                        <div class="absolute top-4 max-[1200px]:top-2.5 max-md:top-2 z-1 right-[-20px] max-[1200px]:right-[-10px] max-md:top-2 max-md:right-auto max-md:left-[20px]"><img class="h-[54px] max-[1200px]:h-[30px]" src="./img/badge-purple-04.svg" alt="" loading="lazy"/></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="p-games__item relative">
+                    <div class="absolute bottom-[-20%] left-[-15%] max-md:bottom-[-10%] max-md:left-0 max-md:right-auto w-full -z-10">
+                      <picture>
+                        <source media="(max-width: 767px)" srcset="img/p-games-item-bg-mob.png"/><img class="w-full" src="./img/p-games-item-bg.png" loading="lazy"/>
+                      </picture>
+                    </div>
+                    <div class="flex flex-wrap items-center  max-md:flex-col-reverse max-md:max-w-[380px] max-md:mx-auto max-md:gap-[33px]">
+                      <div class="p-games__item-body w-[35.26%] max-md:w-full flex flex-col gap-[22px] px-[35px] items-end text-left max-md:items-stretch max-md:text-left max-md:px-[28px]">
+                        <div>
+                          <div class="p-games__item-title text-app-pink italic font-black uppercase text-[28px] max-[1200px]:text-[17px] max-md:text-[22px]">Dirt Rally 2.0</div>
+                          <div class="p-games__item-text text-app-white-secondary font-golos font-medium  mt-[22px] max-[1200px]:mt-[18px] text-[19px] max-[1200px]:text-[11px] max-md:text-[14px]">Хардкорный симулятор ралли <br/> с жесткой физикой, реалистичным <br/> управлением и высокой сложностью, <br/> погружающий игрока в атмосферу <br/> настоящих внедорожных гонок. <br/> <br/> <br/> Динамичная погода, разрушаемые <br/> покрытия и точное воспроизведение <br/> легендарных трасс делают игру <br/> испытанием для мастерства пилота.</div>
+                          <div class="p-games__item-btn mt-[44px] max-[1200px]:mt-[22px] max-md:mt-[33px] w-full"><a class="btn btn-white-pink w-[248px] h-[55px] max-[1200px]:w-[150px] max-[1200px]:h-[34px] max-md:w-full max-md:h-[58px]" href="#">Подробнее</a></div>
+                        </div>
+                      </div>
+                      <div class="p-games__item-img relative w-[64.74%] max-md:w-full">
+                        <picture>
+                          <source srcset="./img/mob-p-games-5.png" loading="lazy" media="(max-width: 767px)"/><img src="./img/p-games-5.png" loading="lazy"/>
+                        </picture>
+                        <div class="absolute top-4 max-[1200px]:top-2.5 max-md:top-2 z-1 left-[80px] max-[1200px]:left-[60px] max-md:top-2 max-md:right-auto max-md:left-[20px]"><img class="h-[54px] max-[1200px]:h-[30px]" src="./img/badge-purple-05.svg" alt="" loading="lazy"/></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="p-games__item relative">
+                    <div class="absolute bottom-[-20%] right-[-15%] max-md:bottom-[-10%] max-md:left-0 max-md:right-auto w-full -z-10">
+                      <picture>
+                        <source media="(max-width: 767px)" srcset="img/p-games-item-bg-mob.png"/><img class="w-full" src="./img/p-games-item-bg.png" loading="lazy"/>
+                      </picture>
+                    </div>
+                    <div class="flex flex-wrap items-center flex-row-reverse max-md:flex-col-reverse max-md:max-w-[380px] max-md:mx-auto max-md:gap-[33px]">
+                      <div class="p-games__item-body w-[35.26%] max-md:w-full flex flex-col gap-[22px] px-[35px] items-start text-start max-md:items-stretch max-md:text-left max-md:px-[28px]">
+                        <div>
+                          <div class="p-games__item-title text-app-pink italic font-black uppercase text-[28px] max-[1200px]:text-[17px] max-md:text-[22px]">Euro Truck Simulator 2</div>
+                          <div class="p-games__item-text text-app-white-secondary font-golos font-medium  mt-[22px] max-[1200px]:mt-[18px] text-[19px] max-[1200px]:text-[11px] max-md:text-[14px]">Детализированный симулятор грузоперевозок, <br/>позволяющий почувствовать себя дальнобойщиком, <br/>путешествуя по Европе, управляя реалистичными <br/>фурами и выполняя заказы. <br/> <br/>Игра сочетает расслабляющую атмосферу дороги <br/>с экономической стратегией, так как игрок может <br/>развивать собственную транспортную компанию.</div>
+                          <div class="p-games__item-btn mt-[44px] max-[1200px]:mt-[22px] max-md:mt-[33px] w-full"><a class="btn btn-white-pink w-[248px] h-[55px] max-[1200px]:w-[150px] max-[1200px]:h-[34px] max-md:w-full max-md:h-[58px]" href="#">Подробнее</a></div>
+                        </div>
+                      </div>
+                      <div class="p-games__item-img relative w-[64.74%] max-md:w-full">
+                        <picture>
+                          <source srcset="./img/mob-p-games-6.png" loading="lazy" media="(max-width: 767px)"/><img src="./img/p-games-6.png" loading="lazy"/>
+                        </picture>
+                        <div class="absolute top-4 max-[1200px]:top-2.5 max-md:top-2 z-1 right-[-20px] max-[1200px]:right-[-10px] max-md:top-2 max-md:right-auto max-md:left-[20px]"><img class="h-[54px] max-[1200px]:h-[30px]" src="./img/badge-purple-06.svg" alt="" loading="lazy"/></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="p-games__item relative">
+                    <div class="absolute bottom-[-20%] left-[-15%] max-md:bottom-[-10%] max-md:left-0 max-md:right-auto w-full -z-10">
+                      <picture>
+                        <source media="(max-width: 767px)" srcset="img/p-games-item-bg-mob.png"/><img class="w-full" src="./img/p-games-item-bg.png" loading="lazy"/>
+                      </picture>
+                    </div>
+                    <div class="flex flex-wrap items-center  max-md:flex-col-reverse max-md:max-w-[380px] max-md:mx-auto max-md:gap-[33px]">
+                      <div class="p-games__item-body w-[35.26%] max-md:w-full flex flex-col gap-[22px] px-[35px] items-end text-left max-md:items-stretch max-md:text-left max-md:px-[28px]">
+                        <div>
+                          <div class="p-games__item-title text-app-pink italic font-black uppercase text-[28px] max-[1200px]:text-[17px] max-md:text-[22px]">City Car Driving</div>
+                          <div class="p-games__item-text text-app-white-secondary font-golos font-medium  mt-[22px] max-[1200px]:mt-[18px] text-[19px] max-[1200px]:text-[11px] max-md:text-[14px]">Реалистичный симулятор вождения <br/>по городским дорогам, который максимально <br/>точно воспроизводит движение в условиях <br/>реального трафика, ПДД и различных <br/>погодных явлений. <br/> <br/>Идеально подходит для обучения <br/>водителей-новичков или оттачивания <br/>навыков в безопасной виртуальной среде.</div>
+                          <div class="p-games__item-btn mt-[44px] max-[1200px]:mt-[22px] max-md:mt-[33px] w-full"><a class="btn btn-white-pink w-[248px] h-[55px] max-[1200px]:w-[150px] max-[1200px]:h-[34px] max-md:w-full max-md:h-[58px]" href="#">Подробнее</a></div>
+                        </div>
+                      </div>
+                      <div class="p-games__item-img relative w-[64.74%] max-md:w-full">
+                        <picture>
+                          <source srcset="./img/mob-p-games-7.png" loading="lazy" media="(max-width: 767px)"/><img src="./img/p-games-7.png" loading="lazy"/>
+                        </picture>
+                        <div class="absolute top-4 max-[1200px]:top-2.5 max-md:top-2 z-1 left-[80px] max-[1200px]:left-[60px] max-md:top-2 max-md:right-auto max-md:left-[20px]"><img class="h-[54px] max-[1200px]:h-[30px]" src="./img/badge-purple-07.svg" alt="" loading="lazy"/></div>
+                      </div>
+                    </div>
+                  </div>
+          </div>
+        </div>
+      </section>
+      <section class="sec-register py-20 max-md:py-[50px] relative overflow-visible max-lg:py-0">
+        <div class="absolute top-[-130%] l-0 w-full -z-10"><img class="w-full" src="./img/reg-bg.png" loading="lazy"/></div>
+        <div class="container">
+          <div class="register-content px-10 max-md:px-5">
+            <div class="
+          border-gradient relative  rounded-[15px] -skew-x-10
+          bg-linear-195 from-[#090D12] from-80% to-app-pink/10
+          max-md:from-60% max-md:to-app-pink/30
+          pt-[55px] pb-[62px] max-md:py-[30px] px-[95px] max-[1360px]:px-[50px] max-md:px-[20px]
+          max-md:pt-5 max-md:pb-3 max-md:pl-[6px] max-md:pr-[15px] max-[1200px]:py-[37px]
+          max-md:max-w-[347px] max-md:mx-auto
+        " style="--border-gradient-image: linear-gradient(195deg, #1E3147 80%, #5D1946)">
+              <div class="border-gradient-border"></div>
+              <div class="border-gradient-content"></div>
+              <div class="
+          relative z-2 skew-x-10
+          flex items-center gap-4
+          max-md:flex-col max-md:gap-6
+          max-md:items-start
+        ">
+                <div class="
+            uppercase text-[32px] max-[1200px]:text-[19px] italic font-black
+            max-[1200px]:text-left max-md:text-[22px] max-md:ml-[25px]
+          "><span class="text-app-pink">онлайн-Запись</span> <br class="md:hidden"/> в наши клубы </div>
+                <div class="
+          register-socs flex items-center gap-2.5
+          max-md:gap-1.5
+          ml-auto max-md:ml-0
+          "><a class="btn-small btn-icon-purple w-[68px] h-[62px]" href=""><img class="brightness-[5] w-[22px] h-[22px]" src="./img/accent-whatsapp.svg" loading="lazy"/></a><a class="btn-small btn-icon-purple w-[68px] h-[62px]" href=""><img class="brightness-[5] w-[22px] h-[22px]" src="./img/accent-tg.svg" loading="lazy"/></a><a class="btn-small btn-icon-purple w-[68px] h-[62px]" href=""><img class="brightness-[5] w-[22px] h-[22px]" src="./img/accent-vk.svg" loading="lazy"/></a><a class="btn-big btn-accent w-[200px] h-[62px] max-lg:w-[124px] max-lg:h-[38px] max-md:w-[144px] max-md:h-[48px]" href="">Записаться</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="relative bg-[#040405] pt-[166px] max-md:py-10 pb-[78px] overflow-hidden">
+      <div class="w-full absolute bottom-0 left-0"><img src="img/footer-bg.svg" loading="lazy"/></div>
+      <div class="container"> 
+        <div class="flex justify-between items-end max-lg:flex-col max-lg:items-center max-lg:text-center gap-y-8 max-md:gap-[33px]">
+          <div>
+            <div class="flex justify-center mx-auto md:hidden mb-[33px]"><img src="img/footer-logo.svg" loading="lazy"/></div>
+            <div class="flex items-center gap-2.5 max-lg:justify-center"><a class="btn-icon-white w-[68px] h-[62px] max-md:w-[50px] max-md:h-[45px] z-1" href=""><img class="w-[22px] h-[22px]" src="./img/accent-whatsapp.svg" loading="lazy"/></a><a class="btn-icon-white w-[68px] h-[62px] max-md:w-[50px] max-md:h-[45px] z-1" href=""><img class="w-[22px] h-[22px]" src="./img/accent-tg.svg" loading="lazy"/></a><a class="btn-icon-white w-[68px] h-[62px] max-md:w-[50px] max-md:h-[45px] z-1" href=""><img class="w-[22px] h-[22px]" src="./img/accent-vk.svg" loading="lazy"/></a><a class="btn-icon-white w-[68px] h-[62px] max-md:w-[50px] max-md:h-[45px] z-1" href=""><img class="w-[22px] h-[22px]" src="./img/accent-insta.svg" loading="lazy"/></a><a class="btn-icon-white w-[68px] h-[62px] max-md:w-[50px] max-md:h-[45px] z-1" href=""><img class="w-[22px] h-[22px]" src="./img/accent-yt.svg" loading="lazy"/></a>
+            </div>
+            <div class="flex items-center gap-4 mt-[24px] text-[#545467] text-[19px] max-md:text-sm font-medium font-golos max-md:hidden"> <img class="size-[38px] opacity-50" src="./img/14+.svg" loading="lazy"/>
+              <p>Погрузись в атмосферу — почувствуй настоящую гонку <br/> и прокачай навыки управления автомобилем.</p>
+            </div>
+          </div>
+          <div class="flex flex-col items-end max-lg:items-center">
+            <div class="max-w-[338px] ml-auto max-lg:ml-0 max-md:hidden"><img src="img/logo-footer.svg" loading="lazy"/></div>
+            <div class="mt-[24px] flex flex-col gap-1 text-[19px] max-md:text-sm font-medium font-golos text-right max-lg:text-center"><span class="text-[#545467]">© 2025 MetaRacing. <br class="md:hidden" /> Сеть клубов гоночных симуляторов.</span><a class="text-[#9090AA]" href="">Политика обработки персональных данных</a></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="modal-success modal-wrapper" data-modal-block="form-success">
+      <div class="modal-content">
+        <div class="x-btn" data-modal-close="form-success"></div>
+        <div class="modal-content__title">Супер!</div>
+        <div class="modal-content__subtitle">Скоро свяжемся с вами</div>
+      </div>
+    </div>
+    <script src="./js/fancybox.umd.js"></script>
+    <script src="./js/imask.js"></script>
+    <script src="./js/aos.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/main.js?v=3"></script>
+  </body>
+</html>

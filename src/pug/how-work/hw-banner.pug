@@ -1,0 +1,39 @@
+include ../mixins/sec-title
+
+section(class="por-banner pt-[200px] pb-[50px] max-md:pt-[130px] relative overflow-visible")
+  div(class="absolute max-md:hidden top-[-10%] l-0 w-full -z-10")
+    img(class="w-full" src="./img/or-banner-bg.png" loading="lazy")
+
+  .container
+    +sec-title('<span class="text-app-pink">Как устроен и работает </span> <br/> гоночный симулятор')
+    div(class="mt-[32px] max-[1200px]:mt-[20px] max-md:mt-[30px] text-center text-[25px] max-[1200px]:text-[15px] max-md:text-[18px] uppercase text-app-white-secondary font-semibold") Гоночный автосимулятор — это полноценный кокпит с рулем, педалями, #[br] коробкой передач и ручником. Конструкция повторяет посадку #[br] и расположение органов управления настоящего автомобиля. #[br] #[br] Руль имеет обратную связь, динамическое изменение усилия, #[br] а также тактильно передает рельеф полотна.
+    
+    div(class="por-banner__img mt-[82px] max-[1200px]:mt-[50px] max-md:mt-[44px]")
+      img(class="w-full" src="./img/hw-banner.png" loading="lazy")
+
+    div(class="mt-[75px] max-[1200px]:mt-[46px] max-md:mt-[40px] text-center text-[25px] max-[1200px]:text-[15px] max-md:text-[18px] uppercase text-app-white-secondary font-semibold") В основе каждого симулятора — мощный игровой компьютер, на который установлены #[br] самые популярные игры, среди которых есть из жанра автосимуляторов, например — #[br] Asseto Corsa и более аркадные, например Forza.
+
+    div(class="mt-[60px] max-[1200px]:mt-[36px] max-md:mt-[43px] flex justify-center")
+      div(class="btn-accent h-[70px] max-md:h-[58px]")
+        p(class="text-[19px] max-md:text-[14px]") Описание всех наших игр
+        img(class="brightness-400" src="./img/arrow.svg" loading="lazy")
+
+    div(class="por-gallery mt-[170px] max-[1200px]:mt-[100px] max-md:mt-[72px]")
+      div(class="max-md:hidden")
+        img(class="w-full" src="./img/hw-gallery-big.png" loading="lazy")
+
+      div(class="md:hidden")
+        div(class="flex flex-col gap-y-4")
+          div(class="swiper swiper-por-gallery")
+            div(class="swiper-wrapper")
+              div(class="swiper-slide max-w-[220px]")
+                img(class="h-[250px]" src="./img/mob-hw-gallery-1.png" loading="lazy")
+              div(class="swiper-slide max-w-[250px]" )
+                img(class="h-[250px]" src="./img/mob-hw-gallery-2.png" loading="lazy")
+              div(class="swiper-slide max-w-[280px]")
+                img(class="h-[250px]" src="./img/mob-hw-gallery-3.png" loading="lazy")
+
+          img(class="w-full" src="./img/mob-hw-gallery-4.png" loading="lazy")
+          img(class="w-full" src="./img/mob-hw-gallery-5.png" loading="lazy")
+
+    

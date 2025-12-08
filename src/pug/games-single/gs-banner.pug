@@ -1,0 +1,44 @@
+include ../mixins/sec-title
+
+section(class="page-games-single py-24 pb-20 pt-[200px] max-md:pt-[130px] max-md:pb-[50px] relative overflow-visible")
+  div(class="absolute top-[0%] l-0 w-full -z-10")
+    img(class="w-full" src="./img/gs-banner-bg.png" loading="lazy")
+
+  .container
+    +sec-title('<span class="text-app-pink">Asseto Corsa</span>', 'Реализм и аутентичность в мире автосимуляторов')
+
+    div(class="pgs-banner mt-[80px] max-[1200px]:mt-[50px]")
+      div(class="grid grid-cols-[64.18%_1fr] max-md:grid-cols-1")
+        div(class="pgs-banner__main relative w-full")
+
+          div(class="pgs-banner__item-img relative")
+            img(class=""  src=`./img/gs-banner-1.png` loading="lazy")
+            div(class="pgs-banner__item-img-title absolute bottom-[33px] max-md:bottom-[12px] max-md:left-[24px] left-[60px] uppercase italic font-black text-[28px] max-[1400px]:text-[17px]") дрифт / шашки / кольцо
+
+          div(class=`
+            pgs-banner__item-body relative w-[90%] 
+            pt-[26px] pb-8 max-[1200px]:pb-3 max-[1200px]:pt-2.5 max-md:pb-[33px]
+            px-[30px] max-[1200px]:px-6 max-md:px-3
+            ml-4 
+          `)
+            div(class=`
+              max-md:hidden
+              card-tech-before-gradient-purple -z-1 absolute w-full bottom-0 left-[10px] -skew-x-10 rounded-[15px]
+              border border-app-white/10 bg-app-card-bg/40 
+              h-[510px] max-[1200px]:h-[313px]  max-md:h-[250px]
+            `)
+            div(class=`
+              md:hidden
+              -z-1 absolute bottom-0
+              w-[120%] left-[-10%]
+              h-[250px]
+              backdrop-blur-[20px]
+              border border-app-white/10 
+              bg-linear-230 from-bg-app-card-bg/40 from-60% to-[#1C1B2B]
+            `)
+
+            div(class="text-app-white-secondary text-[19px] max-[1200px]:text-[11px] max-md:text-sm font-golos font-medium") Профессиональный гоночный симулятор от итальянской студии Kunos Simulazioni, <br/> который сочетает в себе высокую физическую точность, детализированные <br class="max-md:hidden"/> автомобили и трассы, а также широкие возможности для кастомизации.
+
+        div(class="pgs-banner__imgs max-md:hidden flex flex-col gap-[40px] max-[1400px]:gap-[20px]")
+          img(class="h-[350px] max-[1400px]:h-[214px]" src=`./img/gs-banner-2.png` loading="lazy")
+          img(class="h-[350px] max-[1400px]:h-[214px] ml-[-50px] max-[1400px]:ml-[-30px]" src=`./img/gs-banner-3.png` loading="lazy")

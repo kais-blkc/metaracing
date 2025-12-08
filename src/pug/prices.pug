@@ -1,0 +1,109 @@
+extends ./base/base.pug
+include ./mixins/tabs
+include ./mixins/prices
+
+block head
+  title Цены
+
+block content
+  -
+    var tabData = [
+      ['prices-1', 'Клуб м. Московская', 'Санкт-Петербург', 'Московская', 'СПБ'],
+      ['prices-2', 'Клуб м. Приморская', 'Санкт-Петербург', 'Приморская', 'СПБ'],
+      ['prices-3', 'Клуб м. ЗИЛ', 'Москва', 'ЗИЛ', 'Москва']
+    ]
+    var pricesSP1 = [
+      ['30 минут', '790 ₽'],
+      ['1 час', '1390 ₽'],
+      ['2 часа', '2490 ₽', '2780 ₽'],
+      ['3 часа', '3590 ₽', '4170 ₽'],
+    ]
+    var pricesSP2 = [
+      ['15 минут', '790 ₽'],
+      ['30 минут', '1690 ₽'],
+      ['1 час', '2390 ₽'],
+      ['2 часа', '3490 ₽'],
+    ]
+    var pricesSP3 = [
+      ['10 часов / статичный <br/> 5 часов  / подвижный', '10 990 ₽'],
+      ['14 часов / статичный <br/> 7 часов  / подвижный', '16 590 ₽'],
+      ['18 часов / статичный <br/> 9 часов / подвижный', '20 990 ₽'],
+    ]
+
+    var pricesSP2_1 = [
+      ['30 минут', '790 ₽'],
+      ['1 час', '1390 ₽'],
+      ['2 часа', '2490 ₽', '2780 ₽'],
+      ['3 часа', '3590 ₽', '4170 ₽'],
+    ]
+    var pricesSP2_2 = [
+      ['10 часов / статичный', '10 990 ₽'],
+      ['14 часов / статичный', '16 590 ₽'],
+      ['18 часов / статичный', '20 990 ₽'],
+    ]
+
+    var pricesSP3_1 = [
+      ['30 минут', '990 ₽'],
+      ['1 час', '1690 ₽'],
+      ['2 часа', '2990 ₽', '3380 ₽'],
+      ['3 часа', '4290 ₽', '5070 ₽'],
+    ]
+    var pricesSP3_2 = [
+      ['10 часов / статичный', '13 990 ₽'],
+      ['14 часов / статичный', '19 590 ₽'],
+      ['18 часов / статичный', '25 990 ₽'],
+    ]
+
+  section(class="sec-prices relative pb-20 pt-[200px] max-md:pb-[50px] overflow-visible")
+    div(class="absolute top-[-15%] l-0 w-full -z-10 max-md:top-auto max-md:bottom-0")
+      div(class="max-md:hidden")
+        img(class="w-full" src="./img/prices-bg.png" loading="lazy")
+      div(class="md:hidden")
+        img(class="w-full" src="./img/prices-bg-mob.png" loading="lazy")
+      
+    .container
+      div(class="text-center uppercase")
+        div(class="italic font-black text-3xl md:text-6xl lg:text-[80px]") Прайс #[span(class="text-app-pink") и акции]
+
+      div(class="mt-[75px] max-lg:mt[46px] max-md:mt-[26px]")
+        +tabs(tabData)
+          div(class="tab-pane active" data-tab-item="prices-1")
+            //- max-md:grid-cols-1 
+            div(
+              class=`
+              grid grid-cols-3 gap-10 px-7
+              max-md:flex max-md:flex-col max-md:items-center
+              max-[1300px]:gap-4 max-md:gap-[30px]
+            `)
+              div(class="w-full max-w-[450px]")
+                +prices-item('prices-1.svg', '<span class="text-app-purple">Статичный</span><br/> симулятор', 'во всех клубах', '#AC9CDB', pricesSP1)
+              div(class="w-full max-w-[450px]")
+                +prices-item('prices-1.svg', '<span class="text-app-purple">Подвижный</span><br/> симулятор', 'в MetaRacing Московская', '#AC9CDB', pricesSP2)
+              div(class="w-full max-w-[450px]")
+                +prices-item('prices-2.png', '<span class="text-app-accent">Абонементы</span>', 'для всех клубов', '#D89CDB', pricesSP3, true, 'min-[1300px]:pt-[58px] max-[1300px]:pt-[30px]')
+
+          div(class="tab-pane" data-tab-item="prices-2")
+            div(
+              class=`
+              flex justify-center gap-10 px-7
+              max-md:flex-col max-md:items-center
+              max-[1300px]:gap-4 max-md:gap-[30px]
+            `)
+              div(class="w-full max-w-[450px]")
+                +prices-item('prices-1.svg', '<span class="text-app-purple">Подвижный</span><br/> симулятор', 'ТЦ «Шкиперский Молл»', '#AC9CDB', pricesSP2_1)
+              div(class="w-full max-w-[450px]")
+                +prices-item('prices-2.png', '<span class="text-app-accent">Абонементы</span>', 'ТЦ «Шкиперский Молл»', '#D89CDB', pricesSP2_2, true, 'min-[1300px]:pt-[58px] max-[1300px]:pt-[30px]', 'min-h-[420px] max-[1300px]:min-h-[280px]')
+
+          div(class="tab-pane" data-tab-item="prices-3")
+            div(
+              class=`
+              flex justify-center gap-10 px-7
+              max-md:flex-col max-md:items-center
+              max-[1300px]:gap-4 max-md:gap-[30px]
+            `)
+              div(class="w-full max-w-[450px]")
+                +prices-item('prices-1.svg', '<span class="text-app-purple">Подвижный</span><br/> симулятор', 'ТЦ «Шкиперский Молл»', '#AC9CDB', pricesSP3_1)
+              div(class="w-full max-w-[450px]")
+                +prices-item('prices-2.png', '<span class="text-app-accent">Абонементы</span>', 'ТЦ «Шкиперский Молл»', '#D89CDB', pricesSP3_2, true, 'min-[1300px]:pt-[58px] max-[1300px]:pt-[30px]', 'min-h-[420px] max-[1300px]:min-h-[280px]')
+      
+      

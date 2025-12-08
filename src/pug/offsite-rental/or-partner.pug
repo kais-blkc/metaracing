@@ -1,0 +1,94 @@
+include ../mixins/sec-title
+
+mixin or-partner-item(img, title, subtitle)
+  div(class=`or-partner relative`)
+    div(class="or-partner__img flex justify-start")
+      picture
+        source(media="(max-width: 767px)" srcset="./img/mob-"+img)
+        img(class="w-full max-md:h-[300px]" src="./img/"+img, alt="", loading="lazy")
+
+    div(class=`
+      or-partner-content absolute bottom-0 left-0 w-full h-full
+      flex flex-col items-center justify-end
+      px-[45px] py-[40px]
+      max-[1200px]:px-[28px] max-[1200px]:py-[25px]
+    `)
+      div(class=`w-full flex flex-col gap-2.5`)
+        div(class="text-[28px] max-[1200px]:text-[17px] max-md:text-sm text-app-white font-black italic uppercase")!=title
+        div(class="text-[19px] max-[1200px]:text-[11px] max-md:text-[10px] font-golos font-medium text-app-white-secondary")!=subtitle
+
+
+mixin or-partner-item-content(title, subtitle)
+  div(class=`
+    or-partner-content w-full h-full
+    flex flex-col items-center justify-end
+    px-[45px] py-[40px]
+    max-[1200px]:px-[28px] max-[1200px]:py-[25px]
+  `)
+    div(class=`w-full flex flex-col gap-2.5`)
+      div(class="text-[28px] max-[1200px]:text-[17px] max-md:text-sm text-app-white font-black italic uppercase")!=title
+      div(class="text-[19px] max-[1200px]:text-[11px] max-md:text-[10px] font-golos font-medium text-app-white-secondary")!=subtitle
+
+
+mixin or-partner-item-main()
+  div(class="or-partner relative")
+    picture
+      source(media="(max-width: 767px)" srcset="./img/mob-or-partner-5.png")
+      img(class="w-full" src="./img/or-partner-5.png", alt="", loading="lazy")
+
+    div(class=`
+      or-partner-content absolute bottom-0 left-0 w-full h-full
+      flex flex-col items-center justify-end
+      px-[45px] py-[40px]
+      max-[1200px]:px-[28px] max-[1200px]:py-[25px]
+    `)
+      div(class=`w-full flex flex-col gap-2.5`)
+        div(class="text-[80px] max-[1200px]:text-[50px] max-md:text-[54px] text-app-white font-black italic uppercase") 20+
+        div(class="text-[19px] max-[1200px]:text-[11px] max-md:text-sm font-golos font-medium text-app-white-secondary") И десятки других масштабных #[br] событий — от городских #[br] до частных ивентов
+
+
+section(class="por-get pt-[130px] pb-[50px] max-md:pt-[50px] relative overflow-visible")
+  div(class="absolute max-md:hidden top-[7%] l-0 w-full -z-10")
+    img(class="w-full" src="./img/or-partner-bg.png" loading="lazy")
+
+  .container
+    +sec-title('MetaRacing — <br/><span class="text-app-pink">проверенный партнер </span> <br/> крупнейших событий и брендов')
+    div(class="mt-[50px] max-[1200px]:mt-[30px] max-md:mt-[46px] text-center text-[25px] max-[1200px]:text-[15px] max-md:text-[18px] uppercase text-app-white-secondary font-semibold") Наш опыт работы на мероприятиях любого формата и масштаба подтверждает #[br] надежность, популярность и способность работать на самом высоком уровне.
+  
+    div(class="or-partner__list-pc max-md:hidden mt-[130px] max-[1200px]:mt-[80px] max-md:mt-[50px]")
+      div(class="relative")
+        img(class="w-full" src="./img/or-part-1.png" loading="lazy")
+        div(class="absolute bottom-0 left-0 w-full grid grid-cols-[46%_1fr] z-1")
+          +or-partner-item-content('Tsunami Picnic', 'Фестиваль автокультуры')
+          +or-partner-item-content('VK Fest', 'Крупнейший фестиваль под открытым небом')
+
+      div(class="relative")
+        img(class="w-full mt-[60px] max-[1200px]:mt-[40px]" src="./img/or-part-2.png" loading="lazy")
+        div(class="absolute bottom-0 left-0 w-full grid grid-cols-[32%_40%_1fr] z-1")
+          +or-partner-item-content('Drift Expo', 'Выставка дрифт-индустрии')
+          +or-partner-item-content('RDS GP', 'Главные соревнования по дрифту в России')
+          div(class=`
+            or-partner-content w-full h-full
+            flex flex-col items-center justify-end
+            px-[45px] py-[40px]
+            max-[1200px]:px-[28px] max-[1200px]:py-[25px]
+          `)
+            div(class=`w-full flex flex-col gap-2.5`)
+              div(class="text-[80px] max-[1200px]:text-[50px] max-md:text-[54px] text-app-white font-black italic uppercase") 20+
+              div(class="text-[19px] max-[1200px]:text-[11px] max-md:text-sm font-golos font-medium text-app-white-secondary") И десятки других масштабных #[br] событий — от городских #[br] до частных ивентов
+
+
+    div(class="or-partner__list-mob md:hidden mt-[50px]")
+      div(class="swiper swiper-or-partner")
+        div(class="swiper-wrapper")
+          div(class="swiper-slide max-w-[330px]")
+            div(class="flex flex-col gap-8")
+              +or-partner-item('or-partner-1.png', 'Tsunami Picnic', 'Фестиваль автокультуры')
+              +or-partner-item('or-partner-3.png', 'Drift Expo', 'Выставка дрифт-индустрии')
+          div(class="swiper-slide max-w-[330px]")
+            div(class="flex flex-col gap-8 ml-[-30px]")
+              +or-partner-item('or-partner-2.png', 'VK Fest', 'Крупнейший фестиваль под открытым небом')
+              +or-partner-item('or-partner-4.png', 'RDS GP', 'Главные соревнования по дрифту в России')
+
+      div(class="mt-[30px] max-w-[370px]")
+        +or-partner-item-main()

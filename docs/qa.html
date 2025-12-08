@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Вопросы и ответы</title>
+    <link rel="icon" type="image/png" href="favicon.png"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&amp;family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="./css/fancybox.css"/>
+    <link rel="stylesheet" href="./css/aos.css"/>
+    <link rel="stylesheet" href="./css/tailwind.css"/>
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./css/style.css?v=3"/>
+  </head>
+  <body>
+    <header class="header w-full pt-[40px] fixed left-0 top-0 z-20 transition-all duration-300 ease">
+      <div class="container">
+        <div class="header__content flex items-center justify-between gap-2 "><a class="header__logo block cursor-pointer w-[200px] max-[1200px]:w-[130px]" href="/"><img src="./img/metaracing-logo.svg" alt=""/></a>
+          <div class="header__navbar max-md:hidden py-[5px] px-[10px] flex justify-between items-center gap-2.5 font-golos font-bold">
+            <div class="py-2.5 px-5 max-lg:py-1.5 max-lg:px-3"><a class="header__navbar-link max-[1200px]:text-[10px] block transition-all duration-200 ease" href="#">Как это работает</a></div>
+            <div class="py-2.5 px-5 max-lg:py-1.5 max-lg:px-3"><a class="header__navbar-link max-[1200px]:text-[10px] block transition-all duration-200 ease" href="/prices.html">Цены</a></div>
+            <div class="py-2.5 px-5 max-lg:py-1.5 max-lg:px-3"><a class="header__navbar-link max-[1200px]:text-[10px] block transition-all duration-200 ease" href="#">Сертификаты</a></div>
+            <div class="py-2.5 px-5 max-lg:py-1.5 max-lg:px-3"><a class="header__navbar-link max-[1200px]:text-[10px] block transition-all duration-200 ease" href="#">Мероприятия</a></div>
+            <div class="py-2.5 px-5 max-lg:py-1.5 max-lg:px-3"><a class="header__navbar-link max-[1200px]:text-[10px] block transition-all duration-200 ease" href="#">Клубы</a></div>
+          </div>
+          <div class="header__order max-md:hidden">
+            <button class="btn btn-accent">Онлайн-запись</button>
+          </div>
+          <button class="burger d-none-min-mob" data-modal-open="header-mobile" aria-label="Открыть меню"><img src="./img/burger.svg" alt=""/></button>
+        </div>
+      </div>
+    </header>
+    <div class="header-mobile modal-wrapper" data-modal-block="header-mobile" aria-label="Открыть меню">
+      <div class="
+    header-mobile__content w-full h-full flex flex-col gap-6 absolute left-0 bg-[#0E1923]/55 backdrop-blur-[27px]  
+    transition-all duration-300 ease-in-out py-[40px] px-[30px] max-md:px-[20px] text-center
+  ">
+        <button class="x-btn burger" data-modal-close="header-mobile" aria-label="Открыть меню"><img src="./img/x.svg" alt=""/></button><a class="header-mobile__logo block mx-auto w-[150px]" href="/"><img src="./img/metaracing-logo.svg" alt=""/></a>
+        <div class="header-mobile__navbar flex flex-col items-center gap-[22px] "><a class="header__navbar-item text-[21px] font-semibold underline hover:text-app-pink" href="#">Как это работает</a><a class="header__navbar-item text-[21px] font-semibold underline hover:text-app-pink" href="/prices.html">Цены</a><a class="header__navbar-item text-[21px] font-semibold underline hover:text-app-pink" href="#">Сертификаты</a><a class="header__navbar-item text-[21px] font-semibold underline hover:text-app-pink" href="#">Мероприятия</a><a class="header__navbar-item text-[21px] font-semibold underline hover:text-app-pink" href="#">Клубы</a></div>
+        <div class="mt-[30px] uppercase text-lg">
+          <p class="mb-1">МОСКВа (<span class="text-app-accent">new</span>)</p><a class="hover:text-app-pink" href="tel:"><span class="text-app-pink">+</span> 7 812 665-38-88</a>
+        </div>
+        <div class="uppercase text-lg">
+          <p class="mb-1">Санкт-петербург</p><a class="sec-banner__contacts-phone hover:text-app-pink" href="tel:"><span class="text-app-pink">+</span> 7 812 565-38-88</a>
+        </div>
+        <button class="btn btn-accent mx-auto w-full max-w-[337px] h-[63px] mt-5">Онлайн-запись</button>
+        <div class="flex gap-2.5 justify-center"><a class="btn btn-icon-white" href="#"><img class="img-base" src="./img/accent-whatsapp.svg" alt=""/><img class="img-hover" src="./img/hover-whatsapp.svg" alt=""/></a><a class="btn btn-icon-white" href="#"><img class="img-base" src="./img/accent-tg.svg" alt=""/><img class="img-hover" src="./img/hover-tg.svg" alt=""/></a><a class="btn btn-icon-white" href="#"><img class="img-base" src="./img/accent-vk.svg" alt=""/><img class="img-hover" src="./img/hover-vk.svg" alt=""/></a></div>
+        <p class="text-sm text-app-white-secondary font-golos">Ежедневно с 12:00 до 00:00 <br/> Отвечаем моментально.</p>
+      </div>
+    </div>
+    <main>
+      <section class="page-qa py-24 pb-20 pt-[200px] max-md:pb-[50px] relative overflow-visible">
+        <div class="absolute top-[5%] max-md:top-[-5%] l-0 w-full -z-10">
+          <picture>
+            <source media="(max-width: 767px)" srcset="img/p-qa-bg-mob.png"/><img class="w-full" src="./img/p-qa-bg.png" loading="lazy"/>
+          </picture>
+        </div>
+        <div class="container">
+          <div class="text-center uppercase">
+            <div class="italic font-black text-[35px] md:text-[50px] lg:text-[80px] leading-[110%]">Вопросы и ответы</div>
+            <div class="text-2xl mt-6 max-lg:mt-[16px] max-md:mt-[14px] text-app-white-secondary max-lg:text-[15px] max-md:text-lg">Возможно, вы хотите <br class="md:hidden"/>  об этом спросить</div>
+          </div>
+        </div>
+        <div class="container max-md:hidden">
+          <div class="qa-list mt-[80px] max-lg:mt-[35px] flex flex-col gap-y-[30px] max-lg:gap-y-[24px] px-10 max-w-[1400px] mx-auto">
+            <div class="
+      qa-item border-gradient relative rounded-[15px] -skew-x-10
+      bg-linear-195 from-transparent from-80% to-app-pink/10
+      pt-[42px] pb-[32px] pl-[72px] pr-[110px]
+      max-lg:pt-[22px] max-lg:pb-[18px] max-lg:pl-[44px] max-lg:pr-[67px]
+    " style="--border-gradient-image: linear-gradient(195deg, #1E3147 80%, #5D1946)">
+              <div class="border-gradient-border"></div>
+              <div class="border-gradient-content"></div>
+              <div class="absolute max-md:hidden top-5 max-[1200px]:top-2.5 z-1 right-[-10px]  max-md:top-2"><img class="h-[51px] max-lg:h-[30px]  max-md:h-[30px]" src="./img/qa-b-1.svg" alt="" loading="lazy"/></div>
+              <div class="relative z-2 skew-x-10 max-md:skew-x-0">
+                <div class="text-[25px] max-lg:text-[15px] max-md:text-xl font-bold uppercase"><span class="text-app-pink">Можно прийти с 2-3 друзьями,</span> чтобы погонять в одной гонке?</div>
+                <div class="text-[19px] max-lg:text-[11px] max-md:text-base max-sm:text-[12px] font-medium text-app-white-secondary mt-[26px]">Да! У нас доступна совместная игра — можно гонять с друзьями в одном клубе (до 6–8 человек одновременно), либо подключаться к онлайн-серверам и соревноваться между клубами.</div>
+              </div>
+            </div>
+            <div class="
+      qa-item border-gradient relative rounded-[15px] -skew-x-10
+      bg-linear-195 from-transparent from-80% to-app-pink/10
+      pt-[42px] pb-[32px] pl-[72px] pr-[110px]
+      max-lg:pt-[22px] max-lg:pb-[18px] max-lg:pl-[44px] max-lg:pr-[67px]
+    " style="--border-gradient-image: linear-gradient(195deg, #1E3147 80%, #5D1946)">
+              <div class="border-gradient-border"></div>
+              <div class="border-gradient-content"></div>
+              <div class="absolute max-md:hidden top-5 max-[1200px]:top-2.5 z-1 right-[-10px]  max-md:top-2"><img class="h-[51px] max-lg:h-[30px]  max-md:h-[30px]" src="./img/qa-b-2.svg" alt="" loading="lazy"/></div>
+              <div class="relative z-2 skew-x-10 max-md:skew-x-0">
+                <div class="text-[25px] max-lg:text-[15px] max-md:text-xl font-bold uppercase"><span class="text-app-pink">Какие игры у вас есть?</span></div>
+                <div class="text-[19px] max-lg:text-[11px] max-md:text-base max-sm:text-[12px] font-medium text-app-white-secondary mt-[26px]">Доступные игры в наших клубах: Assetto Corsa, Assetto Corsa Competizione, Dirt Rally 2.0, City Car Driving, Euro Truck Simulator 2, Wreckfest. Из дисциплин доступны: дрифт, кольцевые гонки, ралли, Формула 1 и картинг. А также "шашки" с трафиком и езда в открытом мире. Смотрите описание всех наших игр.</div>
+              </div>
+            </div>
+            <div class="
+      qa-item border-gradient relative rounded-[15px] -skew-x-10
+      bg-linear-195 from-transparent from-80% to-app-pink/10
+      pt-[42px] pb-[32px] pl-[72px] pr-[110px]
+      max-lg:pt-[22px] max-lg:pb-[18px] max-lg:pl-[44px] max-lg:pr-[67px]
+    " style="--border-gradient-image: linear-gradient(195deg, #1E3147 80%, #5D1946)">
+              <div class="border-gradient-border"></div>
+              <div class="border-gradient-content"></div>
+              <div class="absolute max-md:hidden top-5 max-[1200px]:top-2.5 z-1 right-[-10px]  max-md:top-2"><img class="h-[51px] max-lg:h-[30px]  max-md:h-[30px]" src="./img/qa-b-3.svg" alt="" loading="lazy"/></div>
+              <div class="relative z-2 skew-x-10 max-md:skew-x-0">
+                <div class="text-[25px] max-lg:text-[15px] max-md:text-xl font-bold uppercase"><span class="text-app-pink">Какие ограничения по возрасту или по росту? </span> Хочу с ребенком покататься</div>
+                <div class="text-[19px] max-lg:text-[11px] max-md:text-base max-sm:text-[12px] font-medium text-app-white-secondary mt-[26px]">Доступ на наши симуляторы осуществляется с 14 лет. Это обусловлено настройкой наших симуляторов под взрослого человека.</div>
+              </div>
+            </div>
+            <div class="
+      qa-item border-gradient relative rounded-[15px] -skew-x-10
+      bg-linear-195 from-transparent from-80% to-app-pink/10
+      pt-[42px] pb-[32px] pl-[72px] pr-[110px]
+      max-lg:pt-[22px] max-lg:pb-[18px] max-lg:pl-[44px] max-lg:pr-[67px]
+    " style="--border-gradient-image: linear-gradient(195deg, #1E3147 80%, #5D1946)">
+              <div class="border-gradient-border"></div>
+              <div class="border-gradient-content"></div>
+              <div class="absolute max-md:hidden top-5 max-[1200px]:top-2.5 z-1 right-[-10px]  max-md:top-2"><img class="h-[51px] max-lg:h-[30px]  max-md:h-[30px]" src="./img/qa-b-4.svg" alt="" loading="lazy"/></div>
+              <div class="relative z-2 skew-x-10 max-md:skew-x-0">
+                <div class="text-[25px] max-lg:text-[15px] max-md:text-xl font-bold uppercase"><span class="text-app-pink">Я только учусь на права и хочу закрепить навыки вождения. </span> Как это сделать?</div>
+                <div class="text-[19px] max-lg:text-[11px] max-md:text-base max-sm:text-[12px] font-medium text-app-white-secondary mt-[26px]">У нас вы можете научиться и гражданскому вождению, и получить навыки управления спортивным автомобилем в различных дисциплинах.</div>
+              </div>
+            </div>
+            <div class="
+      qa-item border-gradient relative rounded-[15px] -skew-x-10
+      bg-linear-195 from-transparent from-80% to-app-pink/10
+      pt-[42px] pb-[32px] pl-[72px] pr-[110px]
+      max-lg:pt-[22px] max-lg:pb-[18px] max-lg:pl-[44px] max-lg:pr-[67px]
+    " style="--border-gradient-image: linear-gradient(195deg, #1E3147 80%, #5D1946)">
+              <div class="border-gradient-border"></div>
+              <div class="border-gradient-content"></div>
+              <div class="absolute max-md:hidden top-5 max-[1200px]:top-2.5 z-1 right-[-10px]  max-md:top-2"><img class="h-[51px] max-lg:h-[30px]  max-md:h-[30px]" src="./img/qa-b-5.svg" alt="" loading="lazy"/></div>
+              <div class="relative z-2 skew-x-10 max-md:skew-x-0">
+                <div class="text-[25px] max-lg:text-[15px] max-md:text-xl font-bold uppercase"><span class="text-app-pink">У вас можно поездить по кольцевой трассе Игора? </span></div>
+                <div class="text-[19px] max-lg:text-[11px] max-md:text-base max-sm:text-[12px] font-medium text-app-white-secondary mt-[26px]">В сети наших клубов вы можете покататься не только на трассе Игора Драйв, но и на многих других. <br/> Для различных гонок вам доступно более 300 трасс и различных локаций.</div>
+              </div>
+            </div>
+            <div class="
+      qa-item border-gradient relative rounded-[15px] -skew-x-10
+      bg-linear-195 from-transparent from-80% to-app-pink/10
+      pt-[42px] pb-[32px] pl-[72px] pr-[110px]
+      max-lg:pt-[22px] max-lg:pb-[18px] max-lg:pl-[44px] max-lg:pr-[67px]
+    " style="--border-gradient-image: linear-gradient(195deg, #1E3147 80%, #5D1946)">
+              <div class="border-gradient-border"></div>
+              <div class="border-gradient-content"></div>
+              <div class="absolute max-md:hidden top-5 max-[1200px]:top-2.5 z-1 right-[-10px]  max-md:top-2"><img class="h-[51px] max-lg:h-[30px]  max-md:h-[30px]" src="./img/qa-b-6.svg" alt="" loading="lazy"/></div>
+              <div class="relative z-2 skew-x-10 max-md:skew-x-0">
+                <div class="text-[25px] max-lg:text-[15px] max-md:text-xl font-bold uppercase"><span class="text-app-pink">Можно ли у вас погонять в картинге?</span></div>
+                <div class="text-[19px] max-lg:text-[11px] max-md:text-base max-sm:text-[12px] font-medium text-app-white-secondary mt-[26px]">Да, картинг доступен в игре Assetto Corsa. Также можно погонять вместе с друзьями.</div>
+              </div>
+            </div>
+            <div class="
+      qa-item border-gradient relative rounded-[15px] -skew-x-10
+      bg-linear-195 from-transparent from-80% to-app-pink/10
+      pt-[42px] pb-[32px] pl-[72px] pr-[110px]
+      max-lg:pt-[22px] max-lg:pb-[18px] max-lg:pl-[44px] max-lg:pr-[67px]
+    " style="--border-gradient-image: linear-gradient(195deg, #1E3147 80%, #5D1946)">
+              <div class="border-gradient-border"></div>
+              <div class="border-gradient-content"></div>
+              <div class="absolute max-md:hidden top-5 max-[1200px]:top-2.5 z-1 right-[-10px]  max-md:top-2"><img class="h-[51px] max-lg:h-[30px]  max-md:h-[30px]" src="./img/qa-b-7.svg" alt="" loading="lazy"/></div>
+              <div class="relative z-2 skew-x-10 max-md:skew-x-0">
+                <div class="text-[25px] max-lg:text-[15px] max-md:text-xl font-bold uppercase"><span class="text-app-pink">Есть подарочные сертификаты?</span> Хотела бы подарить парню на День Рождения</div>
+                <div class="text-[19px] max-lg:text-[11px] max-md:text-base max-sm:text-[12px] font-medium text-app-white-secondary mt-[26px]">У нас вы можете приобрести стильные и полезные подарочные сертификаты для ваших друзей и близких. <br/> Сертификаты выполнены в двух версиях: печатная и электронная.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="md:hidden">
+          <div class=" qa-list mt-[35px] flex flex-col gap-y-[35px]">
+            <div class="
+      qa-item-mob border-gradient relative 
+      bg-linear-195 from-[#0e161f] from-65% to-app-pink/20
+    " style="--border-gradient-image: linear-gradient(195deg, #1E3147 80%, #5D1946)">
+              <div class="border-gradient-border"></div>
+              <div class="border-gradient-content"></div>
+              <div class="relative z-2 container py-5 px-7">
+                <div class="text-[17px] font-bold uppercase leading-[130%]"><span class="text-app-pink">Можно прийти с 2-3 друзьями,</span> <br/> чтобы погонять в одной гонке?</div>
+                <div class="text-sm font-medium text-app-white mt-[17px]">Да! У нас доступна совместная игра — можно гонять с друзьями в одном клубе (до 6–8 человек одновременно), либо подключаться к онлайн-серверам и соревноваться между клубами.</div>
+              </div>
+            </div>
+            <div class="
+      qa-item-mob border-gradient relative 
+      bg-linear-195 from-[#0e161f] from-65% to-app-pink/20
+    " style="--border-gradient-image: linear-gradient(195deg, #1E3147 80%, #5D1946)">
+              <div class="border-gradient-border"></div>
+              <div class="border-gradient-content"></div>
+              <div class="relative z-2 container py-5 px-7">
+                <div class="text-[17px] font-bold uppercase leading-[130%]"><span class="text-app-pink">Какие игры у вас есть?</span></div>
+                <div class="text-sm font-medium text-app-white mt-[17px]">Доступные игры в наших клубах: Assetto Corsa, Assetto Corsa Competizione, Dirt Rally 2.0, City Car Driving, Euro Truck Simulator 2, Wreckfest. <br/> <br/> Из дисциплин доступны: дрифт, кольцевые гонки, ралли, Формула 1 и картинг. А также "шашки" с трафиком и езда в открытом мире. Смотрите описание всех наших игр.</div>
+              </div>
+            </div>
+            <div class="
+      qa-item-mob border-gradient relative 
+      bg-linear-195 from-[#0e161f] from-65% to-app-pink/20
+    " style="--border-gradient-image: linear-gradient(195deg, #1E3147 80%, #5D1946)">
+              <div class="border-gradient-border"></div>
+              <div class="border-gradient-content"></div>
+              <div class="relative z-2 container py-5 px-7">
+                <div class="text-[17px] font-bold uppercase leading-[130%]"><span class="text-app-pink">Какие ограничения по возрасту или по росту?</span> <br/> Хочу с ребенком покататься</div>
+                <div class="text-sm font-medium text-app-white mt-[17px]">Доступ на наши симуляторы осуществляется с 14 лет. Это обусловлено настройкой наших симуляторов под взрослого человека.</div>
+              </div>
+            </div>
+            <div class="
+      qa-item-mob border-gradient relative 
+      bg-linear-195 from-[#0e161f] from-65% to-app-pink/20
+    " style="--border-gradient-image: linear-gradient(195deg, #1E3147 80%, #5D1946)">
+              <div class="border-gradient-border"></div>
+              <div class="border-gradient-content"></div>
+              <div class="relative z-2 container py-5 px-7">
+                <div class="text-[17px] font-bold uppercase leading-[130%]"><span class="text-app-pink">Я только учусь на права <br/> и хочу закрепить навыки <br/> вождения.</span> Как это сделать?</div>
+                <div class="text-sm font-medium text-app-white mt-[17px]">У нас вы можете научиться и гражданскому вождению, и получить навыки управления спортивным автомобилем в различных дисциплинах.</div>
+              </div>
+            </div>
+            <div class="
+      qa-item-mob border-gradient relative 
+      bg-linear-195 from-[#0e161f] from-65% to-app-pink/20
+    " style="--border-gradient-image: linear-gradient(195deg, #1E3147 80%, #5D1946)">
+              <div class="border-gradient-border"></div>
+              <div class="border-gradient-content"></div>
+              <div class="relative z-2 container py-5 px-7">
+                <div class="text-[17px] font-bold uppercase leading-[130%]"><span class="text-app-pink">У вас можно поездить по кольцевой трассе Игора? </span></div>
+                <div class="text-sm font-medium text-app-white mt-[17px]">В сети наших клубов вы можете покататься не только на трассе Игора Драйв, но и на многих других. <br/> Для различных гонок вам доступно более 300 трасс и различных локаций.</div>
+              </div>
+            </div>
+            <div class="
+      qa-item-mob border-gradient relative 
+      bg-linear-195 from-[#0e161f] from-65% to-app-pink/20
+    " style="--border-gradient-image: linear-gradient(195deg, #1E3147 80%, #5D1946)">
+              <div class="border-gradient-border"></div>
+              <div class="border-gradient-content"></div>
+              <div class="relative z-2 container py-5 px-7">
+                <div class="text-[17px] font-bold uppercase leading-[130%]"><span class="text-app-pink">Можно ли у вас погонять в картинге?</span></div>
+                <div class="text-sm font-medium text-app-white mt-[17px]">Да, картинг доступен в игре Assetto Corsa. Также можно погонять вместе с друзьями.</div>
+              </div>
+            </div>
+            <div class="
+      qa-item-mob border-gradient relative 
+      bg-linear-195 from-[#0e161f] from-65% to-app-pink/20
+    " style="--border-gradient-image: linear-gradient(195deg, #1E3147 80%, #5D1946)">
+              <div class="border-gradient-border"></div>
+              <div class="border-gradient-content"></div>
+              <div class="relative z-2 container py-5 px-7">
+                <div class="text-[17px] font-bold uppercase leading-[130%]"><span class="text-app-pink">Есть подарочные сертификаты?</span> Хотела бы подарить парню на День Рождения</div>
+                <div class="text-sm font-medium text-app-white mt-[17px]">У нас вы можете приобрести стильные и полезные подарочные сертификаты для ваших друзей и близких. <br/> Сертификаты выполнены в двух версиях: печатная и электронная.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sec-register py-20 max-md:py-[50px] relative overflow-visible max-lg:py-0">
+        <div class="absolute top-[-130%] l-0 w-full -z-10"><img class="w-full" src="./img/reg-bg.png" loading="lazy"/></div>
+        <div class="container">
+          <div class="register-content px-10 max-md:px-5">
+            <div class="
+          border-gradient relative  rounded-[15px] -skew-x-10
+          bg-linear-195 from-[#090D12] from-80% to-app-pink/10
+          max-md:from-60% max-md:to-app-pink/30
+          pt-[55px] pb-[62px] max-md:py-[30px] px-[95px] max-[1360px]:px-[50px] max-md:px-[20px]
+          max-md:pt-5 max-md:pb-3 max-md:pl-[6px] max-md:pr-[15px] max-[1200px]:py-[37px]
+          max-md:max-w-[347px] max-md:mx-auto
+        " style="--border-gradient-image: linear-gradient(195deg, #1E3147 80%, #5D1946)">
+              <div class="border-gradient-border"></div>
+              <div class="border-gradient-content"></div>
+              <div class="
+          relative z-2 skew-x-10
+          flex items-center gap-4
+          max-md:flex-col max-md:gap-6
+          max-md:items-start
+        ">
+                <div class="
+            uppercase text-[32px] max-[1200px]:text-[19px] italic font-black
+            max-[1200px]:text-left max-md:text-[22px] max-md:ml-[25px]
+          "><span class="text-app-pink">онлайн-Запись</span> <br class="md:hidden"/> в наши клубы </div>
+                <div class="
+          register-socs flex items-center gap-2.5
+          max-md:gap-1.5
+          ml-auto max-md:ml-0
+          "><a class="btn-small btn-icon-purple w-[68px] h-[62px]" href=""><img class="brightness-[5] w-[22px] h-[22px]" src="./img/accent-whatsapp.svg" loading="lazy"/></a><a class="btn-small btn-icon-purple w-[68px] h-[62px]" href=""><img class="brightness-[5] w-[22px] h-[22px]" src="./img/accent-tg.svg" loading="lazy"/></a><a class="btn-small btn-icon-purple w-[68px] h-[62px]" href=""><img class="brightness-[5] w-[22px] h-[22px]" src="./img/accent-vk.svg" loading="lazy"/></a><a class="btn-big btn-accent w-[200px] h-[62px] max-lg:w-[124px] max-lg:h-[38px] max-md:w-[144px] max-md:h-[48px]" href="">Записаться</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="relative bg-[#040405] pt-[166px] max-md:py-10 pb-[78px] overflow-hidden">
+      <div class="w-full absolute bottom-0 left-0"><img src="img/footer-bg.svg" loading="lazy"/></div>
+      <div class="container"> 
+        <div class="flex justify-between items-end max-lg:flex-col max-lg:items-center max-lg:text-center gap-y-8 max-md:gap-[33px]">
+          <div>
+            <div class="flex justify-center mx-auto md:hidden mb-[33px]"><img src="img/footer-logo.svg" loading="lazy"/></div>
+            <div class="flex items-center gap-2.5 max-lg:justify-center"><a class="btn-icon-white w-[68px] h-[62px] max-md:w-[50px] max-md:h-[45px] z-1" href=""><img class="w-[22px] h-[22px]" src="./img/accent-whatsapp.svg" loading="lazy"/></a><a class="btn-icon-white w-[68px] h-[62px] max-md:w-[50px] max-md:h-[45px] z-1" href=""><img class="w-[22px] h-[22px]" src="./img/accent-tg.svg" loading="lazy"/></a><a class="btn-icon-white w-[68px] h-[62px] max-md:w-[50px] max-md:h-[45px] z-1" href=""><img class="w-[22px] h-[22px]" src="./img/accent-vk.svg" loading="lazy"/></a><a class="btn-icon-white w-[68px] h-[62px] max-md:w-[50px] max-md:h-[45px] z-1" href=""><img class="w-[22px] h-[22px]" src="./img/accent-insta.svg" loading="lazy"/></a><a class="btn-icon-white w-[68px] h-[62px] max-md:w-[50px] max-md:h-[45px] z-1" href=""><img class="w-[22px] h-[22px]" src="./img/accent-yt.svg" loading="lazy"/></a>
+            </div>
+            <div class="flex items-center gap-4 mt-[24px] text-[#545467] text-[19px] max-md:text-sm font-medium font-golos max-md:hidden"> <img class="size-[38px] opacity-50" src="./img/14+.svg" loading="lazy"/>
+              <p>Погрузись в атмосферу — почувствуй настоящую гонку <br/> и прокачай навыки управления автомобилем.</p>
+            </div>
+          </div>
+          <div class="flex flex-col items-end max-lg:items-center">
+            <div class="max-w-[338px] ml-auto max-lg:ml-0 max-md:hidden"><img src="img/logo-footer.svg" loading="lazy"/></div>
+            <div class="mt-[24px] flex flex-col gap-1 text-[19px] max-md:text-sm font-medium font-golos text-right max-lg:text-center"><span class="text-[#545467]">© 2025 MetaRacing. <br class="md:hidden" /> Сеть клубов гоночных симуляторов.</span><a class="text-[#9090AA]" href="">Политика обработки персональных данных</a></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="modal-success modal-wrapper" data-modal-block="form-success">
+      <div class="modal-content">
+        <div class="x-btn" data-modal-close="form-success"></div>
+        <div class="modal-content__title">Супер!</div>
+        <div class="modal-content__subtitle">Скоро свяжемся с вами</div>
+      </div>
+    </div>
+    <script src="./js/fancybox.umd.js"></script>
+    <script src="./js/imask.js"></script>
+    <script src="./js/aos.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/main.js?v=3"></script>
+  </body>
+</html>

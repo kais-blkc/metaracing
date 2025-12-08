@@ -1,10 +1,17 @@
 mixin tabs(buttons)
-  div(class="flex justify-center" data-tabs-wrapper)
-    div(class="tabs-buttons flex gap-1 items-center p-2 -skew-x-12 rounded-[20px] border-app-border border")
-      each button, i in buttons
-        div(class=`tab-button py-4 px-9 max-md:px-4 rounded-2xl cursor-pointer font-bold transition duration-300 ease-in-out ${i === 0 ? 'active' : ''}` data-tab-btn=button[0])
-          p(class="skew-x-12")!=button[1]
+  div(data-tabs-wrapper)
+    div(class="flex justify-center")
+      div(class="tabs-buttons flex gap-1 items-center p-2 -skew-x-12 rounded-[25px] border-app-border border")
+        each button, i in buttons
+          - var max_md_hidden = button[3] && button[4] ? 'max-md:hidden' : '';
+          div(class=`tab-button py-4 px-9 max-md:px-4 text-center max-md:text-sm rounded-[15px] cursor-pointer font-bold transition duration-300 ease-in-out ${i === 0 ? 'active' : ''}` data-tab-btn=button[0])
+            p(class=`${max_md_hidden} skew-x-12`)!=button[1]
+            p(class=`${max_md_hidden} skew-x-12 text-[#7E7E8F] font-semibold`)!=button[2]
+            if (button[3])
+              p(class="md:hidden skew-x-12")!=button[3]
+            if (button[3])
+              p(class="md:hidden skew-x-12 text-[#7E7E8F] font-semibold")!=button[4]
 
-  div(class="tab-content w-full mt-[75px] max-lg:mt-[46px] max-md:mt-[26px]")
-    block
+    div(class="tab-content w-full mt-[75px] max-lg:mt-[46px] max-md:mt-[26px]")
+      block
   

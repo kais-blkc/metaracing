@@ -1,0 +1,85 @@
+include ../mixins/sec-title
+
+mixin acd-catalog-item(img, title, subtitle)
+  div(class="acd-catalog__item relative")
+    picture
+      if imgMob
+        source(media="(max-width: 767px)" srcset="./img/"+imgMob)
+      img(class="w-full max-h-[368px]" src="./img/"+img, alt="", loading="lazy")
+
+    div(class=`
+      acd-catalog__item-content absolute bottom-0 left-0 w-full h-full
+      flex flex-col items-center justify-end
+      px-[45px] py-[40px]
+      max-[1200px]:px-[28px] max-[1200px]:py-[25px]
+    `)
+      div(class=`flex gap-2.5 w-full items-end uppercase`)
+        div(class="text-[28px] max-[1200px]:text-[17px] max-md:text-sm text-app-white font-black italic")!=title
+        div(class="text-[19px] max-[1200px]:text-[11px] max-md:text-[10px] font-golos font-medium text-app-white-secondary")!=subtitle
+
+
+mixin acd-catalog-item-main()
+  div(class="acd-catalog__item relative")
+    picture
+      source(media="(max-width: 767px)" srcset="./img/acd-cat-main-mob.png")
+      img(class="w-full max-h-[368px]" src="./img/acd-cat-main.png", alt="", loading="lazy")
+
+    div(class=`
+      acd-catalog__item-content absolute bottom-0 left-0 w-full h-full
+      flex flex-col items-center justify-end
+      px-[45px] py-[40px]
+      max-[1200px]:px-[28px] max-[1200px]:py-[25px]
+    `)
+      div(class=`w-full flex gap-2.5 flex-col justify-end uppercase`)
+        div(class="text-[48px] max-[1200px]:text-[29px] max-md:text-[25px] text-app-white font-black italic") 200+
+        div(class="text-[19px] max-[1200px]:text-[11px] max-md:text-[10px] font-golos font-medium text-app-white-secondary") И еще более 200 автомобилей #[br] на любой вкус
+
+
+section(class="page-acdrift-professionals pt-[130px] max-md:pt-[50px] pb-[50px] relative overflow-visible")
+  div(class="absolute max-md:hidden top-[-10%] l-0 w-full -z-10")
+    img(class="w-full" src="./img/acd-cat-bg.png" loading="lazy")
+
+  .container
+    +sec-title('<span class="text-app-pink">Каталог</span> автомобилей')
+
+    div(class="acd-catalog__list mt-[100px] max-[1200px]:mt-[50px]")
+      div(class="grid grid-cols-3 gap-y-[42px] max-md:hidden")
+        +acd-catalog-item('acd-cat-1.png', 'Silvia S14.9', 'James Deane')
+        div(class="ml-[-10px]")
+          +acd-catalog-item('acd-cat-2.png', 'Supra MK4', 'JZA80')
+        div(class="ml-[-10px]")
+          +acd-catalog-item('acd-cat-3.png', 'Huracán', 'EVO2 GT3 (2023)')
+        +acd-catalog-item('acd-cat-4.png', 'WRX STI ', 'RX')
+        div(class="ml-[-10px]")
+          +acd-catalog-item('acd-cat-5.png', 'Ferrari 296 ', 'GT3 (2023)')
+        div(class="ml-[-10px]")
+          +acd-catalog-item('acd-cat-6.png', 'RX-7', 'FD3S')
+        +acd-catalog-item('acd-cat-7.png', 'Silvia S14', 'Kouki')
+        div(class="ml-[-10px]")
+          +acd-catalog-item('acd-cat-8.png', 'R8 LMS Evo II ', 'GT3 (2022)')
+        div(class="ml-[-10px]")
+          +acd-catalog-item-main()
+
+
+      div(class="md:hidden")
+        div(class="swiper swiper-acd-catalog")
+          div(class="swiper-wrapper")
+            div(class="swiper-slide max-w-[270px]")
+              div(class="flex flex-col gap-y-6")
+                +acd-catalog-item('acd-cat-1.png', 'Silvia S14.9', 'James Deane')
+                +acd-catalog-item('acd-cat-3.png', 'Huracán', 'EVO2 GT3 (2023)')
+            div(class="swiper-slide max-w-[270px]")
+              div(class="flex flex-col gap-y-6")
+                +acd-catalog-item('acd-cat-2.png', 'Supra MK4', 'JZA80')
+                +acd-catalog-item('acd-cat-5.png', 'Ferrari 296 ', 'GT3 (2023)')
+            div(class="swiper-slide max-w-[270px]")
+              div(class="flex flex-col gap-y-6")
+                +acd-catalog-item('acd-cat-4.png', 'WRX STI ', 'RX')
+                +acd-catalog-item('acd-cat-6.png', 'RX-7', 'FD3S')
+            div(class="swiper-slide max-w-[270px]")
+              div(class="flex flex-col gap-y-6")
+                +acd-catalog-item('acd-cat-7.png', 'Silvia S14', 'Kouki')
+                +acd-catalog-item('acd-cat-8.png', 'R8 LMS Evo II ', 'GT3 (2022)')
+
+        div(class="mt-6")
+          +acd-catalog-item-main()

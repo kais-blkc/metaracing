@@ -1,0 +1,19 @@
+include ../mixins/sec-title
+include ../mixins/game-card
+
+section(class="page-games-single py-24 pb-20 pt-[50px] max-md:pt-0 max-md:pb-[50px] relative overflow-visible")
+  div(class="absolute top-[-40%] l-0 w-full -z-10")
+    picture
+      source(media="(max-width: 767px)" srcset="img/gs-properties-bg-mob.png")
+      img(class="w-full" src="./img/gs-properties-bg.png" loading="lazy")
+
+  .container
+    +sec-title('Поддерживает <br/> <span class="text-app-pink">разные дисциплины:</span>')
+
+    div(class="pgs-disciplines__list mt-[100px] max-[1200px]:mt-[75px] max-md:mt-[33px]")
+      div(class="grid grid-cols-3 max-md:grid-cols-1 gap-y-[44px]")
+        +tech-card-content-2(false, 'Управляемый занос — один из самых зрелищных видов автоспорта. <br/> Почувствуйте себя дрифт-пилотом: катайтесь по трассам со всего мира. <br/> Дым, углы и море удовольствия!', 'gs-discip-1.png', 'badge-sky-drift.svg', 'group-hover/card:bg-app-sky', 'group-hover/card:brightness-400')
+        +tech-card-content-2(false, 'Для тех, кто любит «нырять в поток». <br/> Берите друга, выбирайте машину —  <br/> и мы отправим вас на трассу  <br/> с плотным трафиком.  <br/> Проверьте мастерство в динамике!', 'gs-discip-2.png', 'badge-purple-shashki.svg', 'group-hover/card:bg-app-purple', 'group-hover/card:brightness-400', 'to-[#8898A6]/50')
+        +tech-card-content-2(false, 'Любите кольцевые гонки или ралли? <br/> Включайся в заезд на Nurburgring, Spa, Sochi Autodrom и других культовых трассах мира. Соревновательные режимы и гоночные <br/> машины любых классов уже ждут вас.', 'gs-discip-3.png', 'badge-pink-kolco.svg', 'group-hover/card:bg-app-pink', 'group-hover/card:brightness-400', 'to-app-purple/50')
+
+    div(class="mt-[100px] max-[1200px]:mt-[60px] max-md:mt-[42px] text-center text-[25px] max-[1200px]:text-[15px] max-md:text-[18px] uppercase text-app-white font-semibold") Благодаря активному комьюнити и регулярным турнирам, <br/> Assetto Corsa остается одним из лучших автосимуляторов <br/> даже спустя годы после релиза.
