@@ -1,0 +1,65 @@
+include ../mixins/sec-title
+
+mixin b-banner-item-content(badge, text)
+  div(class="w-full h-full flex flex-col items-end relative")
+    div(class=`absolute top-5 max-[1200px]:top-2.5 z-1 left-[60px] max-[1200px]:left-[40px] max-md:left-[30px] max-md:top-2`)
+      img(class="h-[50px] max-[1200px]:h-[30px] max-md:h-[30px]" src="./img/"+badge, alt="", loading="lazy")
+
+    div(class=`
+      b-banner-content w-full h-full
+      flex flex-col items-center justify-end
+      px-[65px] py-[34px]
+      max-[1200px]:px-[40px] max-[1200px]:py-[21px]
+    `)
+      div(class=`w-full flex flex-col gap-2.5`)
+        div(class="text-[19px] max-[1200px]:text-[11px] max-md:text-sm font-golos font-medium text-app-white")!=text
+
+
+mixin b-banner-item(img, badge, text)
+  div(class=`or-partner relative`)
+    div(class=`absolute  z-1 max-md:left-[20px] max-md:top-2`)
+      img(class="max-md:h-[30px]" src="./img/"+badge, alt="", loading="lazy")
+
+    div(class="or-partner__img flex justify-start")
+      picture
+        img(class="w-full" src="./img/"+img, alt="", loading="lazy")
+
+    div(class=`
+      or-partner-content absolute bottom-0 left-0 w-full h-full
+      flex flex-col items-center justify-end
+      px-[30px] py-[22px]
+    `)
+      div(class=`w-full flex flex-col gap-2.5`)
+        div(class="max-md:text-sm font-golos font-medium text-app-white")!=text
+
+
+section(class="bd-banner pt-[200px] pb-[50px] max-md:pt-[130px] relative overflow-visible")
+  div(class="absolute max-md:hidden top-[3%] l-0 w-full -z-10")
+    img(class="w-full" src="./img/bd-banner-bg.png" loading="lazy")
+
+  .container
+    +sec-title('<span class="text-app-pink">День рождения</span> <br/> или корпоратив в MetaRacing')
+    div(class="mt-[32px] max-[1200px]:mt-[20px] text-center text-[25px] max-[1200px]:text-[15px] max-md:text-[18px] uppercase text-app-white-secondary font-semibold") Отличный способ весело провести время, почувствовав себя #[br] настоящим пилотом гоночного болида. Здесь вы не просто друзья и коллеги, #[br] вы — настоящая гоночная команда!
+
+    div(class="bd-banner__list mt-[70px] max-[1200px]:mt-[42px] max-md:mt-[42px]")
+      div(class="max-md:hidden")
+        div(class="relative")
+          img(class="w-full" src="./img/bd-banner-big-1.png" loading="lazy")
+          div(class="absolute left-0 top-0 w-full h-full grid grid-cols-[48.1%_1fr] z-1")
+            +b-banner-item-content('badge-green-funny.svg', 'И увлекательно — все участники <br/> вовлечены в процесс.')
+            +b-banner-item-content('badge-pink-safe.svg', 'Все заезды на симуляторах <br/> безопасны для взрослых и детей.')
+
+        div(class="relative mt-[40px] max-[1200px]:mt-[25px] max-md:mt-[30px]")
+          img(class="w-full" src="./img/bd-banner-big-2.png" loading="lazy")
+          div(class="absolute left-0 top-0 w-full h-full grid grid-cols-[48.1%_1fr] z-1")
+            +b-banner-item-content('badge-sky-choice.svg', 'Различные трассы и дисциплины <br/> на любой вкус.')
+            +b-banner-item-content('badge-purple-unsual.svg', 'Симуляторы — оригинальный способ <br/> провести праздник.')
+
+      div(class="md:hidden")
+        div(class="flex flex-col gap-[30px] items-center")
+          +b-banner-item('bd-banner-1.png', 'badge-green-funny.svg', 'И увлекательно — все участники <br/> вовлечены в процесс.')
+          +b-banner-item('bd-banner-2.png', 'badge-pink-safe.svg', 'Все заезды на симуляторах <br/> безопасны для взрослых и детей.')
+          +b-banner-item('bd-banner-3.png', 'badge-sky-choice.svg', 'Различные трассы и дисциплины <br/> на любой вкус.')
+          +b-banner-item('bd-banner-4.png', 'badge-purple-unsual.svg', 'Симуляторы — оригинальный способ <br/> провести праздник.')
+
+    div(class="mt-[112px] max-[1200px]:mt-[70px] max-md:mt-[55px] text-center text-[25px] max-[1200px]:text-[15px] max-md:text-[18px] uppercase text-app-white-secondary font-semibold") Устройте дрифт-заезд или захватывающую кольцевую гонку на легендарной #[br(class="max-md:hidden")] трассе Нюрбургринг — или даже сразитесь на болидах Формулы 1. #[br]#[br] #[span(class="max-md:text-app-white") В просторных клубах MetaRacing легко организовать фуршет или просто #[br(class="max-md:hidden")]взять угощения с собой.] 

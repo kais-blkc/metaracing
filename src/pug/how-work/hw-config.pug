@@ -1,0 +1,57 @@
+include ../mixins/sec-title
+
+mixin hw-config-item(img, title, desc)
+  div(class="hw-config-item relative w-full max-lg:max-w-[500px] max-lg:mx-auto")
+
+    div(class="gift-item__img relative")
+      img(class="w-full" src=`./img/${img}` loading="lazy")
+
+    div(class=`
+      hw-config-item__body relative
+      w-[90%]
+      py-5 max-[1200px]:py-[11px] pl-[20px] pr-[40px] max-[1200px]:pl-[10px]
+      ml-8
+      max-lg:ml-2 max-md:ml-4
+    `)
+      div(class=`
+        card-tech-before-gradient-pink -z-1 absolute  w-[95%] max-[1200px]:w-[93%] max-md:w-[97%] bottom-0 left-0
+        -skew-x-11 rounded-[15px] border border-app-white/10 bg-app-card-bg/40 
+        h-[380px] max-[1200px]:h-[230px] max-md:h-[270px] 
+      `)
+      div(class="flex flex-col items-start justify-end")
+        div(class="hw-config-item__title uppercase font-black italic text-[28px] max-[1200px]:text-[17px] max-md:text-xl")!=title
+        div(class="hw-config-item__text uppercase font-golos font-medium text-app-white-secondary text-[19px] max-[1200px]:text-[11px] max-md:text-sm")!=desc
+
+
+section(class="hw-config pt-[110px] pb-[50px] max-[1200px]:pt-[50px] max-md:pt-[20px] relative overflow-visible")
+  div(class="absolute max-md:hidden top-[-10%] l-0 w-full -z-10")
+    img(class="w-full" src="./img/hw-config-bg.png" loading="lazy")
+
+  .container
+    +sec-title('<span class="text-app-pink">конфигурация </span> <br/> автосимулятора')
+    div(class="mt-[32px] max-[1200px]:mt-[20px] max-md:mt-[30px] text-center text-[25px] max-[1200px]:text-[15px] max-md:text-[18px] uppercase text-app-white-secondary font-semibold") Во многих компьютерных клубах используется бюджетное оборудование, #[br(class="max-md:hidden")] которое не передает реалистичных ощущений управления. #[br]#[br] #[span(class="text-app-white") Наши симуляторы собраны на базе профессионального оборудования от #[br(class="max-md:hidden")] Simagic — одобренном и используемом большим числом автоспортсменов по #[br(class="max-md:hidden")] всему миру.]
+
+    div(class="hw-config__list mt-[110px] max-[1200px]:mt-[60px]")
+      div(class="grid grid-cols-3 max-md:grid-cols-1 gap-y-[86px] max-md:gap-y-[35px]")
+        +hw-config-item('hw-config-1.png', 'Simagic AlPha ', 'Рулевая база')
+        +hw-config-item('hw-config-2.png', 'Simagic DS-8X', 'Шифтер (КПП)')
+        +hw-config-item('hw-config-3.png', 'Simagic TB-1', 'Ручник')
+        +hw-config-item('hw-config-4.png', 'Simagic GT PRO ', 'Рулевое колесо')
+        +hw-config-item('hw-config-5.png', 'P100', 'Педали')
+        +hw-config-item('hw-config-6.png', 'Intel i7 / 32 GB / RTX 4070', 'Игровой ПК')
+
+    div(class="hw-config__gallery mt-[120px] max-[1200px]:mt-[80px] max-md:mt-[100px]")
+      div(class="max-md:hidden")
+        img(class="w-full" src="./img/hw-config-gallery-big.png" loading="lazy")
+      div(class="md:hidden")
+        img(class="w-full" src="./img/hw-config-gallery-mob.png" loading="lazy")
+
+
+
+
+
+
+
+
+
+

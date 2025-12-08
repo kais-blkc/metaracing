@@ -225,6 +225,10 @@ const swiperOrPartner = new Swiper('.swiper-or-partner', {
 const swiperPorGallery = new Swiper('.swiper-por-gallery', {
   slidesPerView: 'auto',
 });
+
+const swiperBdGallery = new Swiper('.swiper-bd-gallery', {
+  slidesPerView: 'auto',
+});
 /* ========== SWIPER END ========== */
 
 /* ========== TABS ========== */

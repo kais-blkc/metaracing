@@ -2,7 +2,7 @@ extends ./base/base.pug
 include ./mixins/sec-title
 
 block head
-  title Вопросы и ответы
+  title Игры в METARACING
 
 block content
   mixin games-item(img, badge, title, text, reverse=false)
@@ -12,40 +12,41 @@ block content
     - var bgAlign = reverse ? 'right-[-15%]' : 'left-[-15%]'
 
     div(class="p-games__item relative")
-      div(class=`absolute bottom-[-20%] ${bgAlign} max-md:bottom-[-10%] max-md:left-0 max-md:right-auto w-full -z-10`)
-        picture
-          source(media="(max-width: 767px)" srcset="img/p-games-item-bg-mob.png")
-          img(class="w-full" src="./img/p-games-item-bg.png" loading="lazy")
-
-      div(class=`flex flex-wrap items-center ${reverseFlexRow} max-md:flex-col-reverse max-md:max-w-[380px] max-md:mx-auto max-md:gap-[33px]`)
-
-        div(class=`p-games__item-body w-[35.26%] max-md:w-full flex flex-col gap-[22px] px-[35px] ${bodyAlign} max-md:items-stretch max-md:text-left max-md:px-[28px]`)
-          div()
-            div(class=`p-games__item-title text-app-pink italic font-black uppercase text-[28px] max-[1200px]:text-[17px] max-md:text-[22px]`)!=title
-            div(class="p-games__item-text text-app-white-secondary font-golos font-medium  mt-[22px] max-[1200px]:mt-[18px] text-[19px] max-[1200px]:text-[11px] max-md:text-[14px]")!=text
-            div(class="p-games__item-btn mt-[44px] max-[1200px]:mt-[22px] max-md:mt-[33px] w-full")
-              a(href="#" class="btn btn-white-pink w-[248px] h-[55px] max-[1200px]:w-[150px] max-[1200px]:h-[34px] max-md:w-full max-md:h-[58px]") Подробнее
-
-        div(class="p-games__item-img relative w-[64.74%] max-md:w-full")
+      .container
+        div(class=`absolute bottom-[-35%] ${bgAlign} max-md:bottom-[-10%] max-md:left-0 max-md:right-auto w-full -z-10`)
           picture
-            source(srcset=`./img/mob-${img}`, loading="lazy", media="(max-width: 767px)")
-            img(src=`./img/${img}` loading="lazy")
-          div(class=`absolute top-4 max-[1200px]:top-2.5 max-md:top-2 z-1 ${badgeAlign} max-md:right-auto max-md:left-[20px]`)
-            img(class="h-[54px] max-[1200px]:h-[30px]" src="./img/"+badge, alt="", loading="lazy")
+            source(media="(max-width: 767px)" srcset="img/p-games-item-bg-mob.png")
+            img(class="w-full" src="./img/p-games-item-bg.png" loading="lazy")
+
+        div(class=`flex flex-wrap items-center ${reverseFlexRow} max-md:flex-col-reverse max-md:max-w-[380px] max-md:mx-auto max-md:gap-[33px]`)
+
+          div(class=`p-games__item-body w-[35.26%] max-md:w-full flex flex-col gap-[22px] px-[35px] ${bodyAlign} max-md:items-stretch max-md:text-left max-md:px-[28px]`)
+            div()
+              div(class=`p-games__item-title text-app-pink italic font-black uppercase text-[28px] max-[1200px]:text-[17px] max-md:text-[22px]`)!=title
+              div(class="p-games__item-text text-app-white-secondary font-golos font-medium  mt-[22px] max-[1200px]:mt-[18px] text-[19px] max-[1200px]:text-[11px] max-md:text-[14px]")!=text
+              div(class="p-games__item-btn mt-[44px] max-[1200px]:mt-[22px] max-md:mt-[33px] w-full")
+                a(href="#" class="btn btn-white-pink w-[248px] h-[55px] max-[1200px]:w-[150px] max-[1200px]:h-[34px] max-md:w-full max-md:h-[58px]") Подробнее
+
+          div(class="p-games__item-img relative w-[64.74%] max-md:w-full")
+            picture
+              source(srcset=`./img/mob-${img}`, loading="lazy", media="(max-width: 767px)")
+              img(src=`./img/${img}` loading="lazy")
+            div(class=`absolute top-4 max-[1200px]:top-2.5 max-md:top-2 z-1 ${badgeAlign} max-md:right-auto max-md:left-[20px]`)
+              img(class="h-[54px] max-[1200px]:h-[30px]" src="./img/"+badge, alt="", loading="lazy")
 
 
   section(class="page-games py-24 pb-20 pt-[200px] max-md:pb-[50px] relative overflow-visible")
     .container
       +sec-title('<span class="text-app-pink">игры</span> в METARACING', 'Для различных гонок доступно более 300 трасс и локаций')
 
-      div(class="p-games__list mt-[80px] max-[1200px]:mt-[50px] flex flex-col gap-y-[145px] max-[1200px]:gap-y-[85px]")
-        +games-item('p-games-1.png', 'badge-purple-01.svg', 'Assetto Corsa', 'Управляемый занос — один из самых <br/>зрелищных видов автоспорта. <br/> <br/>Почувствуйте себя дрифт-пилотом: <br/>катайтесь по трассам со всего мира. <br/>Дым, углы и море удовольствия!', false)
-        +games-item('p-games-2.png', 'badge-purple-02.svg', 'Assetto Corsa <br/> Competizione', 'Профессиональный гоночный симулятор <br/> выпущенный в 2019 году при поддержке <br/> настоящей гоночной серии GT World Challenge <br/> Europe и предназначен для максимально <br/> реалистичного воспроизведения гонок <br/> на автомобилях класса GT3. <br/> <br/> <br/> Из нововведений: улучшеная физическая <br/> модель, смена погодных условий и глобальная <br/> рейтинговая система для онлайн заездов.', true)
-        +games-item('p-games-3.png', 'badge-purple-03.svg', 'Assetto Corsa EVO', 'Хардкорный симулятор ралли <br/> с жесткой физикой, реалистичным <br/> управлением и высокой сложностью, <br/> погружающий игрока в атмосферу <br/> настоящих внедорожных гонок. <br/> <br/> Динамичная погода, разрушаемые <br/> покрытия и точное воспроизведение <br/> легендарных трасс делают игру <br/> испытанием для мастерства пилота.', false)
-        +games-item('p-games-4.png', 'badge-purple-04.svg', 'Wreckfest', 'Дерзкий симулятор разрушительных <br/>гонок на выживание, где физика повреждений <br/>и хаотичные столкновения играют <br/>ключевую роль. <br/> <br/>Грязные треки, мощные тараны и неистовая <br/>конкуренция создают атмосферу настоящего <br/>демо-дерби, где  побеждает не только скорость, <br/>но и умение крушить соперников.', true)
-        +games-item('p-games-5.png', 'badge-purple-05.svg', 'Dirt Rally 2.0', 'Хардкорный симулятор ралли <br/> с жесткой физикой, реалистичным <br/> управлением и высокой сложностью, <br/> погружающий игрока в атмосферу <br/> настоящих внедорожных гонок. <br/> <br/> <br/> Динамичная погода, разрушаемые <br/> покрытия и точное воспроизведение <br/> легендарных трасс делают игру <br/> испытанием для мастерства пилота.', false)
-        +games-item('p-games-6.png', 'badge-purple-06.svg', 'Euro Truck Simulator 2', 'Детализированный симулятор грузоперевозок, <br/>позволяющий почувствовать себя дальнобойщиком, <br/>путешествуя по Европе, управляя реалистичными <br/>фурами и выполняя заказы. <br/> <br/>Игра сочетает расслабляющую атмосферу дороги <br/>с экономической стратегией, так как игрок может <br/>развивать собственную транспортную компанию.', true)
-        +games-item('p-games-7.png', 'badge-purple-07.svg', 'City Car Driving', 'Реалистичный симулятор вождения <br/>по городским дорогам, который максимально <br/>точно воспроизводит движение в условиях <br/>реального трафика, ПДД и различных <br/>погодных явлений. <br/> <br/>Идеально подходит для обучения <br/>водителей-новичков или оттачивания <br/>навыков в безопасной виртуальной среде.', false)
+    div(class="p-games__list mt-[80px] max-[1200px]:mt-[50px] flex flex-col gap-y-[145px] max-[1200px]:gap-y-[85px]")
+      +games-item('p-games-1.png', 'badge-purple-01.svg', 'Assetto Corsa', 'Управляемый занос — один из самых <br/>зрелищных видов автоспорта. <br/> <br/>Почувствуйте себя дрифт-пилотом: <br/>катайтесь по трассам со всего мира. <br/>Дым, углы и море удовольствия!', false)
+      +games-item('p-games-2.png', 'badge-purple-02.svg', 'Assetto Corsa <br/> Competizione', 'Профессиональный гоночный симулятор <br/> выпущенный в 2019 году при поддержке <br/> настоящей гоночной серии GT World Challenge <br/> Europe и предназначен для максимально <br/> реалистичного воспроизведения гонок <br/> на автомобилях класса GT3. <br/> <br/> <br/> Из нововведений: улучшеная физическая <br/> модель, смена погодных условий и глобальная <br/> рейтинговая система для онлайн заездов.', true)
+      +games-item('p-games-3.png', 'badge-purple-03.svg', 'Assetto Corsa EVO', 'Хардкорный симулятор ралли <br/> с жесткой физикой, реалистичным <br/> управлением и высокой сложностью, <br/> погружающий игрока в атмосферу <br/> настоящих внедорожных гонок. <br/> <br/> Динамичная погода, разрушаемые <br/> покрытия и точное воспроизведение <br/> легендарных трасс делают игру <br/> испытанием для мастерства пилота.', false)
+      +games-item('p-games-4.png', 'badge-purple-04.svg', 'Wreckfest', 'Дерзкий симулятор разрушительных <br/>гонок на выживание, где физика повреждений <br/>и хаотичные столкновения играют <br/>ключевую роль. <br/> <br/>Грязные треки, мощные тараны и неистовая <br/>конкуренция создают атмосферу настоящего <br/>демо-дерби, где  побеждает не только скорость, <br/>но и умение крушить соперников.', true)
+      +games-item('p-games-5.png', 'badge-purple-05.svg', 'Dirt Rally 2.0', 'Хардкорный симулятор ралли <br/> с жесткой физикой, реалистичным <br/> управлением и высокой сложностью, <br/> погружающий игрока в атмосферу <br/> настоящих внедорожных гонок. <br/> <br/> <br/> Динамичная погода, разрушаемые <br/> покрытия и точное воспроизведение <br/> легендарных трасс делают игру <br/> испытанием для мастерства пилота.', false)
+      +games-item('p-games-6.png', 'badge-purple-06.svg', 'Euro Truck Simulator 2', 'Детализированный симулятор грузоперевозок, <br/>позволяющий почувствовать себя дальнобойщиком, <br/>путешествуя по Европе, управляя реалистичными <br/>фурами и выполняя заказы. <br/> <br/>Игра сочетает расслабляющую атмосферу дороги <br/>с экономической стратегией, так как игрок может <br/>развивать собственную транспортную компанию.', true)
+      +games-item('p-games-7.png', 'badge-purple-07.svg', 'City Car Driving', 'Реалистичный симулятор вождения <br/>по городским дорогам, который максимально <br/>точно воспроизводит движение в условиях <br/>реального трафика, ПДД и различных <br/>погодных явлений. <br/> <br/>Идеально подходит для обучения <br/>водителей-новичков или оттачивания <br/>навыков в безопасной виртуальной среде.', false)
 
 
   include ./home/register.pug

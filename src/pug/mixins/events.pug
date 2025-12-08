@@ -1,0 +1,29 @@
+mixin events-item(img, badge, address, city, price)
+  div(class="events-item relative w-full max-lg:max-w-[380px] max-lg:mx-auto z-1")
+    div(class=`absolute top-5 max-[1200px]:top-2.5 z-1 left-[30px] max-[1200px]:left-5 max-md:top-2`)
+      img(class="h-[46px] max-[1200px]:h-[28px] max-md:h-[30px]" src="./img/"+badge, alt="", loading="lazy")
+
+    div(class="events-item__img relative")
+      img(class=""  src=`./img/${img}` loading="lazy")
+
+    div(class=`
+      events-item__body relative w-[90%] 
+      pt-4 pb-6 max-[1200px]:pb-3 max-[1200px]:pt-2.5 
+      pr-10 max-[1200px]:pr-6 max-md:pr-6 
+      ml-4 max-[1200px]:ml-2
+    `)
+      div(class=`
+        card-tech-before-gradient-pink -z-1 absolute w-full bottom-0 left-0 -skew-x-10 rounded-[15px]
+        border border-app-white/10 bg-app-card-bg/40 
+        h-[330px] max-[1200px]:h-[207px] 
+      `)
+
+      div(class="flex items-end flex-wrap gap-y-5 pl-6 max-[1200px]:pl-3 max-md:items-end")
+        div(class="font-golos flex flex-col gap-1 text-[19px] max-[1500px]:text-sm max-[1200px]:text-[11px] max-md:text-sm") 
+          span(class="font-semibold")!=address
+          span(class="text-app-white-secondary font-medium")!=city
+        div(class="flex items-end gap-4 ml-auto")
+          span(class="font-medium text-app-white-secondary text-[19px] max-[1500px]:text-sm max-[1200px]:text-[11px] max-md:text-sm") 1 час /
+          span(class="font-black text-[28px] max-[1500px]:text-[22px] max-[1200px]:text-[17px] max-md:text-xl leading-[110%] uppercase italic")!=price + ' ₽'
+
+      a(href="", class="btn-accent w-full mt-5 max-[1200px]:mt-3 max-md:h-[55px]") Заказать праздник

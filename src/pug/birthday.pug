@@ -1,0 +1,12 @@
+extends ./base/base.pug
+
+block head
+  title День рождения или корпоратив в MetaRacing
+
+block content
+  div(class="md:bg-none bg-[url('/img/bd-bg-mob.png')] bg-cover bg-top bg-no-repeat w-full")
+    include ./birthday/b-banner.pug
+    include ./birthday/b-gallery.pug
+    include ./birthday/b-prices.pug
+
+  include ./home/register.pug

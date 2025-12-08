@@ -1,0 +1,17 @@
+
+section(class="bd-banner mt-[112px] max-[1200px]:mt-[20px] pb-[50px] relative overflow-visible")
+  div(class="absolute max-md:hidden top-[-80%] l-0 w-full -z-10")
+    img(class="w-full" src="./img/bd-gallery-bg.png" loading="lazy")
+  
+  .container
+    div(class="max-md:hidden")
+      img(class="w-full" src="./img/bd-gallery-big.png" loading="lazy")
+    div(class="md:hidden")
+      div(class="swiper swiper-bd-gallery")
+        div(class="swiper-wrapper")
+          - for (let i = 1; i <= 5; i++)
+            - var styles = i !== 1 ? 'ml-[-10px]' : '';
+            div(class="swiper-slide max-w-[330px]")
+              img(class=`w-full ${styles}` src=`./img/mob-bd-gallery-${i}.png` loading="lazy")
+
+    div(class="mt-[100px] max-[1200px]:mt-[60px] text-center text-[25px] max-[1200px]:text-[15px] max-md:text-[18px] uppercase text-app-white-secondary font-semibold") Такой праздник #[br(class="md:hidden")] подойдёт и взрослым, #[br] и подросткам от 14 лет.

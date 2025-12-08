@@ -1,0 +1,13 @@
+include ../mixins/prices
+include ../mixins/events
+
+section(class="bd-prices mt-[124px] max-[1200px]:mt-[76px] max-md:mt-[10px] pb-[50px] relative overflow-visible")
+  div(class="absolute top-[-60%] max-md:top-0 l-0 w-full -z-10")
+    img(class="w-full" src="./img/events-bg.png" loading="lazy")
+  
+  .container
+    div(class="bd-prices__list")
+      div(class="events-list grid grid-cols-3 max-md:grid-cols-1 gap-y-[33px] max-md:px-2.5 mt-[100px] max-lg:mt-[56px]")
+        +events-item('bd-prices-1.png', 'event-b-1.svg', 'Метро Приморская,', ' Санкт-Петербург', '6990')
+        +events-item('bd-prices-2.png', 'event-b-2.svg', 'Метро Приморская,', ' Санкт-Петербург', '9990')
+        +events-item('bd-prices-3.png', 'event-b-2.svg', 'Метро ЗИЛ,', 'Москва', '12 990')

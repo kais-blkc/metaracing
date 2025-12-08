@@ -2,10 +2,11 @@ extends ./base/base.pug
 include ./mixins/sec-title
 
 block head
-  title Вопросы и ответы
+  title Как устроен и работает гоночный симулятор
 
 block content
-  div(class="md:bg-none bg-[url('/img/p-or-bg-mob.png')] bg-cover bg-top bg-no-repeat w-full")
+  div(class="md:bg-none bg-[url('/img/hw-bg-mob.png')] bg-cover bg-top bg-no-repeat w-full")
     include ./how-work/hw-banner.pug
+    include ./how-work/hw-config.pug
 
   include ./home/register.pug

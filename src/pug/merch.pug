@@ -3,7 +3,7 @@ include ./mixins/sec-title
 include ./mixins/merch
 
 block head
-  title Сертификаты
+  title Наш мерч
 
 block content
   section(class="page-merch pb-20 pt-[200px] max-md:pb-[100px] relative overflow-visible")
@@ -16,12 +16,12 @@ block content
       +sec-title('Наш <span class="text-app-pink">мерч</span>', 'MetaRacing — это стиль жизни! <br/> Приобрести всю красоту можно как в клубе, так и онлайн')
 
       div(class="merch-list relative grid grid-cols-3 max-md:grid-cols-1 gap-y-[33px] mt-[80px] max-lg:mt-[48px] max-md:gap-y-[54px]")
-        +page-merch-item('p-merch-1.png', 'Зип-худи', 'merch-b-1.svg', 'sky', false, 'ml-[40px] max-[1200px]:ml-[30px]  max-md:max-w-[370px] max-md:mx-auto', true, true)
-        +page-merch-item('p-merch-2.png', 'Ветровка', 'merch-b-690.svg', 'sky', false, 'max-md:max-w-[370px] max-md:mx-auto', true, true)
-        +page-merch-item('p-merch-3.png', 'Ветровка', 'merch-b-2.svg', 'sky', false, 'ml-[-40px] max-[1200px]:ml-[-30px] max-md:max-w-[370px] max-md:mx-auto', true, true)
+        +page-merch-item('p-merch-1.png', 'Зип-худи', 'merch-b-1.svg', 'sky', false, 'ml-[40px] max-[1200px]:ml-[30px]  max-md:max-w-[370px] max-md:mx-auto', true )
+        +page-merch-item('p-merch-2.png', 'ланьярд', 'merch-b-690.svg', 'sky', false, 'max-md:max-w-[370px] max-md:mx-auto', true)
+        +page-merch-item('p-merch-3.png', 'Ветровка', 'merch-b-2.svg', 'sky', false, 'ml-[-40px] max-[1200px]:ml-[-30px] max-md:max-w-[370px] max-md:mx-auto', true)
 
       div(class="merch-list relative grid grid-cols-[1fr_57.89%] max-md:grid-cols-1 gap-y-[33px] mt-[60px] max-[1200px]:mt-[35px] max-md:gap-y-[54px] max-md:mt-[120px]")
-        +page-merch-item('p-merch-4.png', 'Ветровка', 'merch-b-390.svg', 'sky', false, 'ml-[20px] max-md:max-w-[370px] max-md:mx-auto', true, true)
-        +page-merch-item('p-merch-5.png', 'Ветровка', 'merch-b-190.svg', 'sky', false, 'ml-[-20px] max-md:max-w-[370px] max-md:mx-auto', true, true)
-    
+        +page-merch-item('p-merch-4.png', 'брелок', 'merch-b-390.svg', 'sky', false, 'ml-[20px] max-md:max-w-[370px] max-md:mx-auto', true, true, 'md:max-w-[97%] lg:max-w-[98%]')
+        +page-merch-item('p-merch-5.png', 'набор наклеек', 'merch-b-190.svg', 'sky', false, 'ml-[-20px] max-md:max-w-[370px] max-md:mx-auto', true, true, 'md:max-w-[98%] lg:max-w-full')
+
   include ./home/register.pug

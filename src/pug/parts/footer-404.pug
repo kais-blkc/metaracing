@@ -1,0 +1,28 @@
+mixin btn-icon(img) 
+  a(href="" class="btn-icon-white w-[68px] h-[62px] max-md:w-[50px] max-md:h-[45px] z-1")
+    img(class="w-[22px] h-[22px]" src=`./img/${img}` loading="lazy")
+
+footer(class="relative pt-[72px] max-[1200px]:pt-[50px] max-md:pt-[76px] max-md:py-10 pb-[78px] overflow-hidden")
+  div(class="w-full absolute bottom-0 left-0")
+    img(src="img/footer-bg.svg" loading="lazy")
+
+  .container 
+    div(class="flex justify-between items-end max-lg:flex-col max-lg:items-center max-lg:text-center gap-y-8 max-md:gap-[33px]")
+      div
+
+        div(class="flex items-center gap-2.5 max-lg:justify-center")
+          +btn-icon("accent-whatsapp.svg")
+          +btn-icon("accent-tg.svg")
+          +btn-icon("accent-vk.svg")
+          +btn-icon("accent-insta.svg")
+          +btn-icon("accent-yt.svg")
+        div(class="flex items-center gap-4 mt-[24px] text-[#545467] text-[19px] max-md:text-sm font-medium font-golos max-md:hidden") 
+          img(class="size-[38px] opacity-50" src="./img/14+.svg" loading="lazy")
+          p Погрузись в атмосферу — почувствуй настоящую гонку <br/> и прокачай навыки управления автомобилем.
+
+      div(class="flex flex-col items-end max-lg:items-center")
+        div(class="max-w-[338px] ml-auto max-lg:ml-0 max-md:hidden")
+          img(src="img/logo-footer.svg" loading="lazy")
+        div(class="mt-[24px] flex flex-col gap-1 text-[19px] max-md:text-sm font-medium font-golos text-right max-lg:text-center")
+          span(class="text-[#545467]") © 2025 MetaRacing. <br class="md:hidden" /> Сеть клубов гоночных симуляторов.
+          a(href="" class="text-[#9090AA]") Политика обработки персональных данных
