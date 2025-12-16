@@ -13,16 +13,18 @@ html(lang="ru")
     link(rel="stylesheet", href="./css/aos.css")
     link(rel="stylesheet", href="./css/tailwind.css")
     link(rel="stylesheet", href="./css/swiper-bundle.min.css")
-    link(rel="stylesheet", href="./css/style.css?v=3")
+    link(rel="stylesheet", href="./css/style.css?v=5")
 
   body
-    include ../parts/header.pug
+    block header
+      include ../parts/header.pug
 
     main
       block content
 
 
-    include ../parts/footer.pug
+    block footer
+      include ../parts/footer.pug
     include ../parts/modals.pug
 
 
@@ -30,4 +32,4 @@ html(lang="ru")
     script(src="./js/imask.js")
     script(src="./js/aos.js")
     script(src="./js/swiper-bundle.min.js")
-    script(src="./js/main.js?v=3")
+    script(src="./js/main.js?v=5")

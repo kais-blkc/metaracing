@@ -431,7 +431,7 @@ $breakpoints: (
 
 .tab-button {
   &.active {
-    background-color: var(--color-white);
+    // background-color: var(--color-white);
     color: var(--color-accent);
   }
 }
@@ -443,7 +443,6 @@ $breakpoints: (
       color-mix(in srgb, #de127a, transparent 40%) 100%
     )
     color-mix(in srgb, #0e1923, transparent 60%);
-
   background-repeat: no-repeat;
 }
 

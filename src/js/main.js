@@ -239,14 +239,20 @@ function tabs() {
     const tabsWrapper = e.target.closest('*[data-tabs-wrapper]');
     const tabBtns = tabsWrapper.querySelectorAll('*[data-tab-btn]');
     const tabItems = tabsWrapper.querySelectorAll('*[data-tab-item]');
+    const tabBtnsCover = tabsWrapper.querySelector('.tabs-buttons-cover');
 
     tabItems.forEach((item, index) => {
       tabBtns[index].classList.remove('active');
+      tabBtns[index].classList.remove('bg-app-white');
       tabItems[index].classList.remove('active');
 
       if (tabBtn.dataset.tabBtn === item.dataset.tabItem) {
         item.classList.add('active');
         tabBtn.classList.add('active');
+        getComputedStyle(tabBtnsCover).width;
+        tabBtnsCover.style.borderRadius = `15px`;
+        tabBtnsCover.style.left = `${tabBtn.offsetLeft}px`;
+        tabBtnsCover.style.width = `${tabBtn.offsetWidth}px`;
       }
     });
   });

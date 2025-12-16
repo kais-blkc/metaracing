@@ -1,54 +1,24 @@
+extends ./base/base.pug
 include ./mixins/sec-title
 
+block head
+  title 404 | страница не найдена или была удалена
+
 block content
-    
-<!DOCTYPE html>
-html(lang="ru")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title 404 | страница не найдена или была удалена
+  div(class="bg-[url('/img/404-bg.png')] bg-cover bg-top bg-no-repeat w-full")
+    section(class="not-found pt-[200px] max-md:pt-[90px] relative overflow-visible")
+      .container
+        div(class="not-found__content flex flex-col items-center justify-center")
+          div(class="not-found__banner relative flex items-center justify-center")
+            div(class=`
+              absolute transform 
+              translate-x-[3px] translate-y-[12px] max-[1200px]:translate-x-px max-[1200px]:translate-y-[6px]
+              w-[802px] max-[1200px]:w-[495px] max-md:w-[333px]
+            `)
+              img(class="mx-auto" src="./img/404.svg" loading="lazy")
+            div(class="w-[1100px] max-[1200px]:w-[680px] max-md:w-[457px]")
+              img(class="w-full" src="./img/404-light.png" loading="lazy")
 
-    link(rel="icon" type="image/png" href="favicon.png")
-    link(rel="preconnect" href="https://fonts.googleapis.com")
-    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
-    link(href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet")
-    link(rel="stylesheet", href="./css/fancybox.css")
-    link(rel="stylesheet", href="./css/aos.css")
-    link(rel="stylesheet", href="./css/tailwind.css")
-    link(rel="stylesheet", href="./css/swiper-bundle.min.css")
-    link(rel="stylesheet", href="./css/style.css?v=3")
-
-  body
-    include ./parts/header.pug
-
-    main
-      div(class="bg-[url('/img/404-bg.png')] bg-cover bg-top bg-no-repeat w-full")
-        section(class="not-found pt-[200px] max-md:pt-[90px] relative overflow-visible")
-          .container
-            div(class="not-found__content flex flex-col items-center justify-center")
-              div(class="not-found__banner relative flex items-center justify-center")
-                div(class=`
-                  absolute transform 
-                  translate-x-[3px] translate-y-[12px] max-[1200px]:translate-x-px max-[1200px]:translate-y-[6px]
-                  w-[802px] max-[1200px]:w-[495px] max-md:w-[333px]
-                `)
-                  img(class="mx-auto" src="./img/404.svg" loading="lazy")
-                div(class="w-[1100px] max-[1200px]:w-[680px] max-md:w-[457px]")
-                  img(class="w-full" src="./img/404-light.png" loading="lazy")
-
-            div(class="mt-[-50px] max-[1200px]:mt-[-10px] max-md:mt-0 text-center text-[25px] max-[1200px]:text-[15px] max-md:text-[18px] uppercase text-app-white-secondary font-semibold") Запрашиваемая страница #[br(class="md:hidden")] не найдена или была удалена. #[br] Проверьте адрес или вернитесь  #[br(class="md:hidden")] на главную страницу.
-            div(class="flex justify-center items-center mt-[44px] max-[1200px]:mt-[27px] max-md:mt-[33px]")
-              a(href="/" class="btn-accent h-[60px] max-md:w-[338px] max-[1200px]:h-[35px] max-md:h-[60px]") Вернуться на главную
-
-
-
-    include ./parts/footer-404.pug
-    include ./parts/modals.pug
-
-
-    script(src="./js/fancybox.umd.js")
-    script(src="./js/imask.js")
-    script(src="./js/aos.js")
-    script(src="./js/swiper-bundle.min.js")
-    script(src="./js/main.js?v=3")
+        div(class="mt-[-50px] max-[1200px]:mt-[-10px] max-md:mt-0 text-center text-[25px] max-[1200px]:text-[15px] max-md:text-[18px] uppercase text-app-white-secondary font-semibold") Запрашиваемая страница #[br(class="md:hidden")] не найдена или была удалена. #[br] Проверьте адрес или вернитесь  #[br(class="md:hidden")] на главную страницу.
+        div(class="flex justify-center items-center mt-[44px] max-[1200px]:mt-[27px] max-md:mt-[33px]")
+          a(href="/" class="btn-accent h-[60px] max-md:w-[338px] max-[1200px]:h-[35px] max-md:h-[60px]") Вернуться на главную

@@ -1,9 +1,10 @@
 section.sec-banner
   .container
     .sec-banner__content
-      div(class="md:hidden relative text-[44px] z-2 mt-[50px]")
+      div(class="md:hidden relative text-[44px] max-[380px]:text-[38px] z-2 mt-[50px]")
         div(class="font-black italic text-center uppercase leading-[110%]") Сеть клубов #[br] #[span(class="text-app-accent") гоночных #[br] симуляторов]
-        img(class="md:hidden absolute right-[-5%] z-1 w-[110%] object-cover" src="./img/banner-bg-mob.png" alt="" style="max-width: none;")
+        //- img(class="md:hidden absolute right-[-5%] z-1 w-[110%] object-cover" src="./img/banner-bg-mob.png" alt="" style="max-width: none;")
+        img(class="md:hidden absolute right-[-5%] z-1 w-[110%] object-cover" src="./img/banner-bg-mob-big.png" alt="" style="max-width: none;")
 
       div(class="sec-banner__contacts z-2 mt-auto flex gap-2.5 max-md:flex-col max-md:items-center max-md:gap-5")
         div(class="sec-banner__contacts-socs max-md:order-3 flex  items-center gap-1.5 max-md:w-full max-md:justify-center max-md:text-center")
@@ -17,8 +18,8 @@ section.sec-banner
             img(class="img-base" src="./img/accent-vk.svg", alt="")
             img(class="img-hover" src="./img/hover-vk.svg", alt="")
         
-        div(class="md:hidden w-full")
-          button(class="btn-accent order-2 mx-auto w-full max-w-[337px] h-[63px]") Онлайн-запись
+        div(class="md:hidden w-full order-2")
+          button(class="btn-accent mx-auto w-full max-w-[337px] h-[63px]") Онлайн-запись
 
         div(class="flex max-md:flex-wrap max-md:justify-center z-2 gap-[15px] max-md:order-1 text-[24px] max-lg:text-sm max-md:text-base font-bold uppercase ml-auto max-md:ml-0")
           div(class="sec-banner__contacts-address")

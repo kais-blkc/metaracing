@@ -12,12 +12,12 @@
     <link rel="stylesheet" href="./css/aos.css"/>
     <link rel="stylesheet" href="./css/tailwind.css"/>
     <link rel="stylesheet" href="./css/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="./css/style.css?v=3"/>
+    <link rel="stylesheet" href="./css/style.css?v=5"/>
   </head>
   <body>
     <header class="header w-full pt-[40px] fixed left-0 top-0 z-20 transition-all duration-300 ease">
       <div class="container">
-        <div class="header__content flex items-center justify-between gap-2 "><a class="header__logo block cursor-pointer w-[200px] max-[1200px]:w-[130px]" href="/"><img src="./img/metaracing-logo.svg" alt=""/></a>
+        <div class="header__content flex items-center justify-between gap-2 "><a class="header__logo block max-md:w-full cursor-pointer w-[200px] max-[1200px]:w-[130px]" href="/"><img class="max-md:mx-auto translate-x-[18%] max-md:w-[150px]" src="./img/metaracing-logo.svg" alt=""/></a>
           <div class="header__navbar max-md:hidden py-[5px] px-[10px] flex justify-between items-center gap-2.5 font-golos font-bold">
             <div class="py-2.5 px-5 max-lg:py-1.5 max-lg:px-3"><a class="header__navbar-link max-[1200px]:text-[10px] block transition-all duration-200 ease" href="#">Как это работает</a></div>
             <div class="py-2.5 px-5 max-lg:py-1.5 max-lg:px-3"><a class="header__navbar-link max-[1200px]:text-[10px] block transition-all duration-200 ease" href="/prices.html">Цены</a></div>
@@ -54,13 +54,13 @@
       <section class="sec-banner">
         <div class="container">
           <div class="sec-banner__content">
-            <div class="md:hidden relative text-[44px] z-2 mt-[50px]">
-              <div class="font-black italic text-center uppercase leading-[110%]">Сеть клубов <br/> <span class="text-app-accent">гоночных <br/> симуляторов</span></div><img class="md:hidden absolute right-[-5%] z-1 w-[110%] object-cover" src="./img/banner-bg-mob.png" alt="" style="max-width: none;"/>
+            <div class="md:hidden relative text-[44px] max-[380px]:text-[38px] z-2 mt-[50px]">
+              <div class="font-black italic text-center uppercase leading-[110%]">Сеть клубов <br/> <span class="text-app-accent">гоночных <br/> симуляторов</span></div><img class="md:hidden absolute right-[-5%] z-1 w-[110%] object-cover" src="./img/banner-bg-mob-big.png" alt="" style="max-width: none;"/>
             </div>
             <div class="sec-banner__contacts z-2 mt-auto flex gap-2.5 max-md:flex-col max-md:items-center max-md:gap-5">
               <div class="sec-banner__contacts-socs max-md:order-3 flex  items-center gap-1.5 max-md:w-full max-md:justify-center max-md:text-center"><a class="btn btn-icon-white" href="#"><img class="img-base" src="./img/accent-whatsapp.svg" alt=""/><img class="img-hover" src="./img/hover-whatsapp.svg" alt=""/></a><a class="btn btn-icon-white" href="#"><img class="img-base" src="./img/accent-tg.svg" alt=""/><img class="img-hover" src="./img/hover-tg.svg" alt=""/></a><a class="btn btn-icon-white" href="#"><img class="img-base" src="./img/accent-vk.svg" alt=""/><img class="img-hover" src="./img/hover-vk.svg" alt=""/></a></div>
-              <div class="md:hidden w-full">
-                <button class="btn-accent order-2 mx-auto w-full max-w-[337px] h-[63px]">Онлайн-запись</button>
+              <div class="md:hidden w-full order-2">
+                <button class="btn-accent mx-auto w-full max-w-[337px] h-[63px]">Онлайн-запись</button>
               </div>
               <div class="flex max-md:flex-wrap max-md:justify-center z-2 gap-[15px] max-md:order-1 text-[24px] max-lg:text-sm max-md:text-base font-bold uppercase ml-auto max-md:ml-0">
                 <div class="sec-banner__contacts-address">
@@ -235,7 +235,7 @@
         </div>
         <div class="container">
                 <div class="text-center uppercase">
-                  <div class="italic font-black text-[35px] md:text-[50px] lg:text-[80px] leading-[110%]"> <span class="text-app-pink"> Игры <br class="md:hidden"/> </span> на любой вкус</div>
+                  <div class="italic font-black text-[30px] md:text-[50px] lg:text-[80px] leading-[110%]"> <span class="text-app-pink"> Игры <br class="md:hidden"/> </span> на любой вкус</div>
                   <div class="text-2xl mt-6 max-lg:mt-[16px] max-md:mt-[14px] text-app-white-secondary max-lg:text-[15px] max-md:text-lg">Отличный способ весело провести время</div>
                 </div>
           <div class="grid grid-cols-[40%_60%] mt-[70px] max-md:mt-[32px] max-md:flex max-md:flex-col gap-y-6">
@@ -523,8 +523,9 @@
           <div class="mt-[75px] max-lg:mt[46px] max-md:mt-[26px]">
                   <div data-tabs-wrapper="data-tabs-wrapper">
                     <div class="flex justify-center">
-                      <div class="tabs-buttons flex gap-1 items-center p-2 -skew-x-12 rounded-[25px] border-app-border border">
-                        <div class="tab-button py-4 px-9 max-md:px-4 text-center max-md:text-sm rounded-[15px] cursor-pointer font-bold transition duration-300 ease-in-out active" data-tab-btn="prices-1">
+                      <div class="tabs-buttons flex gap-1 items-center p-2 max-md:p-1.5 -skew-x-12 rounded-[25px] border-app-border border">
+                        <div class="tabs-buttons-cover absolute top-[8px] max-md:top-[6px] left-[8px] max-md:left-[6px]  h-[calc(100%-16px)] max-md:h-[calc(100%-12px)] bg-app-white rounded-[15px] -z-1 transition-all duration-300 ease-in-out"></div>
+                        <div class="tab-button py-4 px-9 max-md:px-4 text-center max-md:text-sm rounded-[15px] cursor-pointer font-bold transition duration-300 ease-in-out bg-app-white active" data-tab-btn="prices-1">
                           <p class=" skew-x-12">Сакнт-Петербург</p>
                           <p class=" skew-x-12 text-[#7E7E8F] font-semibold"></p>
                         </div>
@@ -901,7 +902,7 @@
         <div class="container">
           <div class="flex relative justify-center items-end max-md:flex-col max-md:items-center">
                   <div class="text-center uppercase">
-                    <div class="italic font-black text-[35px] md:text-[50px] lg:text-[80px] leading-[110%]"><span class="text-app-pink"> Атмосфера </span></div>
+                    <div class="italic font-black text-[30px] md:text-[50px] lg:text-[80px] leading-[110%]"><span class="text-app-pink"> Атмосфера </span></div>
                     <div class="text-2xl mt-6 max-lg:mt-[16px] max-md:mt-[14px] text-app-white-secondary max-lg:text-[15px] max-md:text-lg">Видео с заездами наших клиентов</div>
                   </div>
             <div class="flex gap-4 absolute right-0 h-[55px] max-md:hidden">
@@ -1019,7 +1020,7 @@
         <div class="container">
           <div class="flex relative justify-center items-end max-md:flex-col max-md:items-center">
                   <div class="text-center uppercase">
-                    <div class="italic font-black text-[35px] md:text-[50px] lg:text-[80px] leading-[110%]">Впечатления </div>
+                    <div class="italic font-black text-[30px] md:text-[50px] lg:text-[80px] leading-[110%]">Впечатления </div>
                     <div class="text-2xl mt-6 max-lg:mt-[16px] max-md:mt-[14px] text-app-white-secondary max-lg:text-[15px] max-md:text-lg">Отзывы гостей наших клубов</div>
                   </div>
             <div class="flex gap-4 absolute right-0 h-[55px] max-md:hidden">
@@ -1268,7 +1269,7 @@
         <div class="absolute top-[-15%] max-md:top-0 l-0 w-full -z-10"><img class="w-full" src="./img/events-bg.png" loading="lazy"/></div>
         <div class="container">
                 <div class="text-center uppercase">
-                  <div class="italic font-black text-[35px] md:text-[50px] lg:text-[80px] leading-[110%]">Мероприятия </div>
+                  <div class="italic font-black text-[30px] md:text-[50px] lg:text-[80px] leading-[110%]">Мероприятия </div>
                   <div class="text-2xl mt-6 max-lg:mt-[16px] max-md:mt-[14px] text-app-white-secondary max-lg:text-[15px] max-md:text-lg">В день рождения или корпоратив  —  арендуйте весь клуб MetaRacing <br/> и отлично проведите время со своей компанией</div>
                 </div>
           <div class="events-list grid grid-cols-3 max-md:grid-cols-1 gap-y-[33px] max-md:px-2.5 mt-[100px] max-lg:mt-[56px]">
@@ -1339,7 +1340,7 @@
         <div class="absolute top-[-15%] max-md:top-0 l-0 w-full -z-10"><img class="w-full" src="./img/rental-bg.png" loading="lazy"/></div>
         <div class="container">
                 <div class="text-center uppercase">
-                  <div class="italic font-black text-[35px] md:text-[50px] lg:text-[80px] leading-[110%]">Выездная <span class="text-app-pink"> аренда</span></div>
+                  <div class="italic font-black text-[30px] md:text-[50px] lg:text-[80px] leading-[110%]">Выездная <span class="text-app-pink"> аренда</span></div>
                   <div class="text-2xl mt-6 max-lg:mt-[16px] max-md:mt-[14px] text-app-white-secondary max-lg:text-[15px] max-md:text-lg">MetaRacing — выбор крупнейших событий и брендов, <br class="md:hidden" /> Мы берём все заботы на себя, <br/> а вам остается только <br class="md:hidden" /> наслаждаться восторгом гостей</div>
                 </div>
           <div class="rental-content mt-[77px] max-lg:mt-[48px] max-md:mt-[33px]">
@@ -1398,7 +1399,7 @@
         <div class="absolute top-[-15%] max-md:top-0 l-0 w-full -z-10"><img class="w-full" src="./img/gift-bg.png" loading="lazy"/></div>
         <div class="container">
                 <div class="text-center uppercase">
-                  <div class="italic font-black text-[35px] md:text-[50px] lg:text-[80px] leading-[110%]">В подарок</div>
+                  <div class="italic font-black text-[30px] md:text-[50px] lg:text-[80px] leading-[110%]">В подарок</div>
                   <div class="text-2xl mt-6 max-lg:mt-[16px] max-md:mt-[14px] text-app-white-secondary max-lg:text-[15px] max-md:text-lg">Подарочный сертификат MetaRacing не оставит равнодушным <br class="max-md:hidden"/> ни одного фаната автомобилей, На ваш выбор — сертификат может быть <br class="max-md:hidden"/> изготовлен в печатном или электронном виде</div>
                 </div>
         </div>
@@ -1472,7 +1473,7 @@
         <div class="absolute top-[10%] max-md:top-0 l-0 w-full -z-10"><img class="w-full" src="./img/merch-bg.png" loading="lazy"/></div>
         <div class="container">
                 <div class="text-center uppercase">
-                  <div class="italic font-black text-[35px] md:text-[50px] lg:text-[80px] leading-[110%]">Наш <span class="text-app-pink">мерч</span></div>
+                  <div class="italic font-black text-[30px] md:text-[50px] lg:text-[80px] leading-[110%]">Наш <span class="text-app-pink">мерч</span></div>
                   <div class="text-2xl mt-6 max-lg:mt-[16px] max-md:mt-[14px] text-app-white-secondary max-lg:text-[15px] max-md:text-lg">MetaRacing — это стиль жизни! <br/> Приобрести всю красоту можно как в клубе, так и онлайн</div>
                 </div>
           <div class="merch-list max-md:hidden relative grid grid-cols-[30.51%_30.51%_45.26%] max-md:grid-cols-1 gap-y-[33px] mt-[80px] max-lg:mt-[48px] ">
@@ -1622,7 +1623,7 @@
         <div class="absolute top-[10%] max-md:top-[-15%] l-0 w-full -z-10"><img class="w-full" src="./img/qa-bg.png" loading="lazy"/></div>
         <div class="container">
                 <div class="text-center uppercase">
-                  <div class="italic font-black text-[35px] md:text-[50px] lg:text-[80px] leading-[110%]">Вопросы и ответы</div>
+                  <div class="italic font-black text-[30px] md:text-[50px] lg:text-[80px] leading-[110%]">Вопросы и ответы</div>
                   <div class="text-2xl mt-6 max-lg:mt-[16px] max-md:mt-[14px] text-app-white-secondary max-lg:text-[15px] max-md:text-lg">Возможно, вы хотите <br class="md:hidden"/>  об этом спросить</div>
                 </div>
         </div>
@@ -1743,14 +1744,15 @@
         <div class="absolute top-[10%] max-md:top-0 l-0 w-full -z-10"><img class="w-full" src="./img/address-bg.png" loading="lazy"/></div>
         <div class="container">
                 <div class="text-center uppercase">
-                  <div class="italic font-black text-[35px] md:text-[50px] lg:text-[80px] leading-[110%]"><span class="text-app-pink">Где мы</span> находимся</div>
+                  <div class="italic font-black text-[30px] md:text-[50px] lg:text-[80px] leading-[110%]"><span class="text-app-pink">Где мы</span> находимся</div>
                   <div class="text-2xl mt-6 max-lg:mt-[16px] max-md:mt-[14px] text-app-white-secondary max-lg:text-[15px] max-md:text-lg">Адреса клубов в Москве и Санкт-Петербурге</div>
                 </div>
           <div class="address-list mt-[80px] max-lg:mt-[35px]">
                   <div data-tabs-wrapper="data-tabs-wrapper">
                     <div class="flex justify-center">
-                      <div class="tabs-buttons flex gap-1 items-center p-2 -skew-x-12 rounded-[25px] border-app-border border">
-                        <div class="tab-button py-4 px-9 max-md:px-4 text-center max-md:text-sm rounded-[15px] cursor-pointer font-bold transition duration-300 ease-in-out active" data-tab-btn="t-address-1">
+                      <div class="tabs-buttons flex gap-1 items-center p-2 max-md:p-1.5 -skew-x-12 rounded-[25px] border-app-border border">
+                        <div class="tabs-buttons-cover absolute top-[8px] max-md:top-[6px] left-[8px] max-md:left-[6px]  h-[calc(100%-16px)] max-md:h-[calc(100%-12px)] bg-app-white rounded-[15px] -z-1 transition-all duration-300 ease-in-out"></div>
+                        <div class="tab-button py-4 px-9 max-md:px-4 text-center max-md:text-sm rounded-[15px] cursor-pointer font-bold transition duration-300 ease-in-out bg-app-white active" data-tab-btn="t-address-1">
                           <p class=" skew-x-12">Сакнт-Петербург</p>
                           <p class=" skew-x-12 text-[#7E7E8F] font-semibold"></p>
                         </div>
@@ -1775,7 +1777,7 @@
                                     <div class="border-gradient-content"></div>
                                     <div class="absolute top-5 max-[1200px]:top-2.5 z-1 right-[-10px]  max-md:top-2"><img class="h-[51px] max-[1200px]:h-[30px]" src="./img/add-b-1.svg" alt="" loading="lazy"/></div>
                                     <div class="relative z-2  max-md:skew-x-0">
-                                      <div class="text-[25px] max-[1200px]:text-[19px] max-md:text-[21px] font-bold max-md:font-black uppercase">metaracing <br/> <span class="text-app-pink">М.Московская</span></div>
+                                      <div class="text-[25px] leading-[110%] max-[1200px]:text-[19px] max-md:text-[21px] font-bold max-md:font-black uppercase">metaracing <br/> <span class="text-app-pink">М.Московская</span></div>
                                       <div class="
         flex justify-between
         text-[19px] max-[1200px]:text-[11px] max-md:text-sm
@@ -1785,7 +1787,7 @@
                                         <div class="flex flex-col"><span>+7 921 864-38-88</span><span class="text-app-white-secondary text-right max-md:text-left">12:00 – 00:00 <br/> без выходных</span></div>
                                       </div>
                                       <div class="md:hidden max-lg:mt-4 skew-x-10"><a class="btn btn-accent" href="">Построить маршрут в Навигаторе</a></div>
-                                      <div class="address-btns grid grid-cols-[42%_1fr] max-md:grid-cols-2 gap-2.5 mt-6 max-lg:mt-0 max-md:mt-5 skew-x-10">
+                                      <div class="address-btns grid grid-cols-[42%_1fr] max-md:grid-cols-2 gap-2.5 mt-6 max-lg:mt-0 max-md:mt-2 skew-x-10">
                                         <div class="max-md:hidden"><a class="btn btn-accent" href="">Позвонить</a></div>
                                         <div class="max-md:hidden"><a class="btn btn-white-pink text-app-pink" href="">Как добраться?</a></div>
                                         <div class="md:hidden"><a class="btn btn-white-pink text-app-pink" href="">Как добраться?</a></div>
@@ -1804,7 +1806,7 @@
                                     <div class="border-gradient-content"></div>
                                     <div class="absolute top-5 max-[1200px]:top-2.5 z-1 right-[-10px]  max-md:top-2"><img class="h-[51px] max-[1200px]:h-[30px]" src="./img/add-b-1.svg" alt="" loading="lazy"/></div>
                                     <div class="relative z-2  max-md:skew-x-0">
-                                      <div class="text-[25px] max-[1200px]:text-[19px] max-md:text-[21px] font-bold max-md:font-black uppercase">metaracing <br/> <span class="text-app-pink">М.Московская</span></div>
+                                      <div class="text-[25px] leading-[110%] max-[1200px]:text-[19px] max-md:text-[21px] font-bold max-md:font-black uppercase">metaracing <br/> <span class="text-app-pink">М.Московская</span></div>
                                       <div class="
         flex justify-between
         text-[19px] max-[1200px]:text-[11px] max-md:text-sm
@@ -1814,7 +1816,7 @@
                                         <div class="flex flex-col"><span>+7 921 764-38-88</span><span class="text-app-white-secondary text-right max-md:text-left">12:00 – 00:00 <br/> без выходных</span></div>
                                       </div>
                                       <div class="md:hidden max-lg:mt-4 skew-x-10"><a class="btn btn-accent" href="">Построить маршрут в Навигаторе</a></div>
-                                      <div class="address-btns grid grid-cols-[42%_1fr] max-md:grid-cols-2 gap-2.5 mt-6 max-lg:mt-0 max-md:mt-5 skew-x-10">
+                                      <div class="address-btns grid grid-cols-[42%_1fr] max-md:grid-cols-2 gap-2.5 mt-6 max-lg:mt-0 max-md:mt-2 skew-x-10">
                                         <div class="max-md:hidden"><a class="btn btn-accent" href="">Позвонить</a></div>
                                         <div class="max-md:hidden"><a class="btn btn-white-pink text-app-pink" href="">Как добраться?</a></div>
                                         <div class="md:hidden"><a class="btn btn-white-pink text-app-pink" href="">Как добраться?</a></div>
@@ -1852,7 +1854,7 @@
                                     <div class="border-gradient-content"></div>
                                     <div class="absolute top-5 max-[1200px]:top-2.5 z-1 right-[-10px]  max-md:top-2"><img class="h-[51px] max-[1200px]:h-[30px]" src="./img/add-b-1.svg" alt="" loading="lazy"/></div>
                                     <div class="relative z-2  max-md:skew-x-0">
-                                      <div class="text-[25px] max-[1200px]:text-[19px] max-md:text-[21px] font-bold max-md:font-black uppercase">metaracing <br/> <span class="text-app-pink">М.Московская</span></div>
+                                      <div class="text-[25px] leading-[110%] max-[1200px]:text-[19px] max-md:text-[21px] font-bold max-md:font-black uppercase">metaracing <br/> <span class="text-app-pink">М.Московская</span></div>
                                       <div class="
         flex justify-between
         text-[19px] max-[1200px]:text-[11px] max-md:text-sm
@@ -1862,7 +1864,7 @@
                                         <div class="flex flex-col"><span>+7 921 864-38-88</span><span class="text-app-white-secondary text-right max-md:text-left">12:00 – 00:00 <br/> без выходных</span></div>
                                       </div>
                                       <div class="md:hidden max-lg:mt-4 skew-x-10"><a class="btn btn-accent" href="">Построить маршрут в Навигаторе</a></div>
-                                      <div class="address-btns grid grid-cols-[42%_1fr] max-md:grid-cols-2 gap-2.5 mt-6 max-lg:mt-0 max-md:mt-5 skew-x-10">
+                                      <div class="address-btns grid grid-cols-[42%_1fr] max-md:grid-cols-2 gap-2.5 mt-6 max-lg:mt-0 max-md:mt-2 skew-x-10">
                                         <div class="max-md:hidden"><a class="btn btn-accent" href="">Позвонить</a></div>
                                         <div class="max-md:hidden"><a class="btn btn-white-pink text-app-pink" href="">Как добраться?</a></div>
                                         <div class="md:hidden"><a class="btn btn-white-pink text-app-pink" href="">Как добраться?</a></div>
@@ -1881,7 +1883,7 @@
                                     <div class="border-gradient-content"></div>
                                     <div class="absolute top-5 max-[1200px]:top-2.5 z-1 right-[-10px]  max-md:top-2"><img class="h-[51px] max-[1200px]:h-[30px]" src="./img/add-b-1.svg" alt="" loading="lazy"/></div>
                                     <div class="relative z-2  max-md:skew-x-0">
-                                      <div class="text-[25px] max-[1200px]:text-[19px] max-md:text-[21px] font-bold max-md:font-black uppercase">metaracing <br/> <span class="text-app-pink">М.Московская</span></div>
+                                      <div class="text-[25px] leading-[110%] max-[1200px]:text-[19px] max-md:text-[21px] font-bold max-md:font-black uppercase">metaracing <br/> <span class="text-app-pink">М.Московская</span></div>
                                       <div class="
         flex justify-between
         text-[19px] max-[1200px]:text-[11px] max-md:text-sm
@@ -1891,7 +1893,7 @@
                                         <div class="flex flex-col"><span>+7 921 764-38-88</span><span class="text-app-white-secondary text-right max-md:text-left">12:00 – 00:00 <br/> без выходных</span></div>
                                       </div>
                                       <div class="md:hidden max-lg:mt-4 skew-x-10"><a class="btn btn-accent" href="">Построить маршрут в Навигаторе</a></div>
-                                      <div class="address-btns grid grid-cols-[42%_1fr] max-md:grid-cols-2 gap-2.5 mt-6 max-lg:mt-0 max-md:mt-5 skew-x-10">
+                                      <div class="address-btns grid grid-cols-[42%_1fr] max-md:grid-cols-2 gap-2.5 mt-6 max-lg:mt-0 max-md:mt-2 skew-x-10">
                                         <div class="max-md:hidden"><a class="btn btn-accent" href="">Позвонить</a></div>
                                         <div class="max-md:hidden"><a class="btn btn-white-pink text-app-pink" href="">Как добраться?</a></div>
                                         <div class="md:hidden"><a class="btn btn-white-pink text-app-pink" href="">Как добраться?</a></div>
@@ -1986,6 +1988,6 @@
     <script src="./js/imask.js"></script>
     <script src="./js/aos.js"></script>
     <script src="./js/swiper-bundle.min.js"></script>
-    <script src="./js/main.js?v=3"></script>
+    <script src="./js/main.js?v=5"></script>
   </body>
 </html>

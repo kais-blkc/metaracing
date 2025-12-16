@@ -12,12 +12,14 @@
     <link rel="stylesheet" href="./css/aos.css"/>
     <link rel="stylesheet" href="./css/tailwind.css"/>
     <link rel="stylesheet" href="./css/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="./css/style.css?v=3"/>
+    <link rel="stylesheet" href="./css/style.css?v=5"/>
   </head>
   <body>
     <header class="header w-full pt-[40px] fixed left-0 top-0 z-20 transition-all duration-300 ease">
       <div class="container">
-        <div class="header__content flex items-center justify-between gap-2 "><a class="header__logo block cursor-pointer w-[200px] max-[1200px]:w-[130px]" href="/"><img src="./img/metaracing-logo.svg" alt=""/></a>
+        <div class="header__content flex items-center justify-between gap-2 "><a class="header__logo block cursor-pointer w-[200px] max-[1200px]:w-[130px] max-md:w-[200px]" href="/">
+            <div class="max-md:hidden"><img src="./img/metaracing-logo.svg" alt=""/></div>
+            <div class="md:hidden"><img src="./img/metaracing-logo-h.svg" alt=""/></div></a>
           <div class="header__navbar max-md:hidden py-[5px] px-[10px] flex justify-between items-center gap-2.5 font-golos font-bold">
             <div class="py-2.5 px-5 max-lg:py-1.5 max-lg:px-3"><a class="header__navbar-link max-[1200px]:text-[10px] block transition-all duration-200 ease" href="#">Как это работает</a></div>
             <div class="py-2.5 px-5 max-lg:py-1.5 max-lg:px-3"><a class="header__navbar-link max-[1200px]:text-[10px] block transition-all duration-200 ease" href="/prices.html">Цены</a></div>
@@ -37,7 +39,7 @@
     header-mobile__content w-full h-full flex flex-col gap-6 absolute left-0 bg-[#0E1923]/55 backdrop-blur-[27px]  
     transition-all duration-300 ease-in-out py-[40px] px-[30px] max-md:px-[20px] text-center
   ">
-        <button class="x-btn burger" data-modal-close="header-mobile" aria-label="Открыть меню"><img src="./img/x.svg" alt=""/></button><a class="header-mobile__logo block mx-auto w-[150px]" href="/"><img src="./img/metaracing-logo.svg" alt=""/></a>
+        <button class="x-btn burger" data-modal-close="header-mobile" aria-label="Открыть меню"><img src="./img/x.svg" alt=""/></button><a class="header-mobile__logo block mx-auto w-[150px]" href="/"><img src="./img/metaracing-logo-h.svg" alt=""/></a>
         <div class="header-mobile__navbar flex flex-col items-center gap-[22px] "><a class="header__navbar-item text-[21px] font-semibold underline hover:text-app-pink" href="#">Как это работает</a><a class="header__navbar-item text-[21px] font-semibold underline hover:text-app-pink" href="/prices.html">Цены</a><a class="header__navbar-item text-[21px] font-semibold underline hover:text-app-pink" href="#">Сертификаты</a><a class="header__navbar-item text-[21px] font-semibold underline hover:text-app-pink" href="#">Мероприятия</a><a class="header__navbar-item text-[21px] font-semibold underline hover:text-app-pink" href="#">Клубы</a></div>
         <div class="mt-[30px] uppercase text-lg">
           <p class="mb-1">МОСКВа (<span class="text-app-accent">new</span>)</p><a class="hover:text-app-pink" href="tel:"><span class="text-app-pink">+</span> 7 812 665-38-88</a>
@@ -59,7 +61,7 @@
         </div>
         <div class="container">
           <div class="text-center uppercase">
-            <div class="italic font-black text-[35px] md:text-[50px] lg:text-[80px] leading-[110%]">Наш <span class="text-app-pink">мерч</span></div>
+            <div class="italic font-black text-[30px] md:text-[50px] lg:text-[80px] leading-[110%]">Наш <span class="text-app-pink">мерч</span></div>
             <div class="text-2xl mt-6 max-lg:mt-[16px] max-md:mt-[14px] text-app-white-secondary max-lg:text-[15px] max-md:text-lg">MetaRacing — это стиль жизни! <br/> Приобрести всю красоту можно как в клубе, так и онлайн</div>
           </div>
           <div class="merch-list relative grid grid-cols-3 max-md:grid-cols-1 gap-y-[33px] mt-[80px] max-lg:mt-[48px] max-md:gap-y-[54px]">
@@ -324,6 +326,6 @@
     <script src="./js/imask.js"></script>
     <script src="./js/aos.js"></script>
     <script src="./js/swiper-bundle.min.js"></script>
-    <script src="./js/main.js?v=3"></script>
+    <script src="./js/main.js?v=5"></script>
   </body>
 </html>

@@ -3,6 +3,9 @@ extends ./base/base.pug
 block head
   title Главная
 
+block header
+  include ./parts/header-main.pug
+
 block content
   include ./home/banner.pug
   include ./home/benefits.pug
